@@ -19,6 +19,8 @@ if(isset($_SESSION['email']) && (isset($_SESSION['nom'])))
     <a href="deleteuser.php">Supprimer votre compte</a>
 
     <a href="..\index.php">Page d'accueil</a>
+
+    <a href="festivals.php">Liste des festivals</a>
     
     <?php
 
