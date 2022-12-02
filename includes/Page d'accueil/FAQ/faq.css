@@ -1,0 +1,200 @@
+*{
+    padding:0;
+    margin: 0;
+    font-family:"Georgia";
+    text-decoration: none;
+    list-style:none;
+}
+
+img {
+    height: auto;
+    width: 200px;
+    position: absolute;
+    top: -80px;
+}
+
+.navbar{
+    position: absolute;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing:border-box;
+    align-items: center;
+    z-index:1;
+}
+
+.navbar a {
+    color: white;
+}
+
+.navbar .nav-links ul {
+    display : flex;
+}
+
+.button {
+    display: inline-block;
+    margin: 0 25px;
+    border: 0;
+    padding : 10px 20px;
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0px -0px 0px 0px rgba(113, 34, 215, 0.5),0px 0px 0px 0px rgba(225, 51, 16, 0.5);
+    transition: all .2s;
+}
+
+.button::after {
+    content:"";
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(225deg,#f53b1e 0%,#911ef6 25%,#ee1616
+    100%);
+    position: absolute;
+    z-index :-1;
+    left: -20mm;
+    top: -15mm;
+    transition: all .5s;
+}
+
+.navbar .nav-links ul li.active a {
+    font-weight: 600;
+}
+
+.button:hover::after{
+    transform:rotate(300deg);
+}
+
+.button:hover{
+    transform: translate(0, -2mm);
+    box-shadow: 10px -10px 25px 0 rgba(168, 107, 247, 0.25), -10px 10px
+    25px 0px rgba(255, 255, 255, 0.25);
+}
+
+button {
+    background: transparent;
+    color: white;
+    position: absolute;
+    top :300px;
+    left: 450px;
+    font-weight: 600;
+    z-index:1;
+    overflow: clip;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    box-shadow: 0px -0px 0px 0px rgba(143, 64, 248, .5),0px 0px 0px 0px
+    rgba(39,200, 255, .5);
+    
+    transition: all .5s;
+    
+}
+
+button::after {
+    content:"";
+    width: 700px;
+    height: 700px;
+    font-weight: 500px;
+    background: linear-gradient(225deg,#e21717 0%,#eb8125 25%,#e022bd
+    100%);
+    position: absolute;
+    top:-500px;
+    left:-150px;
+    z-index:-1;
+    transition: all.3s;
+}
+
+button:hover::after {
+    transform: rotate(150deg);
+}
+
+button:hover {
+    transform: translate(0,-6px);
+    box-shadow: 10px -10px 25px 0 rgba(168, 107, 247, 0.25), -10px 10px
+    25px 0px rgba(255, 255, 255, 0.25);
+}
+
+.FAQTitle {
+    position: absolute;
+    top: 36%;
+    left: 43%;
+    right: 43%;
+    padding: 10px;
+    background: linear-gradient(225deg,#e21717 0%,#eb8125 25%,#e022bd
+    100%);
+    border-radius: 50px;
+    box-shadow:0 0 5px 2px #b277e6;
+}
+
+.FAQTitle h1 {
+    text-align: center;
+    font-size: 62;
+    color: white;
+    font-family: 'Elephant';
+    margin: 0;
+}
+
+.FAQCards {
+    position: relative;
+    margin: auto auto 500px auto;
+    top: 320px;
+}
+
+.FAQCard {
+    margin: 50px auto;
+    width: 75%;
+    height: 300px;
+    border-color: #111;
+    border-width: 2px;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 2px 2px 10px #111;
+}
+
+.FAQQuestion {
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(225deg,#e21717 0%,#eb8125 25%,#e022bd
+    100%);
+    text-align: left;
+    padding-left: 50px;
+    padding-right: 50px;
+    color: white;
+    font-size: 30px;
+}
+
+.FAQAnswer {
+    width: 100%;
+    height: 50%;
+    background-color: #eee;
+    box-shadow: inset 0 5px 5px #111;
+    text-align: left;
+    padding-left: 50px;
+    padding-right: 50px;
+    color: rgb(134, 97, 255);
+    font-size: 24px;
+}
+
+.FAQQuestion *, .FAQAnswer * {
+    display: flex;
+    padding-top: 50px;
+    height: 90%;
+    width: 90%;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+nav{
+    top: 0;
+    background: linear-gradient(225deg,#f53b1e 0%,#911ef6 25%,#ee1616);
+    box-shadow: 0 3px 20px #f53b1e;
+}
+
+.button {
+    box-shadow: inset 0 0 4px 1px #333;
+}
+.button:hover {
+    box-shadow: 2px 2px 4px 1px #333;
+}
+
