@@ -3,6 +3,7 @@ session_start();
 if(isset($_SESSION['email']) && (isset($_SESSION['nom'])))
 {
     ?>
+    
     <h1>Bienvenue sur votre profil</h1>
     <p>Votre email : <?php echo $_SESSION['email']; ?> </p>
     <p>Votre id : <?php echo $_SESSION['id']; ?> </p>
