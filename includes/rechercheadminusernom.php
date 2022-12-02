@@ -1,20 +1,20 @@
 <?php
 
-    if(isset($_POST['formrechercheuserid']))
+    if(isset($_POST['formrechercheusernom']))
     {
         extract($_POST);
-
-        if(!empty($rechercheuserid))
+        
+        if(!empty($rechercheusernom))
         {
-            $x = $db->prepare("SELECT * FROM user WHERE id = :rechercheuserid");
-            $x->execute(['rechercheuserid' => $rechercheuserid]);
-            $resultc = $x->fetch();
+            $o = $db->prepare("SELECT * FROM user WHERE nom = :rechercheusernom");
+            $o->execute(['rechercheusernom' => $rechercheusernom]);
+            $resultm = $o->fetch();
 
             // var_dump($resultc);
 
-            if($resultc == true){
-            $id = $resultc['id'];
-            $nom = $resultc['nom'];
+            if($resultm == true){
+            $id = $resultm['id'];
+            $nom = $resultm['nom'];
             }
             else {
                 echo "Le user que vous avez cherché n'existe pas";
