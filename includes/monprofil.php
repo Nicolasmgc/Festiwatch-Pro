@@ -22,7 +22,7 @@ if(isset($_SESSION['email']) && (isset($_SESSION['nom'])))
     <?php
 
 }else{
-    echo "Veuillez vous connecter à votre ";
+    echo "Veuillez vous connecter à votre compte";
 }
 
 ?>
