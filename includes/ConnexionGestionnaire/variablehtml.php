@@ -19,13 +19,14 @@
         <input type="varchar" name="Fest_pays" id="Fest_pays" placeholder="Votre pays" required><br/>
         <input type="text" name="Fest_access" id="Fest_access" placeholder="Accès à votre festival" required><br/>
         <input type="text" name="Fest_lien" id="Fest_lien" placeholder="Lien vers votre festival" required><br/>
-        <input type="varchar" name="fest_password" id="fest_password" placeholder="Votre mot de passe" required><br/>
+        <input type="password" name="fest_password" id="fest_password" placeholder="Votre mot de passe" required><br/>
+        <input type="password" name="fest_passwordc" id="fest_passwordc" placeholder="Vérifiez votre mdp" required><br/>
 
         
-        
+        <input type="submit" name="formsendgestio" id="formsendgestio" value="Ok">
     </form>
 
-    <?php include 'C:\wamp64\www\includes\signin.php'; ?>
+    <?php include 'includes\ConnexionGestionnaire\signingestio.php'; ?>
 
 
 
