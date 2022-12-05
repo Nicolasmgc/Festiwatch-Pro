@@ -110,7 +110,6 @@ h1{
 button{
     display: inline-block;
 }
-
-.btn1{
-    text-align: left;
+.btn{
+    display: inline-block;
 }

@@ -27,7 +27,7 @@ if(isset($_SESSION['email']) && (isset($_SESSION['nom'])))
      <p><?php echo $_SESSION['ville']; ?> </p>
     </div>
 
-
+    <div class="btn">
     <button class="btn1"><a href="deconnexion.php">Déconnexion</a></button>
 
     <button class="btn2"><a href="deleteuser.php">Supprimer votre compte</a></button>
@@ -35,7 +35,7 @@ if(isset($_SESSION['email']) && (isset($_SESSION['nom'])))
     <button class="btn3"><a href="..\index.php">Page d'accueil</a></button>
 
     <button class="btn4"><a href="festivals.php">Liste des festivals</a></button>
-    
+</div>
 </body>
 </html>
 
