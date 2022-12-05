@@ -13,18 +13,18 @@ if(isset($_SESSION['email']) && (isset($_SESSION['nom'])))
          </head>
      <body> 
      <div class="round"> 
-    <p>Votre email </p><br>
+    <p>Votre email </p>
      <p><?php echo $_SESSION['email']; ?> </p>
      <p>Votre nom </p>
-     <?php echo $_SESSION['nom']; ?>
+    <p> <?php echo $_SESSION['nom']; ?></p>
      <p>Votre prénom</p> 
-    <?php echo $_SESSION['prenom']; ?> 
+    <p><?php echo $_SESSION['prenom']; ?> </p>
     <p>Votre numéro de téléphone </p>
-    <?php echo $_SESSION['numtelephone']; ?> 
+    <p><?php echo $_SESSION['numtelephone']; ?> </p>
     <p>Votre adresse </p>
-     <?php echo $_SESSION['adresse']; ?> 
+     <p><?php echo $_SESSION['adresse']; ?> </p>
     <p>Votre ville </p>
-     <?php echo $_SESSION['ville']; ?> 
+     <p><?php echo $_SESSION['ville']; ?> </p>
     </div>
 
 
