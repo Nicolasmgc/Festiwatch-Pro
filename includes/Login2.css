@@ -86,6 +86,7 @@ body {
     color: beige;
     font-weight: 600;
 }
+<<<<<<< HEAD
 .round{
     border: 5px solid black;
     padding: 100px;
@@ -115,3 +116,5 @@ button{
 .btn{
     display: inline-block;
 }
+=======
+>>>>>>> 505e830de0f90ec9fc9bd38d120f80506d3ebbf1
