@@ -111,6 +111,6 @@ button{
     display: inline-block;
 }
 
-#btn1{
+.btn1{
     text-align: left;
 }
