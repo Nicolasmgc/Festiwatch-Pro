@@ -6,7 +6,7 @@
    <head>
         <meta charset="utf-8">
         <title>A propos de nous </title>
-        <link rel="stylesheet" href="AProposDeNous.css">
+        <link rel="stylesheet" href="AProposDeNous2.css">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap" rel="stylesheet">
         
     </head>
