@@ -13,8 +13,8 @@ if(isset($_SESSION['email']) && (isset($_SESSION['nom'])))
          </head>
      <body> 
      <div class="round"> 
-    <p>Votre email </p>
-     <?php echo $_SESSION['email']; ?> 
+    <p>Votre email </p><br>
+     <p><?php echo $_SESSION['email']; ?> </p>
      <p>Votre nom </p>
      <?php echo $_SESSION['nom']; ?>
      <p>Votre prénom</p> 
