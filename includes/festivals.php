@@ -84,7 +84,7 @@
 </form>
 
 
-<a href="index.php">Accueil</a>
+<a href="Page d'accueil/index.php">Accueil</a>
 
 
 

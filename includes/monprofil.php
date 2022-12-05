@@ -30,7 +30,7 @@ if(isset($_SESSION['email']) && (isset($_SESSION['nom'])))
 
     <button ><a href="deleteuser.php"  style="text-decoration:none">Supprimer votre compte</a></button>
 
-    <button ><a href="..\index.php"  style="text-decoration:none">Page d'accueil</a></button>
+    <button ><a href="Page d'accueil/index.php"  style="text-decoration:none">Page d'accueil</a></button>
 
     <button ><a href="festivals.php"  style="text-decoration:none">Liste des festivals</a></button>
 </div>
