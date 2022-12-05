@@ -9,7 +9,7 @@
         <meta charset="utf-8">
         <link rel="icon" href="Logo alternatif.png">
         <link rel="stylesheet" type="text/css" href="general.css">
-        <link rel="stylesheet" type="text/css" href="C:\wamp64\www\Festiwatch-Pro\includes\Page d'accueil\accueil.css">
+        <link rel="stylesheet" type="text/css" href="accueil2.css">
     </head>
     <body>
         <nav class="navbar">
@@ -91,3 +91,4 @@
    
     </body>
 </html>
+
