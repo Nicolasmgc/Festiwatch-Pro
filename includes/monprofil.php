@@ -13,28 +13,28 @@ if(isset($_SESSION['email']) && (isset($_SESSION['nom'])))
          </head>
      <body> 
      <div class="round"> 
-    <p>Votre email </p>
+    <p>Votre email : </p>
      <p><?php echo $_SESSION['email']; ?> </p>
-     <p>Votre nom </p>
+     <p>Votre nom :</p>
     <p> <?php echo $_SESSION['nom']; ?></p>
-     <p>Votre prénom</p> 
+     <p>Votre prénom :</p> 
     <p><?php echo $_SESSION['prenom']; ?> </p>
-    <p>Votre numéro de téléphone </p>
+    <p>Votre numéro de téléphone : </p>
     <p><?php echo $_SESSION['numtelephone']; ?> </p>
-    <p>Votre adresse </p>
+    <p>Votre adresse : </p>
      <p><?php echo $_SESSION['adresse']; ?> </p>
-    <p>Votre ville </p>
+    <p>Votre ville : </p>
      <p><?php echo $_SESSION['ville']; ?> </p>
     </div>
 
 
-    <button><a href="deconnexion.php">Déconnexion</a></button>
+    <button class="btn1"><a href="deconnexion.php">Déconnexion</a></button>
 
-    <button><a href="deleteuser.php">Supprimer votre compte</a></button>
+    <button class="btn2"><a href="deleteuser.php">Supprimer votre compte</a></button>
 
-    <button><a href="..\index.php">Page d'accueil</a></button>
+    <button class="btn3"><a href="..\index.php">Page d'accueil</a></button>
 
-    <button><a href="festivals.php">Liste des festivals</a></button>
+    <button class="btn4"><a href="festivals.php">Liste des festivals</a></button>
     
 </body>
 </html>
