@@ -20,8 +20,11 @@
                     <li class="active">
                         <a class="button" href="#">Accueil</a>
                     </li>
-                    <li>
-                        <a class="button" href="../login1.php">Se connecter</a>
+                    <li> <?php if(isset($_SESSION['email'])){
+                        
+                        }else{ ?> <a class="button" href="../login1.php">Se connecter</a> <?php
+                    }
+                        ?>
                     </li>
                     <li>
                         <a class="button" href="./FAQ/faq.php">FAQ</a>
@@ -34,9 +37,12 @@
                     </li>
                     <li>
                         <a class="button"> <?php if(isset($_SESSION['email'])){
+                            ?>
+                        <div class="ooo"> aaa </div>
                         
-                        echo $_SESSION['email'];
-                        }else{echo "Vous n'êtes pas connectés";} ?></a>
+                    <div class="lalal">   <?php echo $_SESSION['email'];?> </div>
+                    <?php
+                        }else{echo "pas co";} ?></a>
 
                 </ul>
            
