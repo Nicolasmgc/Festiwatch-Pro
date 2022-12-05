@@ -6,7 +6,7 @@ if(isset($_SESSION['email']) && (isset($_SESSION['nom'])))
          <!DOCTYPE html>
      <html>
         <head>
-           <link rel="stylesheet" href="Login.css">
+           <link rel="stylesheet" href="Login2.css">
            <h1>Bienvenue sur votre profil</h1>
          </head>
      <body> 
