@@ -108,9 +108,9 @@ h1{
      font-family: 'Montserrat', sans-serif;
 }
 button{
-    padding: 50px;
+    margin: 50px;
     font-family: 'Montserrat', sans-serif;
-    text-decoration : none;
+    text-decoration: none;
 }
 .btn{
     display: inline-block;
