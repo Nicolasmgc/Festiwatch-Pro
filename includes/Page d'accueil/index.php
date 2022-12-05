@@ -9,7 +9,7 @@
         <meta charset="utf-8">
         <link rel="icon" href="Logo alternatif.png">
         <link rel="stylesheet" type="text/css" href="general.css">
-        <link rel="stylesheet" type="text/css" href="accueil.css">
+        <link rel="stylesheet" type="text/css" href="C:\wamp64\www\Festiwatch-Pro\includes\Page d'accueil\accueil.css">
     </head>
     <body>
         <nav class="navbar">
@@ -33,7 +33,7 @@
                         <a class="button" href="#">Nous contacter</a>
                     </li>
                     <li>
-                        <a class="texte"> <?php if(isset($_SESSION['email'])){
+                        <a class="button"> <?php if(isset($_SESSION['email'])){
                         
                         echo $_SESSION['email'];
                         }else{echo "Vous n'êtes pas connectés";} ?></a>
