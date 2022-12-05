@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="Login2.css">
 <head>
     <title>Login</title>
-    <a href="accueil.php">Sign in</a>
+    <a href="Page d'accueil/accueil.php">Sign in</a>
     <h1>Login</h1>
 </head>
 

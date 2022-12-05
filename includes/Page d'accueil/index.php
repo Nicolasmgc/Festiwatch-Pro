@@ -21,7 +21,7 @@
                         <a class="button" href="#">Accueil</a>
                     </li>
                     <li> <?php if(isset($_SESSION['email'])){
-                        
+                        ?> <a class="button" href="../deconnexion.php">Se déconnecter</a> <?php
                         }else{ ?> <a class="button" href="../login1.php">Se connecter</a> <?php
                     }
                         ?>
