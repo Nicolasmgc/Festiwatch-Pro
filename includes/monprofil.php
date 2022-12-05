@@ -28,13 +28,13 @@ if(isset($_SESSION['email']) && (isset($_SESSION['nom'])))
     </div>
 
     <div class="btn">
-    <button class="btn1"><a href="deconnexion.php">Déconnexion</a></button>
+    <button ><a href="deconnexion.php">Déconnexion</a></button>
 
-    <button class="btn2"><a href="deleteuser.php">Supprimer votre compte</a></button>
+    <button ><a href="deleteuser.php">Supprimer votre compte</a></button>
 
-    <button class="btn3"><a href="..\index.php">Page d'accueil</a></button>
+    <button ><a href="..\index.php">Page d'accueil</a></button>
 
-    <button class="btn4"><a href="festivals.php">Liste des festivals</a></button>
+    <button ><a href="festivals.php">Liste des festivals</a></button>
 </div>
 </body>
 </html>
