@@ -22,6 +22,7 @@ body {
     background-image: url("bg.svg");
     background-repeat: no-repeat;
     background-size: cover;
+    
     animation: 
     pan 4s infinite alternate linear;
 }
@@ -77,39 +78,11 @@ body {
 .login-form>input{
     border: 2px solid rgb(40, 40, 97);
 }
-
-.login-form>button{
+.butt{
     width: 100%;
     height: 56px;
     border: 0;
     background: blue;
     color: beige;
     font-weight: 600;
-}
-.round{
-    border: 5px solid black;
-    padding: 100px;
-    border-radius: 50%;
-    height: 800px;
-    width: 800px;
-    position: relative;
-    
-    margin:75px;
-    
-}
-p{
-    font-size: 20px;
-    text-align: center;
-  font-family: 'Montserrat', sans-serif;
-}
-
-h1{
-    text-align: center;
-     font-family: 'Montserrat', sans-serif;
-}
-button{
-    display: inline-block;
-}
-.btn{
-    display: inline-block;
 }

@@ -25,7 +25,7 @@ global $db;
 <form class="login-form" method="post">
     <input type="email" name="lemail" id="lemail" placeholder="Votre Email" required><br/>
     <input type="password" name="lpassword" id="lpassword" placeholder="Votre Mot de passe" required><br/>
-    <button><input type="submit" name="formlogin" id="formlogin" value="Ok"></button>
+    <button><input class="butt" type="submit" name="formlogin" id="formlogin" value="Ok"></button>
 </form>
 
     <?php include 'C:\wamp64\www\includes\login.php'; ?>
