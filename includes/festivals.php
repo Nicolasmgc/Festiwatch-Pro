@@ -30,7 +30,7 @@
 <!DOCTYPE html>
 <html>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="festivals.css">
+    <link rel="stylesheet" href="listfestivals.css">
 </br>
 <head>Afficher la liste des festivals</head>
 <body>
