@@ -6,12 +6,7 @@ if(isset($_SESSION['email']) && (isset($_SESSION['nom'])))
          <!DOCTYPE html>
      <html>
         <head>
-<<<<<<< HEAD
            <link rel="stylesheet" href="monprofil.css">
-=======
-           <link rel="stylesheet" href="Login2.css">
-           <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap" rel="stylesheet">
->>>>>>> ed66fae47cc7c31c05a158d145686ce0c547d2ab
            <h1>Bienvenue sur votre profil</h1>
          </head>
      <body> 
