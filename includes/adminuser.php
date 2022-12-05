@@ -1,12 +1,13 @@
 
-
-    <?php include 'C:\wamp64\www\Festiwatch-Pro\includes\database.php';
-    global $db;
-    ?>
+<?php
+    include 'database.php';
+    global $db; ?>
 
 <?php include 'C:\wamp64\www\Festiwatch-Pro\includes\rechercheadminuserid.php'; ?>
 
 <?php include 'C:\wamp64\www\Festiwatch-Pro\includes\rechercheadminusernom.php'; ?>
+
+
 
 
 <form method="post">
@@ -31,6 +32,9 @@ if(isset($resultc['id']))
     <h2>Les informations</h2>
     <p>L'id de l'utilisateur : <?php echo $resultc['id']; ?> </p>
     <p>Le nom de l'utilisateur : <?php echo $resultc['nom']; ?> </p>
+
+    <a href="deleteuserid.php?id=<?php echo $resultc['id'];?>">Supprimer cet utilisateur</a> 
+
     <?php
 
 }else{
