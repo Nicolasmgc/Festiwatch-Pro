@@ -8,7 +8,7 @@
         <title>Efrontech </title>
         <meta charset="utf-8">
         <link rel="icon" href="Logo alternatif.png">
-        <link rel="stylesheet" type="text/css" href="general.css">
+        
         <link rel="stylesheet" type="text/css" href="accueil2.css">
     </head>
     <body>

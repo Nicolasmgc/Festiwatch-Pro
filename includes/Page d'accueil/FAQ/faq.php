@@ -7,7 +7,7 @@
     <title>FestiWatch - FAQ</title>
     <meta charset="utf-8">
     <link rel="icon" href="icon.jpeg">
-    <link rel="stylesheet" type="text/css" href="general.css">
+    
     <link rel="stylesheet" type="text/css" href="faq2.css">
 </head>
 <body>

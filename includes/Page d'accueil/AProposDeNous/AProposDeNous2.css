@@ -24,7 +24,7 @@ h2{
     height: 100px; 
     background:linear-gradient(225deg,#f53b1e 0%,#911ef6 25%,#ee1616); 
     -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
+    
     
 }
 
@@ -73,7 +73,7 @@ p1{
     color : black ;
     background:linear-gradient(225deg,#f53b1e 0%,#911ef6 25%,#ee1616); 
     -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
+    
 }
 
 div{
