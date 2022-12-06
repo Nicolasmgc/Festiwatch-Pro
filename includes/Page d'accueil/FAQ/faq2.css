@@ -152,7 +152,8 @@ button:hover {
     box-shadow: 2px 2px 10px #111;
 }
 body{
-    background-color: #911ef6;
+    background: linear-gradient(225deg,#f99b0d 0%,#8425f8 40%,#452df8
+    50%);
 }
 .FAQQuestion {
     width: 100%;
