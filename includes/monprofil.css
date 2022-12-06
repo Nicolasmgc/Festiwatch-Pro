@@ -1,31 +1,70 @@
 .round{
     border: 5px solid black;
-    padding: 100px;
+    padding: 70px;
     border-radius: 50%;
-    height: 800px;
-    width: 800px;
+    height:560px;
+    width: 560px;
     position: relative;
-    
-    margin:75px;
-    
+    margin:30px;
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 0px 0px 0px rgb(113 34 215 / 50%), 0px 0px 0px 0px rgb(225 51 16 / 50%);
+    transition: all .2s;
+}
+.round::after {
+    content: "";
+    width: 1000px;
+    height: 1000px;
+    background: linear-gradient(225deg,#f53b1e 0%,#911ef6 25%,#ee1616 100%);
+    position: absolute;
+    z-index: -1;
+    left: -20mm;
+    top: -15mm;
+    transition: all .5s;
+}
+.round:hover::after{
+    transform:rotate(300deg);
+}
+
+.round:hover{
+    transform: translate(0, -2mm);
+    box-shadow: 10px -10px 25px 0 rgba(168, 107, 247, 0.25), -10px 10px
+    25px 0px rgba(255, 255, 255, 0.25);
 }
 p{
     font-size: 20px;
     text-align: center;
   font-family: 'Montserrat', sans-serif;
+  color: black;
 }
 
 h1{
     text-align: center;
      font-family: 'Montserrat', sans-serif;
-}
-button{
-    display: inline-block;
+   color: black;
+   border: 5px solid black;
+   background-color: white;
+   margin: 50px;
+   border-radius: 20px;
+   height: 100px;
+   width: 250px;
 }
 
-.btn1{
-    text-align: left;
+button{
+    margin-right: 60px;
+    margin-top: 10px;
+    font-family: 'Montserrat', sans-serif;
+    height: 60px;
+    width: 220px;
+    border: 5px solid black;
+    border-radius: 20px;
 }
+a{
+    color: black;
+    font-size:20px ;
+}
+
 
 body {
     display: grid;
@@ -38,3 +77,9 @@ body {
     animation: 
     pan 4s infinite alternate linear;
 }
+
+body {
+    color:black;
+    background-color:white;
+    background-image:url(image.jpg);
+    }
