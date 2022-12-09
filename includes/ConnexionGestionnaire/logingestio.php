@@ -36,7 +36,7 @@ global $db;
 <form method="post">
     <input type="texte" name="lfest_nom" id="lfest_nom" placeholder="Le nom de votre festival" required><br/>
     <input type="password" name="fpassword" id="fpassword" placeholder="Votre Mot de passe" required><br/>
-    <button><input type="submit" name="formlogingestio" id="formlogingestio" value="Ok"></button><br/>
+    <input type="submit" name="formlogingestio" id="formlogingestio" value="Ok"><br/>
 </form>
 
     <?php include 'backlogingestio.php'; ?>

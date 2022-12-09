@@ -25,7 +25,7 @@
                 }
                 else
                 {
-                    echo "Le mot de passe n'est pas correcte";
+                    echo "Le mot de passe n'est pas correcte, veuillez réessayer";
                 }
             }
             else
