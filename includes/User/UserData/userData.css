@@ -1,0 +1,172 @@
+.userDataTitle {
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    right: 25%;
+    padding: 10px;
+    background: linear-gradient(225deg,#e21717 0%,#eb8125 25%,#e022bd
+    100%);
+    border-radius: 50px;
+    box-shadow: 0 0 5px 2px #b277e6;
+}
+
+.userDataTitle h1 {
+    text-align: center;
+    font-size: 62;
+    color: white;
+    font-family: 'Elephant';
+    margin: 0;
+}
+
+#content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 280px 1% 30px 1%;
+}
+
+#sidebar {
+    width: 30%;
+    margin: 1% 0% 1% 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#mapBox {
+    width: 90%;
+    height: 100%;
+    border-radius: 10px;
+    padding: 2%;
+    margin-bottom: 10px;
+    background: linear-gradient(225deg,#e21717 0%,#eb8125 25%,#e022bd
+    100%);
+    box-shadow: 0 0 5px 2px #b277e6;
+}
+
+#mapBox h1, #friendBox h1 {
+    color: white;
+    text-align: center;
+}
+
+#map {
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+#mapImage {
+    position: inherit;
+    margin: 5px;
+    height: 200px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+#friendBox {
+    width: 90%;
+    height: 100%;
+    border-radius: 10px;
+    padding: 2% 2% 5% 2%;
+    margin-top: 10px;
+    background: linear-gradient(225deg,#e21717 0%,#eb8125 25%,#e022bd
+    100%);
+    text-align: center;
+    color: white;
+    box-shadow: 0 0 5px 2px #b277e6;
+}
+
+#mainContent {
+    width: 90%;
+    margin: 1% 1% 1% 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0px 10px;
+    text-align: center;
+}
+
+#searchBox {
+    width: 100%;
+    border-radius: 50px;
+    background: linear-gradient(225deg,#e21717 0%,#eb8125 25%,#e022bd
+    100%);
+    padding: 5px;
+    margin: 5px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    box-shadow: 0 0 5px 2px #b277e6;
+}
+
+#searchBar {
+    padding: 0px 10px;
+    font-size: 20px;
+    background: linear-gradient(225deg,#e21717 0%,#eb8125 25%,#e022bd
+    100%);
+    color: white;
+    border-width: 0;
+    border-radius: 20px;
+    box-shadow: inset 0 0 5px 2px #926;
+    width: 95%;
+}
+
+#searchIcon {
+    position: inherit;
+    margin: 5px;
+    height: 30px;
+    width: auto;
+}
+
+#dashboardBox {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    margin: 5px 0px 0px 0px;
+    background: linear-gradient(225deg,#e21717 0%,#eb8125 25%,#e022bd
+    100%);
+    border-radius: 20px;
+    box-shadow: 0 0 5px 2px #b277e6;
+}
+
+#dashboardBox h1 {
+    color: white;
+}
+
+#upperIndicators, #lowerIndicators {
+    margin: auto 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#upperIndicators div, #lowerIndicators div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+label {
+    margin-top: 40px;
+    margin-bottom: 50px;
+    color: white;
+    font-weight: 900;
+}
+
+#upperIndicators {
+    margin-left: 0px;
+    margin-right: 40%;
+}
+
+#lowerIndicators{
+    margin-left: 16%;
+    margin-right: 0px;
+}
+
+meter {
+    rotate: -90deg;
+    height: 30px;
+    width: 80px;
+    color: white;
+}
