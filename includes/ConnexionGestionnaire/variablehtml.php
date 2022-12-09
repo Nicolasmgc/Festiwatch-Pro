@@ -1,14 +1,21 @@
 <?php session_start();
 
-
 ?>
+
 <!DOCTYPE html>
 <html>
 <meta charset="utf-8">
 <body>
 <h1>Sign in</h1>
+
+
+
+
+<?php include 'C:\wamp64\www\Festiwatch-Pro\includes\database.php';
+global $db;
+?>
+
     <form method="post">
-        <input type="int" name="Fest_id" id="Fest_id" placeholder="Votre id de festival" required><br/>
         <input type="varchar" name="Fest_nom" id="Fest_nom" placeholder="Votre Nom" required><br/>
         <input type="date" name="Fest_datedebut" id="Fest_datedebut" placeholder="Début de votre festival" required><br/>
         <input type="date" name="Fest_datefin" id="Fest_datefin" placeholder="Fin de votre festival" required><br/>
@@ -26,9 +33,7 @@
         <input type="submit" name="formsendgestio" id="formsendgestio" value="Ok">
     </form>
 
-    <?php include 'includes\ConnexionGestionnaire\signingestio.php'; ?>
-
-
+    <?php include 'signingestio.php'; ?>
 
 </body>
 </html>
