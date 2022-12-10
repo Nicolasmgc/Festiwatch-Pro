@@ -21,7 +21,9 @@
                     
                     $_SESSION['Fest_id'] = $result['Fest_id'];
                     $_SESSION['Fest_nom'] = $result['Fest_nom'];
-                    $_SESSION['Fest_acces'] = $result['Fest_acces'];
+                    $_SESSION['Fest_email'] = $result['Fest_email'];
+                    $_SESSION['Fest_numtelephone'] = $result['Fest_numtelephone'];
+                    $_SESSION['Fest_access'] = $result['Fest_access'];
                     $_SESSION['Fest_adresse'] = $result['Fest_adresse'];
                     $_SESSION['Fest_codepostal'] = $result['Fest_codepostal'];
                     $_SESSION['Fest_datedebut'] = $result['Fest_datedebut'];
@@ -31,6 +33,7 @@
                     $_SESSION['Fest_prix'] = $result['Fest_prix'];
                     $_SESSION['Fest_programmation'] = $result['Fest_programmation'];
                     $_SESSION['Fest_password'] = $result['Fest_password'];
+                    header("Location: monfestival.php?Fest_id=".$_SESSION['Fest_id']);
                 }
                 else
                 {

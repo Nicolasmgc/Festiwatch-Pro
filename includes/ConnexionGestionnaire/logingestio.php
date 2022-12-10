@@ -42,8 +42,6 @@ global $db;
     <?php include 'backlogingestio.php'; ?>
 
     <a href="./Page d'accueil/index.php" class="acc"> Revenir à la page d'accueil </a>
-    
-    
 
     </div>
 
