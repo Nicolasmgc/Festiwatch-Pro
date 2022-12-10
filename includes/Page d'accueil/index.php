@@ -13,8 +13,7 @@
     </head>
     <body>
         <nav class="navbar">
-            <a href="C:\Nicolas\Travail\A1\APP\ProDeTech\CODE\Première page d'acceuil\Page acceuil\accueil.html" class="logo"> <img src="Logo alternatif.png">  </a>
-            <img class="boite" src="Logo alternatif 2.png">
+            <a href="C:\Nicolas\Travail\A1\APP\ProDeTech\CODE\Première page d'acceuil\Page accueil\accueil.html" class="logo"> <img src="Logo alternatif.png">  </a>
             <div class="nav-links">
                 <ul>
                     <li class="active">
@@ -56,10 +55,10 @@
             <header> </header>
 
         -->
-
         <button class="PoButton">
             <div class="Po">Qu'est-ce que FestiWatch ?</div>
         </button>
+        <img class="boite" src="Logo alternatif 2.png">
        
         <video src="./Concert - 1630.mp4" id="video" autoplay loop muted></video>
         <div class="shadowup"></div>

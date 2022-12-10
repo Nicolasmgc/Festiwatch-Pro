@@ -39,11 +39,12 @@ img {
 }
 
 .boite {
-    position:absolute;
-    top:-150px;
-    left: 345px;
-    width: 650px;
-    height: auto;
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 25%;
+    margin-right: 35%;
+    width: 50%;
+    height: 100%;
 }
 
 .navbar{
