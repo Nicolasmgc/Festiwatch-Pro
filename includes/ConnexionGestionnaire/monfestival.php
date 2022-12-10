@@ -10,7 +10,7 @@ if(isset($_SESSION['Fest_nom']) && (isset($_SESSION['Fest_email'])))
          </head>
      <body> 
      <div> 
-    <p>Votre nom : </p>
+    <p>Votre nom de festival: </p>
      <p><?php echo $_SESSION['Fest_nom']; ?> </p>
      <p>Votre date de début :</p>
     <p> <?php echo $_SESSION['Fest_datedebut']; ?></p>

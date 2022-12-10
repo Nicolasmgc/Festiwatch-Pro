@@ -44,7 +44,7 @@
 
             }
 
-        }else {echo "erreur";
+        }else {echo "Veuillez remplir tous les champs";
         }
     }
 

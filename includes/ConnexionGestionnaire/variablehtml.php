@@ -29,7 +29,7 @@ global $db;
         <input type="email" name="Fest_email" id="Fest_email" placeholder="Email du festival" required><br/>
         <input type="int" name="Fest_numtelephone" id="Fest_numtelephone" placeholder="Numéro de téléphone du festival" required><br/>
         <input type="password" name="fest_password" id="fest_password" placeholder="Votre mot de passe" required><br/>
-        <input type="password" name="fest_passwordc" id="fest_passwordc" placeholder="Vérifiez votre mdp" required><br/>
+        <input type="password" name="fest_passwordc" id="fest_passwordc" placeholder="Vérifiez votre mot de passe" required><br/>
 
         
         <input type="submit" name="formsendgestio" id="formsendgestio" value="Ok">

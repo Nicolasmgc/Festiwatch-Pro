@@ -7,8 +7,7 @@
 if(isset($_SESSION['Fest_nom']))
 {
     ?>
-    <h1>Bienvenue sur votre profil</h1>
-    <p>Votre nom : <?php echo $_SESSION['Fest_nom']; ?> </p>
+    <p>Votre nom de festival : <?php echo $_SESSION['Fest_nom']; ?> </p>
 
     <?php
 
