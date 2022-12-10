@@ -37,7 +37,7 @@
                     'Fest_password' => $hashpassf
 
                 ]);
-                echo "Le compte a été créé";
+                echo "Le festival a été créé";
             }else{
                 echo"Ce nom est déjà utilisé";
             }

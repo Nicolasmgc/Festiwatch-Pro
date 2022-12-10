@@ -12,7 +12,7 @@ if(isset($_SESSION['Fest_nom']))
     <?php
 
 }else{
-    echo "Veuillez vous connecter à votre compte";
+    echo "Veuillez vous connecter à votre festival";
 }
 
 ?>
