@@ -84,3 +84,9 @@ body {
     background-color:white;
     background-image: black;
     }
+
+    .modif{
+        display: flex;
+        justify-content: space-between;
+      
+    }
