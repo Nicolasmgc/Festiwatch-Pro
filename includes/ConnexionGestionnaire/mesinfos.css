@@ -1,7 +1,7 @@
-.round{
+.infocard{
     border: 5px solid black;
     padding: 70px;
-    border-radius: 50%;
+    border-radius: 5%;
     height:560px;
     width: 560px;
     position: relative;
@@ -13,23 +13,23 @@
     transition: all .2s;
 }
 
-.round::after {
+.infocard::after {
     content: "";
-    width: 1000px;
-    height: 1000px;
+    width: 200%;
+    height: 200%;
     background: linear-gradient(225deg,#f53b1e 0%,#911ef6 25%,#ee1616 100%);
     position: absolute;
     z-index: -1;
-    left: -20mm;
-    top: -15mm;
+    left: -100mm;
+    top: -30mm;
     transition: all .5s;
 }
 
-.round:hover::after{
+.infocard:hover::after{
     transform:rotate(300deg);
 }
 
-.round:hover{
+.infocard:hover{
     transform: translate(0, -2mm);
     box-shadow: 10px -10px 25px 0 rgba(168, 107, 247, 0.25), -10px 10px
     25px 0px rgba(255, 255, 255, 0.25);
@@ -50,9 +50,7 @@ h1{
     background-color: white;
     margin: 50px;
     border-radius: 20px;
-    height: 100px;
-    width: 350px;
-    padding-top: 20px;
+    padding: 20px;
 }
 
 button{
@@ -87,7 +85,7 @@ body {
 }
 
 .modif{
-    display: flex;
+    display: inline;
     justify-content: space-between;
-    
+    margin: 50px auto;
 }
