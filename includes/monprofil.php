@@ -26,7 +26,24 @@ if(isset($_SESSION['email']) && (isset($_SESSION['nom'])))
      <p><?php echo $_SESSION['ville']; ?> </p>
     </div>
 
-    <div class="btn">
+    <div class="modif">
+<form method="post">
+<button><input type="submit" name="formrechercheuserid" id="formrechercheuserid" value="Ok">Modifier votre adresse</button>
+    <input type="number" name="rechercheuserid" id="rechercheuserid" placeholder="Chercher un utilisateur par id" required><br/>
+</form>
+
+<form method="post">
+<button><input type="submit" name="formrechercheuserid" id="formrechercheuserid" value="Ok">Modifier votre ville</button>
+    <input type="number" name="rechercheuserid" id="rechercheuserid" placeholder="Chercher un utilisateur par id" required><br/>
+</form>
+
+<form method="post">
+<button><input type="submit" name="formrechercheuserid" id="formrechercheuserid" value="Ok">Modifier votre numéro de téléphone</button>
+    <input type="number" name="rechercheuserid" id="rechercheuserid" placeholder="Chercher un utilisateur par id" required><br/>
+</form>
+</div>
+
+<div class="btn">
     <button ><a href="deconnexion.php"  style="text-decoration:none">Déconnexion</a></button>
 
     <button ><a href="deleteuser.php"  style="text-decoration:none">Supprimer votre compte</a></button>
