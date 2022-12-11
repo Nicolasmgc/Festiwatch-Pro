@@ -12,7 +12,7 @@ if(isset($_SESSION['Fest_nom']))
     <?php
 
 }else{
-    echo "Veuillez vous connecter à votre festival";
+    echo "";
 }
 
 ?>
@@ -20,9 +20,9 @@ if(isset($_SESSION['Fest_nom']))
 <!DOCTYPE html>
 <html>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="Login2.css">
+    <link rel="stylesheet" href="logingestio.css">
 <head>
-    <title>Login</title>
+    <title>Login Gestionnaire</title>
 
 </head>
 
@@ -31,8 +31,11 @@ global $db;
 ?>
 
 <body>
+<div class="login-card">
+    <h2>Connexion</h2>
+    <h3>Veuillez vous connecter à votre festival</h3>
 
-<form method="post">
+<form class="login-form" method="post">
     <input type="texte" name="lfest_nom" id="lfest_nom" placeholder="Le nom de votre festival" required><br/>
     <input type="password" name="fpassword" id="fpassword" placeholder="Votre Mot de passe" required><br/>
     <input type="submit" name="formlogingestio" id="formlogingestio" value="Ok"><br/>
@@ -40,7 +43,7 @@ global $db;
 
     <?php include 'backlogingestio.php'; ?>
 
-    <a href="./Page d'accueil/index.php" class="acc"> Revenir à la page d'accueil </a>
+    <a href="../Page d'accueil/index.php" class="acc"> Revenir à la page d'accueil </a>
 
     </div>
 
