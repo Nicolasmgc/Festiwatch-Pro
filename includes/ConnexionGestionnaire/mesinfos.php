@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if(isset($_SESSION['email']) && (isset($_SESSION['nom'])))
+    if(isset($_SESSION['Fest_email']) && (isset($_SESSION['Fest_nom'])))
     {
 ?>
     <!DOCTYPE html>
@@ -15,7 +15,7 @@
             <div class="infocard">
             
             <p>Votre adresse email personnelle : </p>
-            <p><?php echo $_SESSION['email']; ?> </p>
+            <p><?php echo $_SESSION['Fest_email']; ?> </p>
 
             <br>
             <br>
@@ -23,70 +23,70 @@
             <p><?php 
             if(isset($_SESSION['Fest_id']))
             {
-                echo "Le nom de votre festival : " + $_SESSION['Fest_nom'];
+                echo "Le nom de votre festival : ". $_SESSION['Fest_nom'];
             }
             ?></p>
 
             <p><?php 
             if(isset($_SESSION['Fest_id']))
             {
-                echo "La date de début de " + $_SESSION['Fest_nom'] + " : " + $_SESSION['Fest_datedebut'];
+                echo "La date de début de " . $_SESSION['Fest_nom'] . " : " . $_SESSION['Fest_datedebut'];
             }
             ?></p>
 
             <p><?php 
             if(isset($_SESSION['Fest_id']))
             {
-                echo "La date de fin de " + $_SESSION['Fest_nom'] + " : " + $_SESSION['Fest_datefin'];
+                echo "La date de fin de " . $_SESSION['Fest_nom'] . " : " . $_SESSION['Fest_datefin'];
             }
             ?></p>
 
             <p><?php 
             if(isset($_SESSION['Fest_id']))
             {
-                echo "Le prix d'une place : " + $_SESSION['Fest_prix'];
+                echo "Le prix d'une place : " . $_SESSION['Fest_prix'];
             }
             ?></p>
 
             <p><?php 
             if(isset($_SESSION['Fest_id']))
             {
-                echo "Les accès pour " + $_SESSION['Fest_nom'] + " : " + $_SESSION['Fest_access'];
+                echo "Les accès pour " . $_SESSION['Fest_nom'] . " : " . $_SESSION['Fest_access'];
             }
             ?></p>
             
             <p><?php 
             if(isset($_SESSION['Fest_id']))
             {
-                echo "Le numéro de " + $_SESSION['Fest_nom'] + " : " + $_SESSION['Fest_numtelephone'];
+                echo "Le numéro de téléphone de" . $_SESSION['Fest_nom'] . " : " . $_SESSION['Fest_numtelephone'];
             }
             ?></p>
 
             <p><?php 
             if(isset($_SESSION['Fest_id']))
             {
-                echo "L'e-mail de " + $_SESSION['Fest_nom'] + " : " + $_SESSION['Fest_mail'];
+                echo "L'e-mail de " . $_SESSION['Fest_nom'] . " : " . $_SESSION['Fest_email'];
             }
             ?></p>
 
             <p><?php 
             if(isset($_SESSION['Fest_id']))
             {
-                echo "L'adresse de " + $_SESSION['Fest_nom'] + " : " + $_SESSION['Fest_adresse'];
+                echo "L'adresse de " . $_SESSION['Fest_nom'] . " : " . $_SESSION['Fest_adresse'];
             }
             ?></p>
 
             <p><?php 
             if(isset($_SESSION['Fest_id']))
             {
-                echo "Le code postal de " + $_SESSION['Fest_nom'] + " : " + $_SESSION['Fest_codepostal'];
+                echo "Le code postal de " . $_SESSION['Fest_nom'] . " : " . $_SESSION['Fest_codepostal'];
             }
             ?></p>
 
             <p><?php 
             if(isset($_SESSION['Fest_id']))
             {
-                echo "Le pays de " + $_SESSION['Fest_nom'] +" : " + $_SESSION['Fest_pays'];
+                echo "Le pays de " . $_SESSION['Fest_nom'] ." : " . $_SESSION['Fest_pays'];
             }
             else
             {
