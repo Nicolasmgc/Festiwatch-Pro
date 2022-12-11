@@ -1,0 +1,91 @@
+.infocard{
+    border: 5px solid black;
+    padding: 70px;
+    border-radius: 5%;
+    height:560px;
+    width: 560px;
+    position: relative;
+    margin:30px;
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 0px 0px 0px rgb(113 34 215 / 50%), 0px 0px 0px 0px rgb(225 51 16 / 50%);
+    transition: all .2s;
+}
+
+.infocard::after {
+    content: "";
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(225deg,#f53b1e 0%,#911ef6 25%,#ee1616 100%);
+    position: absolute;
+    z-index: -1;
+    left: -100mm;
+    top: -30mm;
+    transition: all .5s;
+}
+
+.infocard:hover::after{
+    transform:rotate(300deg);
+}
+
+.infocard:hover{
+    transform: translate(0, -2mm);
+    box-shadow: 10px -10px 25px 0 rgba(168, 107, 247, 0.25), -10px 10px
+    25px 0px rgba(255, 255, 255, 0.25);
+}
+
+p{
+    font-size: 20px;
+    text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    border: 5px solid black;
+    background-color: white;
+    margin: 50px;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+button{
+    margin-right: 60px;
+    margin-top: 10px;
+    font-family: 'Montserrat', sans-serif;
+    height: 60px;
+    width: 220px;
+    border: 5px solid black;
+    border-radius: 20px;
+}
+
+a{
+    color: black;
+    font-size:20px ;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    margin: 0;
+    padding: 0 24px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: pan 4s infinite alternate linear;
+}
+
+body {
+    color:black;
+    background-color:white;
+    background-image: black;
+}
+
+.modif{
+    display: inline;
+    justify-content: space-between;
+    margin: 50px auto;
+}

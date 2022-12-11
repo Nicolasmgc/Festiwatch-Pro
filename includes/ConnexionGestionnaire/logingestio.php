@@ -7,13 +7,12 @@
 if(isset($_SESSION['Fest_nom']))
 {
     ?>
-    <h1>Bienvenue sur votre profil</h1>
-    <p>Votre nom : <?php echo $_SESSION['Fest_nom']; ?> </p>
+    <p>Votre nom de festival : <?php echo $_SESSION['Fest_nom']; ?> </p>
 
     <?php
 
 }else{
-    echo "Veuillez vous connecter à votre compte";
+    echo "Veuillez vous connecter à votre festival";
 }
 
 ?>
@@ -42,8 +41,6 @@ global $db;
     <?php include 'backlogingestio.php'; ?>
 
     <a href="./Page d'accueil/index.php" class="acc"> Revenir à la page d'accueil </a>
-    
-    
 
     </div>
 
