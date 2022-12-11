@@ -44,7 +44,7 @@
                                 'handicap' => $handicap
                             ]);
                         echo "Le compte a été créé";
-                        header("Location: login1.php");
+                        // header location à mettre ici ?
                         }else {
                             echo "Ce numéro de téléphone est déjà utilisé";
                         }

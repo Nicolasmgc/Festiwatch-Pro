@@ -13,7 +13,7 @@
             <p>Sign in</p>
             <input type="texte" name="nom" id="nom" placeholder="Votre Nom" required><br/>
             <input type="texte" name="prenom" id="prenom" placeholder="Votre Prenom" required><br/>
-            <input type="email" name="semail" id="semail" placeholder="Votre Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required><br/>
+            <input type="email" name="semail" id="semail" placeholder="Votre Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required><br/> 
             <input type="int" name="numtelephone" id="numtelephone" placeholder="Votre numéro de téléphone" pattern="[0-9]{10}" required><br/>
             <input type="texte" name="adresse" id="adresse" placeholder="Votre Adresse" required><br/>
             <input type="texte" name="pays" id="pays" placeholder="Votre Pays" required><br/>
