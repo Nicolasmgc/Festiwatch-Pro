@@ -54,7 +54,7 @@
           </table>
       
        
-       <div>
+       <div class="pres">
            <br><br> <h1> Festiwatch en quelques mots</h1> <br>
         <table width="100%" border="%">
             <tr>    
@@ -76,4 +76,20 @@
       
         
     </body>
+    <footer>
+           <div class="contact">
+           <br>
+            Nous contacter <br>
+            Mail:<br> prodetec@gmail.com <br>
+            Numéro:<br> 068975412 <br>
+            Adresse: <br>10 Rue de Vanves, 92130 Issy-les-Moulineaux
+            </div>
+         
+            <div class="reseaux">
+            <img src="insta.png" alt="icone de insta" height="60">
+            <img src="youtube.png" alt="icone de insta" height="70">
+            <img src="twitter.png" alt="icone de insta" height="75">
+            </div>
+
+</footer>
 </html>
