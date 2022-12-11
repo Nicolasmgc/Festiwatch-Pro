@@ -10,51 +10,58 @@
         <link rel="icon" href="Logo alternatif.png">
         
         <link rel="stylesheet" type="text/css" href="accueil2.css">
+        
     </head>
     <body>
-        <nav class="navbar">
-            <a href="C:\Nicolas\Travail\A1\APP\ProDeTech\CODE\Première page d'acceuil\Page accueil\accueil.html" class="logo"> <img src="Logo alternatif.png">  </a>
-            <div class="nav-links">
-                <ul>
-                    <li class="active">
-                        <a class="button" href="#">Accueil</a>
-                    </li>
-                    <li> <?php if(isset($_SESSION['email'])){
-                        ?> <a class="button" href="../deconnexion.php">Se déconnecter</a> <?php
-                        }else{ ?> <a class="button" href="../login1.php">Se connecter</a> <?php
-                    }
-                        ?>
-                    </li>
-                    <li>
-                        <a class="button" href="./FAQ/faq.php">FAQ</a>
-                    </li>
-                    <li>
-                        <a class="button" href="./AProposDeNous/A_propos_de_nous.php">A propos de nous</a>
-                    </li>
-                    <li>
-                        <a class="button" href="#">Nous contacter</a>
-                    </li>
-                    <li>
-                        <a class="button"> <?php if(isset($_SESSION['email'])){
+    <nav>
+            <ul>
+                  
+                <li><a href="#" > Accueil </a></li>
+                <li><a href="./FAQ/faq.php"> FAQ </a></li>
+                <li><a href="./AProposDeNous/A_propos_de_nous.php"> A propos de nous </a></li>
+                
+                
+                
+                <li class="deroulant"><?php if(isset($_SESSION['email'])){
                             ?>
-                        <div class="ooo"> aaa </div>
                         
-                    <div class="lalal">   <?php echo $_SESSION['email'];?> </div>
-                    <?php
-                        }else{echo "pas co";} ?></a>
+                      <a><?php echo $_SESSION['email'];?></a>
+                    <ul class="sous">
+                        <li><a href="#"> Voir mon profil </a></li>
+                        <li><a href="../deconnexion.php"> Se déconnecter </a></li>
+                        
+                        </ul>
+                        <li><img src="Logo alternatif.png" class="logo"></li>
 
-                </ul>
-           
-            </div>
+
+                    
+                    
+                        
+                        <?php
+                        
+                        }else{ ?>
+                        <li><a href="../login1.php">Se connecter </a></li>
+                        <img src="Logo alternatif.png" class="logo">
+                        <?php } ?></a>
+                          
+                    
+                    
+                    
+                </li>
+                
+                
+                
+                
+            </ul>
         </nav>
 
-        <!--
+        
 
             <div class="TOP"></div>
             <div class="TOP2"></div>
             <header> </header>
 
-        -->
+        
         <button class="PoButton">
             <div class="Po">Qu'est-ce que FestiWatch ?</div>
         </button>
@@ -64,7 +71,7 @@
         <div class="shadowup"></div>
         
         
-        <!-- <div class="TOP3"></div> -->
+         <div class="TOP3"></div> 
 
         <section>
             <div class="Bloc-description">
@@ -96,4 +103,3 @@
    
     </body>
 </html>
-
