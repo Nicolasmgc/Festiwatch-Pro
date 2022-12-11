@@ -102,7 +102,7 @@
                         <span>Modifier le nom de votre festival</span>
                         <input type="submit" name="formrechercheuserid" id="formrechercheuserid" value="Ok">
                     </button>
-                    <input type="text" name="rechercheuserid" id="rechercheuserid" placeholder="Chercher un utilisateur par id" required><br/>
+                    <input type="text" name="rechercheuserid" id="rechercheuserid" placeholder="Modifier le nom de votre festival" required><br/>
                 </form>
 
                 <form method="post">
@@ -126,7 +126,7 @@
                         <span>Modifier le prix d'une place</span>
                         <input type="submit" name="formrechercheuserid" id="formrechercheuserid" value="Ok">
                     </button>
-                    <input type="number" name="rechercheuserid" id="rechercheuserid" placeholder="Chercher un utilisateur par id" required><br/>
+                    <input type="number" name="rechercheuserid" id="rechercheuserid" placeholder="Modifier le prix d'une place" required><br/>
                 </form>
 
                 <form method="post">
@@ -134,7 +134,7 @@
                         <span>Modifier l'accès au festival</span>
                         <input type="submit" name="formrechercheuserid" id="formrechercheuserid" value="Ok">
                     </button>
-                    <input type="text" name="rechercheuserid" id="rechercheuserid" placeholder="Chercher un utilisateur par id" required><br/>
+                    <input type="text" name="rechercheuserid" id="rechercheuserid" placeholder="Modifier l'accès au festival" required><br/>
                 </form>
 
                 <form method="post">
@@ -142,7 +142,7 @@
                         <span>Modifier le numéro de téléphone du festival</span>
                         <input type="submit" name="formrechercheuserid" id="formrechercheuserid" value="Ok">
                     </button>
-                    <input type="tel" name="rechercheuserid" id="rechercheuserid" placeholder="Chercher un utilisateur par id" required><br/>
+                    <input type="tel" name="rechercheuserid" id="rechercheuserid" placeholder="Modifier le numéro de téléphone" required><br/>
                 </form>
 
                 <form method="post">
@@ -150,15 +150,15 @@
                         <span>Modifier l'adresse e-mail du festival</span>
                         <input type="submit" name="formrechercheuserid" id="formrechercheuserid" value="Ok">
                     </button>
-                    <input type="email" name="rechercheuserid" id="rechercheuserid" placeholder="Chercher un utilisateur par id" required><br/>
+                    <input type="email" name="rechercheuserid" id="rechercheuserid" placeholder="Mofier l'email du festival" required><br/>
                 </form>
 
                 <form method="post">
                     <button>
-                        <span>Modifier l'adress du festival</span>
+                        <span>Modifier l'adresse du festival</span>
                         <input type="submit" name="formrechercheuserid" id="formrechercheuserid" value="Ok">
                     </button>
-                    <input type="text" name="rechercheuserid" id="rechercheuserid" placeholder="Chercher un utilisateur par id" required><br/>
+                    <input type="text" name="rechercheuserid" id="rechercheuserid" placeholder="Modifier l'adresse du festival" required><br/>
                 </form>
 
                 <form method="post">
@@ -166,7 +166,7 @@
                         <span>Modifier le code postal</span>
                         <input type="submit" name="formrechercheuserid" id="formrechercheuserid" value="Ok">
                     </button>
-                    <input type="text" name="rechercheuserid" id="rechercheuserid" placeholder="Chercher un utilisateur par id" required><br/>
+                    <input type="text" name="rechercheuserid" id="rechercheuserid" placeholder="Modifier le code postal du festival" required><br/>
                 </form>
 
                 <form method="post">
@@ -174,7 +174,7 @@
                         <span>Modifier le pays du festival</span>
                         <input type="submit" name="formrechercheuserid" id="formrechercheuserid" value="Ok">
                     </button>
-                    <input type="text" name="rechercheuserid" id="rechercheuserid" placeholder="Chercher un utilisateur par id" required><br/>
+                    <input type="text" name="rechercheuserid" id="rechercheuserid" placeholder="Modifier le pays du festival" required><br/>
                 </form>
             </div>
 
@@ -183,8 +183,6 @@
 
             <div class="btn">
                 <button><a href="deconnexion.php"  style="text-decoration:none">Déconnexion</a></button>
-
-                <button><a href="deleteuser.php"  style="text-decoration:none">Supprimer votre compte</a></button>
 
                 <button><a href="Page d'accueil/index.php"  style="text-decoration:none">Page d'accueil</a></button>
 
