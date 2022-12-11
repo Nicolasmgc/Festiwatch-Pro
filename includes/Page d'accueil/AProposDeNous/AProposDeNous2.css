@@ -23,9 +23,9 @@ h2{
     font-family: 'Montserrat', sans-serif;
     height: 100px; 
     background:linear-gradient(225deg,#f53b1e 0%,#911ef6 25%,#ee1616); 
+    background-clip: border-box;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
-    
 }
 
 p{
@@ -72,9 +72,9 @@ p1{
     font-family: 'Montserrat', sans-serif;
     color : black ;
     background:linear-gradient(225deg,#f53b1e 0%,#911ef6 25%,#ee1616); 
+    background-clip: border-box;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    
-    
 }
 
 div{
@@ -124,4 +124,8 @@ footer{
    background-color:white ;
     height: 150px;
     width: 1510px;
+}
+html, body 
+{ 
+ height: 100%;
 }
