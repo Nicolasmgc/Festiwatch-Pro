@@ -142,5 +142,11 @@ html, body
     bottom:10%;
     left:40%;
     justify-content: space-between;
+}
+
+.lien{
+    font-family: 'Montserrat', sans-serif;
+    color: aliceblue;
+    margin-left: 35%;
     
 }
