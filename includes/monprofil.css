@@ -12,6 +12,7 @@
     box-shadow: 0px 0px 0px 0px rgb(113 34 215 / 50%), 0px 0px 0px 0px rgb(225 51 16 / 50%);
     transition: all .2s;
 }
+
 .round::after {
     content: "";
     width: 1000px;
@@ -23,6 +24,7 @@
     top: -15mm;
     transition: all .5s;
 }
+
 .round:hover::after{
     transform:rotate(300deg);
 }
@@ -32,6 +34,7 @@
     box-shadow: 10px -10px 25px 0 rgba(168, 107, 247, 0.25), -10px 10px
     25px 0px rgba(255, 255, 255, 0.25);
 }
+
 p{
     font-size: 20px;
     text-align: center;
@@ -41,15 +44,15 @@ p{
 
 h1{
     text-align: center;
-     font-family: 'Montserrat', sans-serif;
-   color: black;
-   border: 5px solid black;
-   background-color: white;
-   margin: 50px;
-   border-radius: 20px;
-   height: 100px;
-   width: 350px;
-   padding-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    border: 5px solid black;
+    background-color: white;
+    margin: 50px;
+    border-radius: 20px;
+    height: 100px;
+    width: 350px;
+    padding-top: 20px;
 }
 h2{
     text-align: center;
@@ -75,11 +78,11 @@ button{
     border: 5px solid black;
     border-radius: 20px;
 }
+
 a{
     color: black;
     font-size:20px ;
 }
-
 
 body {
     display: grid;
@@ -88,9 +91,7 @@ body {
     padding: 0 24px;
     background-repeat: no-repeat;
     background-size: cover;
-    
-    animation: 
-    pan 4s infinite alternate linear;
+    animation: pan 4s infinite alternate linear;
 }
 
 body {
@@ -99,35 +100,8 @@ body {
     background-image:url(image.jpg);
     }
 
-.modif{
+    .modif{
         display: flex;
         justify-content: space-between;
-
+      
     }
-
-input[type=text]{
-    margin-right: 50px;
-    margin-top: 10px;
-    font-family: 'Montserrat', sans-serif;
-    height: 60px;
-    width: 220px;
-    border: 5px solid black;
-    border-radius: 20px;
-    text-align: center;
-    }
-input[type=submit]{
-      margin-top: 10px;
-      margin-left: 50px;
-        font-family: 'Montserrat', sans-serif;
-        height: 40px;
-        width: 120px;
-        border: 5px solid black;
-        border-radius: 15px;
-        }
-label{
-    display: block;
-    text-align: center;
-    margin-right: 50px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 22px;
-}

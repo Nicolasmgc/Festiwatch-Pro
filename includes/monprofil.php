@@ -54,6 +54,27 @@ if(isset($_SESSION['email']) && (isset($_SESSION['nom'])))
    <input type="submit" name="formupdate" id="formupdate" value="Ok">
 </form>
 </div>
+<?php include 'C:\wamp64\www\includes\database.php';
+  global $db;
+  ?>
+
+  <?php
+  if(isset($_POST['formupdate'])){
+
+    extract($_POST);
+
+    if(!empty($padresse)&& !empty ($pville)&& !empty ($pemail)&& !empty ($pnumtelephone)){
+        $z = $db->prepare("UPDATE user SET adresse = :adresse, ville = :ville, email = :email, numtelephone = :numtelephone WHERE id = :id");
+        $z ->execute([
+            'adresse' => $padresse,
+            'ville'  => $pville,
+            'email'  => $pmail;
+            'numtelephone'  => $pnumtelephone
+            'id' =>$_SESSION['id']
+        ]);
+        echo "Changement faits";
+    }
+  }   ?>
 <br/><br/><br/>
 <div class="btn">
     <button ><a href="deconnexion.php"  style="text-decoration:none">Déconnexion</a></button>
