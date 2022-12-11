@@ -86,7 +86,7 @@
             </div>
          
             <div class="reseaux">
-            <img src="insta.png" alt="icone de insta" height="60">
+            <a href="https://www.instagram.com/pro_detech"> <img src="insta.png" alt="icone de insta" height="60"></a>
             <img src="youtube.png" alt="icone de insta" height="70">
             <img src="twitter.png" alt="icone de insta" height="75">
             </div>
