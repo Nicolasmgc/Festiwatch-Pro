@@ -39,19 +39,19 @@ if(isset($_SESSION['email']) && (isset($_SESSION['nom'])))
 <form method="post">
 <label for="pville">Modifier <br/>votre ville</label><br/>
     <input type="text" name="pville" id="pville" placeholder="Nouvelle ville" required><br/>
-   <input type="submit" name="formupdate" id="formupdate" value="Ok">
+   <input type="submit" name="formupdate1" id="formupdate1" value="Ok">
 </form>
 
 <form method="post">
 <label for="pemail">Modifier <br/>votre email</label><br/>
     <input type="text" name="pemail" id="pemail" placeholder="Nouveau mail" required><br/>
-   <input type="submit" name="formupdate" id="formupdate" value="Ok">
+   <input type="submit" name="formupdate2" id="formupdate2" value="Ok">
 </form>
 
 <form method="post">
 <label for="pnumtelephone" >Modifier votre numéro <br/>de téléphone </label><br/>
     <input type="text" name="pnumtelephone" id="pnumtelephone" placeholder="Nouveau numéro" required><br/>
-   <input type="submit" name="formupdate" id="formupdate" value="Ok">
+   <input type="submit" name="formupdate3" id="formupdate3" value="Ok">
 </form>
 </div>
 <?php include 'C:\wamp64\www\includes\database.php';
@@ -63,13 +63,51 @@ if(isset($_SESSION['email']) && (isset($_SESSION['nom'])))
 
     extract($_POST);
 
-    if(!empty($padresse)&& !empty ($pville)&& !empty ($pemail)&& !empty ($pnumtelephone)){
-        $z = $db->prepare("UPDATE user SET adresse = :adresse, ville = :ville, email = :email, numtelephone = :numtelephone WHERE id = :id");
+    if(!empty($padresse)){
+        $z = $db->prepare("UPDATE user SET adresse = :adresse WHERE id = :id");
         $z ->execute([
             'adresse' => $padresse,
-            'ville'  => $pville,
-            'email'  => $pmail;
-            'numtelephone'  => $pnumtelephone
+
+            'id' =>$_SESSION['id']
+        ]);
+        echo "Changement faits";
+    }
+}
+if(isset($_POST['formupdate1'])){
+
+    extract($_POST);
+
+    if(!empty($pville)){
+        $z = $db->prepare("UPDATE user SET ville = :ville WHERE id = :id");
+        $z ->execute([
+            'ville' => $pville,
+
+            'id' =>$_SESSION['id']
+        ]);
+        echo "Changement faits";
+    }
+}
+if(isset($_POST['formupdate2'])){
+    extract($_POST);
+
+    if(!empty($pemail)){
+        $z = $db->prepare("UPDATE user SET email = :email WHERE id = :id");
+        $z ->execute([
+            'email' => $pemail,
+
+            'id' =>$_SESSION['id']
+        ]);
+        echo "Changement faits";
+    }
+}
+if(isset($_POST['formupdate3'])){
+    extract($_POST);
+    
+        if(!empty($pnumtelephone)){
+        $z = $db->prepare("UPDATE user SET numtelephone = :numtelephone WHERE id = :id");
+        $z ->execute([
+            'numtelephone' => $pnumtelephone,
+
             'id' =>$_SESSION['id']
         ]);
         echo "Changement faits";
