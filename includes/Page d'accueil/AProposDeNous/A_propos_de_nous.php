@@ -15,7 +15,6 @@
     
         
         </header>
-             <img src="prodetech 2.png" alt="Logo de l'entreprise"class="image" ><br>
             <h2>Notre mission</h2><span class="vertical"></span>            
             <p>Nous sommes un entreprises composé de septs jeunes ingénieur, prêt à relever les défis de demain. Notre entreprise cherche à faciliter et 
             améiolerer votre quotidien  en vous informant sur la qualité de votre envirronement, et plus particulierement en envirronement festif.
@@ -55,7 +54,7 @@
           </table>
       
        
-       <div>
+       <div class="pres">
            <br><br> <h1> Festiwatch en quelques mots</h1> <br>
         <table width="100%" border="%">
             <tr>    
@@ -77,4 +76,26 @@
       
         
     </body>
+    <footer>
+           <div class="contact">
+           <br>
+            Nous contacter <br>
+            Mail:<br> prodetec@gmail.com <br>
+            Numéro:<br> 068975412 <br>
+            Adresse: <br>10 Rue de Vanves, 92130 Issy-les-Moulineaux
+            </div>
+         
+            <div class="reseaux">
+            <a href="https://www.instagram.com/pro_detech"> <img src="insta.png" alt="icone de insta" height="60"></a>
+            <img src="youtube.png" alt="icone de insta" height="70">
+            <img src="twitter.png" alt="icone de insta" height="75">
+            </div>
+
+            <div class="lien">
+            <a href="https://www.instagram.com/pro_detech">Condition général d'utilisation</a>
+            <a href="faq.php"> FAQ</a>
+            <a href="login1.php">Connexion</a>
+            </div>
+
+</footer>
 </html>

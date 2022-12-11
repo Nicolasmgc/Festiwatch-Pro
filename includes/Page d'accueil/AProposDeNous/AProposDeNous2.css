@@ -23,9 +23,9 @@ h2{
     font-family: 'Montserrat', sans-serif;
     height: 100px; 
     background:linear-gradient(225deg,#f53b1e 0%,#911ef6 25%,#ee1616); 
+    background-clip: border-box;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
-    
 }
 
 p{
@@ -72,12 +72,12 @@ p1{
     font-family: 'Montserrat', sans-serif;
     color : black ;
     background:linear-gradient(225deg,#f53b1e 0%,#911ef6 25%,#ee1616); 
+    background-clip: border-box;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    
-    
 }
 
-div{
+.pres{
 
     height: 900px;
     width: 1510px;
@@ -121,7 +121,39 @@ table{
     } 
 
 footer{
-   background-color:white ;
-    height: 150px;
-    width: 1510px;
+   background-color:black ;
+    height: 200px;
+    color: aliceblue;
+}
+html, body 
+{ 
+ height: 100%;
+ overflow:scroll;
+}
+.contact{
+    font-size:15px;
+    margin-left: 15px;
+    font-family: 'Montserrat', sans-serif;
+    flex-direction: column;
+    width:220px;
+}
+.reseaux{
+    display:block;
+    position: relative;
+    bottom:60%;
+    left:40%;
+    justify-content: space-between;
+}
+
+.lien{
+    font-family: 'Montserrat', sans-serif;
+    color: aliceblue;
+    position: relative;
+    bottom:40%;
+    margin-left: 35%;    
+    
+}
+
+a{
+    color: white;padding: 5px;
 }
