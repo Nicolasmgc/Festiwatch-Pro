@@ -26,23 +26,35 @@ if(isset($_SESSION['email']) && (isset($_SESSION['nom'])))
      <p><?php echo $_SESSION['ville']; ?> </p>
     </div>
 
+    <h2>Modifier votre profil</h2>
+
+
     <div class="modif">
 <form method="post">
-<button><input type="submit" name="formrechercheuserid" id="formrechercheuserid" value="Ok">Modifier votre adresse</button>
-    <input type="number" name="rechercheuserid" id="rechercheuserid" placeholder="Chercher un utilisateur par id" required><br/>
+<label for="padresse">Modifier<br/> votre adresse</label><br/>
+    <input type="text" name="padresse" id="padresse" placeholder="Nouvelle adresse" required><br/>
+   <input type="submit" name="formupdate" id="formupdate" value="Ok">
 </form>
 
 <form method="post">
-<button><input type="submit" name="formrechercheuserid" id="formrechercheuserid" value="Ok">Modifier votre ville</button>
-    <input type="number" name="rechercheuserid" id="rechercheuserid" placeholder="Chercher un utilisateur par id" required><br/>
+<label for="pville">Modifier <br/>votre ville</label><br/>
+    <input type="text" name="pville" id="pville" placeholder="Nouvelle ville" required><br/>
+   <input type="submit" name="formupdate" id="formupdate" value="Ok">
 </form>
 
 <form method="post">
-<button><input type="submit" name="formrechercheuserid" id="formrechercheuserid" value="Ok">Modifier votre numéro de téléphone</button>
-    <input type="number" name="rechercheuserid" id="rechercheuserid" placeholder="Chercher un utilisateur par id" required><br/>
+<label for="pemail">Modifier <br/>votre email</label><br/>
+    <input type="text" name="pemail" id="pemail" placeholder="Nouveau mail" required><br/>
+   <input type="submit" name="formupdate" id="formupdate" value="Ok">
+</form>
+
+<form method="post">
+<label for="pnumtelephone" >Modifier votre numéro <br/>de téléphone </label><br/>
+    <input type="text" name="pnumtelephone" id="pnumtelephone" placeholder="Nouveau numéro" required><br/>
+   <input type="submit" name="formupdate" id="formupdate" value="Ok">
 </form>
 </div>
-
+<br/><br/><br/>
 <div class="btn">
     <button ><a href="deconnexion.php"  style="text-decoration:none">Déconnexion</a></button>
 

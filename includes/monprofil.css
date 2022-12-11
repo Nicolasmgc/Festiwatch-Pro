@@ -51,6 +51,20 @@ h1{
    width: 350px;
    padding-top: 20px;
 }
+h2{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+  color: black;
+  border: 5px solid black;
+  background-color: white;
+  margin: 50px;
+  border-radius: 20px;
+  height: 50px;
+  width: 350px;
+  padding-top: 20px;
+
+
+}
 
 button{
     margin-right: 60px;
@@ -82,11 +96,38 @@ body {
 body {
     color:black;
     background-color:white;
-    background-image: black;
+    background-image:url(image.jpg);
     }
 
-    .modif{
+.modif{
         display: flex;
         justify-content: space-between;
-      
+
     }
+
+input[type=text]{
+    margin-right: 50px;
+    margin-top: 10px;
+    font-family: 'Montserrat', sans-serif;
+    height: 60px;
+    width: 220px;
+    border: 5px solid black;
+    border-radius: 20px;
+    text-align: center;
+    }
+input[type=submit]{
+      margin-top: 10px;
+      margin-left: 50px;
+        font-family: 'Montserrat', sans-serif;
+        height: 40px;
+        width: 120px;
+        border: 5px solid black;
+        border-radius: 15px;
+        }
+label{
+    display: block;
+    text-align: center;
+    margin-right: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+}
