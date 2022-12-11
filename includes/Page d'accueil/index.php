@@ -27,7 +27,7 @@
                         
                       <a><?php echo $_SESSION['email'];?></a>
                     <ul class="sous">
-                        <li><a href="#"> Voir mon profil </a></li>
+                        <li><a href="../monprofil.php"> Voir mon profil </a></li>
                         <li><a href="../deconnexion.php"> Se déconnecter </a></li>
                         
                         </ul>
