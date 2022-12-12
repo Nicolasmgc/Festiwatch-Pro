@@ -21,7 +21,7 @@ session_start();
 
     <h1>CGU</h1>
 
-    <p>Les présentes conditions générales d'utilisation (dites « CGU ») ont pour objet l'encadrement juridique des modalités de mise à disposition du site et des services par FestiWatch et de définir les conditions d’accès et d’utilisation des services par « l'Utilisateur ».
+    <p>Les conditions générales d'utilisation (dites « CGU ») ont pour objet l'encadrement juridique des modalités de mise à disposition du site et des services par FestiWatch et de définir les conditions d’accès et d’utilisation des services par « l'Utilisateur ».
         Les présentes CGU sont accessibles sur le site à la rubrique « CGU ».
         
         Toute inscription ou utilisation du site implique l'acceptation sans aucune réserve ni restriction des présentes CGU par l’utilisateur. Lors de l'inscription sur le site via le Formulaire d’inscription, chaque utilisateur accepte expressément les présentes CGU en cochant la case précédant le texte suivant : « Je reconnais avoir lu et compris les CGU et je les accepte ».
