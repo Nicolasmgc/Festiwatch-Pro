@@ -8,71 +8,80 @@
         <title>A propos de nous </title>
         <link rel="stylesheet" href="AProposDeNous2.css">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap" rel="stylesheet">
-        
     </head>
     <body>
-        
+             <div class="haut">
             <h2>Notre mission</h2><span class="vertical"></span>            
-            <p>Nous sommes un entreprises composé de septs jeunes ingénieur, prêt à relever les défis de demain. Notre entreprise cherche à faciliter et 
-            améiolerer votre quotidien  en vous informant sur la qualité de votre envirronement, et plus particulierement en envirronement festif.
-            Afin de prévenir d'éventuelle accident et de pouvoir profiter d'un evenement en toute tranquilloter, nous avons développer la festiwath.
-             Notre équipe ce compose de Nicolas merbouche. Notre directeur général.Bastien Maupas notre consultant informatique
-            </p><br><br><br><br>
-       
-        
-            <div class="yellow-bloc">
-            <h4>Qui sommes-nous ?</h4> <br>
-            </div><br><br><br>
-        
-
-        <table width="100%" border="20%">
-            <tr>    
-                <td><img src="PDG.jpg" alt="Photo du PDG de l'entreprise"  height="175"  class="image1" /><br><br>
-                    <p1>Directeur général Nicolas Merbouche</p1></td>
-                <td><img src="Anais.jpg" alt="Photo d'anais"  height="175" class="image1"/><br><br>
-                    <p1>Responsable Marketing  Anaïs Messalti</p1></td>
-                <td><img src="Bastien.jpg" alt="Photo de bastien"  height="175" class="image1" /><br><br>
-                    <p1>Consultant informatique  Bastien Maupas</p1></td>
-                </tr>
-            <tr>    
-                <td><img src="TOM.jpg" alt="Photo de Tom"  height="175"  class="image1" /><br><br>
-                    <p1>Développeur <br> Tom Hall</p1></td>
-                <td><img src="Cons.jpg" alt="Photo de Constance"  height="175" class="image1" /><br><br>
-                     <p1>Chargée de conception  Constance Persad</p1></td>
-                <td><img src="Arno.jpg" alt="Photo d'Arno"  height="175" class="image1"/><br><br>
-                     <p1>UX / UI Designer<br> Arno Laperotine</p1></td>
-                </tr>
-            <tr>    
-                    <td></td>
-                    <td><img src="Ziad.jpg" alt="Photo de Ziad"  height="175"  class="image1" /><br><br>
-                    <p1> Développeur<br>Ziad El Younsi  </p1></td>
-                    <td></td>
-            </tr>
-          </table>
-      
-       
-       <div class="pres">
-           <br><br> <h1> Festiwatch en quelques mots</h1> <br>
-        <table width="100%" border="%">
-            <tr>    
-                <td><img src="health22.png" alt="icone de santé"  height="310"  class="image2" /><br>
-                <p2><br>La Festiwatch vous permet de relevé votre rythme cardiaque, ainsi que votre température.Vos données de santé sont stocker et peuvent être consulter 
-                    sur le site en temps réel et  après le festival. Nous considérons que votre santé et primordiale pour passer un bon moment, ces données vous 
-                    permetterons de réagir au plus vite en cas de problème.</p2></td>
-                <td><img src="icones-de-localisation.png" alt="icone de localisation"  height="325" class="image2"/><br>
-                <p2><br>La Festiwatch vous permet de vous localiser vous et vos amis sur un carte, afin de vous retrouver plus facilement lors de Festivales. Un bouton d'urgence sur votre monter vous permet d'envoyer votre
-                    localisation, afin qu'une équipe viennent vous portez secours au plus vite en cas d'accident.
-                </p2></td>
-                <td><img src="party2.png" alt="icone de fete"  height="325" class="image2" /><br>
-                <p2><br>Des capteurs vous permettent de mesurer la qualité de l'air autour de vous, en cas de donnée anormale une alerte vous sera envoyée.
-                     Pour que votre expérience en festival ce passe au mieux nous relevons également des données sonores et la montre
-                    inclus un compteurs de boisson alcooliser,afin de savoir où vous en êtes ;). 
-                </p2></td>
-                </tr></table>
+            <br>Nous sommes une entreprise composée de sept jeunes ingénieurs, prêts á relever les défis de demain.
+              Notre entreprise cherche à faciliter et à améliorer votre quotidien en vous informant sur la qualité de votre environnement,
+               en l’occurrence un environnement festif. Afin de prévenir d’éventuels accidents  et de pouvoir profiter de votre événement en toute tranquillité, nous avons développer une montre connectée “FestiWatch”.
             </div>
-      
         
-    </body>
+             <div class="yellow-bloc">
+            <h4>Qui sommes-nous ?</h4> 
+            </div>
+        
+ 
+        <div class="photo1">
+        <div class="nicolas">
+        <img src="PDG.jpg" alt="Photo du PDG de l'entreprise"   class="image" />
+        <p>Directeur général</br> Nicolas Merbouche </p> 
+        </div>
+
+        <div class="anais">
+        <img src="Anais.jpg" alt="Photo d'anais" class="image" />
+        <p> Responsable Marketing </br> Anaïs Messalti</p>
+        </div>
+
+        <div class="bastien" >
+         <img src="Bastien.jpg" alt="Photo de bastien"  class="image" />
+        <p>Consultant informatique </br> Bastien Maupas</p>
+        </div>
+                    
+        </div>
+
+        <div class="photo1">
+        <div class="tom">
+        <img src="TOM.jpg" alt="Photo de tom"   class="image" />
+        <p>Développeur</br> Tom Hall</p>
+        </div>
+
+        <div class="constance">
+        <img src="Cons.jpg" alt="Photo constance" class="image" />
+        <p> Chargée de conception </br>  Constance Persad</p>
+        </div>
+
+        <div class="arno" >
+         <img src="Arno.jpg" alt="Photo d'Arno"  class="image" />
+         <p>UX / UI Designer</br> Arno Laperotine</p></div>
+        </div>
+        
+         <div class="ziad">
+        <img src="Ziad.jpg" alt="Photo de Ziad" class="image"/>
+        <p>Développeur<br>Ziad El Younsi</p>
+       </div>
+                
+       <h1> Festiwatch en quelques mots</h1>
+       <div class="photo2">
+       <img src="health22.png" alt="icone de santé"  height="310"  class="image1" /><br>
+       <img src="icones-de-localisation.png" alt="icone de localisation"  height="325"class="image1" /><br>
+       <img img src="party2.png" alt="icone de fete"  height="325"class="image1" /><br>
+       </div>
+       <div class="paragraphe">
+       <p>FestiWatch vous permet de mesurer votre fréquence cardiaque, ainsi que votre température et l’intensité sonore
+        autour de vous. Vos données de santé sont stockées et peuvent être consultées sur le site en temps réel, mais aussi 
+        après le festival. Nous considérons que votre santé et votre sécurité sont primordiales pour passer un bon moment entres amis. 
+        Ces données nous permettront de réagir rapidement en cas de problème. </p> 
+        <p>La FestiWatch vous permet également de vous localiser et de localiser vos amis sur une carte, afin de vous retrouver
+        facilement au courant de la soirée. Un bouton d’urgence a été ajouté aux montres pour vous permettre d’envoyer votre localisation, 
+        afin qu’une équipe de sécurité vienne vous porter secours au plus vite si un problème survient. </p> 
+        <p>Des capteurs vous permettent de mesurer la qualité de l’air autour de vous, si des données anormales sont récoltées,
+         une alerte nous sera envoyer,pour que votre expérience se passe au mieux.
+        FestiWatch vous permet de vous localiser et de localiser vos amis sur une carte afin de vous retrouver plus facilement. </p> 
+       </div>
+             <!--    
+               
+    </body>-- > 
     <footer>
            <div class="contact">
            <br>
