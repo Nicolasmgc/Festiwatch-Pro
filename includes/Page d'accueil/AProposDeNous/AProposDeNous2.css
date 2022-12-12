@@ -157,3 +157,9 @@ html, body
 a{
     color: white;padding: 5px;
 }
+
+body{
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
