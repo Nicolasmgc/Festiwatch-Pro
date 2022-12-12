@@ -3,20 +3,6 @@
 ?>
 
 
-<?php 
-if(isset($_SESSION['Fest_nom']))
-{
-    ?>
-    <p>Votre nom de festival : <?php echo $_SESSION['Fest_nom']; ?> </p>
-
-    <?php
-
-}else{
-    echo "";
-}
-
-?>
-
 <!DOCTYPE html>
 <html>
     <meta charset="utf-8">

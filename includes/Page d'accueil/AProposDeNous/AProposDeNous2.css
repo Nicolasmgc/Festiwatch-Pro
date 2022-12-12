@@ -158,3 +158,11 @@ a{
     color: white;padding: 5px;
 }
 
+<<<<<<< HEAD
+=======
+body{
+    resize: unset;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+>>>>>>> daa2f982ec01909f5fdeda00dba8245e349a4197

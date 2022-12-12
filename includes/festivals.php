@@ -3,10 +3,6 @@
 ?>
 
 <?php
-    echo $_SESSION['email'];
-?>
-
-<?php
   $host = 'localhost';
   $dbname = 'siteweb';
   $username = 'root';
@@ -26,17 +22,30 @@
   }
 ?>
 
+<?php include 'C:\wamp64\www\includes\database.php';
+    global $db;
+    ?>
+
 
 <!DOCTYPE html>
 <html>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="listfestivals.css">
+    <link rel="stylesheet" href="festivals.css">
 </br>
-<head>Afficher la liste des festivals</head>
+<head></head>
+
 <body>
  <h1>Liste des festivals</h1>
- <table>
+
+ <p>Recherchez votre festival afin de suivre vos données en temps réel. La montre Festiwatch vous sera attribuée une fois arrivé à votre festival.  </p>
+ <div class=barre> <form method="post">
+    <input type="texte" name="recherche" id="recherche" placeholder="Recherchez le festival que vous souhaitez" required><br/>
+    <button><input type="submit" name="formrecherche" id="formrecherche" value="OK"></button>
+  </form>
+  </div>
+ <table class= "fond" style ="background-image:url('fondTable.jpeg');" >
    <thead>
+    <div class="scroller">
      <tr>
        <th class="test">ID</th>
        <th>Nom</th>
@@ -50,12 +59,19 @@
        <th>Access</th>
        <th>Lien</th>
      </tr>
+     </div>
    </thead>
+
+
+<?php include 'C:\wamp64\www\includes\festivalrecherche.php'; ?>
+
+
+
    <tbody>
      <?php while($row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
-     <tr>
+     <tr> 
        <td><?php echo htmlspecialchars($row['Fest_id']); ?></td>
-       <td><?php echo htmlspecialchars($row['Fest_nom']); ?></td>
+       <td><a href="./Page d'accueil/accueil.php" class=festival ><?php echo htmlspecialchars($row['Fest_nom']); ?></a></td>
        <td><?php echo htmlspecialchars($row['Fest_datedebut']); ?></td>
        <td><?php echo htmlspecialchars($row['Fest_datefin']); ?></td>
        <td><?php echo htmlspecialchars($row['Fest_prix']); ?></td>
@@ -72,39 +88,28 @@
 
      </br>
 
-     <?php include 'C:\wamp64\www\includes\database.php';
-    global $db;
-    ?>
-
-<?php include 'C:\wamp64\www\includes\festivalrecherche.php'; ?>
-
- <form method="post">
-    <input type="texte" name="recherche" id="recherche" placeholder="Cherchez le festival que vous souhaitez" required><br/>
-    <button><input type="submit" name="formrecherche" id="formrecherche" value="Ok"></button>
-</form>
 
 
-<a href="Page d'accueil/index.php">Accueil</a>
+<a href="index.php">Accueil</a>
 
 
 
 <?php
 
-if(isset($resultf['Fest_nom']))
-{
-    ?>
-<h1>Bienvenue sur la page du festival <?php echo $resultf['Fest_nom'] ?></h1>
-    <h2>Les informations</h2>
-    <p>L'id du festival : <?php echo $resultf['Fest_id']; ?> </p>
-    <p>Le nom du festival : <?php echo $resultf['Fest_nom']; ?> </p>
-    <?php
+// if(isset($resultf['Fest_nom']))
+// {
+//     ?>
+// <h1>Bienvenue sur la page du festival <?php echo $resultf['Fest_nom'] ?></h1>
+//     <h2>Les informations</h2>
+//     <p>L'id du festival : <?php echo $resultf['Fest_id']; ?> </p>
+//     <p>Le nom du festival : <?php echo $resultf['Fest_nom']; ?> </p>
+//     <?php
 
-}else{
-    echo "Veuillez chercher un festival";
-}
+// }else{
+//     echo "liste des festivals";
+// }
 
 ?>
-
 </body>
 </html>
 
