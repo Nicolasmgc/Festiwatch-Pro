@@ -92,7 +92,7 @@
             </div>
 
             <div class="lien">
-            <a href="https://www.instagram.com/pro_detech">Condition général d'utilisation</a>
+            <a href="../../cgu.php">Condition général d'utilisation</a>
             <a href="faq.php"> FAQ</a>
             <a href="login1.php">Connexion</a>
             </div>
