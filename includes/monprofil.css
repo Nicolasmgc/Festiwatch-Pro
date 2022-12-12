@@ -109,12 +109,10 @@ body {
     }
 
 input[type=submit]{
-    margin-left:100px;
-    margin-top: 10px;
-    
+    margin:  5% 23%;
     font-family: 'Montserrat', sans-serif;
     height: 60px;
-    width: 75px;
+    width: 40%;
     border: 5px solid black;
     border-radius: 20px;
     
@@ -134,6 +132,6 @@ label{
     font-size: 25px;
     text-align: center;
     border: 5px solid black;
-    margin-right: 40px;
+    margin-right: 10%;
     background: #911ef6;
 }
