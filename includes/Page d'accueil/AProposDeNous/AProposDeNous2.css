@@ -159,7 +159,7 @@ a{
 }
 
 body{
-
+    resize: unset;
     overflow-x: hidden;
     overflow-y: scroll;
 }
