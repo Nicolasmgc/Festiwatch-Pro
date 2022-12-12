@@ -11,10 +11,7 @@
         
     </head>
     <body>
-        <header>
-    
         
-        </header>
             <h2>Notre mission</h2><span class="vertical"></span>            
             <p>Nous sommes un entreprises composé de septs jeunes ingénieur, prêt à relever les défis de demain. Notre entreprise cherche à faciliter et 
             améiolerer votre quotidien  en vous informant sur la qualité de votre envirronement, et plus particulierement en envirronement festif.
