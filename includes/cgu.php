@@ -11,7 +11,7 @@ session_start();
 </head>
 <body>
     <div class="header">
-        <a href="" class="logo"><img src="src/Logo alternatif.png"></a>
+        <a href="" class="logo"><img src="Page d'accueil/Logo alternatif.png"></a>
         <div class="header-right">
           <a class="active" href="">Accueil</a>
           <a href="">Nous contacter</a>
