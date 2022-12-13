@@ -112,7 +112,7 @@
             }
             else
             {
-                echo "Veuillez vous connecter à un festival.";
+
             }
             ?></p>
             </div>

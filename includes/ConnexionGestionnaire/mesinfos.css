@@ -22,6 +22,7 @@
     left: -80%;
     top: -50%;
     transition: all .5s;
+    
 }
 
 .infocard:hover::after{
