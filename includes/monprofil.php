@@ -8,9 +8,49 @@ if(isset($_SESSION['email']) && (isset($_SESSION['nom'])))
         <head>
            <link rel="stylesheet" href="monprofil.css">
            <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap" rel="stylesheet">
-           <h1>Bienvenue sur votre profil</h1>
+           
          </head>
      <body> 
+     <nav>
+            <ul>
+               <li><a><img src="Logo alternatif2.png" class="logo" >  </a></li>   
+                  
+                <li><a href="./Page d'accueil/index.php" > Accueil </a></li>
+                <li><a href="./Page d'accueil/FAQ/faq.php"> FAQ </a></li>
+                <li><a href="./Page d'accueil/AProposDeNous/A_propos_de_nous.php"> A propos de nous </a></li>
+                
+                <li class="deroulant"><?php if(isset($_SESSION['email'])){
+                            ?>
+                        
+                      <a><?php echo $_SESSION['email'];?></a>
+                        <ul class="sous">
+                            <li><a href="#"> Voir mon profil </a></li>
+                            <li><a href="./deconnexion.php"> Se déconnecter </a></li>
+                        </ul>
+                        
+
+
+                    
+                    
+                        
+                        <?php
+                        
+                        }else{ ?>
+                        <li><a href="../login1.php">Se connecter </a></li>
+                        
+                        <?php } ?></a>
+                          
+                    
+                    
+                    
+                </li>
+                
+                
+                
+                
+            </ul>
+        </nav>
+        <h1>Bienvenue sur votre profil</h1>
      <div class="round"> 
     <p>Votre email : </p>
      <p><?php echo $_SESSION['email']; ?> </p>
@@ -115,9 +155,9 @@ if(isset($_POST['formupdate3'])){
   }   ?>
 <br/><br/><br/>
 <div class="btn">
-    <button ><a href="deconnexion.php"  style="text-decoration:none">Déconnexion</a></button>
+    <button ><a href="./deconnexion.php"  style="text-decoration:none">Déconnexion</a></button>
 
-    <button ><a href="deleteuser.php"  style="text-decoration:none">Supprimer votre compte</a></button>
+    <button ><a href="./deleteuser.php"  style="text-decoration:none">Supprimer votre compte</a></button>
 
     <button ><a href="Page d'accueil/index.php"  style="text-decoration:none">Page d'accueil</a></button>
 
@@ -140,8 +180,8 @@ if(isset($_POST['formupdate3'])){
             <img src="twitter.png" alt="icone de insta" height="75">
             </div>
             <div class="lien">
-            <a href="../../cgu.php">Conditions général d'utilisation</a>
-            <a href="faq.php"> FAQ</a>
+            <a href="./cgu.php">Conditions général d'utilisation</a>
+            <a href="./Page d'accueil/FAQ/faq.php"> FAQ</a>
             <a href="login1.php">Connexion</a>
             </div> </div>
              </footer>
