@@ -15,6 +15,7 @@
     <body>
     <nav>
             <ul>
+               <li><img src="Logo alternatif.png" class="logo" >  </a></li>   
                   
                 <li><a href="#" > Accueil </a></li>
                 <li><a href="./FAQ/faq.php"> FAQ </a></li>
@@ -28,7 +29,7 @@
                             <li><a href="../monprofil.php"> Voir mon profil </a></li>
                             <li><a href="../deconnexion.php"> Se déconnecter </a></li>
                         </ul>
-                        <li><img src="Logo alternatif.png" class="logo"></li>
+                        
 
 
                     
@@ -38,7 +39,7 @@
                         
                         }else{ ?>
                         <li><a href="../login1.php">Se connecter </a></li>
-                        <img src="Logo alternatif.png" class="logo">
+                        
                         <?php } ?></a>
                           
                     
