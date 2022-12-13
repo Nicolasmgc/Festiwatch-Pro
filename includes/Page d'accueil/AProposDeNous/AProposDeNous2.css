@@ -102,6 +102,7 @@ h1{
 }
 footer{
    background-color:black ;
+   width: 100%;
    display: flex;
 }
 
