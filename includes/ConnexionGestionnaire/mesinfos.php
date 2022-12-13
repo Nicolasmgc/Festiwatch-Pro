@@ -97,85 +97,75 @@
 
 
             <div class="modif">
-                <form method="post">
-                    <button>
-                        <span>Modifier le nom de votre festival</span>
+                <div class="subfields">
+                    <form method="post">
+                        <button>Modifier le nom de votre festival</button>
+                        <input type="text" name="rechercheuserid" id="rechercheuserid" placeholder="Modifier le nom de votre festival" required><br/>
                         <input type="submit" name="formrechercheuserid" id="formrechercheuserid" value="Ok">
-                    </button>
-                    <input type="text" name="rechercheuserid" id="rechercheuserid" placeholder="Modifier le nom de votre festival" required><br/>
-                </form>
+                    </form>
 
-                <form method="post">
-                    <button>
-                        <span>Modifier la date de début</span>
+                    <form method="post">
+                        <button>Modifier le prix d'une place</button>
+                        <input type="number" name="rechercheuserid" id="rechercheuserid" placeholder="Prix d'une place (en €)" required><br/>
                         <input type="submit" name="formrechercheuserid" id="formrechercheuserid" value="Ok">
-                    </button>
-                    <input type="date" name="rechercheuserid" id="rechercheuserid" placeholder="Chercher un utilisateur par id" required><br/>
-                </form>
+                    </form>
+                </div>
 
-                <form method="post">
-                    <button>
-                        <span>Modifier la date de fin</span>
-                        <input type="submit" name="formrechercheuserid" id="formrechercheuserid" value="Ok">
-                    </button>
-                    <input type="date" name="rechercheuserid" id="rechercheuserid" placeholder="Chercher un utilisateur par id" required><br/>
-                </form>
+                <div class="subfields">
 
-                <form method="post">
-                    <button>
-                        <span>Modifier le prix d'une place</span>
+                    <form method="post">
+                        <button>Modifier la date de début</button>
+                        <input type="date" name="rechercheuserid" id="rechercheuserid" placeholder="Chercher un utilisateur par id" required><br/>
                         <input type="submit" name="formrechercheuserid" id="formrechercheuserid" value="Ok">
-                    </button>
-                    <input type="number" name="rechercheuserid" id="rechercheuserid" placeholder="Modifier le prix d'une place" required><br/>
-                </form>
+                    </form>
+                    <form method="post">
+                        <button>Modifier la date de fin</button>
+                        <input type="date" name="rechercheuserid" id="rechercheuserid" placeholder="Chercher un utilisateur par id" required><br/>
+                        <input type="submit" name="formrechercheuserid" id="formrechercheuserid" value="Ok">
+                    </form>
+                </div>
 
-                <form method="post">
-                    <button>
-                        <span>Modifier l'accès au festival</span>
+                <div class="subfields">
+                    <form method="post">
+                        <button>Modifier l'accès au festival</button>    
+                        <input type="text" name="rechercheuserid" id="rechercheuserid" placeholder="Modifier l'accès au festival" required><br/>
                         <input type="submit" name="formrechercheuserid" id="formrechercheuserid" value="Ok">
-                    </button>
-                    <input type="text" name="rechercheuserid" id="rechercheuserid" placeholder="Modifier l'accès au festival" required><br/>
-                </form>
+                    </form>
 
-                <form method="post">
-                    <button>
-                        <span>Modifier le numéro de téléphone du festival</span>
+                    <form method="post">
+                        <button>Modifier le numéro de téléphone du festival</button>
+                        <input type="tel" name="rechercheuserid" id="rechercheuserid" placeholder="Modifier le numéro de téléphone" required><br/>
                         <input type="submit" name="formrechercheuserid" id="formrechercheuserid" value="Ok">
-                    </button>
-                    <input type="tel" name="rechercheuserid" id="rechercheuserid" placeholder="Modifier le numéro de téléphone" required><br/>
-                </form>
+                    </form>
+                </div>
 
-                <form method="post">
-                    <button>
-                        <span>Modifier l'adresse e-mail du festival</span>
+                <div class="subfields">
+                    <form method="post">
+                        <button>Modifier l'adresse e-mail du festival</button>
+                        <input type="email" name="rechercheuserid" id="rechercheuserid" placeholder="Mofier l'email du festival" required><br/>
                         <input type="submit" name="formrechercheuserid" id="formrechercheuserid" value="Ok">
-                    </button>
-                    <input type="email" name="rechercheuserid" id="rechercheuserid" placeholder="Mofier l'email du festival" required><br/>
-                </form>
+                    </form>
 
-                <form method="post">
-                    <button>
-                        <span>Modifier l'adresse du festival</span>
+                    <form method="post">
+                        <button>Modifier l'adresse du festival</button>
+                        <input type="text" name="rechercheuserid" id="rechercheuserid" placeholder="Modifier l'adresse du festival" required><br/>
                         <input type="submit" name="formrechercheuserid" id="formrechercheuserid" value="Ok">
-                    </button>
-                    <input type="text" name="rechercheuserid" id="rechercheuserid" placeholder="Modifier l'adresse du festival" required><br/>
-                </form>
+                    </form>
+                </div>
 
-                <form method="post">
-                    <button>
-                        <span>Modifier le code postal</span>
+                <div class="subfields">
+                    <form method="post">
+                        <button>Modifier le code postal</button>
+                        <input type="text" name="rechercheuserid" id="rechercheuserid" placeholder="Modifier le code postal du festival" required><br/>
                         <input type="submit" name="formrechercheuserid" id="formrechercheuserid" value="Ok">
-                    </button>
-                    <input type="text" name="rechercheuserid" id="rechercheuserid" placeholder="Modifier le code postal du festival" required><br/>
-                </form>
+                    </form>
 
-                <form method="post">
-                    <button>
-                        <span>Modifier le pays du festival</span>
+                    <form method="post">
+                        <button>Modifier le pays du festival</button>
+                        <input type="text" name="rechercheuserid" id="rechercheuserid" placeholder="Modifier le pays du festival" required><br/>
                         <input type="submit" name="formrechercheuserid" id="formrechercheuserid" value="Ok">
-                    </button>
-                    <input type="text" name="rechercheuserid" id="rechercheuserid" placeholder="Modifier le pays du festival" required><br/>
-                </form>
+                    </form>
+                </div>
             </div>
 
 
