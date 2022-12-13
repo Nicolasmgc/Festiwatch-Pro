@@ -20,16 +20,13 @@
                 <li><a href="./FAQ/faq.php"> FAQ </a></li>
                 <li><a href="./AProposDeNous/A_propos_de_nous.php"> A propos de nous </a></li>
                 
-                
-                
                 <li class="deroulant"><?php if(isset($_SESSION['email'])){
                             ?>
                         
                       <a><?php echo $_SESSION['email'];?></a>
-                    <ul class="sous">
-                        <li><a href="../monprofil.php"> Voir mon profil </a></li>
-                        <li><a href="../deconnexion.php"> Se déconnecter </a></li>
-                        
+                        <ul class="sous">
+                            <li><a href="../monprofil.php"> Voir mon profil </a></li>
+                            <li><a href="../deconnexion.php"> Se déconnecter </a></li>
                         </ul>
                         <li><img src="Logo alternatif.png" class="logo"></li>
 
@@ -55,11 +52,7 @@
             </ul>
         </nav>
 
-        
-
-            <div class="TOP"></div>
-            <div class="TOP2"></div>
-            <header> </header>
+            <!--<div class="TOP2"></div>-->
 
         
         <button class="PoButton">
@@ -68,10 +61,8 @@
         <img class="boite" src="Logo alternatif 2.png">
        
         <video src="./Concert - 1630.mp4" id="video" autoplay loop muted></video>
+        
         <div class="shadowup"></div>
-        
-        
-         <div class="TOP3"></div> 
 
         <section>
             <div class="Bloc-description">
@@ -80,10 +71,10 @@
                     retranscription en direct<br> d'information sur votre
                     état physique.<br>
                 </p><br>
-                <p> Véritable bijoux technologique, FestiWatch<br> vous fournira
+                <p> 
+                    Véritable bijoux technologique, FestiWatch<br> vous fournira
                     n'importe quelle information,<br> où vous le voulez et
                     quand vous le voulez.<br>
-                 
                 </p>
             </div>
         </section>
