@@ -2,6 +2,9 @@
 body{
     background: linear-gradient(225deg,#f53b1e 0%,#911ef6 25%,#ee1616);
 }
+html {
+    margin: 0;
+}
 
 .vertical { 
     border-left: 4px solid white; 
@@ -101,10 +104,10 @@ h1{
     justify-content: space-between ; 
 }
 footer{
-   background-color:black ;
-   width: 100%;
-   display: flex;
-}
+    background-color:black ;
+    width: 100%;
+    display: flex;
+ }
 
 .contact{
     font-size:15px;
