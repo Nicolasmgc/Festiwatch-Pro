@@ -9,7 +9,46 @@
         <link rel="stylesheet" href="AProposDeNous2.css">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap" rel="stylesheet">
     </head>
+    
     <body>
+    <nav>
+            <ul>
+                  
+                <li><a href="#" > Accueil </a></li>
+                <li><a href="./FAQ/faq.php"> FAQ </a></li>
+                <li><a href="./AProposDeNous/A_propos_de_nous.php"> A propos de nous </a></li>
+                
+                <li class="deroulant"><?php if(isset($_SESSION['email'])){
+                            ?>
+                        
+                      <a><?php echo $_SESSION['email'];?></a>
+                        <ul class="sous">
+                            <li><a href="../monprofil.php"> Voir mon profil </a></li>
+                            <li><a href="../deconnexion.php"> Se déconnecter </a></li>
+                        </ul>
+                        <li><img src="Logo alternatif.png" class="logo"></li>
+
+
+                    
+                    
+                        
+                        <?php
+                        
+                        }else{ ?>
+                        <li><a href="../login1.php">Se connecter </a></li>
+                        <img src="Logo alternatif.png" class="logo">
+                        <?php } ?></a>
+                          
+                    
+                    
+                    
+                </li>
+                
+                
+                
+                
+            </ul>
+        </nav>
              <div class="haut">
             <h2>Notre mission</h2><span class="vertical"></span>            
             <br>Nous sommes une entreprise composée de sept jeunes ingénieurs, prêts á relever les défis de demain.
