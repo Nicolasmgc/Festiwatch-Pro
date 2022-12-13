@@ -32,10 +32,6 @@
     50%);
 }
 
-
-
-@media only screen and (min-width: 1080px){
-
 /* test */
 
 video {
@@ -311,8 +307,6 @@ button:hover {
     top:-60px;
     left:0px;
     font-size: 10px;
-}
-
 }
 
 
