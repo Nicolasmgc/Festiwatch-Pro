@@ -91,7 +91,8 @@
             <div class="FAQAnswer"><div>Ne vous inquiétez pas, les ondes ne sont pas plus nocives que celles émises par votre téléphone puisqu'elles émettent des ondes Bluetooth.</div></div>
         </div>
     </div>
-    <footer>
+</body>
+<footer>
            <div class="contact">
            <br>
             Nous contacter <br>
@@ -112,6 +113,3 @@
             <a href="login1.php">Connexion</a>
             </div> </div>
              </footer>
-
-
-</body>
