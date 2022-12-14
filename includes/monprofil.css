@@ -177,8 +177,11 @@ footer{
     text-align: center;
  }
  
- a{
+ .reseaux a{
      color: white;
      padding: 5px;
  }
- 
+ .lien a{
+    color: white;
+    padding: 7px;
+ }
