@@ -13,20 +13,22 @@
     <body>
     <nav>
             <ul>
+                <li><img src="Logo alternatif.png" class="logo" >  </a></li> 
                   
-                <li><a href="#" > Accueil </a></li>
-                <li><a href="./FAQ/faq.php"> FAQ </a></li>
-                <li><a href="./AProposDeNous/A_propos_de_nous.php"> A propos de nous </a></li>
+                <li><a href="../index.php" > Accueil </a></li>
+                <li><a href=".././FAQ/faq.php"> FAQ </a></li>
+                <li><a href="#"> A propos de nous </a></li>
                 
                 <li class="deroulant"><?php if(isset($_SESSION['email'])){
                             ?>
                         
                       <a><?php echo $_SESSION['email'];?></a>
                         <ul class="sous">
-                            <li><a href="../monprofil.php"> Voir mon profil </a></li>
-                            <li><a href="../deconnexion.php"> Se déconnecter </a></li>
+                            
+                            <li><a href="../../monprofil.php"> Voir mon profil </a></li>
+                            <li><a href="../../deconnexion.php"> Se déconnecter </a></li>
                         </ul>
-                        <li><img src="Logo alternatif.png" class="logo"></li>
+                        
 
 
                     
@@ -35,8 +37,8 @@
                         <?php
                         
                         }else{ ?>
-                        <li><a href="../login1.php">Se connecter </a></li>
-                        <img src="Logo alternatif.png" class="logo">
+                        <li><a href="../../login1.php">Se connecter </a></li>
+                        
                         <?php } ?></a>
                           
                     

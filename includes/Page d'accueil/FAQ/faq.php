@@ -13,7 +13,7 @@
 <body>
 <nav>
             <ul>
-                  
+                <li><img src="Logo alternatif.png" class="logo"></li> 
                 <li><a href="../index.php" > Accueil </a></li>
                 <li><a href="#"> FAQ </a></li>
                 <li><a href="../AProposDeNous/A_propos_de_nous.php"> A propos de nous </a></li>
@@ -29,12 +29,12 @@
                         <li><a href="../../deconnexion.php"> Se déconnecter </a></li>
                         
                         </ul>
-                        <li><img src="Logo alternatif.png" class="logo"></li>                        
+                                               
                         <?php
                         
                         }else{ ?>
                         <li><a href="../../login1.php">Se connecter </a></li>
-                        <li><img  src="Logo alternatif.png" class="logo" href="../index.php"></li>
+                        
                         <?php } ?>
                     
                     

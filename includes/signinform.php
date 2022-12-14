@@ -3,9 +3,54 @@
 
 <!DOCTYPE html>
 <html>
+
+<head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="signin.css">
     <title>Formulaire pour utilisateurs</title>
+</head>
+<body>
+<nav>
+            <ul>
+               
+                <li><img src="Logo alternatif2.png" class="logo" > </li> 
+                <li><a href="#" > Accueil </a></li>
+                  
+                <li><a href="./FAQ/faq.php"> FAQ </a></li>
+                <li><a href="./AProposDeNous/A_propos_de_nous.php"> A propos de nous </a></li>
+                
+                <li class="deroulant"><?php if(isset($_SESSION['email'])){
+                            ?>
+                        
+                      <a><?php echo $_SESSION['email'];?></a>
+                        <ul class="sous">
+                            <li><a href="../monprofil.php"> Voir mon profil </a></li>
+                            <li><a href="../deconnexion.php"> Se déconnecter </a></li>
+                        </ul>
+                        
+
+
+                    
+                    
+                        
+                        <?php
+                        
+                        }else{ ?>
+                        <li><a href="../login1.php">Se connecter </a></li>
+                        
+                        <?php } ?></a>
+                          
+                    
+                    
+                    
+                </li>
+                
+                
+                
+                
+            </ul>
+        </nav>
+
     <img src="./Logo form2.png">
 
     <div class="container">
@@ -30,7 +75,7 @@
             <input type="submit" name="formsend" id="formsend" value="Ok">
         </form>
     </div>
-
+</body>
 </html>
 
     <?php include 'C:\wamp64\www\includes\database.php';
