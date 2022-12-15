@@ -1,7 +1,7 @@
 *{
     padding:0;
     margin: 0;
-    font-family:"Georgia";
+    font-family: 'Elephant';
     text-decoration: none;
     list-style:none;
 }
@@ -131,7 +131,6 @@ button:hover {
     text-align: center;
     font-size: 62;
     color: white;
-    font-family: 'Elephant';
     margin: 0;
 }
 

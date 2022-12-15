@@ -101,12 +101,13 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     animation: pan 4s infinite alternate linear;
+    color:black;
+    background: linear-gradient(225deg,#f53b1e 0%,#911ef6 25%,#ee1616
+    100%);
 }
 
-body {
-    color:black;
-    background-color:white;
-    background-image: black;
+* {
+    font-family: 'Montserrat', sans-serif;
 }
 
 .modif{

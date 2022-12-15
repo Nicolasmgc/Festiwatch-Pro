@@ -43,48 +43,48 @@
     <button><input type="submit" name="formrecherche" id="formrecherche" value="OK"></button>
   </form>
   </div>
- <table class= "fond" style ="background-image:url('fondTable.jpeg');" >
-   <thead>
-    <div class="scroller">
-     <tr>
-       <th class="test">ID</th>
-       <th>Nom</th>
-       <th>Date début</th>
-       <th>Date fin</th>
-       <th>Prix</th>
-       <th>Programmation</th>
-       <th>Adresse</th>
-       <th>Code postal</th>
-       <th>Pays</th>
-       <th>Access</th>
-       <th>Lien</th>
-     </tr>
-     </div>
-   </thead>
+  <div style="overflow-x:scroll">
+    <table class= "fond" style ="background-image:url('fondTable.jpeg');overflow-x:scroll; margin-top: 50px" >
+      <thead>
+        <tr>
+          <th class="test">ID</th>
+          <th>Nom</th>
+          <th>Date début</th>
+          <th>Date fin</th>
+          <th>Prix</th>
+          <th>Programmation</th>
+          <th>Adresse</th>
+          <th>Code postal</th>
+          <th>Pays</th>
+          <th>Access</th>
+          <th>Lien</th>
+        </tr>
+      </thead>
 
 
-<?php include 'festivalrecherche.php'; ?>
+    <?php include 'festivalrecherche.php'; ?>
 
 
 
-   <tbody>
-     <?php while($row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
-     <tr> 
-       <td><?php echo htmlspecialchars($row['Fest_id']); ?></td>
-       <td><a href="./Page d'accueil/accueil.php" class=festival ><?php echo htmlspecialchars($row['Fest_nom']); ?></a></td>
-       <td><?php echo htmlspecialchars($row['Fest_datedebut']); ?></td>
-       <td><?php echo htmlspecialchars($row['Fest_datefin']); ?></td>
-       <td><?php echo htmlspecialchars($row['Fest_prix']); ?></td>
-       <td><?php echo htmlspecialchars($row['Fest_programmation']); ?></td>
-       <td><?php echo htmlspecialchars($row['Fest_adresse']); ?></td>
-       <td><?php echo htmlspecialchars($row['Fest_codepostal']); ?></td>
-       <td><?php echo htmlspecialchars($row['Fest_pays']); ?></td>
-       <td><?php echo htmlspecialchars($row['Fest_access']); ?></td>
-       <td><?php echo htmlspecialchars($row['Fest_lien']); ?></td>
-     </tr>
-     <?php endwhile; ?>
-   </tbody>
- </table>
+      <tbody>
+        <?php while($row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
+        <tr> 
+          <td><?php echo htmlspecialchars($row['Fest_id']); ?></td>
+          <td><a href="./Page d'accueil/accueil.php" class=festival ><?php echo htmlspecialchars($row['Fest_nom']); ?></a></td>
+          <td><?php echo htmlspecialchars($row['Fest_datedebut']); ?></td>
+          <td><?php echo htmlspecialchars($row['Fest_datefin']); ?></td>
+          <td><?php echo htmlspecialchars($row['Fest_prix']); ?></td>
+          <td><?php echo htmlspecialchars($row['Fest_programmation']); ?></td>
+          <td><?php echo htmlspecialchars($row['Fest_adresse']); ?></td>
+          <td><?php echo htmlspecialchars($row['Fest_codepostal']); ?></td>
+          <td><?php echo htmlspecialchars($row['Fest_pays']); ?></td>
+          <td><?php echo htmlspecialchars($row['Fest_access']); ?></td>
+          <td><?php echo htmlspecialchars($row['Fest_lien']); ?></td>
+        </tr>
+        <?php endwhile; ?>
+      </tbody>
+    </table>
+  </div>
 
      </br>
 

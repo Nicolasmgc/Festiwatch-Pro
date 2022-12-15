@@ -1,6 +1,11 @@
 body{
     background: linear-gradient(225deg,#f53b1e 0%,#911ef6 25%,#ee1616);
 }
+
+* {
+    font-family: 'Elephant';
+}
+
 ::-webkit-scrollbar {
     width: 12px;
     padding: 2px;

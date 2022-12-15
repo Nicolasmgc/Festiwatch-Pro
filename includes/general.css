@@ -1,3 +1,7 @@
+* {
+    font-family: 'Elephant';
+}
+
 ::-webkit-scrollbar {
     width: 12px;
     padding: 2px;
@@ -27,7 +31,6 @@
 *{
     padding:0;
     margin: 0;
-    font-family:"Georgia";
     text-decoration: none;
     list-style:none;
 }
