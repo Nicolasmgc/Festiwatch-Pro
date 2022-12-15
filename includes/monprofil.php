@@ -182,7 +182,7 @@ if(isset($_POST['formupdate3'])){
             <div class="lien">
             <a href="./cgu.php">Conditions général d'utilisation</a>
             <a href="./Page d'accueil/FAQ/faq.php"> FAQ</a>
-            <a href="login1.php">Connexion</a>
+            <a href="../login1.php">Connexion</a>
             </div> </div>
              </footer>
 </html>

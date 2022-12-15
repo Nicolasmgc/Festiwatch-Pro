@@ -316,12 +316,13 @@ button:hover {
 
 footer{
     background-color:black ;
-    width: 100%;
     display: flex;
-   margin-bottom: 0px;
+    width: 100%;
+    position: absolute;
+    margin-top:50%
  }
  
- .contact{
+.contact{
      font-size:15px;
      margin-left: 2%;
      font-family: 'Montserrat', sans-serif;
@@ -331,7 +332,7 @@ footer{
  }
  .reseaux{
      display:block;
-     margin-left:30%;
+     margin-left:40%;
      margin-top: 2%;
      justify-content: space-between;
  }
@@ -344,6 +345,7 @@ footer{
      font-family: 'Montserrat', sans-serif;
      color: aliceblue;   
     margin-top: 4%;
+    margin-left:8%;
     text-align: center;
  }
  
