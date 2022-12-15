@@ -1,7 +1,8 @@
 body{
     background-image:radial-gradient(circle at 55.36% 19.63%, #f0a340 0, #f69940 7.14%, #fb8e42 14.29%, #ff8144 21.43%, #ff7348 28.57%, #ff624d 35.71%, #ff4f52 42.86%, #ff3858 50%, #fb145f 57.14%, #f50068 64.29%, #ee0073 71.43%, #e6007f 78.57%, #db008c 85.71%, #ce009a 92.86%, #bf00a9 100%); 
     color: white;
-    }
+    overflow-x: hidden;
+}
 
 ::-webkit-scrollbar {
     width: 12px;
@@ -116,7 +117,6 @@ td,th {
 .scroller {
     width: 300px;
     height: 100px;
-    scrollbar-color: #a10685;
   }
 
 .festival {
