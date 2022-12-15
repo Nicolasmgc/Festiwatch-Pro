@@ -4,7 +4,7 @@ session_start()
 
 <!DOCTYPE HTML>
 <head>
-    <title>FestiWatch - FAQ</title>
+    <title>FestiWatch - CGU</title>
     <meta charset="utf-8">
     <link rel="icon" href="icon.jpeg">
     <link rel="stylesheet" type="text/css" href="general.css">
