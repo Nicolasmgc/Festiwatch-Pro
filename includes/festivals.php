@@ -110,6 +110,8 @@
           <th>Pays</th>
           <th>Access</th>
           <th>Lien</th>
+          <th>Numéro de téléphone</th>
+          <th>Adresse mail</th>
         </tr>
       </thead>
 
@@ -122,7 +124,7 @@
         <?php while($row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
         <tr> 
           <td><?php echo htmlspecialchars($row['Fest_id']); ?></td>
-          <td><a href="./Page d'accueil/accueil.php" class=festival ><?php echo htmlspecialchars($row['Fest_nom']); ?></a></td>
+          <td><a href="Form user 2.php?Fest_id=<?php echo $row['Fest_id'];?>&amp;Fest_nom=<?php echo $row['Fest_nom'];?>&amp;Fest_datedebut=<?php echo $row['Fest_datedebut'];?>&amp;Fest_datefin=<?php echo $row['Fest_datefin'];?>&amp;Fest_adresse=<?php echo $row['Fest_adresse'];?>&amp;Fest_codepostal=<?php echo $row['Fest_codepostal'];?>&amp;Fest_pays=<?php echo $row['Fest_pays'];?>&amp;Fest_access=<?php echo $row['Fest_access'];?>&amp;Fest_numtelephone=<?php echo $row['Fest_numtelephone'];?>&amp;Fest_email=<?php echo $row['Fest_email'];?>&amp;Fest_programmation=<?php echo $row['Fest_programmation']?>" class=festival ><?php echo htmlspecialchars($row['Fest_nom']); ?></a></td>
           <td><?php echo htmlspecialchars($row['Fest_datedebut']); ?></td>
           <td><?php echo htmlspecialchars($row['Fest_datefin']); ?></td>
           <td><?php echo htmlspecialchars($row['Fest_prix']); ?></td>
@@ -132,6 +134,8 @@
           <td><?php echo htmlspecialchars($row['Fest_pays']); ?></td>
           <td><?php echo htmlspecialchars($row['Fest_access']); ?></td>
           <td><?php echo htmlspecialchars($row['Fest_lien']); ?></td>
+          <td><?php echo htmlspecialchars($row['Fest_numtelephone']); ?></td>
+          <td><?php echo htmlspecialchars($row['Fest_email']); ?></td>
         </tr>
         <?php endwhile; ?>
       </tbody>

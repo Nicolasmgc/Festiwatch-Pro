@@ -66,7 +66,7 @@ session_start();
         </nav>
 
 
-    <h1>Bienvenue sur la page du festival <?php // echo $_GET['Fest_nom']?></h1>
+    <h1>Bienvenue sur la page du festival <?php echo $_GET['Fest_nom']?></h1>
     <div id="searchBox">
                     <input id="searchBar"/>
                     <a href=""><img id="searchIcon" src="searchIcon.png" alt="search"></a>
@@ -75,17 +75,15 @@ session_start();
         <img href="./Efrontech/Form user 2.html"  src="les_ardentes_2022.jpg">
         <div class="round"> 
     <p>La date de début et de fin : </p>
-     <p><?php echo $_SESSION['email']; ?> </p>
+     <p><?php echo $_GET['Fest_datedebut'] ?> - <?php echo $_GET['Fest_datefin'] ?></p>
      <p>L'adresse :</p>
-    <p> <?php echo $_SESSION['nom']; ?></p>
-     <p>Votre prénom :</p> 
-    <p><?php echo $_SESSION['prenom']; ?> </p>
-    <p>Votre numéro de téléphone : </p>
-    <p><?php echo $_SESSION['numtelephone']; ?> </p>
-    <p>Votre adresse : </p>
-     <p><?php echo $_SESSION['adresse']; ?> </p>
-    <p>Votre ville : </p>
-     <p><?php echo $_SESSION['ville']; ?> </p>
+    <p> <?php echo $_GET['Fest_adresse'] ?> - <?php echo $_GET['Fest_codepostal'] ?> - <?php echo $_GET['Fest_pays'] ?></p>
+     <p>L'accès </p> 
+    <p><?php echo $_GET['Fest_access']; ?> </p>
+    <p>Les contacts en cas de problème :</p>
+    <p><?php echo $_GET['Fest_numtelephone'] ?> - <?php echo $_GET['Fest_email'] ?></p>
+    <p>La programmation : </p>
+     <p><?php echo $_GET['Fest_programmation'] ?> </p>
     </div>
 </div>
 
