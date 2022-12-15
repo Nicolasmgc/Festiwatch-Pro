@@ -105,7 +105,8 @@ body {
 
 body {
     color:black;
-    background-color:white;
+    background: linear-gradient(225deg,#f53b1e 0%,#911ef6 25%,#ee1616
+    100%);
     background-image: black;
 }
 

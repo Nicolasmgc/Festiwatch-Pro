@@ -31,6 +31,11 @@
     50%);
 }
 
+body {
+    background: linear-gradient(225deg,#f53b1e 0%,#911ef6 25%,#ee1616
+    100%);
+}
+
 img {
     height: auto;
     width: 200px;
