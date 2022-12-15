@@ -11,29 +11,57 @@ session_start()
     <link rel="stylesheet" type="text/css" href="cgu.css">
 </head>
 <body>
-    <nav class="navbar">
-        <a href="#" class="logo"> <img src="Logo alternatif.png">  </a>
-        <div class="nav-links">
+<nav>
             <ul>
-                <li class="active">
-                    <a class="button" href="#">Accueil</a>
+               <li><img src="Logo alternatif2.png" class="logo" >  </a></li>   
+                  
+                <li><a href="#" > Accueil </a></li>
+                <li><a href="./FAQ/faq.php"> FAQ </a></li>
+                <li><a href="./AProposDeNous/A_propos_de_nous.php"> A propos de nous </a></li>
+                
+                <li class="deroulant"><?php if(isset($_SESSION['email'])){
+                            ?>
+                        
+                      <a><?php echo $_SESSION['email'];?></a>
+                        <ul class="sous">
+                            <li><a href="../monprofil.php"> Voir mon profil </a></li>
+                            <li><a href="../deconnexion.php"> Se déconnecter </a></li>
+                        </ul>           
+                        
+
+
+                        <?php
+                        }
+                        
+                        elseif(isset($_SESSION['Fest_id'])){
+                            ?>
+
+
+                        <a><?php echo $_SESSION['Fest_nom'];?></a>
+                        <ul class="sous">
+                            <li><a href="../ConnexionGestionnaire/mesinfos.php?Fest_id=".$_SESSION['Fest_id']> Voir mes infos </a></li> <?php // Truc très ghetto ça marche moyennement ce href faire gaffe pendant la démo ?>
+                            <li><a href="../deconnexion.php"> Se déconnecter </a></li>
+                        </ul>  
+
+
+                            <?php
+                        }
+                        
+                        else{ ?>
+                        <li><a href="../login1.php">Se connecter </a></li>
+                        
+                        <?php } ?></a>
+                          
+                    
+                    
+                    
                 </li>
-                <li>
-                    <a class="button" href="#">Se connecter</a>
-                </li>
-                <li>
-                    <a class="button" href="#">Blog</a>
-                </li>
-                <li>
-                    <a class="button" href="#">A propos de nous</a>
-                </li>
-                <li>
-                    <a class="button" href="#">Nous contacter</a>
-                </li>
+                
+                
+                
+                
             </ul>
-       
-        </div>
-    </nav>
+        </nav>
 
     <div class="FAQTitle"><h1>CGU</h1></div>
 
