@@ -59,7 +59,6 @@
             </ul>
         </nav>
 
-    <img src="./Logo form2.png">
 
     <div class="container">
         <form method="post">
