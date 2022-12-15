@@ -163,3 +163,43 @@ input[type='text'], input[type='date'], input[type='email'], input[type='tel'], 
 .btn {
     margin-bottom: 20px;
 }
+footer{
+    background-color:black ;
+    width: 105%;
+    display: flex;
+ }
+ 
+ .contact{
+     font-size:15px;
+     margin-left: 2%;
+     font-family: 'Montserrat', sans-serif;
+     flex-direction: column;
+     color: white;
+     margin-bottom: 2%;
+ }
+ .reseaux{
+     display:block;
+     margin-left:30%;
+     margin-top: 2%;
+     justify-content: space-between;
+ }
+ .foot{
+     display: flex;
+     display: inline-block;
+     width: 50%;
+ }
+ .lien{
+     font-family: 'Montserrat', sans-serif;
+     color: aliceblue;   
+    margin-top: 4%;
+    text-align: center;
+ }
+ 
+ .reseaux a{
+     color: white;
+     padding: 5px;
+ }
+ .lien a{
+    color: white;
+    padding: 7px;
+ }
