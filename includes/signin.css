@@ -136,7 +136,7 @@ nav > ul li:hover .sous{
     border-bottom: none;
     background-color: blue;
 }
-img {
+body img {
     box-shadow: transparent;
     width: 80px;
     position: relative;
@@ -245,4 +245,42 @@ select {
     font-weight: 500;
     text-shadow:2px 2px 4px rgba(0,0,0, .2);
     transition: all.3s;
+}
+footer{
+    background-color: #111;
+    position: absolute;
+    width: 100%;
+    top:95%;
+    display: flex;
+}
+.contact{
+    font-size:15px;
+    margin-left: 2%;
+    font-family: 'Montserrat', sans-serif;
+    flex-direction: column;
+    color: white;
+    margin-bottom: 2%;
+}
+.reseaux{
+    display:block;
+    margin-left:45%;
+    margin-top: 2%;
+    justify-content: space-between;
+}
+.foot{
+    display: flex;
+    display: inline-block;
+    width: 50%;
+}
+.lien{
+    font-family: 'Montserrat', sans-serif;
+    color: aliceblue;   
+   margin-top: 4%;
+   margin-left:25%;
+   text-align: center;
+}
+
+a{
+    color: white;
+    padding: 5px;
 }
