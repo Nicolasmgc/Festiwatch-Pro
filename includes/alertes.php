@@ -16,8 +16,6 @@ session_start();
     <h1> Les alertes </h1>
     <p> Vous êtes sur la page du festival "Les ardentes" </p>
 <div class= page> <!-- C'est pour naviguer entre les pages de différents festivals -->
-    <a href="">Solidays</a>
-    <a href=""> Rock en seine </a>
     <a> Les Ardentes </a>
 </div>
 
