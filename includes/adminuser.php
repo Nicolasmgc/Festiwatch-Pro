@@ -57,7 +57,7 @@ if(isset($resultm['nom']))
     <?php
 
 }else{
-    echo "Veuillez chercher un utilisateur";
+
 }
 
 ?>

@@ -393,7 +393,7 @@ if(isset($_POST['formmodiflien'])){
             <div class="btn">
                 <button><a href="../deconnexion.php"  style="text-decoration:none">Déconnexion</a></button>
 
-                <button><a href="Page d'accueil/index.php"  style="text-decoration:none">Page d'accueil</a></button>
+                <button><a href="../Page d'accueil/index.php"  style="text-decoration:none">Page d'accueil</a></button>
 
                 <button><a href="festivals.php"  style="text-decoration:none">Liste des festivals</a></button>
             </div>
