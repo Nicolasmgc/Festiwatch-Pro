@@ -9,7 +9,7 @@
             $options1 = [
                 'cost' => 12,
             ];
-            $hashpassf = password_hash($fest_password, PASSWORD_BCRYPT, $options1);
+            $hashpassf = password_hash($fest_passwordc, PASSWORD_BCRYPT, $options1);
 
             $c1 = $db->prepare("SELECT Fest_nom FROM festival WHERE Fest_nom = :Fest_nom");
             $c1->execute(
