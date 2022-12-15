@@ -120,9 +120,7 @@
          une alerte nous sera envoyer,pour que votre expérience se passe au mieux.
         FestiWatch vous permet de vous localiser et de localiser vos amis sur une carte afin de vous retrouver plus facilement. </p> 
        </div>
-    </body>
-
-    <footer>
+       <footer>
            <div class="contact">
            <br>
             Nous contacter <br>
@@ -143,4 +141,7 @@
             <a href="login1.php">Connexion</a>
             </div> </div>
              </footer>
+    </body>
+
+    
 </html>

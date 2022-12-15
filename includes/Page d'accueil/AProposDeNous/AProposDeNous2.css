@@ -1,10 +1,6 @@
 body{
     background: linear-gradient(225deg,#f53b1e 0%,#911ef6 25%,#ee1616);
 }
-html {
-    margin: 0;
-}
-
 ::-webkit-scrollbar {
     width: 12px;
     padding: 2px;
@@ -144,7 +140,7 @@ img .logo {
 }
 .vertical { 
     border-left: 4px solid white; 
-    height: 100px; 
+    height: 75px; 
     display: inline-block;
     margin-right: 2%;
     margin-left: 2%;
@@ -160,6 +156,7 @@ img .logo {
 }
 h2{
     font-size: 30px ;
+    margin-left: 2%;
 }
 
 .yellow-bloc{ 
@@ -240,11 +237,13 @@ h1{
     justify-content: space-between ; 
 }
 footer{
-    background-color:black ;
+    background-color: #111;
+    position: absolute;
     width: 100%;
+    margin-left: -9px;
     display: flex;
- }
 
+}
 .contact{
     font-size:15px;
     margin-left: 2%;
