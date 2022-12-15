@@ -180,7 +180,7 @@ if(isset($_POST['formupdate3'])){
             <img src="twitter.png" alt="icone de insta" height="75">
             </div>
             <div class="lien">
-            <a href="./cgu.php">Conditions général d'utilisation</a>
+            <a href="./Festiwatch-Pro/includes/cgu.php">Conditions général d'utilisation</a>
             <a href="./Page d'accueil/FAQ/faq.php"> FAQ</a>
             <a href="../login1.php">Connexion</a>
             </div> </div>
