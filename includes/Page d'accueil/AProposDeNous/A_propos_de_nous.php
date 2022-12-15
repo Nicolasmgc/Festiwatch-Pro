@@ -147,8 +147,8 @@
             </div>
             <div class="lien">
             <a href="../../cgu.php">Conditions général d'utilisation</a>
-            <a href="faq.php"> FAQ</a>
-            <a href="login1.php">Connexion</a>
+            <a href=".././FAQ/faq.php"> FAQ</a>
+            <a href="../login1.php">Connexion</a>
             </div> </div>
              </footer>
     </body>
