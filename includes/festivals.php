@@ -36,7 +36,7 @@
 
 <nav>
             <ul>
-               <li><img src="Logo alternatif.png" class="logo" >  </a></li>   
+               <li><img src="Logo alternatif2.png" class="logo" >  </a></li>   
                   
                 <li><a href="#" > Accueil </a></li>
                 <li><a href="./FAQ/faq.php"> FAQ </a></li>
@@ -50,12 +50,15 @@
                             <li><a href="../monprofil.php"> Voir mon profil </a></li>
                             <li><a href="../deconnexion.php"> Se déconnecter </a></li>
                         </ul>           
+                        
+
 
                         <?php
                         }
                         
                         elseif(isset($_SESSION['Fest_id'])){
                             ?>
+
 
                         <a><?php echo $_SESSION['Fest_nom'];?></a>
                         <ul class="sous">
@@ -71,12 +74,17 @@
                         <li><a href="../login1.php">Se connecter </a></li>
                         
                         <?php } ?></a>
-                      
+                          
+                    
+                    
+                    
                 </li>
+                
+                
+                
                 
             </ul>
         </nav>
-
 
 <body>
  <h1>Liste des festivals</h1>
@@ -134,7 +142,7 @@
 
 
 
-<a href="index.php">Accueil</a>
+
 
 
 
@@ -150,7 +158,7 @@ if(isset($resultf['Fest_nom']))
     <?php
 
 }else{
-    echo "liste des festivals";
+    echo "";
 }
 
 ?>
