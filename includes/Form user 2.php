@@ -19,9 +19,9 @@ session_start();
     <div class="global">            
         <img href="./Efrontech/Form user 2.html"  src="les_ardentes_2022.jpg">
         <div class="round"> 
-    <p>Votre email : </p>
+    <p>La date de début et de fin : </p>
      <p><?php echo $_SESSION['email']; ?> </p>
-     <p>Votre nom :</p>
+     <p>L'adresse :</p>
     <p> <?php echo $_SESSION['nom']; ?></p>
      <p>Votre prénom :</p> 
     <p><?php echo $_SESSION['prenom']; ?> </p>
