@@ -18,7 +18,6 @@
                 ]
             );
             $resultf = $c1->rowCount();
-
             if($resultf == 0){
                 $q1 = $db->prepare("INSERT INTO festival(Fest_nom, Fest_email, Fest_numtelephone, Fest_datedebut,Fest_datefin,Fest_prix,Fest_programmation,Fest_adresse,Fest_codepostal,Fest_pays,Fest_access,Fest_lien,Fest_password) VALUES(:Fest_nom, :Fest_email, :Fest_numtelephone, :Fest_datedebut,:Fest_datefin,:Fest_prix,:Fest_programmation,:Fest_adresse,:Fest_codepostal,:Fest_pays,:Fest_access,:Fest_lien,:Fest_password)");
                 $q1->execute([
