@@ -68,7 +68,7 @@ session_start();
 
     <h1>Bienvenue sur la page du festival <?php echo $_GET['Fest_nom']?></h1>
     <div id="searchBox">
-                    <input id="searchBar"/>
+                    <input id="searchBar" placeholder="Recherchez un code de montre ici"/>
                     <a href=""><img id="searchIcon" src="searchIcon.png" alt="search"></a>
                 </div>
     <div class="global">            
