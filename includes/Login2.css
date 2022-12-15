@@ -1,4 +1,7 @@
-* {box-sizing: border-box;}
+* {
+    box-sizing: border-box;
+    font-family: 'Elephant';
+}
 
 ::-webkit-scrollbar {
     width: 12px;

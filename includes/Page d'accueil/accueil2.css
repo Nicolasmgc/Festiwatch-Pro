@@ -1,7 +1,7 @@
 *{
     padding:0;
     margin: 0;
-    font-family:"Georgia";
+    font-family: 'Elephant';
     text-decoration: none;
     list-style:none;
     color: white;
@@ -237,7 +237,6 @@ button:hover {
 
 .Po {
     font-size: 30;
-    font-family:"Georgia";
     justify-content: center;
 }
 
@@ -325,7 +324,6 @@ footer{
 .contact{
      font-size:15px;
      margin-left: 2%;
-     font-family: 'Montserrat', sans-serif;
      flex-direction: column;
      color: white;
      margin-bottom: 2%;
@@ -342,7 +340,6 @@ footer{
      width: 50%;
  }
  .lien{
-     font-family: 'Montserrat', sans-serif;
      color: aliceblue;   
     margin-top: 4%;
     margin-left:8%;

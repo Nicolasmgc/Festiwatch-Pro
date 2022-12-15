@@ -1,3 +1,7 @@
+* {
+    font-family: 'Elephant';
+}
+
 body{ 
     background: rgb(252,136,69);
     background: linear-gradient(90deg, rgba(252,136,69,1) 1%, rgba(253,29,100,1) 44%, rgba(46,60,181,1) 100%, rgba(140,58,180,1) 100%);
@@ -6,7 +10,6 @@ body{
 h1{
     text-align: center;
     color:#101114;
-    font-family:Georgia, 'Times New Roman', Times, serif;
     font-size:xx-large;
     font-weight: bolder;
     text-decoration: underline;
@@ -28,13 +31,11 @@ p{
 td,th {
     border: 2px solid black;
     padding:30px 50px ;
-    font-family:Georgia, 'Times New Roman', Times, serif;
     text-align: center;
     font-size: 100%; }
 
 thead{
     background-color: black;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: white;
 }
 

@@ -1,9 +1,9 @@
 *{
     padding:0;
     margin: 0;
-    font-family:"Georgia";
     text-decoration: none;
     list-style:none;
+    font-family: 'Elephant';
 }
 
 ::-webkit-scrollbar {
@@ -161,7 +161,6 @@ button:hover {
     text-align: center;
     font-size: 62;
     color: white;
-    font-family: 'Elephant';
     margin: 0;
 }
 

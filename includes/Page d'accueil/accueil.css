@@ -1,7 +1,7 @@
 *{
     padding:0;
     margin: 0;
-    font-family:"Georgia";
+    font-family: 'Elephant';
     text-decoration: none;
     list-style:none;
 }
@@ -199,7 +199,6 @@ button:hover {
 
 .Po {
     font-size: 30;
-    font-family:"Georgia";
     justify-content: center;
 }
 
