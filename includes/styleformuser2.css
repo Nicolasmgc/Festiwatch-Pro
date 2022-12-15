@@ -1,0 +1,8 @@
+img {
+    height: auto;
+    width: 1250px;
+    z-index: -1;
+    position: absolute;
+    margin: 0;
+    object-fit: cover;
+}
