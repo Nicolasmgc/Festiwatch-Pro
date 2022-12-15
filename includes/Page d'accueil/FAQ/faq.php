@@ -31,8 +31,21 @@
                         </ul>
                                                
                         <?php
-                        
-                        }else{ ?>
+                }
+                        elseif(isset($_SESSION['Fest_id'])){
+                            ?>
+
+
+                        <a><?php echo $_SESSION['Fest_nom'];?></a>
+                        <ul class="sous">
+                            <li><a href="../../ConnexionGestionnaire/mesinfos.php"> Voir mes infos </a></li> <?php // Truc très ghetto ça marche moyennement ce href faire gaffe pendant la démo ?>
+                            <li><a href="../deconnexion.php"> Se déconnecter </a></li>
+                        </ul>  
+
+
+                            <?php
+                        }
+                        else{ ?>
                         <li><a href="../../login1.php">Se connecter </a></li>
                         
                         <?php } ?>
