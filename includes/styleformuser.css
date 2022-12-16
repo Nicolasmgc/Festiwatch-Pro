@@ -15,10 +15,11 @@
 
 img {
     height: auto;
-    width: 1250px;
+    width: 1500px;
     z-index: -1;
     position: absolute;
-    margin: 0;
+    margin: 0%;
+    object-fit: cover;
 }
 
 .popup-box {
@@ -29,8 +30,8 @@ img {
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
-    left: 70vh;
-    top: 20vh;
+    left: 35%;
+    top: 35%;
     padding: 50px 30px;
     border-radius: 20px;
     color: black;
