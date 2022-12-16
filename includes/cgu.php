@@ -80,5 +80,26 @@ session_start()
             <div class="FAQAnswer"><div>Des liens hypertextes peuvent être présents sur le site. L’Utilisateur est informé qu’en cliquant sur ces liens, il sortira du site FestiWatch. Ce dernier n’a pas de contrôle sur les pages web sur lesquelles aboutissent ces liens et ne saurait, en aucun cas, être responsable de leur contenu.</div></div>
         </div>
     </div>
-
+    <footer>
+           <div class="contact">
+           <br>
+            Nous contacter <br>
+            Mail:<br> prodetec@gmail.com <br>
+            Numéro:<br> 068975412 <br>
+            Adresse: <br>10 Rue de Vanves, 92130 Issy-les-Moulineaux
+            </div>
+         
+            <div class="foot">
+            <div class="reseaux">
+            <a href="https://www.instagram.com/pro_detech"> <img src="insta.png" alt="icone de insta" height="60"></a>
+            <img src="youtube.png" alt="icone de insta" height="70">
+            <img src="twitter.png" alt="icone de insta" height="75">
+            </div>
+            <div class="lien">
+            <a href="./Festiwatch-Pro/includes/cgu.php">Conditions général d'utilisation</a>
+            <a href="./Page d'accueil/FAQ/faq.php"> FAQ</a>
+            <a href="../login1.php">Connexion</a>
+            </div> </div>
+             </footer>
 </body>
+
