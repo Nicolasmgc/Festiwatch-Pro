@@ -23,6 +23,23 @@
     50%);
 }
 
+.sidebarAlert {
+    position: fixed;
+    right: 0;
+    width: 8%;
+    height: 200px;
+    top: 30%;
+    padding: 0;
+    background-color: red;
+}
+
+.sidebarAlert a {
+    margin: 0;
+    padding: 85px 5%;
+    font-size: 16px;
+    color: white;
+}
+
 .infocard{
     border: 5px solid black;
     padding: 70px;
@@ -78,7 +95,7 @@ h1{
     padding: 20px;
 }
 
-button{
+form button{
     margin-right: 60px;
     margin-top: 10px;
     font-family: 'Montserrat', sans-serif;
