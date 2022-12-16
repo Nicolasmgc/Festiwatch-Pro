@@ -12,34 +12,42 @@
 <body>
 <nav>
             <ul>
-               
-                <li><img src="Logo alternatif2.png" class="logo" > </li> 
-                <li><a href="#" > Accueil </a></li>
-                  
-                <li><a href="./FAQ/faq.php"> FAQ </a></li>
-                <li><a href="./AProposDeNous/A_propos_de_nous.php"> A propos de nous </a></li>
+                <li><img src="Logo alternatif.png" class="logo"></li> 
+                <li><a href="./Page d'accueil./index.php" > Accueil </a></li>
+                <li><a href="./Page d'accueil./FAQ ./faq.php"> FAQ </a></li>
+                <li><a href="./Page d'accueil ./AProposDeNous/A_propos_de_nous.php"> A propos de nous </a></li>
+                
+                
                 
                 <li class="deroulant"><?php if(isset($_SESSION['email'])){
                             ?>
                         
                       <a><?php echo $_SESSION['email'];?></a>
-                        <ul class="sous">
-                            <li><a href="../monprofil.php"> Voir mon profil </a></li>
-                            <li><a href="../deconnexion.php"> Se déconnecter </a></li>
+                    <ul class="sous">
+                        <li><a href="../../monprofil.php"> Voir mon profil </a></li>
+                        <li><a href="../../deconnexion.php"> Se déconnecter </a></li>
+                        
                         </ul>
-                        
-
-
-                    
-                    
-                        
+                                               
                         <?php
+                }
+                        elseif(isset($_SESSION['Fest_id'])){
+                            ?>
+
+
+                        <a><?php echo $_SESSION['Fest_nom'];?></a>
+                        <ul class="sous">
+                            <li><a href="./ConnexionGestionnaire/mesinfos.php"> Voir mes infos </a></li> <?php // Truc très ghetto ça marche moyennement ce href faire gaffe pendant la démo ?>
+                            <li><a href="./deconnexion.php"> Se déconnecter </a></li>
+                        </ul>  
+
+
+                            <?php
+                        }
+                        else{ ?>
+                        <li><a href="./login1.php">Se connecter </a></li>
                         
-                        }else{ ?>
-                        <li><a href="../login1.php">Se connecter </a></li>
-                        
-                        <?php } ?></a>
-                          
+                        <?php } ?>
                     
                     
                     
@@ -51,7 +59,6 @@
             </ul>
         </nav>
 
-    <img src="./Logo form2.png">
 
     <div class="container">
         <form method="post">

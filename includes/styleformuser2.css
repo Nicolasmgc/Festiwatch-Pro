@@ -1,10 +1,65 @@
-body img {
+img {
     height: auto;
     width: 1250px;
     z-index: -1;
     position: absolute;
-    margin: 0;
-    object-fit: cover;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav > ul li:hover .sous{
+    display: block;
+}
+
+.sous li{
+    float: none;
+    width: 100%;
+    text-align: left;
+}
+
+.sous a{ 
+    right: 30px;
+    display: block;
+    padding: 10px;
+    border-bottom: none;
+}
+
+.sous a:hover{
+    border-bottom: none;
+    background-color: blue;
+}
+nav .logo{
+    padding-left: 0px;
+    box-shadow: transparent;
+    width: 150px;
+    position: relative
+
+}
+
+.round{
+    border: 5px solid black;
+    padding: 8%;
+    border-radius: 50%;
+    height:560px;
+    width: 560px;
+    position:absolute;
+    margin-left: 360px;
+    margin-top: 15px;
+    opacity: 0.9;
+    background: linear-gradient(225deg,#f53b1e 0%,#911ef6 25%,#ee1616 100%);
+    overflow: hidden;
+    box-shadow: 0px 0px 0px 0px rgb(113 34 215 / 50%), 0px 0px 0px 0px rgb(225 51 16 / 50%);
+    transition: all .2s;
+    z-index: 2;
+    text-align: center;
+}
+
+
+p{
+    font-size: 20px;
+    text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  color: black;
 }
 footer{
     background-color:black ;

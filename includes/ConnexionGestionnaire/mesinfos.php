@@ -11,110 +11,162 @@
         </head>
 
         <body>
+        <nav>
+            <ul>
+               <li><img src="../Logo alternatif2.png" class="logo" >  </a></li>   
+                  
+                <li><a href=".././Page d'accueil ./index.php" > Accueil </a></li>
+                <li><a href=".././Page d'accueil ./FAQ/faq.php"> FAQ </a></li>
+                <li><a href=".././Page d'accueil ./AProposDeNous/A_propos_de_nous.php"> A propos de nous </a></li>
+                
+                <li class="deroulant"><?php if(isset($_SESSION['email'])){
+                            ?>
+                        
+                      <a><?php echo $_SESSION['email'];?></a>
+                        <ul class="sous">
+                            <li><a href="#"> Voir mon profil </a></li>
+                            <li><a href="../deconnexion.php"> Se déconnecter </a></li>
+                        </ul>           
+                        
+
+
+                        <?php
+                        }
+                        
+                        elseif(isset($_SESSION['Fest_id'])){
+                            ?>
+
+
+                        <a><?php echo $_SESSION['Fest_nom'];?></a>
+                        <ul class="sous">
+                            <li><a href="../ConnexionGestionnaire/mesinfos.php?Fest_id=".$_SESSION['Fest_id']> Voir mes infos </a></li> <?php // Truc très ghetto ça marche moyennement ce href faire gaffe pendant la démo ?>
+                            <li><a href="../deconnexion.php"> Se déconnecter </a></li>
+                        </ul>  
+
+
+                            <?php
+                        }
+                        
+                        else{ ?>
+                        <li><a href="../login1.php">Se connecter </a></li>
+                        
+                        <?php } ?></a>
+                          
+                    
+                    
+                    
+                </li>
+                
+                
+                
+                
+            </ul>
+        </nav>
             <h1>Bienvenue sur votre profil gestionnaire</h1>
+            <button class="sidebarAlert" type="button"><a href="../alertes.php">ALERTES</a></button>
             <div class="infocard">
             
-            <p>Votre adresse email personnelle : </p>
-            <p><?php echo $_SESSION['Fest_email']; ?> </p>
+                <p>Votre adresse email personnelle : </p>
+                <p><?php echo $_SESSION['Fest_email']; ?> </p>
 
-            <br>
-            <br>
+                <br>
+                <br>
 
-            <p><?php 
-            if(isset($_SESSION['Fest_id']))
-            {
-                echo "Le nom de votre festival : ". $_SESSION['Fest_nom'];
-            }
-            ?></p>
+                <p><?php 
+                if(isset($_SESSION['Fest_id']))
+                {
+                    echo "Le nom de votre festival : ". $_SESSION['Fest_nom'];
+                }
+                ?></p>
 
-            <p><?php 
-            if(isset($_SESSION['Fest_id']))
-            {
-                echo "La date de début de " . $_SESSION['Fest_nom'] . " : " . $_SESSION['Fest_datedebut'];
-            }
-            ?></p>
+                <p><?php 
+                if(isset($_SESSION['Fest_id']))
+                {
+                    echo "La date de début de " . $_SESSION['Fest_nom'] . " : " . $_SESSION['Fest_datedebut'];
+                }
+                ?></p>
 
-            <p><?php 
-            if(isset($_SESSION['Fest_id']))
-            {
-                echo "La date de fin de " . $_SESSION['Fest_nom'] . " : " . $_SESSION['Fest_datefin'];
-            }
-            ?></p>
+                <p><?php 
+                if(isset($_SESSION['Fest_id']))
+                {
+                    echo "La date de fin de " . $_SESSION['Fest_nom'] . " : " . $_SESSION['Fest_datefin'];
+                }
+                ?></p>
 
-            <p><?php 
-            if(isset($_SESSION['Fest_id']))
-            {
-                echo "Le prix d'une place : " . $_SESSION['Fest_prix'];
-            }
-            ?></p>
+                <p><?php 
+                if(isset($_SESSION['Fest_id']))
+                {
+                    echo "Le prix d'une place : " . $_SESSION['Fest_prix'];
+                }
+                ?></p>
 
-            <p><?php 
-            if(isset($_SESSION['Fest_id']))
-            {
-                echo "Les accès pour " . $_SESSION['Fest_nom'] . " : " . $_SESSION['Fest_access'];
-            }
-            ?></p>
-            
-            <p><?php 
-            if(isset($_SESSION['Fest_id']))
-            {
-                echo "Le numéro de téléphone de" . $_SESSION['Fest_nom'] . " : " . $_SESSION['Fest_numtelephone'];
-            }
-            ?></p>
+                <p><?php 
+                if(isset($_SESSION['Fest_id']))
+                {
+                    echo "Les accès pour " . $_SESSION['Fest_nom'] . " : " . $_SESSION['Fest_access'];
+                }
+                ?></p>
+                
+                <p><?php 
+                if(isset($_SESSION['Fest_id']))
+                {
+                    echo "Le numéro de téléphone de" . $_SESSION['Fest_nom'] . " : " . $_SESSION['Fest_numtelephone'];
+                }
+                ?></p>
 
-            <p><?php 
-            if(isset($_SESSION['Fest_id']))
-            {
-                echo "L'e-mail de " . $_SESSION['Fest_nom'] . " : " . $_SESSION['Fest_email'];
-            }
-            ?></p>
+                <p><?php 
+                if(isset($_SESSION['Fest_id']))
+                {
+                    echo "L'e-mail de " . $_SESSION['Fest_nom'] . " : " . $_SESSION['Fest_email'];
+                }
+                ?></p>
 
-            <p><?php 
-            if(isset($_SESSION['Fest_id']))
-            {
-                echo "L'adresse de " . $_SESSION['Fest_nom'] . " : " . $_SESSION['Fest_adresse'];
-            }
-            ?></p>
+                <p><?php 
+                if(isset($_SESSION['Fest_id']))
+                {
+                    echo "L'adresse de " . $_SESSION['Fest_nom'] . " : " . $_SESSION['Fest_adresse'];
+                }
+                ?></p>
 
-            <p><?php 
-            if(isset($_SESSION['Fest_id']))
-            {
-                echo "Le code postal de " . $_SESSION['Fest_nom'] . " : " . $_SESSION['Fest_codepostal'];
-            }
-            ?></p>
+                <p><?php 
+                if(isset($_SESSION['Fest_id']))
+                {
+                    echo "Le code postal de " . $_SESSION['Fest_nom'] . " : " . $_SESSION['Fest_codepostal'];
+                }
+                ?></p>
 
-            <p><?php 
-            if(isset($_SESSION['Fest_id']))
-            {
-                echo "Le pays de " . $_SESSION['Fest_nom'] ." : " . $_SESSION['Fest_pays'];
-            }
-            else
-            {
-                echo "Veuillez vous connecter à un festival.";
-            }
-            ?></p>
+                <p><?php 
+                if(isset($_SESSION['Fest_id']))
+                {
+                    echo "Le pays de " . $_SESSION['Fest_nom'] ." : " . $_SESSION['Fest_pays'];
+                }
+                else
+                {
+                    echo "Veuillez vous connecter à un festival.";
+                }
+                ?></p>
 
-            <p><?php 
-            if(isset($_SESSION['Fest_id']))
-            {
-                echo "La programmation de " . $_SESSION['Fest_nom'] ." : " . $_SESSION['Fest_programmation'];
-            }
-            else
-            {
-                echo "Veuillez vous connecter à un festival.";
-            }
-            ?></p>
+                <p><?php 
+                if(isset($_SESSION['Fest_id']))
+                {
+                    echo "La programmation de " . $_SESSION['Fest_nom'] ." : " . $_SESSION['Fest_programmation'];
+                }
+                else
+                {
+                    echo "Veuillez vous connecter à un festival.";
+                }
+                ?></p>
 
-            <p><?php 
-            if(isset($_SESSION['Fest_id']))
-            {
-                echo "Le lien de " . $_SESSION['Fest_nom'] ." : " . $_SESSION['Fest_lien'];
-            }
-            else
-            {
+                <p><?php 
+                if(isset($_SESSION['Fest_id']))
+                {
+                    echo "Le lien de " . $_SESSION['Fest_nom'] ." : " . $_SESSION['Fest_lien'];
+                }
+                else
+                {
 
-            }
-            ?></p>
+                }
+                ?></p>
             </div>
 
 
@@ -395,7 +447,7 @@ if(isset($_POST['formmodiflien'])){
 
                 <button><a href="../Page d'accueil/index.php"  style="text-decoration:none">Page d'accueil</a></button>
 
-                <button><a href="festivals.php"  style="text-decoration:none">Liste des festivals</a></button>
+                <button><a href="../festivals.php"  style="text-decoration:none">Liste des festivals</a></button>
             </div>
     </body>
     <footer>
@@ -409,9 +461,9 @@ if(isset($_POST['formmodiflien'])){
          
             <div class="foot">
             <div class="reseaux">
-            <a href="https://www.instagram.com/pro_detech"> <img src="insta.png" alt="icone de insta" height="60"></a>
-            <img src="youtube.png" alt="icone de insta" height="70">
-            <img src="twitter.png" alt="icone de insta" height="75">
+            <a href="https://www.instagram.com/pro_detech"> <img src="../insta.png" alt="icone de insta" height="60"></a>
+            <img src="../youtube.png" alt="icone de insta" height="70">
+            <img src="../twitter.png" alt="icone de insta" height="75">
             </div>
             <div class="lien">
             <a href="../../cgu.php">Conditions général d'utilisation</a>

@@ -1,38 +1,16 @@
 *{
     padding:0;
     margin: 0;
-    font-family: 'Elephant';
+    font-family:"Georgia";
     text-decoration: none;
     list-style:none;
 }
-
-::-webkit-scrollbar {
-    width: 12px;
-    padding: 2px;
+html{
+    scroll-behavior: smooth;
 }
-  
-/* Track */
-::-webkit-scrollbar-track {
-    background: #111;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: linear-gradient(225deg,#f53b1e 0%,#911ef6 25%,#ee1616
-    100%);
-    box-shadow: 0 0 50px 10px rgba(255, 81, 0, 0.459);
-    border-radius: 10px;
-    width: 2px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(125deg,#f53b1e 0%,#911ef6 12%,#ee1616
-    50%);
-}
-
 video {
     width: 100%;
+    max-width: 100%;
     height: 100vh;
     object-fit: cover;
 }
@@ -41,7 +19,7 @@ video {
     position: absolute;
     width: 100%;
     height: 100%;
-    box-shadow: inset 0px -80px 120px 20px rgba(0, 0, 0, 1);
+    box-
     top: 0;
     left: 0;
 }
@@ -63,9 +41,9 @@ img {
 
 .boite {
     position:absolute;
-    top:-150px;
-    left: 345px;
-    width: 650px;
+    top:-60%;
+    left: 30%;
+    width: 45%;
     height: auto;
 }
 
@@ -88,7 +66,7 @@ img {
     display : flex;
 }
 
-navbar li {
+.navbar li {
     overflow: hidden;
 }
 
@@ -187,8 +165,10 @@ button:hover {
     left: 40%;
     right: 40%;
     box-shadow: 5px 5px 5px #eb8125;
-    border-width: 1px;
+    border-width: 0px;
     border-color: #e21717;
+    padding: 20px;
+    width: 25%;
 }
 
 .PoButton:hover {
@@ -197,8 +177,9 @@ button:hover {
     border-color: #911ef6;
 }
 
-.Po {
-    font-size: 30;
+a#scroll_btn {
+    font-size: 600;
+    font-family:"Georgia";
     justify-content: center;
 }
 
@@ -209,11 +190,12 @@ button:hover {
 }
 
 .Bloc-description {
-    left:100px;
+    left:2%;
     position: absolute;
     z-index: 1;
     color: white;
-    top: 800px;
+    top: 138%;
+
 }
 
 .Bloc-description p {
@@ -225,6 +207,12 @@ button:hover {
     border: 0;
 }
 
+.Bloc-description p, .Bloc-description2 p {
+    background-color: rgba(51, 51, 51, 0.6);
+    border-radius: 10px;
+    box-shadow: 0 0 10px #333;
+}
+
 .image2 {
     position: absolute;
     left:0px;
@@ -232,6 +220,7 @@ button:hover {
     width: 100%;
     top: 600px;
     z-index: -1;
+    object-fit: cover;
 }
 
 .TOP2 {
@@ -257,17 +246,41 @@ button:hover {
 }
 
 .Bloc-description2 {
-    left:800px;
+    right:2%;
     position: absolute;
     z-index: 1;
     color: white;
-    top: 1000px;
+    top: 140%;
 }
 
 .button2 {
     top:-60px;
     left:0px;
-    font-size: 10px;
+    
+}
+
+.button3 {
+    top: 171%;
+    left :49%;
+    position: absolute;
+    z-index : 1;
+    border: 0;
+    border-radius: 5px 20px ;
+    width: 0px;
+}
+
+.button4 {
+    top: 190%;
+    left :45%;
+    position: absolute;
+    z-index : 1;
+    border: 0;
+    border-radius: 5px 20px ;
+    width: 0px;
+}
+
+.button3:hover {
+
 }
 
 .FAQTitle {
@@ -319,4 +332,18 @@ button:hover {
     height: 50%;
     background-color: #eee;
     box-shadow: inset 0 5px 5px #111;
+}
+
+.section-1{
+    display: flex;
+
+}
+
+.Montre {
+    position: absolute;
+    top : 150%;
+    right: 40%;
+    height: auto;
+    width: 20%;
+
 }

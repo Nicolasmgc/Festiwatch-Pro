@@ -51,6 +51,7 @@ nav ul{
     
 }
 .logo{
+    bottom: 60px;
     background: transparent;
     margin-left: 60px;
     margin-top: 0px;
@@ -137,6 +138,7 @@ nav > ul li:hover .sous{
     background-color: blue;
 }
 body img {
+       
     box-shadow: transparent;
     width: 80px;
     position: relative;
@@ -227,6 +229,8 @@ img {
     width: 750px;
     height: auto;
     position: absolute;
+
+    
 }
 
 select {
