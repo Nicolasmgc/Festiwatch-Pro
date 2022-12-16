@@ -89,20 +89,4 @@ session_start();
 
                 
     </body>
-    <footer>
-           <div class="contact">
-           <br>
-            Nous contacter <br>
-            Mail:<br> prodetec@gmail.com <br>
-            Numéro:<br> 068975412 <br>
-            Adresse: <br>10 Rue de Vanves, 92130 Issy-les-Moulineaux
-            </div>
-         
-            <div class="foot">
-            <div class="lien">
-            <a href="./Festiwatch-Pro/includes/cgu.php">Conditions général d'utilisation</a>
-            <a href="./Page d'accueil/FAQ/faq.php"> FAQ</a>
-            <a href="../login1.php">Connexion</a>
-            </div> </div>
-             </footer>
 </html>
