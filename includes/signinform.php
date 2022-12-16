@@ -13,9 +13,9 @@
 <nav>
             <ul>
                 <li><img src="Logo alternatif.png" class="logo"></li> 
-                <li><a href="../index.php" > Accueil </a></li>
-                <li><a href="#"> FAQ </a></li>
-                <li><a href="../AProposDeNous/A_propos_de_nous.php"> A propos de nous </a></li>
+                <li><a href="./Page d'accueil./index.php" > Accueil </a></li>
+                <li><a href="./Page d'accueil./FAQ ./faq.php"> FAQ </a></li>
+                <li><a href="./Page d'accueil ./AProposDeNous/A_propos_de_nous.php"> A propos de nous </a></li>
                 
                 
                 
@@ -37,15 +37,15 @@
 
                         <a><?php echo $_SESSION['Fest_nom'];?></a>
                         <ul class="sous">
-                            <li><a href="../../ConnexionGestionnaire/mesinfos.php"> Voir mes infos </a></li> <?php // Truc très ghetto ça marche moyennement ce href faire gaffe pendant la démo ?>
-                            <li><a href="../deconnexion.php"> Se déconnecter </a></li>
+                            <li><a href="./ConnexionGestionnaire/mesinfos.php"> Voir mes infos </a></li> <?php // Truc très ghetto ça marche moyennement ce href faire gaffe pendant la démo ?>
+                            <li><a href="./deconnexion.php"> Se déconnecter </a></li>
                         </ul>  
 
 
                             <?php
                         }
                         else{ ?>
-                        <li><a href="../../login1.php">Se connecter </a></li>
+                        <li><a href="./login1.php">Se connecter </a></li>
                         
                         <?php } ?>
                     
