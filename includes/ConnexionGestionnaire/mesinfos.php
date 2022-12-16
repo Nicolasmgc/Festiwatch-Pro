@@ -461,9 +461,9 @@ if(isset($_POST['formmodiflien'])){
          
             <div class="foot">
             <div class="reseaux">
-            <a href="https://www.instagram.com/pro_detech"> <img src="insta.png" alt="icone de insta" height="60"></a>
-            <img src="youtube.png" alt="icone de insta" height="70">
-            <img src="twitter.png" alt="icone de insta" height="75">
+            <a href="https://www.instagram.com/pro_detech"> <img src="../insta.png" alt="icone de insta" height="60"></a>
+            <img src="../youtube.png" alt="icone de insta" height="70">
+            <img src="../twitter.png" alt="icone de insta" height="75">
             </div>
             <div class="lien">
             <a href="../../cgu.php">Conditions général d'utilisation</a>

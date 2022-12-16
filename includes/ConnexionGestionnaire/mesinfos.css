@@ -121,6 +121,7 @@ body {
     color:black;
     background: linear-gradient(225deg,#f53b1e 0%,#911ef6 25%,#ee1616
     100%);
+    overflow-x: hidden;
 }
 nav{
     width: 100%;
