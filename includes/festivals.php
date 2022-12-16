@@ -34,6 +34,58 @@
 </br>
 <head></head>
 
+<nav>
+            <ul>
+               <li><img src="Logo alternatif2.png" class="logo" >  </a></li>   
+                  
+                <li><a href="Page d'accueil/index.php" > Accueil </a></li>
+                <li><a href="Page d'accueil/FAQ/faq.php"> FAQ </a></li>
+                <li><a href="Page d'accueil/AProposDeNous/A_propos_de_nous.php"> A propos de nous </a></li>
+                
+                <li class="deroulant"><?php if(isset($_SESSION['email'])){
+                            ?>
+                        
+                      <a><?php echo $_SESSION['email'];?></a>
+                        <ul class="sous">
+                            <li><a href="monprofil.php"> Voir mon profil </a></li>
+                            <li><a href="deconnexion.php"> Se déconnecter </a></li>
+                        </ul>           
+                        
+
+
+                        <?php
+                        }
+                        
+                        elseif(isset($_SESSION['Fest_id'])){
+                            ?>
+
+
+                        <a><?php echo $_SESSION['Fest_nom'];?></a>
+                        <ul class="sous">
+                            <li><a href="ConnexionGestionnaire/mesinfos.php?Fest_id=".$_SESSION['Fest_id']> Voir mes infos </a></li> <?php // Truc très ghetto ça marche moyennement ce href faire gaffe pendant la démo ?>
+                            <li><a href="deconnexion.php"> Se déconnecter </a></li>
+                        </ul>  
+
+
+                            <?php
+                        }
+                        
+                        else{ ?>
+                        <li><a href="login1.php">Se connecter </a></li>
+                        
+                        <?php } ?></a>
+                          
+                    
+                    
+                    
+                </li>
+                
+                
+                
+                
+            </ul>
+        </nav>
+
 <body>
  <h1>Liste des festivals</h1>
 
@@ -58,6 +110,8 @@
           <th>Pays</th>
           <th>Access</th>
           <th>Lien</th>
+          <th>Numéro de téléphone</th>
+          <th>Adresse mail</th>
         </tr>
       </thead>
 
@@ -70,7 +124,7 @@
         <?php while($row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
         <tr> 
           <td><?php echo htmlspecialchars($row['Fest_id']); ?></td>
-          <td><a href="./Page d'accueil/accueil.php" class=festival ><?php echo htmlspecialchars($row['Fest_nom']); ?></a></td>
+          <td><a href="Form user 2.php?Fest_id=<?php echo $row['Fest_id'];?>&amp;Fest_nom=<?php echo $row['Fest_nom'];?>&amp;Fest_datedebut=<?php echo $row['Fest_datedebut'];?>&amp;Fest_datefin=<?php echo $row['Fest_datefin'];?>&amp;Fest_adresse=<?php echo $row['Fest_adresse'];?>&amp;Fest_codepostal=<?php echo $row['Fest_codepostal'];?>&amp;Fest_pays=<?php echo $row['Fest_pays'];?>&amp;Fest_access=<?php echo $row['Fest_access'];?>&amp;Fest_numtelephone=<?php echo $row['Fest_numtelephone'];?>&amp;Fest_email=<?php echo $row['Fest_email'];?>&amp;Fest_programmation=<?php echo $row['Fest_programmation']?>" class=festival ><?php echo htmlspecialchars($row['Fest_nom']); ?></a></td>
           <td><?php echo htmlspecialchars($row['Fest_datedebut']); ?></td>
           <td><?php echo htmlspecialchars($row['Fest_datefin']); ?></td>
           <td><?php echo htmlspecialchars($row['Fest_prix']); ?></td>
@@ -80,6 +134,8 @@
           <td><?php echo htmlspecialchars($row['Fest_pays']); ?></td>
           <td><?php echo htmlspecialchars($row['Fest_access']); ?></td>
           <td><?php echo htmlspecialchars($row['Fest_lien']); ?></td>
+          <td><?php echo htmlspecialchars($row['Fest_numtelephone']); ?></td>
+          <td><?php echo htmlspecialchars($row['Fest_email']); ?></td>
         </tr>
         <?php endwhile; ?>
       </tbody>
@@ -90,7 +146,7 @@
 
 
 
-<a href="index.php">Accueil</a>
+
 
 
 
@@ -106,10 +162,30 @@ if(isset($resultf['Fest_nom']))
     <?php
 
 }else{
-    echo "liste des festivals";
+    echo "";
 }
 
 ?>
 </body>
+<footer>
+           <div class="contact">
+           <br>
+            Nous contacter <br>
+            Mail:<br> prodetec@gmail.com <br>
+            Numéro:<br> 068975412 <br>
+            Adresse: <br>10 Rue de Vanves, 92130 Issy-les-Moulineaux
+            </div>
+         
+            <div class="foot">
+            <div class="reseaux">
+            <a href="https://www.instagram.com/pro_detech"> <img src="insta.png" alt="icone de insta" height="60"></a>
+            <img src="youtube.png" alt="icone de insta" height="70">
+            <img src="twitter.png" alt="icone de insta" height="75">
+            </div>
+            <div class="lien">
+            <a href="./cgu.php">Conditions général d'utilisation</a>
+            <a href="../login1.php">Connexion</a>
+            </div> </div>
+             </footer>
 </html>
 
