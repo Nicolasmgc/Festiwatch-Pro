@@ -45,6 +45,7 @@
                             ]);
                         echo "Le compte a été créé";
                         // header location à mettre ici ?
+                        header('Location: login1.php')
                         }else {
                             echo "Ce numéro de téléphone est déjà utilisé";
                         }
