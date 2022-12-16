@@ -95,7 +95,7 @@ h1{
     padding: 20px;
 }
 
-form button{
+form button, .btn button {
     margin-right: 60px;
     margin-top: 10px;
     font-family: 'Montserrat', sans-serif;
