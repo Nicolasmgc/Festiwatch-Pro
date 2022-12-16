@@ -121,7 +121,7 @@
             <img src="twitter.png" alt="icone de insta" height="75">
             </div>
             <div class="lien">
-            <a href="./cgu.php">Conditions général d'utilisation</a>
-            <a href="../login1.php">Connexion</a>
+            <a href="../.././cgu.php">Conditions général d'utilisation</a>
+            <a href="../.././login1.php">Connexion</a>
             </div> </div>
              </footer>
