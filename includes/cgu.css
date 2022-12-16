@@ -228,7 +228,7 @@ nav{
 
 footer{
     background-color:black ;
-    width: 100%;
+    width: 105%;
     display: flex;
     padding: 20px auto;
  }
@@ -236,7 +236,7 @@ footer{
  .contact{
      font-size:15px;
      margin-left: 2%;
-     font-family: 'Elephant';
+     font-family: 'Montserrat', sans-serif;
      flex-direction: column;
      color: white;
      margin-bottom: 2%;
@@ -244,9 +244,9 @@ footer{
  .reseaux{
      display:block;
      margin-left:30%;
-     margin-bottom: 25%;
+     margin-top: 2%;
      justify-content: space-between;
-     background-color: #eee;
+     
  }
  .foot{
      display: flex;

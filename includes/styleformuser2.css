@@ -1,4 +1,4 @@
-img {
+body img {
     height: auto;
     width: 1250px;
     z-index: -1;
@@ -6,3 +6,53 @@ img {
     margin: 0;
     object-fit: cover;
 }
+footer{
+    background-color:black ;
+    width: 105%;
+    display: flex;
+    padding: 20px auto;
+ }
+ 
+ .contact{
+     font-size:15px;
+     margin-left: 2%;
+     font-family: 'Montserrat', sans-serif;
+     flex-direction: column;
+     color: white;
+     margin-bottom: 2%;
+ }
+ .reseaux{
+     display:block;
+     margin-left:30%;
+     margin-top: 2%;
+     justify-content: space-between;
+ }
+.twitter{
+    height:75px;
+ }
+ .youtube{
+    height:70px;
+ }
+ .insta{
+    height:60px;
+ }
+ .foot{
+     display: flex;
+     display: inline-block;
+     width: 50%;
+ }
+ .lien{
+     font-family: 'Montserrat', sans-serif;
+     color: aliceblue;   
+    margin-top: 4%;
+    text-align: center;
+ }
+ 
+ .reseaux a{
+     color: white;
+     padding: 5px;
+ }
+ .lien a{
+    color: white;
+    padding: 7px;
+ }
