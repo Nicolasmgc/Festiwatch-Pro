@@ -15,17 +15,17 @@ session_start()
             <ul>
                <li><img src="Logo alternatif2.png" class="logo" >  </a></li>   
                   
-                <li><a href="#" > Accueil </a></li>
-                <li><a href="./FAQ/faq.php"> FAQ </a></li>
-                <li><a href="./AProposDeNous/A_propos_de_nous.php"> A propos de nous </a></li>
+                <li><a href="./Page d'accueil ./index.php" > Accueil </a></li>
+                <li><a href="./Page d'accueil ./FAQ/faq.php"> FAQ </a></li>
+                <li><a href="./Page d'accueil ./AProposDeNous/A_propos_de_nous.php"> A propos de nous </a></li>
                 
                 <li class="deroulant"><?php if(isset($_SESSION['email'])){
                             ?>
                         
                       <a><?php echo $_SESSION['email'];?></a>
                         <ul class="sous">
-                            <li><a href="../monprofil.php"> Voir mon profil </a></li>
-                            <li><a href="../deconnexion.php"> Se déconnecter </a></li>
+                            <li><a href="./monprofil.php"> Voir mon profil </a></li>
+                            <li><a href="./deconnexion.php"> Se déconnecter </a></li>
                         </ul>           
                         
 

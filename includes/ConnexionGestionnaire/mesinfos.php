@@ -11,6 +11,57 @@
         </head>
 
         <body>
+        <nav>
+            <ul>
+               <li><img src="../Logo alternatif2.png" class="logo" >  </a></li>   
+                  
+                <li><a href=".././Page d'accueil ./index.php" > Accueil </a></li>
+                <li><a href=".././Page d'accueil ./FAQ/faq.php"> FAQ </a></li>
+                <li><a href=".././Page d'accueil ./AProposDeNous/A_propos_de_nous.php"> A propos de nous </a></li>
+                
+                <li class="deroulant"><?php if(isset($_SESSION['email'])){
+                            ?>
+                        
+                      <a><?php echo $_SESSION['email'];?></a>
+                        <ul class="sous">
+                            <li><a href="#"> Voir mon profil </a></li>
+                            <li><a href="../deconnexion.php"> Se déconnecter </a></li>
+                        </ul>           
+                        
+
+
+                        <?php
+                        }
+                        
+                        elseif(isset($_SESSION['Fest_id'])){
+                            ?>
+
+
+                        <a><?php echo $_SESSION['Fest_nom'];?></a>
+                        <ul class="sous">
+                            <li><a href="../ConnexionGestionnaire/mesinfos.php?Fest_id=".$_SESSION['Fest_id']> Voir mes infos </a></li> <?php // Truc très ghetto ça marche moyennement ce href faire gaffe pendant la démo ?>
+                            <li><a href="../deconnexion.php"> Se déconnecter </a></li>
+                        </ul>  
+
+
+                            <?php
+                        }
+                        
+                        else{ ?>
+                        <li><a href="../login1.php">Se connecter </a></li>
+                        
+                        <?php } ?></a>
+                          
+                    
+                    
+                    
+                </li>
+                
+                
+                
+                
+            </ul>
+        </nav>
             <h1>Bienvenue sur votre profil gestionnaire</h1>
             <div class="infocard">
             
@@ -395,7 +446,7 @@ if(isset($_POST['formmodiflien'])){
 
                 <button><a href="../Page d'accueil/index.php"  style="text-decoration:none">Page d'accueil</a></button>
 
-                <button><a href="festivals.php"  style="text-decoration:none">Liste des festivals</a></button>
+                <button><a href="../festivals.php"  style="text-decoration:none">Liste des festivals</a></button>
             </div>
     </body>
     <footer>
