@@ -228,3 +228,45 @@ nav .logo{
     box-shadow: 2px 2px 4px 1px #333;
 }
 
+footer{
+    background-color:black ;
+    width: 105%;
+    display: flex;
+    padding: 20px auto;
+ }
+ 
+ .contact{
+     font-size:15px;
+     margin-left: 2%;
+     font-family: 'Montserrat', sans-serif;
+     flex-direction: column;
+     color: white;
+     margin-bottom: 2%;
+ }
+ .reseaux{
+     display:block;
+     margin-left:30%;
+     margin-top: 2%;
+     justify-content: space-between;
+     
+ }
+ .foot{
+     display: flex;
+     display: inline-block;
+     width: 50%;
+ }
+ .lien{
+     font-family: 'Montserrat', sans-serif;
+     color: aliceblue;   
+    margin-top: 4%;
+    text-align: center;
+ }
+ 
+ .reseaux a{
+     color: white;
+     padding: 5px;
+ }
+ .lien a{
+    color: white;
+    padding: 7px;
+ }

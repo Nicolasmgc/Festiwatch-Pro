@@ -307,7 +307,6 @@ footer{
     margin-top: 2%;
     justify-content: space-between;
 }
-
 .foot{
     display: flex;
     display: inline-block;
@@ -324,3 +323,4 @@ a{
     color: white;
     padding: 5px;
 }
+

@@ -141,7 +141,7 @@ session_start();
             <div class="foot">
             <div class="reseaux">
             <a href="https://www.instagram.com/pro_detech"> <img src="insta.png" alt="icone de insta" height="60"></a>
-            <img src="youtube.png" alt="icone de insta" height="70">
+            <img src="youtube.png" alt="icone de insta" height="70" class="youtube">
             <img src="twitter.png" alt="icone de insta" height="75"  class="twitter">
             </div>
             <div class="lien">
