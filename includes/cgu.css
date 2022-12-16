@@ -230,7 +230,7 @@ nav .logo{
 
 footer{
     background-color:black ;
-    width: 105%;
+    width: 100%;
     display: flex;
     padding: 20px auto;
  }
@@ -243,13 +243,7 @@ footer{
      color: white;
      margin-bottom: 2%;
  }
- .reseaux{
-     display:block;
-     margin-left:30%;
-     margin-top: 2%;
-     justify-content: space-between;
-     
- }
+
  .foot{
      display: flex;
      display: inline-block;

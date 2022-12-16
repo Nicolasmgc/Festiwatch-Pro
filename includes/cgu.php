@@ -118,11 +118,6 @@ session_start()
             </div>
          
             <div class="foot">
-            <div class="reseaux">
-            <a href="https://www.instagram.com/pro_detech"> <img src="insta.png" alt="icone de insta" height="60"></a>
-            <img src="youtube.png" alt="icone de insta" height="70">
-            <img src="twitter.png" alt="icone de insta" height="75">
-            </div>
             <div class="lien">
             <a href="./Festiwatch-Pro/includes/cgu.php">Conditions général d'utilisation</a>
             <a href="./Page d'accueil/FAQ/faq.php"> FAQ</a>
