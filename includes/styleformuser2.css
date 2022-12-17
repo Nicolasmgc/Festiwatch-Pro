@@ -1,3 +1,7 @@
+*{
+    font-family: "Elephant";
+}
+
 img {
     width: 1500px;
     display: flex;
@@ -83,7 +87,6 @@ nav{
     position: relative;
     top: 10px;
     z-index: 1;
-
 }
 nav ul{
     list-style-type: none;
