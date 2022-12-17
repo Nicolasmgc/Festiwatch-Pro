@@ -232,7 +232,7 @@ body {
 body {
     color:black;
     background-color:white;
-    background-image:url(image.jpg);
+    background-image:url(../../../PNG/image.jpg);
     overflow-x: hidden;
     overflow-y: scroll;
     }

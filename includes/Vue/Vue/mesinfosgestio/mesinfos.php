@@ -13,45 +13,42 @@
         <body>
         <nav>
             <ul>
-               <li><img src="../Logo alternatif2.png" class="logo" >  </a></li>   
-                  
-                <li><a href=".././Page d'accueil ./index.php" > Accueil </a></li>
-                <li><a href=".././Page d'accueil ./FAQ/faq.php"> FAQ </a></li>
-                <li><a href=".././Page d'accueil ./AProposDeNous/A_propos_de_nous.php"> A propos de nous </a></li>
+                <li><img src="../../../PNG/Logo alternatif.png" class="logo"></li> 
+                <li><a href="../Pagedaccueil/index.php" > Accueil </a></li>
+                <li><a href="../FAQ/faq.php"> FAQ </a></li>
+                <li><a href="../Apropos/A_propos_de_nous.php"> A propos de nous </a></li>
+                
+                
                 
                 <li class="deroulant"><?php if(isset($_SESSION['email'])){
                             ?>
                         
                       <a><?php echo $_SESSION['email'];?></a>
-                        <ul class="sous">
-                            <li><a href="#"> Voir mon profil </a></li>
-                            <li><a href="../deconnexion.php"> Se déconnecter </a></li>
-                        </ul>           
+                    <ul class="sous">
+                        <li><a href="../monprofiluser/monprofil.php"> Voir mon profil </a></li>
+                        <li><a href="../../../Controller/deconnexion.php"> Se déconnecter </a></li>
                         
-
-
+                        </ul>
+                                               
                         <?php
-                        }
-                        
+                }
                         elseif(isset($_SESSION['Fest_id'])){
                             ?>
 
 
                         <a><?php echo $_SESSION['Fest_nom'];?></a>
                         <ul class="sous">
-                            <li><a href="../ConnexionGestionnaire/mesinfos.php?Fest_id=".$_SESSION['Fest_id']> Voir mes infos </a></li> <?php // Truc très ghetto ça marche moyennement ce href faire gaffe pendant la démo ?>
-                            <li><a href="../deconnexion.php"> Se déconnecter </a></li>
+                            <li><a href="../mesinfosgestio/mesinfos.php"> Voir mes infos </a></li> <?php // Truc très ghetto ça marche moyennement ce href faire gaffe pendant la démo ?>
+                            <li><a href="../../../Controller/deconnexion.php"> Se déconnecter </a></li>
                         </ul>  
 
 
                             <?php
                         }
-                        
                         else{ ?>
-                        <li><a href="../login1.php">Se connecter </a></li>
+                        <li><a href="../Connexionuser/login1.php">Se connecter </a></li>
                         
-                        <?php } ?></a>
-                          
+                        <?php } ?>
                     
                     
                     
@@ -256,7 +253,7 @@
             </div>
 
 
-<?php include 'C:\wamp64\www\includes\database.php';
+<?php include '../../../Controller/database.php';
 global $db;
 ?>
 
@@ -443,11 +440,11 @@ if(isset($_POST['formmodiflien'])){
 ?>
 
             <div class="btn">
-                <button><a href="../deconnexion.php"  style="text-decoration:none">Déconnexion</a></button>
+                <button><a href="../../../Controller/deconnexion.php"  style="text-decoration:none">Déconnexion</a></button>
 
-                <button><a href="../Page d'accueil/index.php"  style="text-decoration:none">Page d'accueil</a></button>
+                <button><a href="../Pagedaccueil/index.php"  style="text-decoration:none">Page d'accueil</a></button>
 
-                <button><a href="../festivals.php"  style="text-decoration:none">Liste des festivals</a></button>
+                <button><a href="../listefestivals/festivals.php"  style="text-decoration:none">Liste des festivals</a></button>
             </div>
     </body>
     <footer>
@@ -461,14 +458,14 @@ if(isset($_POST['formmodiflien'])){
          
             <div class="foot">
             <div class="reseaux">
-            <a href="https://www.instagram.com/pro_detech"> <img src="../insta.png" alt="icone de insta" height="60"></a>
-            <img src="../youtube.png" alt="icone de insta" height="70">
-            <img src="../twitter.png" alt="icone de insta" height="75">
+            <a href="https://www.instagram.com/pro_detech"> <img src="../../../PNG/insta.png" alt="icone de insta" height="60"></a>
+            <img src="../../../PNG/youtube.png" alt="icone de insta" height="70">
+            <img src="../../../PNG/twitter.png" alt="icone de insta" height="75">
             </div>
             <div class="lien">
-            <a href="../../cgu.php">Conditions général d'utilisation</a>
-            <a href=".././FAQ/faq.php"> FAQ</a>
-            <a href="../login1.php">Connexion</a>
+            <a href="../CGU/cgu.php">Conditions général d'utilisation</a>
+            <a href="../FAQ/faq.php"> FAQ</a>
+            <a href="../Connexionuser/login1.php">Connexion</a>
             </div> </div>
              </footer>
     </html>

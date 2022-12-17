@@ -13,44 +13,42 @@
     <body>
     <nav>
             <ul>
-                <li><img src="Logo alternatif.png" class="logo" >  </a></li> 
-                  
-                <li><a href="../index.php" > Accueil </a></li>
-                <li><a href=".././FAQ/faq.php"> FAQ </a></li>
-                <li><a href="#"> A propos de nous </a></li>
+                <li><img src="../../../PNG/Logo alternatif.png" class="logo"></li> 
+                <li><a href="../Pagedaccueil/index.php" > Accueil </a></li>
+                <li><a href="../FAQ/faq.php"> FAQ </a></li>
+                <li><a href="../Apropos/A_propos_de_nous.php"> A propos de nous </a></li>
+                
+                
                 
                 <li class="deroulant"><?php if(isset($_SESSION['email'])){
                             ?>
                         
                       <a><?php echo $_SESSION['email'];?></a>
-                        <ul class="sous">
-                            
-                            <li><a href="../../monprofil.php"> Voir mon profil </a></li>
-                            <li><a href="../../deconnexion.php"> Se déconnecter </a></li>
-                        </ul>
+                    <ul class="sous">
+                        <li><a href="../monprofiluser/monprofil.php"> Voir mon profil </a></li>
+                        <li><a href="../../../Controller/deconnexion.php"> Se déconnecter </a></li>
                         
-
-                    <?php
-                    }
+                        </ul>
+                                               
+                        <?php
+                }
                         elseif(isset($_SESSION['Fest_id'])){
                             ?>
 
 
                         <a><?php echo $_SESSION['Fest_nom'];?></a>
                         <ul class="sous">
-                            <li><a href="../../ConnexionGestionnaire/mesinfos.php"> Voir mes infos </a></li> <?php // Truc très ghetto ça marche moyennement ce href faire gaffe pendant la démo ?>
-                            <li><a href="../deconnexion.php"> Se déconnecter </a></li>
+                            <li><a href="../mesinfosgestio/mesinfos.php"> Voir mes infos </a></li> <?php // Truc très ghetto ça marche moyennement ce href faire gaffe pendant la démo ?>
+                            <li><a href="../../../Controller/deconnexion.php"> Se déconnecter </a></li>
                         </ul>  
 
 
                             <?php
                         }
-                        
                         else{ ?>
-                        <li><a href="../../login1.php">Se connecter </a></li>
+                        <li><a href="../Connexionuser/login1.php">Se connecter </a></li>
                         
-                        <?php } ?></a>
-                          
+                        <?php } ?>
                     
                     
                     
@@ -75,17 +73,17 @@
  
         <div class="photo1">
         <div class="nicolas">
-        <img src="PDG.jpg" alt="Photo du PDG de l'entreprise"   class="image" />
+        <img src="../../../PNG/PDG.jpg" alt="Photo du PDG de l'entreprise"   class="image" />
         <p>Directeur général</br> Nicolas Merbouche </p> 
         </div>
 
         <div class="anais">
-        <img src="Anais.jpg" alt="Photo d'anais" class="image" />
+        <img src="../../../PNG/Anais.jpg" alt="Photo d'anais" class="image" />
         <p> Responsable Marketing </br> Anaïs Messalti</p>
         </div>
 
         <div class="bastien" >
-         <img src="Bastien.jpg" alt="Photo de bastien"  class="image" />
+         <img src="../../../PNG/Bastien.jpg" alt="Photo de bastien"  class="image" />
         <p>Consultant informatique </br> Bastien Maupas</p>
         </div>
                     
@@ -93,30 +91,30 @@
 
         <div class="photo1">
         <div class="tom">
-        <img src="TOM.jpg" alt="Photo de tom"   class="image" />
+        <img src="../../../PNG/TOM.jpg" alt="Photo de tom"   class="image" />
         <p>Développeur</br> Tom Hall</p>
         </div>
 
         <div class="constance">
-        <img src="Cons.jpg" alt="Photo constance" class="image" />
+        <img src="../../../PNG/Cons.jpg" alt="Photo constance" class="image" />
         <p> Chargée de conception </br>  Constance Persad</p>
         </div>
 
         <div class="arno" >
-         <img src="Arno.jpg" alt="Photo d'Arno"  class="image" />
+         <img src="../../../PNG/Arno.jpg" alt="Photo d'Arno"  class="image" />
          <p>UX / UI Designer</br> Arno Laperotine</p></div>
         </div>
         
          <div class="ziad">
-        <img src="Ziad.jpg" alt="Photo de Ziad" class="image"/>
+        <img src="../../../PNG/Ziad.jpg" alt="Photo de Ziad" class="image"/>
         <p>Développeur<br>Ziad El Younsi</p>
        </div>
                 
        <h1> Festiwatch en quelques mots</h1>
        <div class="photo2">
-       <img src="health22.png" alt="icone de santé"  height="310"  class="image1" /><br>
-       <img src="icones-de-localisation.png" alt="icone de localisation"  height="325"class="image1" /><br>
-       <img img src="party2.png" alt="icone de fete"  height="325"class="image1" /><br>
+       <img src="../../../PNG/health22.png" alt="icone de santé"  height="310"  class="image1" /><br>
+       <img src="../../../PNG/icones-de-localisation.png" alt="icone de localisation"  height="325"class="image1" /><br>
+       <img img src="../../../PNG/party2.png" alt="icone de fete"  height="325"class="image1" /><br>
        </div>
        <div class="paragraphe">
        <p>FestiWatch vous permet de mesurer votre fréquence cardiaque, ainsi que votre température et l’intensité sonore
@@ -141,14 +139,14 @@
          
             <div class="foot">
             <div class="reseaux">
-            <a href="https://www.instagram.com/pro_detech"> <img src="insta.png" alt="icone de insta" height="60"></a>
-            <img src="youtube.png" alt="icone de insta" height="70">
-            <img src="twitter.png" alt="icone de insta" height="75">
+            <a href="https://www.instagram.com/pro_detech"> <img src="../../../PNG/insta.png" alt="icone de insta" height="60"></a>
+            <img src="../../../PNG/youtube.png" alt="icone de insta" height="70">
+            <img src="../../../PNG/twitter.png" alt="icone de insta" height="75">
             </div>
             <div class="lien">
-            <a href="../../cgu.php">Conditions général d'utilisation</a>
-            <a href=".././FAQ/faq.php"> FAQ</a>
-            <a href="../login1.php">Connexion</a>
+            <a href="../CGU/cgu.php">Conditions général d'utilisation</a>
+            <a href="../FAQ/faq.php"> FAQ</a>
+            <a href="../Connexionuser/login1.php">Connexion</a>
             </div> </div>
              </footer>
     </body>

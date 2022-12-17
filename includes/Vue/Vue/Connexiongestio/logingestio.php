@@ -12,7 +12,7 @@
 
 </head>
 
-<?php include 'C:\wamp64\www\includes\database.php';
+<?php include '../../../Controller/database.php';
 global $db;
 ?>
 
@@ -27,9 +27,9 @@ global $db;
     <input type="submit" name="formlogingestio" id="formlogingestio" value="Ok"><br/>
 </form>
 
-    <?php include 'backlogingestio.php'; ?>
+    <?php include '../../../Modele/logingestio/backlogingestio.php'; ?>
 
-    <a href="../Page d'accueil/index.php" class="acc"> Revenir à la page d'accueil </a>
+    <a href="../Pagedaccueil/index.php" class="acc"> Revenir à la page d'accueil </a>
 
     </div>
 

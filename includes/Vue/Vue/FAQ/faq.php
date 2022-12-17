@@ -6,17 +6,17 @@
 <head>
     <title>FestiWatch - FAQ</title>
     <meta charset="utf-8">
-    <link rel="icon" href="icon.jpeg">
+    <link rel="icon" href="../../../PNG/icon.jpeg">
     
     <link rel="stylesheet" type="text/css" href="faq2.css">
 </head>
 <body>
 <nav>
             <ul>
-                <li><img src="Logo alternatif.png" class="logo"></li> 
-                <li><a href="../index.php" > Accueil </a></li>
-                <li><a href="#"> FAQ </a></li>
-                <li><a href="../AProposDeNous/A_propos_de_nous.php"> A propos de nous </a></li>
+                <li><img src="../../../PNG/Logo alternatif.png" class="logo"></li> 
+                <li><a href="../Pagedaccueil/index.php" > Accueil </a></li>
+                <li><a href="../FAQ/faq.php"> FAQ </a></li>
+                <li><a href="../Apropos/A_propos_de_nous.php"> A propos de nous </a></li>
                 
                 
                 
@@ -25,8 +25,8 @@
                         
                       <a><?php echo $_SESSION['email'];?></a>
                     <ul class="sous">
-                        <li><a href="../../monprofil.php"> Voir mon profil </a></li>
-                        <li><a href="../../deconnexion.php"> Se déconnecter </a></li>
+                        <li><a href="../monprofiluser/monprofil.php"> Voir mon profil </a></li>
+                        <li><a href="../../../Controller/deconnexion.php"> Se déconnecter </a></li>
                         
                         </ul>
                                                
@@ -38,15 +38,15 @@
 
                         <a><?php echo $_SESSION['Fest_nom'];?></a>
                         <ul class="sous">
-                            <li><a href="../../ConnexionGestionnaire/mesinfos.php"> Voir mes infos </a></li> <?php // Truc très ghetto ça marche moyennement ce href faire gaffe pendant la démo ?>
-                            <li><a href="../deconnexion.php"> Se déconnecter </a></li>
+                            <li><a href="../mesinfosgestio/mesinfos.php"> Voir mes infos </a></li> <?php // Truc très ghetto ça marche moyennement ce href faire gaffe pendant la démo ?>
+                            <li><a href="../../../Controller/deconnexion.php"> Se déconnecter </a></li>
                         </ul>  
 
 
                             <?php
                         }
                         else{ ?>
-                        <li><a href="../../login1.php">Se connecter </a></li>
+                        <li><a href="../Connexionuser/login1.php">Se connecter </a></li>
                         
                         <?php } ?>
                     
@@ -116,7 +116,7 @@
          
             <div class="foot">
             <div class="lien">
-            <a href="../.././cgu.php">Conditions général d'utilisation</a>
-            <a href="../.././login1.php">Connexion</a>
+            <a href="../CGU/cgu.php">Conditions général d'utilisation</a>
+            <a href="../Connexionuser/login1.php">Connexion</a>
             </div> </div>
              </footer>
