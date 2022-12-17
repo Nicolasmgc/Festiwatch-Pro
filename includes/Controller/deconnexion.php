@@ -1,7 +1,7 @@
 <?php
 session_start();
 session_destroy();
-header('location: login1.php');
+header('location: ../Vue/Vue/Connexionuser/login1.php');
 exit;
 
 ?>

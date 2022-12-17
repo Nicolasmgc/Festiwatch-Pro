@@ -33,7 +33,7 @@
                     $_SESSION['Fest_prix'] = $result['Fest_prix'];
                     $_SESSION['Fest_programmation'] = $result['Fest_programmation'];
                     $_SESSION['Fest_password'] = $result['Fest_password'];
-                    header("Location: mesinfos.php?Fest_id=".$_SESSION['Fest_id']);
+                    header("Location: ../../Vue/mesinfosgestio/mesinfos.php?Fest_id=".$_SESSION['Fest_id']);
                 }
                 else
                 {

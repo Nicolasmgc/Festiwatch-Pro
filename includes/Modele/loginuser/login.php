@@ -30,7 +30,7 @@
                     $_SESSION['codepostal'] = $result['codepostal'];
                     $_SESSION['ville'] = $result['ville'];
                     $_SESSION['password'] = $result['password'];
-                    header("Location: monprofil.php?id=".$_SESSION['id']);
+                    header("Location: ../../Vue/monprofiluser/monprofil.php?id=".$_SESSION['id']);
                 }
                 else
                 {
