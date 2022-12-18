@@ -79,7 +79,7 @@
                 <select type="boolean" name="handicap" id="handicap">
                     <option value=0>Non</option>
                     <option value=1>Oui</option><br/>
-            <input type="submit" name="formsend" id="formsend" value="Ok">
+            <input type="submit" name="formsend" id="formsend" value="S'inscrire">
         </form>
     </div>
 </body>

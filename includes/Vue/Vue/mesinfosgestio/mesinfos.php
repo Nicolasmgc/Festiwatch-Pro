@@ -60,7 +60,7 @@
             </ul>
         </nav>
             <h1>Bienvenue sur votre profil gestionnaire</h1>
-            <button class="sidebarAlert" type="button"><a href="../alertes.php">ALERTES</a></button>
+            <button class="sidebarAlert" type="button"><a href="../listealertes/alertes.php">ALERTES</a></button>
             <div class="infocard">
             
                 <p>Votre adresse email personnelle : </p>
