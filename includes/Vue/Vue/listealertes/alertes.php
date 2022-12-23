@@ -2,6 +2,35 @@
 session_start();
 ?>
 
+<?php
+  $host = 'localhost';
+  $dbname = 'siteweb';
+  $username = 'root';
+  $password = '';
+    
+  $dsn = "mysql:host=$host;dbname=$dbname"; 
+  // récupérer tous les utilisateurs
+  $sql = "SELECT alerte.alerte_id, alerte.alerte_zone, alerte.alerte_horaire, alerte.alerte_date, alerte.alerte_statut, alerte.alerte_type, festival.Fest_nom, montre.Montre_code, personnel.Personnel_nom
+  FROM (((alerte
+  INNER JOIN montre ON alerte.Montre_code = montre.Montre_code)
+  INNER JOIN festival ON alerte.Fest_id = festival.Fest_id)
+  INNER JOIN personnel ON alerte.Personnel_id = personnel.Personnel_id)
+  WHERE alerte.Fest_id = ".$_SESSION['Fest_id'];
+   
+  try{
+   $pdo = new PDO($dsn, $username, $password);
+   $stmt = $pdo->query($sql);
+   
+   
+  }catch (PDOException $e){
+    echo $e->getMessage();
+  }
+?>
+
+<?php include '../../../Controller/database.php';
+    global $db;
+    ?>
+
 
 <!DOCTYPE html> 
 <html lang="fr">
@@ -81,7 +110,23 @@ session_start();
                 <th> Type d'alerte</th>
             </tr>
         </thead>
-        <tbody> 
+
+        <tbody>
+        <?php while($row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
+        <tr> 
+          <td><?php echo htmlspecialchars($row['alerte_id']); ?></td>
+          <td><?php echo htmlspecialchars($row['Montre_code']); ?></td>
+          <td><?php echo htmlspecialchars($row['alerte_zone']); ?></td>
+          <td><?php echo htmlspecialchars($row['alerte_date']); ?></td>
+          <td><?php echo htmlspecialchars($row['alerte_horaire']); ?></td>
+          <td><?php echo htmlspecialchars($row['Personnel_nom']); ?></td>
+          <td><?php echo htmlspecialchars($row['alerte_statut']); ?></td>
+          <td><?php echo htmlspecialchars($row['alerte_type']); ?></td>
+        </tr>
+        <?php endwhile; ?>
+      </tbody>
+
+        <!-- <tbody> 
             <tr>
                 <td> 1 </td>
                 <td> 25 </td>
@@ -122,7 +167,7 @@ session_start();
                 <td> Terminé </td>
                 <td> Bagarre </td>
             </tr>
-        </tbody>
+        </tbody> -->
     </table>
 </br>
     <footer>
