@@ -63,7 +63,7 @@
             <h2>Notre mission</h2><span class="vertical"></span>            
             <br>Nous sommes une entreprise composée de sept jeunes ingénieurs, prêts á relever les défis de demain.
               Notre entreprise cherche à faciliter et à améliorer votre quotidien en vous informant sur la qualité de votre environnement,
-               en l’occurrence un environnement festif. Afin de prévenir d’éventuels accidents  et de pouvoir profiter de votre événement en toute tranquillité, nous avons développer une montre connectée “FestiWatch”.
+               en l’occurrence un environnement festif. Afin de prévenir d’éventuels accidents  et de pouvoir profiter de votre événement en toute tranquillité, nous avons développé une montre connectée “FestiWatch”.
             </div>
         
              <div class="yellow-bloc">
