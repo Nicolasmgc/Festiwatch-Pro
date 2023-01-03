@@ -69,19 +69,21 @@
             <input type="int" name="numtelephone" id="numtelephone" placeholder="Votre numéro de téléphone" pattern="[0-9]{10}" required><br/>
             <input type="texte" name="adresse" id="adresse" placeholder="Votre Adresse" required><br/>
             <input type="texte" name="pays" id="pays" placeholder="Votre Pays" required><br/>
-            <input type="date" name="datedenaissance" id="datedenaissance" placeholder="Votre Date de Naissance" required><br/>
+            <input type="date" name="datedenaissance" id="datedenaissance" placeholder="Votre Date de Naissance" max="2004-12-31" min="1963-01-01" required><br/>
             <input type="int" name="codepostal" id="codepostal" placeholder="Votre Code Postal" required><br/>
             <input type="texte" name="ville" id="ville" placeholder="Votre Ville" required><br/>
             <input type="password" name="password" id="password" placeholder="Votre Mot de passe" required><br/>
             <input type="password" name="cpassword" id="cpassword" placeholder="Confirmez votre mot de passe" required><br/>
             
-            <label> Accès handicapé :</label>
-                <select type="boolean" name="handicap" id="handicap">
-                    <option value=0>Non</option>
-                    <option value=1>Oui</option><br/>
+            <label>Handicap :</label>
+                <input type="radio" name="handicap" id="handicap" for="handicap" value=1> Oui</input>
+                <input type="radio" name="handicap" id="handicap" for="handicap" value=0 checked> Non</input>
+                    
             <input type="submit" name="formsend" id="formsend" value="S'inscrire">
+            <input type="reset" value="Effacer">
         </form>
     </div>
+    <script src="myscripts.js"></script>
 </body>
                     
 <footer>
