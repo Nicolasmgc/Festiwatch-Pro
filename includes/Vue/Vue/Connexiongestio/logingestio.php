@@ -19,7 +19,9 @@ global $db;
 <body>
 <div class="login-card">
     <h2>Connexion</h2>
+    <h3> <a href="#"> Comment créer un festival ? </a></h3>
     <h3>Veuillez vous connecter à votre festival</h3>
+    
 
 <form class="login-form" method="post">
     <input type="texte" name="lfest_nom" id="lfest_nom" placeholder="Le nom de votre festival" required><br/>
