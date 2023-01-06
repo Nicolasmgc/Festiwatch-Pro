@@ -7,7 +7,8 @@ session_start();
   $dbname = 'siteweb';
   $username = 'root';
   $password = '';
-    
+
+  global $dsn;
   $dsn = "mysql:host=$host;dbname=$dbname"; 
   // récupérer tous les utilisateurs
   $sql = "SELECT alerte.alerte_id, alerte.alerte_zone, alerte.alerte_horaire, alerte.alerte_date, alerte.alerte_statut, alerte.alerte_type, festival.Fest_nom, montre.Montre_code, personnel.Personnel_nom
@@ -29,6 +30,7 @@ session_start();
 
 <?php include '../../../Controller/database.php';
     global $db;
+    $db = new PDO("mysql:host=" . $host . ";dbname=" . $dbname, $username, $password);
     ?>
 
 
@@ -113,7 +115,21 @@ session_start();
         </thead>
 
         <tbody>
-        <?php while($row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
+            <?php
+                function modifyAlert($id){
+                    global $db;
+                    global $row;
+                    $z = $db->prepare("DELETE FROM alerte WHERE alerte_id = :id;");
+                    $z -> execute(['id' => $row['alerte_id']]);
+                };
+                function deleteAlert($id){
+                    global $db;
+                    global $row;
+                    $z = $db->prepare("DELETE FROM alerte WHERE alerte_id = :id;");
+                    $z -> execute(['id' => $row['alerte_id']]);
+                };
+            ?>
+        <?php global $row; while($row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
         <tr> 
           <td><?php echo htmlspecialchars($row['alerte_id']); ?></td>
           <td><?php echo htmlspecialchars($row['Montre_code']); ?></td>
@@ -124,59 +140,16 @@ session_start();
           <td><?php echo htmlspecialchars($row['alerte_statut']); ?></td>
           <td><?php echo htmlspecialchars($row['alerte_type']); ?></td>
           <td>
-            <button class="actionBtns" style="background-color: #55F">
+            <button onclick="" class="actionBtns" style="background-color: #55F">
                 Modifier
             </button>
-            <button class="actionBtns" style="background-color: #F58">
+            <button onclick="" class="actionBtns" style="background-color: #F58">
                 Terminé
             </button>
           </td>
         </tr>
         <?php endwhile; ?>
       </tbody>
-
-        <!-- <tbody> 
-            <tr>
-                <td> 1 </td>
-                <td> 25 </td>
-                <td> zone B </td>
-                <td> 14-12-2022 </td>
-                <td> 20:09 </td>
-                <td> Henry Mont </td> 
-                <td> En attente </td>
-                <td> Malaise </td>
-            </tr>
-            <tr>
-                <td> 2 </td>
-                <td> 47 </td>
-                <td> zone A </td>
-                <td> 14-12-2022 </td>
-                <td> 20:45 </td>
-                <td> Thomas Auster </td> 
-                <td> En cours </td>
-                <td> Agression </td>
-            </tr>
-            <tr>
-                <td> 3 </td>
-                <td> 89 </td>
-                <td> zone C </td>
-                <td> 17-12-2022 </td>
-                <td> 18:49 </td>
-                <td> Justine Briant </td> 
-                <td> Terminé </td>
-                <td> Chute </td>
-            </tr>
-            <tr>
-                <td> 4 </td>
-                <td> 172 </td>
-                <td> zone B </td>
-                <td> 22-12-2022 </td>
-                <td> 14:49 </td>
-                <td> Arthur Lagrange </td> 
-                <td> Terminé </td>
-                <td> Bagarre </td>
-            </tr>
-        </tbody> -->
     </table>
 </br>
     <footer>

@@ -3,7 +3,6 @@
 }
 
 body{
-    overflow-x: hidden;
     background: rgb(252,136,69);
     background: linear-gradient(90deg, rgba(252,136,69,1) 1%, rgba(253,29,100,1) 44%, rgba(46,60,181,1) 100%, rgba(140,58,180,1) 100%);
 }
