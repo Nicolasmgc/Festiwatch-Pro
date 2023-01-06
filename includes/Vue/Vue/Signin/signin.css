@@ -150,6 +150,7 @@ body img {
 }
 
 form {
+    margin-top: 10%;
     background : rgba(255,255,255,.3);
     padding: 0.80rem;
     border-radius:20px;
@@ -238,6 +239,7 @@ input #handicap {
 }
 
 footer{
+    margin-top: 10%;
     background-color: #111;
     position: absolute;
     width: 100%;
