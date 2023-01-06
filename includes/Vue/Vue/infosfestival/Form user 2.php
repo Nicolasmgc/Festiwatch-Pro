@@ -11,6 +11,8 @@ session_start();
         <link rel="stylesheet" type="text/css" href="styleformuser2.css">
     </head>
 
+</body>
+</html>
 
     <body>
     <nav>
@@ -28,6 +30,7 @@ session_start();
                       <a><?php echo $_SESSION['email'];?></a>
                     <ul class="sous">
                         <li><a href="../monprofiluser/monprofil.php"> Voir mon profil </a></li>
+                        <li><a href="#"> Liste des festivales </a></li>
                         <li><a href="../../../Controller/deconnexion.php"> Se déconnecter </a></li>
                         
                         </ul>
@@ -62,7 +65,96 @@ session_start();
             </ul>
         </nav>
 
+<?php include '../../../Controller/database.php';
+global $db;
+?>
 
+    <?php
+    
+        $r4 = $db->prepare("SELECT * FROM reservation WHERE Fest_id = :Fest_id AND id = :id");
+        $r4->execute([
+            'Fest_id' => $_GET['Fest_id'],
+            'id' => $_SESSION['id']
+        ]);
+        $result4 = $r4->fetch();
+
+        if($result4 == 0){
+
+    if(isset($_POST['formnumreserv']))
+    {
+
+        extract($_POST);
+
+        if(!empty($lnumreserv))
+        {
+            $r = $db->prepare("SELECT * FROM reservation WHERE Fest_id = :Fest_id AND id IS NULL");
+            $r->execute(['Fest_id' => $_GET['Fest_id']]);
+            $result = $r->fetch();
+
+            $r1 = $db->prepare("SELECT * FROM reservation WHERE Fest_id = :Fest_id AND id = :id");
+            $r1->execute([
+                'Fest_id' => $_GET['Fest_id'],
+                'id' => $_SESSION['id']
+            ]);
+            $result2 = $r1->fetch();
+
+            if($result2 == 0){
+
+            if($result == true){
+                $r2 = $db->prepare("UPDATE reservation SET id = :id WHERE Fest_id = :Fest_id AND Reservation_id = :Reservation_id AND id IS NULL");
+                $r2->execute([
+                    'id' => $_SESSION['id'],
+                    'Fest_id' => $_GET['Fest_id'],
+                    'Reservation_id' => $lnumreserv
+                ]);
+?>
+                    <h1>Bienvenue sur la page du festival <?php echo $_GET['Fest_nom']?></h1>
+                    <div id="searchBox">
+                                    <input id="searchBar" placeholder="Recherchez un code de montre ici"/>
+                                    <a href=""><img id="searchIcon" src="../../../PNG/searchIcon.png" alt="search"></a>
+                                </div>
+                    <div class="global">            
+                        <img href="./Efrontech/Form user 2.html"  src="../../../PNG/les_ardentes_2022.jpg">
+                        <div class="round"> 
+                    <p>La date de début et de fin : </p>
+                     <p><?php echo $_GET['Fest_datedebut'] ?> - <?php echo $_GET['Fest_datefin'] ?></p>
+                     <p>L'adresse :</p>
+                    <p> <?php echo $_GET['Fest_adresse'] ?> - <?php echo $_GET['Fest_codepostal'] ?> - <?php echo $_GET['Fest_pays'] ?></p>
+                     <p>L'accès </p> 
+                    <p><?php echo $_GET['Fest_access']; ?> </p>
+                    <p>Les contacts en cas de problème :</p>
+                    <p><?php echo $_GET['Fest_numtelephone'] ?> - <?php echo $_GET['Fest_email'] ?></p>
+                    <p>La programmation : </p>
+                     <p><?php echo $_GET['Fest_programmation'] ?> </p>
+                    </div>
+                </div>
+
+<?php
+            }else{
+                echo "erreur";
+            }
+        }else{
+            echo "erreur";
+        }
+    }echo "erreur";
+
+        ?>
+
+<?php
+    }
+    else{
+        ?>
+
+<form class="numreserv" method="post">
+    <input type="int" name="lnumreserv" id="lnumreserv" placeholder="Rentrez votre numéro de réservation" required><br/>
+    <input type="submit" name="formnumreserv" id="formnumreserv" value="Ok"><br/>
+</form>
+
+<?php
+    }
+
+}else{
+    ?>
     <h1>Bienvenue sur la page du festival <?php echo $_GET['Fest_nom']?></h1>
     <div id="searchBox">
                     <input id="searchBar" placeholder="Recherchez un code de montre ici"/>
@@ -84,6 +176,11 @@ session_start();
     </div>
 </div>
 
-                
+<?php
+}
+    ?>
+
+        
     </body>
 </html>
+
