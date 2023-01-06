@@ -57,7 +57,6 @@ session_start();
                       <a><?php echo $_SESSION['email'];?></a>
                     <ul class="sous">
                         <li><a href="../monprofiluser/monprofil.php"> Voir mon profil </a></li>
-                       
                         <li><a href="../../../Controller/deconnexion.php"> Se déconnecter </a></li>
                         
                         </ul>
@@ -109,6 +108,7 @@ session_start();
                 <th> Personnel en charge </th>
                 <th> Statut </th>
                 <th> Type d'alerte</th>
+                <th> Action</th>
             </tr>
         </thead>
 
@@ -123,6 +123,14 @@ session_start();
           <td><?php echo htmlspecialchars($row['Personnel_nom']); ?></td>
           <td><?php echo htmlspecialchars($row['alerte_statut']); ?></td>
           <td><?php echo htmlspecialchars($row['alerte_type']); ?></td>
+          <td>
+            <button class="actionBtns" style="background-color: #55F">
+                Modifier
+            </button>
+            <button class="actionBtns" style="background-color: #F58">
+                Terminé
+            </button>
+          </td>
         </tr>
         <?php endwhile; ?>
       </tbody>

@@ -2,7 +2,8 @@
     font-family: 'Elephant';
 }
 
-body{ 
+body{
+    overflow-x: hidden;
     background: rgb(252,136,69);
     background: linear-gradient(90deg, rgba(252,136,69,1) 1%, rgba(253,29,100,1) 44%, rgba(46,60,181,1) 100%, rgba(140,58,180,1) 100%);
 }
@@ -134,16 +135,19 @@ p{
 }
 
 .tableau-style {
+    overflow-x: scroll;
     border-collapse:collapse;
-    width: auto;
     box-shadow: 0 5px 50px rgba(58, 7, 158, 0.745);
     background-color: white;
+    margin: auto;
 }
 td,th {
     border: 2px solid black;
-    padding:30px 50px ;
+    padding:30px 30px ;
     text-align: center;
-    font-size: 100%; }
+    font-size: 100%;
+    min-width: 60px;
+}
 
 thead{
     background-color: black;
@@ -197,4 +201,18 @@ footer{
  .lien a{
     color: white;
     padding: 7px;
+ }
+
+.actionBtns{
+    margin: 5px auto; border-radius: 5px; text-align: center; padding: 10px; height: 75%;
+    transition: 0.7s;
+}
+
+ .actionBtns:hover {
+    margin: 5px auto; 
+    border-radius: 5px; 
+    text-align: center; 
+    padding: 15px; 
+    height: 75%;
+    transition: 0.2s;
  }
