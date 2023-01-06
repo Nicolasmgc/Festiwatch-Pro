@@ -49,6 +49,7 @@ html{
 
 h1{
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #searchBox {
@@ -196,7 +197,7 @@ nav .logo{
 
 .round{
     border: 5px solid black;
-    padding: 8%;
+    padding: 7%;
     border-radius: 50%;
     height:560px;
     width: 560px;
@@ -214,10 +215,12 @@ nav .logo{
 
 
 p{
-    font-size: 20px;
+    
+    font-size: 22px;
     text-align: center;
-  font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
   color: black;
+    font-weight: 700;
 }
 
 .haut{
@@ -243,9 +246,10 @@ p{
 }
 
 span{
-    font-family: "Elephant";
+    font-family: 'Montserrat', sans-serif;
     position: fixed;
     left:32%;
     top:30% ;
     font-size: 25px;
 }
+

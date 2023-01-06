@@ -9,6 +9,7 @@ session_start();
         <meta charset="utf-8">
         <link rel="icon" href="../../../PNG/icon.jpeg">
         <link rel="stylesheet" type="text/css" href="styleformuser2.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap" rel="stylesheet">
     </head>
 
 </body>
@@ -116,15 +117,17 @@ global $db;
                     <div class="global">            
                         <img href="./Efrontech/Form user 2.html"  src="../../../PNG/les_ardentes_2022.jpg">
                         <div class="round"> 
-                    <p>La date de début et de fin : </p>
-                     <p><?php echo $_GET['Fest_datedebut'] ?> - <?php echo $_GET['Fest_datefin'] ?></p>
-                     <p>L'adresse :</p>
-                    <p> <?php echo $_GET['Fest_adresse'] ?> - <?php echo $_GET['Fest_codepostal'] ?> - <?php echo $_GET['Fest_pays'] ?></p>
-                     <p>L'accès </p> 
-                    <p><?php echo $_GET['Fest_access']; ?> </p>
-                    <p>Les contacts en cas de problème :</p>
-                    <p><?php echo $_GET['Fest_numtelephone'] ?> - <?php echo $_GET['Fest_email'] ?></p>
-                    <p>La programmation : </p>
+                        <p>Date début : </p>
+                     <p><?php echo $_GET['Fest_datedebut'] ?></p>
+                     <p>Date de fin : </p>
+                     <p> <?php echo $_GET['Fest_datefin'] ?></p>
+                     <p>Lieu du festival :</p>
+                     <p> <?php echo $_GET['Fest_adresse'] ?> - <?php echo $_GET['Fest_codepostal'] ?> - <?php echo $_GET['Fest_pays'] ?></p>
+                     <p>Accès du festival </p> 
+                     <p><?php echo $_GET['Fest_access']; ?> </p>
+                     <p>Contacts en cas de problème :</p>
+                     <p><?php echo $_GET['Fest_numtelephone'] ?> - <?php echo $_GET['Fest_email'] ?></p>
+                     <p>Programmation : </p>
                      <p><?php echo $_GET['Fest_programmation'] ?> </p>
                     </div>
                 </div>
@@ -164,15 +167,17 @@ global $db;
     <div class="global">            
         <img href="./Efrontech/Form user 2.html"  src="../../../PNG/les_ardentes_2022.jpg">
         <div class="round"> 
-    <p>La date de début et de fin : </p>
-     <p><?php echo $_GET['Fest_datedebut'] ?> - <?php echo $_GET['Fest_datefin'] ?></p>
-     <p>L'adresse :</p>
+    <p>Date début : </p>
+     <p><?php echo $_GET['Fest_datedebut'] ?></p>
+     <p>Date de fin : </p>
+     <p> <?php echo $_GET['Fest_datefin'] ?></p>
+     <p>Lieu du festival :</p>
     <p> <?php echo $_GET['Fest_adresse'] ?> - <?php echo $_GET['Fest_codepostal'] ?> - <?php echo $_GET['Fest_pays'] ?></p>
-     <p>L'accès </p> 
+     <p>Accès du festival </p> 
     <p><?php echo $_GET['Fest_access']; ?> </p>
-    <p>Les contacts en cas de problème :</p>
+    <p>Contacts en cas de problème :</p>
     <p><?php echo $_GET['Fest_numtelephone'] ?> - <?php echo $_GET['Fest_email'] ?></p>
-    <p>La programmation : </p>
+    <p>Programmation : </p>
      <p><?php echo $_GET['Fest_programmation'] ?> </p>
     </div>
 </div>
