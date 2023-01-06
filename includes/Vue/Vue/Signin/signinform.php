@@ -68,7 +68,7 @@
             
             <label>Handicap :</label>
                 <input type="radio" name="handicap" id="handicap" for="handicap" value=1> Oui</input>
-                <input type="radio" name="handicap" id="handicap" for="handicap" value=0 checked> Non</input>
+                <input type="radio" name="handicap" id="handicap" for="handicap" value=0 checked> Non</input><br>
                     
             <input type="submit" name="formsend" id="formsend" value="S'inscrire">
             <input type="reset" value="Effacer">
