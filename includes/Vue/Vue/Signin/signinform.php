@@ -16,9 +16,7 @@
                 <li><a href="../Pagedaccueil/index.php" > Accueil </a></li>
                 <li><a href="../FAQ/faq.php"> FAQ </a></li>
                 <li><a href="../Apropos/A_propos_de_nous.php"> A propos de nous </a></li>
-                
-                
-                
+                                
                 <li class="deroulant"><?php if(isset($_SESSION['email'])){
                             ?>
                         
@@ -34,13 +32,11 @@
                         elseif(isset($_SESSION['Fest_id'])){
                             ?>
 
-
                         <a><?php echo $_SESSION['Fest_nom'];?></a>
                         <ul class="sous">
                             <li><a href="../mesinfosgestio/mesinfos.php"> Voir mes infos </a></li> <?php // Truc très ghetto ça marche moyennement ce href faire gaffe pendant la démo ?>
                             <li><a href="../../../Controller/deconnexion.php"> Se déconnecter </a></li>
                         </ul>  
-
 
                             <?php
                         }
@@ -49,12 +45,7 @@
                         
                         <?php } ?>
                     
-                    
-                    
                 </li>
-                
-                
-                
                 
             </ul>
         </nav>
@@ -63,21 +54,21 @@
     <div class="container">
         <form method="post">
             <p>Sign in</p>
-            <input type="texte" name="nom" id="nom" placeholder="Votre Nom" required><br/>
-            <input type="texte" name="prenom" id="prenom" placeholder="Votre Prenom" required><br/>
-            <input type="email" name="semail" id="semail" placeholder="Votre Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required><br/> 
-            <input type="int" name="numtelephone" id="numtelephone" placeholder="Votre numéro de téléphone" pattern="[0-9]{10}" required><br/>
-            <input type="texte" name="adresse" id="adresse" placeholder="Votre Adresse" required><br/>
-            <input type="texte" name="pays" id="pays" placeholder="Votre Pays" required><br/>
-            <input type="date" name="datedenaissance" id="datedenaissance" placeholder="Votre Date de Naissance" max="2004-12-31" min="1963-01-01" required><br/>
-            <input type="int" name="codepostal" id="codepostal" placeholder="Votre Code Postal" required><br/>
-            <input type="texte" name="ville" id="ville" placeholder="Votre Ville" required><br/>
-            <input type="password" name="password" id="password" placeholder="Votre Mot de passe" required><br/>
-            <input type="password" name="cpassword" id="cpassword" placeholder="Confirmez votre mot de passe" required><br/>
+            <input type="texte" name="nom" id="nom" placeholder="Votre Nom" required><br><br>
+            <input type="texte" name="prenom" id="prenom" placeholder="Votre Prenom" required><br><br>
+            <input type="email" name="semail" id="semail" placeholder="Votre Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required><br><br>
+            <input type="int" name="numtelephone" id="numtelephone" placeholder="Votre numéro de téléphone" pattern="[0-9]{10}" required><br><br>
+            <input type="texte" name="adresse" id="adresse" placeholder="Votre Adresse" required><br><br>
+            <input type="texte" name="pays" id="pays" placeholder="Votre Pays" required><br><br>
+            <input type="date" name="datedenaissance" id="datedenaissance" placeholder="Votre Date de Naissance" max="2004-12-31" min="1963-01-01" required><br><br>
+            <input type="int" name="codepostal" id="codepostal" placeholder="Votre Code Postal" required><br><br>
+            <input type="texte" name="ville" id="ville" placeholder="Votre Ville" required><br><br>
+            <input type="password" name="password" id="password" placeholder="Votre Mot de passe" required><br><br>
+            <input type="password" name="cpassword" id="cpassword" placeholder="Confirmez votre mot de passe" required><br><br>
             
             <label>Handicap :</label>
                 <input type="radio" name="handicap" id="handicap" for="handicap" value=1> Oui</input>
-                <input type="radio" name="handicap" id="handicap" for="handicap" value=0 checked> Non</input>
+                <input type="radio" name="handicap" id="handicap" for="handicap" value=0 checked> Non</input><br><br>
                     
             <input type="submit" name="formsend" id="formsend" value="S'inscrire">
             <input type="reset" value="Effacer">

@@ -22,5 +22,5 @@ function validate() {
     if (mdp.match( /[0-9]/g) && mdp.match( /[A-Z]/g) && mdp.match(/[a-z]/g) && mdp.match( /[^a-zA-Z\d]/g) && mdp.length >= 10) 
         alert("Mot de passe fort !"); 
     else 
-        alert("Mot de passe faible !"); 
+        alert("Mot de passe faible !");
 }
