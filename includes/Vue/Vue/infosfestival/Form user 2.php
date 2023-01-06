@@ -146,8 +146,9 @@ global $db;
         ?>
 
 <form class="numreserv" method="post">
-    <input type="int" name="lnumreserv" id="lnumreserv" placeholder="Rentrez votre numéro de réservation" required><br/>
-    <input type="submit" name="formnumreserv" id="formnumreserv" value="Ok"><br/>
+    <span>Rentrez votre numéro de réservation pour <?php echo $_GET['Fest_nom'] ?> </span>
+    <input type="int" name="lnumreserv" id="lnumreserv" placeholder="Numéro de réservation " class="haut"  required><br/>
+    <input type="submit" name="formnumreserv" id="formnumreserv" value="Ok" class="button_ok"><br/>
 </form>
 
 <?php
