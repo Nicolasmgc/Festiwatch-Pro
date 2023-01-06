@@ -64,11 +64,11 @@
             <input type="int" name="codepostal" id="codepostal" placeholder="Votre Code Postal" required><br><br>
             <input type="texte" name="ville" id="ville" placeholder="Votre Ville" required><br><br>
             <input type="password" name="password" id="password" placeholder="Votre Mot de passe" required><br><br>
-            <input type="password" name="cpassword" id="cpassword" placeholder="Confirmez votre mot de passe" required><br/>
+            <input type="password" name="cpassword" id="cpassword" placeholder="Confirmez votre mot de passe" required><br><br>
             
             <label>Handicap :</label>
                 <input type="radio" name="handicap" id="handicap" for="handicap" value=1> Oui</input>
-                <input type="radio" name="handicap" id="handicap" for="handicap" value=0 checked> Non</input><br>
+                <input type="radio" name="handicap" id="handicap" for="handicap" value=0 checked> Non</input><br><br>
                     
             <input type="submit" name="formsend" id="formsend" value="S'inscrire">
             <input type="reset" value="Effacer">
