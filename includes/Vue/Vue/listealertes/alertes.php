@@ -7,7 +7,8 @@ session_start();
   $dbname = 'siteweb';
   $username = 'root';
   $password = '';
-    
+
+  global $dsn;
   $dsn = "mysql:host=$host;dbname=$dbname"; 
   // récupérer tous les utilisateurs
   $sql = "SELECT alerte.alerte_id, alerte.alerte_zone, alerte.alerte_horaire, alerte.alerte_date, alerte.alerte_statut, alerte.alerte_type, festival.Fest_nom, montre.Montre_code, personnel.Personnel_nom
@@ -29,6 +30,7 @@ session_start();
 
 <?php include '../../../Controller/database.php';
     global $db;
+    $db = new PDO("mysql:host=" . $host . ";dbname=" . $dbname, $username, $password);
     ?>
 
 
@@ -57,7 +59,6 @@ session_start();
                       <a><?php echo $_SESSION['email'];?></a>
                     <ul class="sous">
                         <li><a href="../monprofiluser/monprofil.php"> Voir mon profil </a></li>
-                       
                         <li><a href="../../../Controller/deconnexion.php"> Se déconnecter </a></li>
                         
                         </ul>
@@ -110,11 +111,15 @@ session_start();
                 <th> Statut </th>
                 
                 <th> Type d'alerte</th>
+                <th> Action</th>
             </tr>
         </thead>
 
         <tbody>
-        <?php while($row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
+        <?php
+        global $row; 
+        while($row = $stmt->fetch(PDO::FETCH_ASSOC)) : 
+        ?>
         <tr> 
           <td><?php echo htmlspecialchars($row['alerte_id']); ?></td>
           <td><?php echo htmlspecialchars($row['Montre_code']); ?></td>
@@ -124,52 +129,62 @@ session_start();
           <td><?php echo htmlspecialchars($row['Personnel_nom']); ?></td>
           <td><?php echo htmlspecialchars($row['alerte_statut']); ?></td>
           <td><?php echo htmlspecialchars($row['alerte_type']); ?></td>
-        </tr>
-        <?php endwhile; ?>
-      </tbody>
+          <td>
+            <script>
+                async function modifyRecord(event) {
+                    event.preventDefault();
 
-        <!-- <tbody> 
-            <tr>
-                <td> 1 </td>
-                <td> 25 </td>
-                <td> zone B </td>
-                <td> 14-12-2022 </td>
-                <td> 20:09 </td>
-                <td> Henry Mont </td> 
-                <td> En attente </td>
-                <td> Malaise </td>
-            </tr>
-            <tr>
-                <td> 2 </td>
-                <td> 47 </td>
-                <td> zone A </td>
-                <td> 14-12-2022 </td>
-                <td> 20:45 </td>
-                <td> Thomas Auster </td> 
-                <td> En cours </td>
-                <td> Agression </td>
-            </tr>
-            <tr>
-                <td> 3 </td>
-                <td> 89 </td>
-                <td> zone C </td>
-                <td> 17-12-2022 </td>
-                <td> 18:49 </td>
-                <td> Justine Briant </td> 
-                <td> Terminé </td>
-                <td> Chute </td>
-            </tr>
-            <tr>
-                <td> 4 </td>
-                <td> 172 </td>
-                <td> zone B </td>
-                <td> 22-12-2022 </td>
-                <td> 14:49 </td>
-                <td> Arthur Lagrange </td> 
-                <td> Terminé </td>
-                <td> Bagarre </td>
-            </tr>
-        </tbody> -->
+                    const id = event.target.getAttribute('data-id');
+                    const response = await fetch(`/FestiWatch-pro/includes/Vue/Vue/listealertes/alertes.php`, {
+                        method: 'MODIFY'
+                    });
+
+                    console.log(id);
+
+                    if (response.ok) {
+                    console.log('Record deleted successfully');
+                    } else {
+                    console.error('Error deleting record');
+                    }
+                    setTimeout(() => location.reload(), 1000);
+                }
+
+                async function deleteRecord(event) {
+                    event.preventDefault();
+
+                    const id = event.target.getAttribute('data-id');
+                    const response = await fetch(`/FestiWatch-pro/includes/Vue/Vue/listealertes/alertes.php`, {
+                        method: 'DELETE'
+                    });
+                    
+                    console.log(id);
+
+                    if (response.ok) {
+                    console.log('Record deleted successfully');
+                    } else {
+                    console.error('Error deleting record');
+                    }
+                    setTimeout(() => location.reload(), 1000);
+                }
+            </script>
+            <form method="GET">
+                <input type="number" name="alerteid" id="alerteid" placeholder="Enter the alert's id" required>
+                <input type="button" value="Modifier" onclick="modifyRecord(event)" data-id="<?php echo $row['alerte_id']?>" class="actionBtns" style="background-color: #55F">
+                <input type="button" value="Terminé" onclick="deleteRecord(event)" data-id="<?php echo $row['alerte_id']?>" class="actionBtns" style="background-color: #F58">
+            </form>
+        </td>
+        </tr>
+        <?php 
+        endwhile; 
+        
+        if ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
+            $alerteid = intval($_GET['alerteid']);
+            $stmt = $db->prepare("UPDATE alerte SET alerte_statut = 'Terminée' WHERE alerte_id = :id");
+            $stmt->execute(['id' => $alerteid]);
+        }
+        
+        ?>
+      </tbody>
     </table>
 </br>
     <footer>

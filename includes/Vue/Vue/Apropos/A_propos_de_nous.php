@@ -5,7 +5,7 @@
 <html>
    <head>
         <meta charset="utf-8">
-        <title>A propos de nous </title>
+        <title>À propos de nous</title>
         <link rel="stylesheet" href="AProposDeNous2.css">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap" rel="stylesheet">
     </head>
@@ -16,7 +16,7 @@
                 <li><img src="../../../PNG/Logo alternatif.png" class="logo"></li> 
                 <li><a href="../Pagedaccueil/index.php" > Accueil </a></li>
                 <li><a href="../FAQ/faq.php"> FAQ </a></li>
-                <li><a href="../Apropos/A_propos_de_nous.php"> A propos de nous </a></li>
+                <li><a href="../Apropos/A_propos_de_nous.php"> À propos de nous </a></li>
                 
                 
                 
@@ -26,7 +26,7 @@
                       <a><?php echo $_SESSION['email'];?></a>
                     <ul class="sous">
                         <li><a href="../monprofiluser/monprofil.php"> Voir mon profil </a></li>
-                        <li><a href="#"> Liste des festivales </a></li>
+                        <li><a href="#"> Liste des festivals </a></li>
                         <li><a href="../../../Controller/deconnexion.php"> Se déconnecter </a></li>
                         
                         </ul>
@@ -133,9 +133,9 @@
            <div class="contact">
            <br>
             Nous contacter <br>
-            Mail:<br> prodetec@gmail.com <br>
-            Numéro:<br> 068975412 <br>
-            Adresse: <br>10 Rue de Vanves, 92130 Issy-les-Moulineaux
+            Mail :<br> prodetech@gmail.com <br>
+            Numéro :<br> 068975412 <br>
+            Adresse :<br>10 Rue de Vanves, 92130 Issy-les-Moulineaux
             </div>
          
             <div class="foot">
@@ -145,7 +145,7 @@
             <img src="../../../PNG/twitter.png" alt="icone de insta" height="75">
             </div>
             <div class="lien">
-            <a href="../CGU/cgu.php">Conditions général d'utilisation</a>
+            <a href="../CGU/cgu.php">Conditions générales d'utilisation</a>
             <a href="../FAQ/faq.php"> FAQ</a>
             <a href="../Connexionuser/login1.php">Connexion</a>
             </div> </div>
