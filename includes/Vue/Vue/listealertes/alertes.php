@@ -108,6 +108,7 @@ session_start();
                 <th> Heure </th>
                 <th> Personnel en charge </th>
                 <th> Statut </th>
+                
                 <th> Type d'alerte</th>
             </tr>
         </thead>
