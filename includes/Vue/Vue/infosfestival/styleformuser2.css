@@ -259,7 +259,7 @@ footer{
     display: flex;
     padding: 20px auto;
     position: fixed;
-    top: 75%;
+    bottom:0px;
     left:0px;
  }
  
@@ -304,5 +304,5 @@ footer{
  .logo_foot{
     height: 30%;
     width:5%;
-    border: 4px solid white;
+  
  }

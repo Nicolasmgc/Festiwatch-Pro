@@ -199,7 +199,7 @@ global $db;
          
             <div class="foot">
             <div class="reseaux">
-            <a href="https://www.instagram.com/pro_detech"> <img src="includes/PNG/insta.png" alt="icone de insta" class="logo_foot"></a>
+            <a href="https://www.instagram.com/pro_detech"> <img src="../../../PNG/insta.png" alt="icone de insta" class="logo_foot"></a>
             <img src="../../../PNG/youtube.png" alt="icone de insta" class="logo_foot" >
             <img src="../../../PNG/twitter.png" alt="icone de insta" class="logo_foot">
             </div>
