@@ -197,17 +197,18 @@ global $db;
             Adresse: <br>10 Rue de Vanves, 92130 Issy-les-Moulineaux
             </div>
          
-            <div class="foot">
+        <div class="foot">
             <div class="reseaux">
-            <a href="https://www.instagram.com/pro_detech"> <img src="../../../PNG/insta.png" alt="icone de insta" class="logo_foot"></a>
-            <img src="../../../PNG/youtube.png" alt="icone de insta" class="logo_foot">
-            <img src="../../../PNG/twitter.png" alt="icone de insta"class="logo_foot">
+                <a href="https://www.instagram.com/pro_detech"> <img src="../../../PNG/insta.png" alt="icone de insta"class="logo_foot"></a>
+                <a href="https://www.instagram.com/pro_detech"> <img src="../../../PNG/twitter.png" alt="icone de insta" class="logo_foot"></a>
+                <a href="https://www.instagram.com/pro_detech"> <img src="../../../PNG/youtube.png" alt="icone de insta" class="logo_foot_you"  ></a>
             </div>
             <div class="lien">
-            <a href="../CGU/cgu.php">Conditions général d'utilisation</a>
-            <a href="../FAQ/faq.php"> FAQ</a>
-            <a href="#">Connexion</a>
-            </div> </div>
-             </footer>
+                <a href="../CGU/cgu.php">Conditions général d'utilisation</a>
+                <a href="../FAQ/faq.php"> FAQ</a>
+                <a href="#">Connexion</a>
+            </div> 
+        </div>
+    </footer>
 </html>
 

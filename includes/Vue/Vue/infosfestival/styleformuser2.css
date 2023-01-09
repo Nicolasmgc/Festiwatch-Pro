@@ -3,12 +3,9 @@
 }
 
 img {
-    width: 1500px;
-    display: flex;
+    display: block;
     margin-right: auto;
     margin-left: auto;
-    z-index: 1;
-    position: absolute
 }
 
 body {
@@ -272,14 +269,21 @@ footer{
      margin-bottom: 2%;
  }
  .reseaux{
-     display:block;
+     display:flex;
+     flex-direction: row;
      margin-left:30%;
      margin-top: 2%;
+     width: 300px;
      justify-content: space-between;
  }
+ .reseaux img, .reseaux a {
+    width: 70%;
+    height: auto;
+ }
+
  .foot{
-     display: flex;
      display: inline-block;
+     justify-content: space-between;
      width: 50%;
  }
  .lien{
@@ -296,6 +300,8 @@ footer{
      color: white;
      padding: 5px;
  }
+
+
  .lien a{
     color: white;
     padding: 7px;
@@ -304,5 +310,10 @@ footer{
  .logo_foot{
     height: 30%;
     width:5%;
-  
+    padding:5%;
+ }
+ .logo_foot_you{
+    height: 35%;
+    width:5%;
+    padding:5%;
  }
