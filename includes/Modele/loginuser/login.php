@@ -30,6 +30,8 @@
                     $_SESSION['codepostal'] = $result['codepostal'];
                     $_SESSION['ville'] = $result['ville'];
                     $_SESSION['password'] = $result['password'];
+                    $_SESSION['datedecreation'] = $result['datedecreation'];
+                    $_SESSION['handicap'] = $result['handicap'];
                     header("Location: ../../Vue/monprofiluser/monprofil.php?id=".$_SESSION['id']);
                 }
                 else

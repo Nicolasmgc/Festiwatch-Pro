@@ -29,7 +29,7 @@
 
                     if($result == 0){
                         if($result2 == 0){
-                            $q = $db->prepare("INSERT INTO user(nom,prenom,email,numtelephone,adresse,pays,datedenaissance,codepostal,ville,password,handicap) VALUES(:nom,:prenom,:email,:numtelephone,:adresse,:pays,:datedenaissance,:codepostal,:ville,:password,:handicap)");
+                            $q = $db->prepare("INSERT INTO user(nom,prenom,email,numtelephone,adresse,pays,datedenaissance,codepostal,ville,password,handicap,role_id) VALUES(:nom,:prenom,:email,:numtelephone,:adresse,:pays,:datedenaissance,:codepostal,:ville,:password,:handicap,:role_id)");
                             $q->execute([
                                 'nom' => $nom,
                                 'prenom' => $prenom,
@@ -41,7 +41,8 @@
                                 'codepostal' => $codepostal,
                                 'ville' => $ville,
                                 'password' => $hashpass,
-                                'handicap' => $handicap
+                                'handicap' => $handicap,
+                                'role_id' => 1
                             ]);
                         echo "Le compte a été créé";
                         // header location à mettre ici ?
@@ -58,11 +59,6 @@
 
                 }
                 
-
-                // if(password_verify('houssem18', $hashpass)){
-                //     echo "le mot de pass est le même";
-                // }   else {
-                //     echo "le mot de passe n'est pas correcte";
                 }else {
                     echo "les champs ne sont pas tous remplis";
                 }
