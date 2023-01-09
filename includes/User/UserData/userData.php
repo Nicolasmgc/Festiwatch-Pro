@@ -14,7 +14,7 @@ session_start();
     <body>
     <nav>
             <ul>
-               <li><img src="../../Logo alternatif2.png" class="logo" >  </a></li>   
+               <li><img src="../../PNG/Logo alternatif2.png" class="logo" >  </a></li>   
                   
                 <li><a href="../.././Page d'accueil./index.php" > Accueil </a></li>
                 <li><a href="../.././Page d'accueil ./FAQ/faq.php"> FAQ </a></li>
@@ -107,10 +107,12 @@ session_start();
                         <div>
                             <label for="heartRate">Fréquence Cardiaque</label>
                             <meter id="heartRate" min=0 max=100 low="50" high="80" value=81 optimum="0"></meter>
+                            <div style="margin-bottom: 20px; margin-top: 40px; color: white">81%</div>
                         </div>
                         <div>
                             <label for="soundIntensity">Amplitude Sonore</label>
                             <meter id="soundIntensity" min=0 max=100 low="50" high="80" value=51 optimum="0"></meter>
+                            <div style="margin-bottom: 20px; margin-top: 40px; color: white">51%</div>
                         </div>
                     </div>
                     
@@ -118,10 +120,12 @@ session_start();
                         <div>
                             <label for="gazExposition">Gaz</label>
                             <meter id="gazExposition" min=0 max=100 low="33" high="66" value=20 optimum="0"></meter>
+                            <div style="margin-bottom: 20px; margin-top: 40px; color: white">20%</div>
                         </div>   
                         <div>
                             <label for="alcoholConsumption">Consommation d'Alcool</label>
                             <meter id="alcoholConsumption" min=0 max=100 low="33" high="66" value=80 optimum="0"></meter>
+                            <div style="margin-bottom: 20px; margin-top: 40px; color: white">80%</div>
                         </div> 
                     </div>
                 </div>
@@ -144,6 +148,6 @@ session_start();
             <a href=".././FAQ/faq.php"> FAQ</a>
             <a href="#">Connexion</a>
             </div> </div>
-             </footer>
+    </footer>
 
 </html>
