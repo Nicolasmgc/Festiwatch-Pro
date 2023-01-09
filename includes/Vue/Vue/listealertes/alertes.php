@@ -109,6 +109,7 @@ session_start();
                 <th> Heure </th>
                 <th> Personnel en charge </th>
                 <th> Statut </th>
+                
                 <th> Type d'alerte</th>
                 <th> Action</th>
             </tr>
@@ -120,6 +121,14 @@ session_start();
         while($row = $stmt->fetch(PDO::FETCH_ASSOC)) : 
         ?>
         <tr> 
+          <td class = 'id'><?php echo htmlspecialchars($row['alerte_id']); ?></td>
+          <td class = 'code'><?php echo htmlspecialchars($row['Montre_code']); ?></td>
+          <td class = 'zone'><?php echo htmlspecialchars($row['alerte_zone']); ?></td>
+          <td class = 'date'><?php echo htmlspecialchars($row['alerte_date']); ?></td>
+          <td class = 'horaire'><?php echo htmlspecialchars($row['alerte_horaire']); ?></td>
+          <td class = 'personnel'><?php echo htmlspecialchars($row['Personnel_nom']); ?></td>
+          <td class = 'statut'><?php echo htmlspecialchars($row['alerte_statut']); ?></td>
+          <td class = 'type'><?php echo htmlspecialchars($row['alerte_type']); ?></td>
           <td><?php echo htmlspecialchars($row['alerte_id']); ?></td>
           <td><?php echo htmlspecialchars($row['Montre_code']); ?></td>
           <td><?php echo htmlspecialchars($row['alerte_zone']); ?></td>
@@ -184,6 +193,79 @@ session_start();
         
         ?>
       </tbody>
+
+      <script>
+        xmlhttp=new XMLHttpRequest();
+        xmlhttp.open("POST","../../../Modele/listealerte/filtrealerte.php",true);
+        xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        xmlhttp.send("fname=Henry&lname=Ford");
+
+        xmlhttp.onreadystatechange=function(){
+        if (xmlhttp.readyState==4 && xmlhttp.status==200){
+            var tab=JSON.parse(xmlhttp.responseText);
+            // console.log(tab[0][0])
+            for(r of tab){
+                console.log(r[1])
+                
+            document.getElementsByTagName('tbody')[0].innerHTML=r[0]
+            document.getElementsByTagName('tbody')[0].innerHTML=r[1]
+            document.getElementsByClassName('zone')[2].innerHTML=r[2]
+            document.getElementsByClassName('date')[3].innerHTML=r[3]
+            document.getElementsByClassName('horaire')[4].innerHTML=r[4]
+            document.getElementsByClassName('personnel')[5].innerHTML=r[5]
+            document.getElementsByClassName('statut')[6].innerHTML=r[6]
+            document.getElementsByClassName('type')[7].innerHTML=r[7]
+                
+            }
+    }
+}
+        </script>
+
+
+        
+
+        <!-- <tbody> 
+            <tr>
+                <td> 1 </td>
+                <td> 25 </td>
+                <td> zone B </td>
+                <td> 14-12-2022 </td>
+                <td> 20:09 </td>
+                <td> Henry Mont </td> 
+                <td> En attente </td>
+                <td> Malaise </td>
+            </tr>
+            <tr>
+                <td> 2 </td>
+                <td> 47 </td>
+                <td> zone A </td>
+                <td> 14-12-2022 </td>
+                <td> 20:45 </td>
+                <td> Thomas Auster </td> 
+                <td> En cours </td>
+                <td> Agression </td>
+            </tr>
+            <tr>
+                <td> 3 </td>
+                <td> 89 </td>
+                <td> zone C </td>
+                <td> 17-12-2022 </td>
+                <td> 18:49 </td>
+                <td> Justine Briant </td> 
+                <td> Terminé </td>
+                <td> Chute </td>
+            </tr>
+            <tr>
+                <td> 4 </td>
+                <td> 172 </td>
+                <td> zone B </td>
+                <td> 22-12-2022 </td>
+                <td> 14:49 </td>
+                <td> Arthur Lagrange </td> 
+                <td> Terminé </td>
+                <td> Bagarre </td>
+            </tr>
+        </tbody> -->
     </table>
 </br>
     <footer>
@@ -205,7 +287,10 @@ session_start();
             <a href="../CGU/cgu.php">Conditions général d'utilisation</a>
             <a href="../FAQ/faq.php"> FAQ</a>
             <a href="../Connexionuser/login1.php">Connexion</a>
+            <a href="../../../Modele/listealerte/filtrealerte.php">lalalala</a>
             </div> </div>
              </footer>
     </body>
+    
+
     
