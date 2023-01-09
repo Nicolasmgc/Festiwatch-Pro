@@ -9,6 +9,7 @@ session_start();
         <meta charset="utf-8">
         <link rel="icon" href="../../../PNG/icon.jpeg">
         <link rel="stylesheet" type="text/css" href="styleformuser2.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap" rel="stylesheet">
     </head>
 
 </body>
@@ -116,15 +117,17 @@ global $db;
                     <div class="global">            
                         <img href="./Efrontech/Form user 2.html"  src="../../../PNG/les_ardentes_2022.jpg">
                         <div class="round"> 
-                    <p>La date de début et de fin : </p>
-                     <p><?php echo $_GET['Fest_datedebut'] ?> - <?php echo $_GET['Fest_datefin'] ?></p>
-                     <p>L'adresse :</p>
-                    <p> <?php echo $_GET['Fest_adresse'] ?> - <?php echo $_GET['Fest_codepostal'] ?> - <?php echo $_GET['Fest_pays'] ?></p>
-                     <p>L'accès </p> 
-                    <p><?php echo $_GET['Fest_access']; ?> </p>
-                    <p>Les contacts en cas de problème :</p>
-                    <p><?php echo $_GET['Fest_numtelephone'] ?> - <?php echo $_GET['Fest_email'] ?></p>
-                    <p>La programmation : </p>
+                        <p>Date début : </p>
+                     <p><?php echo $_GET['Fest_datedebut'] ?></p>
+                     <p>Date de fin : </p>
+                     <p> <?php echo $_GET['Fest_datefin'] ?></p>
+                     <p>Lieu du festival :</p>
+                     <p> <?php echo $_GET['Fest_adresse'] ?> - <?php echo $_GET['Fest_codepostal'] ?> - <?php echo $_GET['Fest_pays'] ?></p>
+                     <p>Accès du festival </p> 
+                     <p><?php echo $_GET['Fest_access']; ?> </p>
+                     <p>Contacts en cas de problème :</p>
+                     <p><?php echo $_GET['Fest_numtelephone'] ?> - <?php echo $_GET['Fest_email'] ?></p>
+                     <p>Programmation : </p>
                      <p><?php echo $_GET['Fest_programmation'] ?> </p>
                     </div>
                 </div>
@@ -146,8 +149,9 @@ global $db;
         ?>
 
 <form class="numreserv" method="post">
-    <input type="int" name="lnumreserv" id="lnumreserv" placeholder="Rentrez votre numéro de réservation" required><br/>
-    <input type="submit" name="formnumreserv" id="formnumreserv" value="Ok"><br/>
+    <span>Rentrer votre numéro de réservation pour <?php echo $_GET['Fest_nom'] ?> </span>
+    <input type="int" name="lnumreserv" id="lnumreserv" placeholder="Numéro de réservation " class="haut"  required><br/>
+    <input type="submit" name="formnumreserv" id="formnumreserv" value="Ok" class="button_ok"><br/>
 </form>
 
 <?php
@@ -163,15 +167,17 @@ global $db;
     <div class="global">            
         <img href="./Efrontech/Form user 2.html"  src="../../../PNG/les_ardentes_2022.jpg">
         <div class="round"> 
-    <p>La date de début et de fin : </p>
-     <p><?php echo $_GET['Fest_datedebut'] ?> - <?php echo $_GET['Fest_datefin'] ?></p>
-     <p>L'adresse :</p>
+    <p>Date début : </p>
+     <p><?php echo $_GET['Fest_datedebut'] ?></p>
+     <p>Date de fin : </p>
+     <p> <?php echo $_GET['Fest_datefin'] ?></p>
+     <p>Lieu du festival :</p>
     <p> <?php echo $_GET['Fest_adresse'] ?> - <?php echo $_GET['Fest_codepostal'] ?> - <?php echo $_GET['Fest_pays'] ?></p>
-     <p>L'accès </p> 
+     <p>Accès du festival </p> 
     <p><?php echo $_GET['Fest_access']; ?> </p>
-    <p>Les contacts en cas de problème :</p>
+    <p>Contacts en cas de problème :</p>
     <p><?php echo $_GET['Fest_numtelephone'] ?> - <?php echo $_GET['Fest_email'] ?></p>
-    <p>La programmation : </p>
+    <p>Programmation : </p>
      <p><?php echo $_GET['Fest_programmation'] ?> </p>
     </div>
 </div>
@@ -182,5 +188,26 @@ global $db;
 
         
     </body>
+    <footer>
+           <div class="contact">
+           <br>
+            Nous contacter <br>
+            Mail :<br> prodetech@gmail.com <br>
+            Numéro :<br> 068975412 <br>
+            Adresse :<br>10 Rue de Vanves, 92130 Issy-les-Moulineaux
+            </div>
+         
+            <div class="foot">
+            <div class="reseaux">
+            <a href="https://www.instagram.com/pro_detech"> <img src="includes/PNG/insta.png" alt="icone de insta" class="logo_foot"></a>
+            <img src="../../../PNG/youtube.png" alt="icone de insta" class="logo_foot" >
+            <img src="../../../PNG/twitter.png" alt="icone de insta" class="logo_foot">
+            </div>
+            <div class="lien">
+            <a href="../CGU/cgu.php">Conditions générales d'utilisation</a>
+            <a href="../FAQ/faq.php"> FAQ</a>
+            <a href="../Connexionuser/login1.php">Connexion</a>
+            </div> </div>
+             </footer>
 </html>
 

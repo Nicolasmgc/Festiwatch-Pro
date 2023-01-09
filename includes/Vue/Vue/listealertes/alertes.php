@@ -7,7 +7,8 @@ session_start();
   $dbname = 'siteweb';
   $username = 'root';
   $password = '';
-    
+
+  global $dsn;
   $dsn = "mysql:host=$host;dbname=$dbname"; 
   // récupérer tous les utilisateurs
   $sql = "SELECT alerte.alerte_id, alerte.alerte_zone, alerte.alerte_horaire, alerte.alerte_date, alerte.alerte_statut, alerte.alerte_type, festival.Fest_nom, montre.Montre_code, personnel.Personnel_nom
@@ -29,6 +30,7 @@ session_start();
 
 <?php include '../../../Controller/database.php';
     global $db;
+    $db = new PDO("mysql:host=" . $host . ";dbname=" . $dbname, $username, $password);
     ?>
 
 
@@ -57,7 +59,6 @@ session_start();
                       <a><?php echo $_SESSION['email'];?></a>
                     <ul class="sous">
                         <li><a href="../monprofiluser/monprofil.php"> Voir mon profil </a></li>
-                       
                         <li><a href="../../../Controller/deconnexion.php"> Se déconnecter </a></li>
                         
                         </ul>
@@ -108,12 +109,17 @@ session_start();
                 <th> Heure </th>
                 <th> Personnel en charge </th>
                 <th> Statut </th>
+                
                 <th> Type d'alerte</th>
+                <th> Action</th>
             </tr>
         </thead>
 
         <tbody>
-        <?php while($row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
+        <?php
+        global $row; 
+        while($row = $stmt->fetch(PDO::FETCH_ASSOC)) : 
+        ?>
         <tr> 
           <td class = 'id'><?php echo htmlspecialchars($row['alerte_id']); ?></td>
           <td class = 'code'><?php echo htmlspecialchars($row['Montre_code']); ?></td>
@@ -123,8 +129,69 @@ session_start();
           <td class = 'personnel'><?php echo htmlspecialchars($row['Personnel_nom']); ?></td>
           <td class = 'statut'><?php echo htmlspecialchars($row['alerte_statut']); ?></td>
           <td class = 'type'><?php echo htmlspecialchars($row['alerte_type']); ?></td>
+          <td><?php echo htmlspecialchars($row['alerte_id']); ?></td>
+          <td><?php echo htmlspecialchars($row['Montre_code']); ?></td>
+          <td><?php echo htmlspecialchars($row['alerte_zone']); ?></td>
+          <td><?php echo htmlspecialchars($row['alerte_date']); ?></td>
+          <td><?php echo htmlspecialchars($row['alerte_horaire']); ?></td>
+          <td><?php echo htmlspecialchars($row['Personnel_nom']); ?></td>
+          <td><?php echo htmlspecialchars($row['alerte_statut']); ?></td>
+          <td><?php echo htmlspecialchars($row['alerte_type']); ?></td>
+          <td>
+            <script>
+                async function modifyRecord(event) {
+                    event.preventDefault();
+
+                    const id = event.target.getAttribute('data-id');
+                    const response = await fetch(`/FestiWatch-pro/includes/Vue/Vue/listealertes/alertes.php`, {
+                        method: 'MODIFY'
+                    });
+
+                    console.log(id);
+
+                    if (response.ok) {
+                    console.log('Record deleted successfully');
+                    } else {
+                    console.error('Error deleting record');
+                    }
+                    setTimeout(() => location.reload(), 1000);
+                }
+
+                async function deleteRecord(event) {
+                    event.preventDefault();
+
+                    const id = event.target.getAttribute('data-id');
+                    const response = await fetch(`/FestiWatch-pro/includes/Vue/Vue/listealertes/alertes.php`, {
+                        method: 'DELETE'
+                    });
+                    
+                    console.log(id);
+
+                    if (response.ok) {
+                    console.log('Record deleted successfully');
+                    } else {
+                    console.error('Error deleting record');
+                    }
+                    setTimeout(() => location.reload(), 1000);
+                }
+            </script>
+            <form method="GET">
+                <input type="number" name="alerteid" id="alerteid" placeholder="Enter the alert's id" required>
+                <input type="button" value="Modifier" onclick="modifyRecord(event)" data-id="<?php echo $row['alerte_id']?>" class="actionBtns" style="background-color: #55F">
+                <input type="button" value="Terminé" onclick="deleteRecord(event)" data-id="<?php echo $row['alerte_id']?>" class="actionBtns" style="background-color: #F58">
+            </form>
+        </td>
         </tr>
-        <?php endwhile; ?>
+        <?php 
+        endwhile; 
+        
+        if ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
+            $alerteid = intval($_GET['alerteid']);
+            $stmt = $db->prepare("UPDATE alerte SET alerte_statut = 'Terminée' WHERE alerte_id = :id");
+            $stmt->execute(['id' => $alerteid]);
+        }
+        
+        ?>
       </tbody>
 
       <script>

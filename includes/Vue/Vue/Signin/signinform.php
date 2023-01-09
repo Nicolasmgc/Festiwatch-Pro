@@ -11,21 +11,20 @@
 </head>
 <body>
 <nav>
-            <ul>
-                <li><img src="../../../PNG/Logo alternatif.png" class="logo"></li> 
-                <li><a href="../Pagedaccueil/index.php" > Accueil </a></li>
-                <li><a href="../FAQ/faq.php"> FAQ </a></li>
-                <li><a href="../Apropos/A_propos_de_nous.php"> A propos de nous </a></li>
+    <ul>
+        <li><img src="../../../PNG/Logo alternatif.png" class="logo"></li> 
+        <li><a href="../Pagedaccueil/index.php" > Accueil </a></li>
+        <li><a href="../FAQ/faq.php"> FAQ </a></li>
+        <li><a href="../Apropos/A_propos_de_nous.php"> À propos de nous </a></li>
                                 
-                <li class="deroulant"><?php if(isset($_SESSION['email'])){
-                            ?>
+        <li class="deroulant"><?php if(isset($_SESSION['email'])){
+                    ?>
                         
-                      <a><?php echo $_SESSION['email'];?></a>
+          <a><?php echo $_SESSION['email'];?></a>
                     <ul class="sous">
                         <li><a href="../monprofiluser/monprofil.php"> Voir mon profil </a></li>
-                        <li><a href="../../../Controller/deconnexion.php"> Se déconnecter </a></li>
-                        
-                        </ul>
+                        <li><a href="../../../Controller/deconnexion.php"> Se déconnecter </a></li>    
+                    </ul>
                                                
                         <?php
                 }
@@ -41,7 +40,7 @@
                             <?php
                         }
                         else{ ?>
-                        <li><a href="../Connexionuser/login1.php">Se connecter </a></li>
+                        <li><a href="../Connexionuser/login1.php"> Se connecter </a></li>
                         
                         <?php } ?>
                     
@@ -49,7 +48,6 @@
                 
             </ul>
         </nav>
-
 
     <div class="container">
         <form method="post">
@@ -67,7 +65,7 @@
             <input type="password" name="cpassword" id="cpassword" placeholder="Confirmez votre mot de passe" required><br><br>
             
             <label>Handicap :</label>
-                <input type="radio" name="handicap" id="handicap" for="handicap" value=1> Oui</input>
+                <input type="radio" name="handicap" id="handicap" for="handicap" value=1 size="10"> Oui</input>
                 <input type="radio" name="handicap" id="handicap" for="handicap" value=0 checked> Non</input><br><br>
                     
             <input type="submit" name="formsend" id="formsend" value="S'inscrire">
@@ -78,25 +76,26 @@
 </body>
                     
 <footer>
-           <div class="contact">
-           <br>
-            Nous contacter <br>
-            Mail:<br> prodetec@gmail.com <br>
-            Numéro:<br> 068975412 <br>
-            Adresse: <br>10 Rue de Vanves, 92130 Issy-les-Moulineaux
-            </div>
+    <div class="contact">
+        <br>
+        Nous contacter <br>
+        Mail :<br> prodetech@gmail.com <br>
+        Numéro :<br> 068975412 <br>
+        Adresse : <br>10 Rue de Vanves, 92130 Issy-les-Moulineaux
+        </div>
          
-            <div class="foot">
-            <div class="reseaux">
-            <a href="https://www.instagram.com/pro_detech"> <img src="../../../PNG/insta.png" alt="icone de insta" height="60"></a>
-            <img src="../../../PNG/youtube.png" alt="icone de insta" height="70">
-            <img src="../../../PNG/twitter.png" alt="icone de insta" height="75" class="twitter">
-            </div>
-            <div class="lien">
-            <a href="../CGU/cgu.php">Conditions général d'utilisation</a>
-            <a href="../FAQ/faq.php"> FAQ</a>
-            </div> </div>
-             </footer>
+        <div class="foot">
+        <div class="reseaux">
+        <a href="https://www.instagram.com/pro_detech"> <img src="../../../PNG/insta.png" alt="icone de insta" height="60"></a>
+        <img src="../../../PNG/youtube.png" alt="icone de insta" height="70">
+        <img src="../../../PNG/twitter.png" alt="icone de insta" height="75" class="twitter">
+        </div>
+        <div class="lien">
+        <a href="../CGU/cgu.php">Conditions générales d'utilisation</a>
+        <a href="../FAQ/faq.php">FAQ</a>
+        </div> 
+    </div>
+</footer>
 </html>
 
     <?php include '../../../Controller/database.php';

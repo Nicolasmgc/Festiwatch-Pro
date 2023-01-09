@@ -17,7 +17,9 @@ body {
 
 html{
     background: linear-gradient(225deg,#f99b0d 10%,#8425f8 30%,#452df8
-    10%,rgb(227, 51, 243 ))
+    10%,rgb(227, 51, 243 ));
+    width: 100%;
+    height: 100%;
 }
 
 ::-webkit-scrollbar {
@@ -47,6 +49,7 @@ html{
 
 h1{
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #searchBox {
@@ -194,7 +197,7 @@ nav .logo{
 
 .round{
     border: 5px solid black;
-    padding: 8%;
+    padding: 7%;
     border-radius: 50%;
     height:560px;
     width: 560px;
@@ -212,8 +215,94 @@ nav .logo{
 
 
 p{
-    font-size: 20px;
+    
+    font-size: 22px;
     text-align: center;
-  font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
   color: black;
+    font-weight: 700;
 }
+
+.haut{
+    width: 20%;
+    margin:2%;
+    height:10%;
+    position: fixed;
+    left:40%;
+    border: 4px solid black;
+    border-radius: 20px;
+    top:35% ;
+    text-align: center;
+}
+.button_ok{
+    width: 9%;
+    margin:2%;
+    height:7%;
+    position: fixed;
+    left: 46%;
+    border: 4px solid black;
+    top:49% ;
+    border-radius: 20px;
+}
+
+span{
+    font-family: 'Montserrat', sans-serif;
+    position: fixed;
+    left:30%;
+    top:30% ;
+    font-size: 25px;
+}
+
+footer{
+    background-color:black ;
+    width: 100%;
+    display: flex;
+    padding: 20px auto;
+    position: fixed;
+    top: 75%;
+    left:0px;
+ }
+ 
+ .contact{
+     font-size:15px;
+     margin-left: 2%;
+     font-family: 'Elephant';
+     flex-direction: column;
+     color: white;
+     margin-bottom: 2%;
+ }
+ .reseaux{
+     display:block;
+     margin-left:30%;
+     margin-top: 2%;
+     justify-content: space-between;
+ }
+ .foot{
+     display: flex;
+     display: inline-block;
+     width: 50%;
+ }
+ .lien{
+     font-family: 'Montserrat', sans-serif;
+     color: aliceblue;   
+    margin-top: 4%;
+    text-align: center;
+    position: fixed;
+    top: 85%;
+    left:35%;
+ }
+ 
+ .reseaux a{
+     color: white;
+     padding: 5px;
+ }
+ .lien a{
+    color: white;
+    padding: 7px;
+ }
+ 
+ .logo_foot{
+    height: 30%;
+    width:5%;
+    border: 4px solid white;
+ }
