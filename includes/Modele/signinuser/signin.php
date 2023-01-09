@@ -43,6 +43,7 @@
                                 'password' => $hashpass,
                                 'handicap' => $handicap,
                                 'role_id' => 1
+                                
                             ]);
                         echo "Le compte a été créé";
                         // header location à mettre ici ?

@@ -17,6 +17,7 @@ global $db;
     WHERE alerte.Fest_id = :Fest_id AND alerte.alerte_statut = 'Termine'");
     $r->execute([
         'Fest_id' => $_SESSION[('Fest_id')]
+        
     ]);
     while ($result = $r->fetch()) {
 

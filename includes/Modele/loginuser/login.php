@@ -33,6 +33,7 @@
                     $_SESSION['datedecreation'] = $result['datedecreation'];
                     $_SESSION['handicap'] = $result['handicap'];
                     header("Location: ../../Vue/monprofiluser/monprofil.php?id=".$_SESSION['id']);
+                    
                 }
                 else
                 {
