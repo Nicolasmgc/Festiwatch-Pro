@@ -121,6 +121,7 @@ session_start();
         while($row = $stmt->fetch(PDO::FETCH_ASSOC)) : 
         ?>
         <tr> 
+            <!--
           <td class = 'id'><?php echo htmlspecialchars($row['alerte_id']); ?></td>
           <td class = 'code'><?php echo htmlspecialchars($row['Montre_code']); ?></td>
           <td class = 'zone'><?php echo htmlspecialchars($row['alerte_zone']); ?></td>
@@ -129,6 +130,7 @@ session_start();
           <td class = 'personnel'><?php echo htmlspecialchars($row['Personnel_nom']); ?></td>
           <td class = 'statut'><?php echo htmlspecialchars($row['alerte_statut']); ?></td>
           <td class = 'type'><?php echo htmlspecialchars($row['alerte_type']); ?></td>
+        -->
           <td><?php echo htmlspecialchars($row['alerte_id']); ?></td>
           <td><?php echo htmlspecialchars($row['Montre_code']); ?></td>
           <td><?php echo htmlspecialchars($row['alerte_zone']); ?></td>
@@ -194,6 +196,7 @@ session_start();
         ?>
       </tbody>
 
+      <!--
       <script>
         xmlhttp=new XMLHttpRequest();
         xmlhttp.open("POST","../../../Modele/listealerte/filtrealerte.php",true);
