@@ -6,27 +6,27 @@ session_start();
     <head>
         <title>FestiWatch - Mes Données</title>
         <meta charset="utf-8">
-        <link rel="icon" href="icon.jpeg">
-        <link rel="stylesheet" type="text/css" href="../general.css">
-        <link rel="stylesheet" type="text/css" href="../navStyle.css">
-        <link rel="stylesheet" type="text/css" href="userData.css">
+        <link rel="icon" href="../../../PNG/icon.jpeg">
+        <link rel="stylesheet" type="text/css" href="../../../general.css">
+        <link rel="stylesheet" type="text/css" href="navStyle.css">
+        <link rel="stylesheet" type="text/css" href="../UserData/userData.css">
     </head>
     <body>
     <nav>
             <ul>
-               <li><img src="../../PNG/Logo alternatif2.png" class="logo" >  </a></li>   
+               <li><img src="../../../PNG/Logo alternatif2.png" class="logo" >  </a></li>   
                   
-                <li><a href="../.././Page d'accueil./index.php" > Accueil </a></li>
-                <li><a href="../.././Page d'accueil ./FAQ/faq.php"> FAQ </a></li>
-                <li><a href="../.././Page d'accueil ./AProposDeNous/A_propos_de_nous.php"> A propos de nous </a></li>
+                <li><a href="../../Vue/Pagedaccueil" > Accueil </a></li>
+                <li><a href="../../Vue/FAQ/faq.php"> FAQ </a></li>
+                <li><a href="../../Vue/Apropos/A_propos_de_nous.php"> A propos de nous </a></li>
                 
                 <li class="deroulant"><?php if(isset($_SESSION['email'])){
                             ?>
                         
                       <a><?php echo $_SESSION['email'];?></a>
                         <ul class="sous">
-                            <li><a href="../monprofil.php"> Voir mon profil </a></li>
-                            <li><a href="../deconnexion.php"> Se déconnecter </a></li>
+                            <li><a href="../monprofiluser/monprofil.php"> Voir mon profil </a></li>
+                            <li><a href="../../../Controller/deconnexion.php"> Se déconnecter </a></li>
                         </ul>           
                         
 
@@ -40,7 +40,7 @@ session_start();
 
                         <a><?php echo $_SESSION['Fest_nom'];?></a>
                         <ul class="sous">
-                            <li><a href="../ConnexionGestionnaire/mesinfos.php?Fest_id=".$_SESSION['Fest_id']> Voir mes infos </a></li> <?php // Truc très ghetto ça marche moyennement ce href faire gaffe pendant la démo ?>
+                            <li><a href="../ConnexionGestionnaire/mesinfos.php?Fest_id=".$_SESSION[`Fest_id`]> Voir mes infos </a></li> <?php // Truc très ghetto ça marche moyennement ce href faire gaffe pendant la démo ?>
                             <li><a href="../deconnexion.php"> Se déconnecter </a></li>
                         </ul>  
 
@@ -49,7 +49,7 @@ session_start();
                         }
                         
                         else{ ?>
-                        <li><a href="../login1.php">Se connecter </a></li>
+                        <li><a href="../Connexionuser/login1.php">Se connecter </a></li>
                         
                         <?php } ?></a>
                           
@@ -74,7 +74,7 @@ session_start();
                     <div id="map">
                         <!--<img id="mapImage" src="templateMap.png" alt="Current Map unavailable">-->
                         <?php 
-                            include "../MAP/map.html";
+                            include "../UserData/MAP/map.html";
                         ?>
                     </div>
                 </div>
@@ -99,7 +99,7 @@ session_start();
             <div id="mainContent">
                 <div id="searchBox">
                     <input id="searchBar"/>
-                    <a href=""><img id="searchIcon" src="searchIcon.png" alt="search"></a>
+                    <a href=""><img id="searchIcon" src="../../../PNG/searchIcon.png" alt="search"></a>
                 </div>
                 <div id="dashboardBox">
                     <h1>Dashboard</h1>
@@ -144,8 +144,8 @@ session_start();
          
             <div class="foot">
             <div class="lien">
-            <a href="../../cgu.php">Conditions général d'utilisation</a>
-            <a href=".././FAQ/faq.php"> FAQ</a>
+            <a href="../CGU/cgu.php">Conditions général d'utilisation</a>
+            <a href="../FAQ/faq.php"> FAQ</a>
             <a href="#">Connexion</a>
             </div> </div>
     </footer>
