@@ -47,7 +47,7 @@
                             <?php
                         }
                         else{ ?>
-                        <li><a href="../Connexionuser/login1.php">Se connecter </a></li>
+                        <li><a href="../Connexionuser/login1.php">Se connecter</a></li>
                         
                         <?php } ?>
                     
