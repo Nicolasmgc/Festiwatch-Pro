@@ -12,7 +12,7 @@ if(isset($_POST['formlogingestio'])){
         );
         $resultff = $c2->rowCount();
         if($resultff == 0){
-            $q2 = $db->prepare("INSERT INTO festsign(festsign_id, festsign_nom, festsign_prenom, festsign_email, festsign_numtel, festsign_adresse, festsign_remarque) VALUES(:festsign_id, :festsign_nom, :festsign_prenom, :festsign_email, :festsign_numtel, :festsign_adresse, :festsign_remarque)");
+            $q2 = $db->prepare("INSERT INTO festsign(festsign_nom, festsign_prenom, festsign_email, festsign_numtel, festsign_adresse, festsign_remarque) VALUES(:festsign_nom, :festsign_prenom, :festsign_email, :festsign_numtel, :festsign_adresse, :festsign_remarque)");
             $q2->execute(
                 [
                     'festsign_nom' => $Cl_nom,
