@@ -1,8 +1,11 @@
 <?php
 session_start();
-if(isset($_SESSION['email']) && (isset($_SESSION['nom'])))
-{
+
     ?>
+        <?php
+        if(isset($_SESSION['id'])){
+    ?>
+
          <!DOCTYPE html>
      <html>
         <head>
@@ -10,6 +13,9 @@ if(isset($_SESSION['email']) && (isset($_SESSION['nom'])))
            <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap" rel="stylesheet">
            
          </head>
+
+
+
      <body> 
      <nav>
             <ul>
@@ -202,11 +208,39 @@ if(isset($_POST['formupdate3'])){
     
     <?php
 
-}else{
-    echo "Veuillez vous connecter à votre compte";
-}
+// }else{
+//     echo "Veuillez vous connecter à votre compte";
+// }
 
 ?>
 
 
+<?php
+}else{
+    ?>
+    <!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../Controller/errors/erreur.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap" rel="stylesheet">
+<head>
+    <title>Erreur</title>
+</head>
+<body>
+<div class="fond">
+    <div class="round">
+        Erreur vous n'avez pas accès à cette page !</br>
+        Veuillez vous connecter</br>
+        <button ><a href="../Connexionuser/login1.php"  style="text-decoration:none">Se connecter</a></button>
+        </div>
+</div>
 
+
+<img src="../../../PNG/errorimage.png" alt="image d'erreur">
+
+</body>
+
+</html>
+<?php
+}
+?>

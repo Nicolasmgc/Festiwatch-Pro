@@ -1,5 +1,7 @@
 <?php
 session_start();
+
+if(isset($_SESSION['Fest_id'])){
 ?>
 
 <?php
@@ -94,9 +96,9 @@ session_start();
         </nav>
 
     <h1> Les alertes </h1>
-    <p> Vous êtes sur la page du festival "Les ardentes" </p>
+    <p> Vous êtes sur la page du festival <?php echo $_SESSION['Fest_nom']; ?> </p>
 <div class= page> <!-- C'est pour naviguer entre les pages de différents festivals -->
-    <a> Les Ardentes </a>
+
 </div>
 
 <table class="tableau-style">
@@ -196,79 +198,6 @@ session_start();
         ?>
       </tbody>
 
-      <!--
-      <script>
-        xmlhttp=new XMLHttpRequest();
-        xmlhttp.open("POST","../../../Modele/listealerte/filtrealerte.php",true);
-        xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-        xmlhttp.send("fname=Henry&lname=Ford");
-
-        xmlhttp.onreadystatechange=function(){
-        if (xmlhttp.readyState==4 && xmlhttp.status==200){
-            var tab=JSON.parse(xmlhttp.responseText);
-            // console.log(tab[0][0])
-            for(r of tab){
-                console.log(r[1])
-                
-            document.getElementsByTagName('tbody')[0].innerHTML=r[0]
-            document.getElementsByTagName('tbody')[0].innerHTML=r[1]
-            document.getElementsByClassName('zone')[2].innerHTML=r[2]
-            document.getElementsByClassName('date')[3].innerHTML=r[3]
-            document.getElementsByClassName('horaire')[4].innerHTML=r[4]
-            document.getElementsByClassName('personnel')[5].innerHTML=r[5]
-            document.getElementsByClassName('statut')[6].innerHTML=r[6]
-            document.getElementsByClassName('type')[7].innerHTML=r[7]
-                
-            }
-    }
-}
-        </script>
-
-
-        
-
-        <!-- <tbody> 
-            <tr>
-                <td> 1 </td>
-                <td> 25 </td>
-                <td> zone B </td>
-                <td> 14-12-2022 </td>
-                <td> 20:09 </td>
-                <td> Henry Mont </td> 
-                <td> En attente </td>
-                <td> Malaise </td>
-            </tr>
-            <tr>
-                <td> 2 </td>
-                <td> 47 </td>
-                <td> zone A </td>
-                <td> 14-12-2022 </td>
-                <td> 20:45 </td>
-                <td> Thomas Auster </td> 
-                <td> En cours </td>
-                <td> Agression </td>
-            </tr>
-            <tr>
-                <td> 3 </td>
-                <td> 89 </td>
-                <td> zone C </td>
-                <td> 17-12-2022 </td>
-                <td> 18:49 </td>
-                <td> Justine Briant </td> 
-                <td> Terminé </td>
-                <td> Chute </td>
-            </tr>
-            <tr>
-                <td> 4 </td>
-                <td> 172 </td>
-                <td> zone B </td>
-                <td> 22-12-2022 </td>
-                <td> 14:49 </td>
-                <td> Arthur Lagrange </td> 
-                <td> Terminé </td>
-                <td> Bagarre </td>
-            </tr>
-        </tbody> -->
     </table>
 </br>
     <footer>
@@ -296,4 +225,36 @@ session_start();
     </body>
     
 
-    
+    <?php
+
+    }else{
+        ?>
+
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../Controller/errors/erreur.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap" rel="stylesheet">
+<head>
+    <title>Erreur</title>
+</head>
+<body>
+<div class="fond">
+    <div class="round">
+        Erreur cette page est reservée aux festivals !</br>
+        Veuillez retouner à la page d'accueil !</br>
+        <button ><a href=" ../Pagedaccueil/index.php"  style="text-decoration:none">Page d'accueil</a></button>
+        </div>
+</div>
+
+
+<img src="../../../PNG/errorimage.png" alt="image d'erreur">
+
+</body>
+
+</html>
+
+        <?php
+    }
+
+?>
