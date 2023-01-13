@@ -1,0 +1,44 @@
+* {
+    font-family: 'Elephant';
+}
+img{
+    position: fixed;
+    left: 59%;
+    top: 15%;
+}
+.round{
+    background-color: #FFF7BF;
+    width:35%;
+    border: 8px solid black;
+    padding:3%;
+    position: fixed;
+    top: 20%;
+    text-align: center;
+    font-size: 25px;
+    left: 5%;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 20px;
+}
+.fond{
+    background-color: #E38EBA;
+    width: 50%;
+    height: 95%;
+    position: fixed;
+    border: 8px solid black;
+}
+button{
+    position: fixed;
+    top: 50%;
+    left: 13%;
+    padding:2%;
+    text-align: center;
+    border: 8px solid black;
+    background-color: white;
+    border-radius: 20px;
+    font-size: 30px;
+    margin:1%;
+}
+a{
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+}
