@@ -78,22 +78,6 @@ session_start();
                         ?>
                     </div>
                 </div>
-                <div id="friendBox">
-                    <h1>Friends</h1>
-                    <div id="friendList">
-                        <?php 
-                            $friendList = [["Jean-Patrick", "105235"], ["Marie-Francine", "696969"], ["Billie Jean-Paul", "515625"]];
-
-                            for($i = 0 ; $i < count($friendList) ; $i++){
-                                echo  "<br>";
-                                echo $friendList[$i][0];
-                                echo  " ";
-                                echo  $friendList[$i][1];
-                                echo  "<br>";
-                            }
-                        ?>
-                    </div>
-                </div>
             </div>
 
             <div id="mainContent">
@@ -107,12 +91,12 @@ session_start();
                         <div>
                             <label for="heartRate">Fréquence Cardiaque</label>
                             <meter id="heartRate" min=0 max=100 low="50" high="80" value=81 optimum="0"></meter>
-                            <div style="margin-bottom: 20px; margin-top: 40px; color: white">81%</div>
+                            <div style="font-size: 32px; margin-bottom: 20px; margin-top: 40px; color: white">130 BPM</div>
                         </div>
                         <div>
                             <label for="soundIntensity">Amplitude Sonore</label>
                             <meter id="soundIntensity" min=0 max=100 low="50" high="80" value=51 optimum="0"></meter>
-                            <div style="margin-bottom: 20px; margin-top: 40px; color: white">51%</div>
+                            <div style="font-size: 32px; margin-bottom: 20px; margin-top: 40px; color: white">80 dB</div>
                         </div>
                     </div>
                     
@@ -120,12 +104,12 @@ session_start();
                         <div>
                             <label for="gazExposition">Gaz</label>
                             <meter id="gazExposition" min=0 max=100 low="33" high="66" value=20 optimum="0"></meter>
-                            <div style="margin-bottom: 20px; margin-top: 40px; color: white">20%</div>
+                            <div style="font-size: 32px; margin-bottom: 20px; margin-top: 40px; color: white">20%</div>
                         </div>   
                         <div>
                             <label for="alcoholConsumption">Consommation d'Alcool</label>
                             <meter id="alcoholConsumption" min=0 max=100 low="33" high="66" value=80 optimum="0"></meter>
-                            <div style="margin-bottom: 20px; margin-top: 40px; color: white">80%</div>
+                            <div style="font-size: 32px; margin-bottom: 20px; margin-top: 40px; color: white">6 verres</div>
                         </div> 
                     </div>
                 </div>
