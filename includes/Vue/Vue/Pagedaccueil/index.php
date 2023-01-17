@@ -74,6 +74,7 @@
         <video src="../../../PNG/Concert - 1630.mp4" id="video" autoplay loop muted></video>
         
         <div class="shadowup"></div>
+        <img class="Montre" src="../../../PNG/Montre.png">
 
         <section>
             <div class="Bloc-description">
@@ -99,6 +100,26 @@
 
             </div>
         </section>
+        </div>
+            <div class="element">
+                <div class="nombre1">1</div>
+                <div class="infobulle">
+                    Capteur1
+                </div>
+            </div>
+            <div class="element2">
+                <div class="nombre2">2</div>
+                <div class="infobulle2">
+                    Capteur2
+                </div>
+            </div>
+            <div class="element3">
+                <div class="nombre3">3</div>
+                <div class="infobulle3">
+                    Capteur3
+                </div>
+            </div>
+        
        
         <div class="shadowdown"></div>
         <img class="image2" src="../../../PNG/hd-wallpaper-4768501_1920.jpg">
