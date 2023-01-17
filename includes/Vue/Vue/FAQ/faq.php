@@ -3,6 +3,7 @@
 
 ?>
 <!DOCTYPE HTML>
+<html>
 <head>
     <title>FestiWatch - FAQ</title>
     <meta charset="utf-8">
@@ -126,4 +127,7 @@
             <a href="../FAQ/faq.php"> FAQ</a>
             <a href="../Connexionuser/login1.php">Connexion</a>
             </div> </div>
+          
              </footer>
+
+</html>
