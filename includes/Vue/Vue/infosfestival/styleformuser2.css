@@ -16,7 +16,7 @@ html{
     background: linear-gradient(225deg,#f99b0d 10%,#8425f8 30%,#452df8
     10%,rgb(227, 51, 243 ));
     width: 100%;
-    height: 100%;
+    height: 95%;
 }
 
 ::-webkit-scrollbar {
@@ -315,12 +315,6 @@ footer{
     width:5%;
     padding:5%;
  }
- .logo_foot_you{
-    height: 35%;
-    width:5%;
-    padding:5%;
- }
-
   .contact{
      font-size:15px;
      margin-left: 2%;
@@ -352,9 +346,6 @@ footer{
      color: aliceblue;   
     margin-top: 4%;
     text-align: center;
-    position: fixed;
-    top: 85%;
-    left:35%;
  }
  
  .reseaux a{
@@ -378,7 +369,9 @@ footer{
     width:5%;
     padding:5%;
  }
- /**/
+.foot_2{
+    position: relative;
+}
  .contact_2{
     font-size:15px;
     margin-left: 2%;
@@ -386,9 +379,18 @@ footer{
     flex-direction: column;
     color: white;
     margin-bottom: 2%;
-    display:flex;
-    top:185%;
 }
+.reseaux_2{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;   
+}
+.logo_foot2{
+    height: 30%;
+    width:5%;
+    padding:5%;
+ }
+
 .reseaux_2{
     display:flex;
     flex-direction: row;
@@ -396,6 +398,10 @@ footer{
     margin-top: 2%;
     width: 300px;
     justify-content: space-between;
+    position: relative;
+   bottom: 200px;
+   left:120px;
+    
 }
 .reseaux_2 img, .reseaux_2 a {
    width: 70%;
@@ -405,16 +411,15 @@ footer{
 .foot_2{
     display: inline-block;
     justify-content: space-between;
-    width: 50%;
 }
 .lien_2{
     font-family: 'Montserrat', sans-serif;
     color: aliceblue;   
    margin-top: 4%;
    text-align: center;
-   position: fixed;
-   top: 85%;
-   left:35%;
+   width:100%;
+   position: relative;
+   bottom: 200px;
 }
 
 .reseaux_2 a{
@@ -427,7 +432,7 @@ footer{
    color: white;
    padding: 7px;
 }
-
+/*
 .logo_foot{
    height: 30%;
    width:5%;
@@ -437,4 +442,10 @@ footer{
    height: 35%;
    width:5%;
    padding:5%;
+}*/
+.foot_2{
+    width: 100%;
+    position: relative;
+    height: 220px;
+    top:10%;
 }

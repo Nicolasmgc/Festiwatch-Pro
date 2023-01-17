@@ -236,8 +236,8 @@ global $db;
          
         <div class="foot_2">
             <div class="reseaux_2">
-                <a href="https://www.instagram.com/pro_detech"> <img src="../../../PNG/insta.png" alt="icone de insta"class="logo_foot"></a>
-                <a href="https://www.instagram.com/pro_detech"> <img src="../../../PNG/twitter.png" alt="icone de insta" class="logo_foot"></a>
+                <a href="https://www.instagram.com/pro_detech"> <img src="../../../PNG/insta.png" alt="icone de insta"class="logo_foot2"></a>
+                <a href="https://www.instagram.com/pro_detech"> <img src="../../../PNG/twitter.png" alt="icone de insta" class="logo_foot2"></a>
                 <a href="https://www.instagram.com/pro_detech"> <img src="../../../PNG/youtube.png" alt="icone de insta" class="logo_foot_you"  ></a>
             </div>
             <div class="lien_2">

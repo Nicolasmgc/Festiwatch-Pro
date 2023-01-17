@@ -1,8 +1,11 @@
 <?php
 session_start();
-if(isset($_SESSION['email']) && (isset($_SESSION['nom'])))
-{
+
     ?>
+        <?php
+        if(isset($_SESSION['id'])){
+    ?>
+
          <!DOCTYPE html>
      <html>
         <head>
@@ -10,6 +13,9 @@ if(isset($_SESSION['email']) && (isset($_SESSION['nom'])))
            <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap" rel="stylesheet">
            
          </head>
+
+
+
      <body> 
      <nav>
             <ul>
@@ -179,19 +185,19 @@ if(isset($_POST['formupdate3'])){
            <div class="contact">
            <br>
             Nous contacter <br>
-            Mail:<br> prodetec@gmail.com <br>
-            Numéro:<br> 068975412 <br>
-            Adresse: <br>10 Rue de Vanves, 92130 Issy-les-Moulineaux
+            Mail :<br> prodetech@gmail.com <br>
+            Numéro :<br> 068975412 <br>
+            Adresse :<br>10 Rue de Vanves, 92130 Issy-les-Moulineaux
             </div>
          
             <div class="foot">
             <div class="reseaux">
-            <a href="https://www.instagram.com/pro_detech"> <img src="../../../PNG/insta.png" alt="icone de insta" height="60"></a>
-            <img src="../../../PNG/youtube.png" alt="icone de insta" height="70">
+            <a href="https://www.instagram.com/pro_detech"> <img src="../../../PNG/insta.png" alt="icone de insta"height="65"  ></a>
+            <img src="../../../PNG/youtube.png" alt="icone de insta" height="65" >
             <img src="../../../PNG/twitter.png" alt="icone de insta" height="75">
             </div>
             <div class="lien">
-            <a href="../CGU/cgu.php">Conditions général d'utilisation</a>
+            <a href="../CGU/cgu.php">Conditions générales d'utilisation</a>
             <a href="../FAQ/faq.php"> FAQ</a>
             <a href="../Connexionuser/login1.php">Connexion</a>
             </div> </div>
@@ -202,11 +208,39 @@ if(isset($_POST['formupdate3'])){
     
     <?php
 
-}else{
-    echo "Veuillez vous connecter à votre compte";
-}
+// }else{
+//     echo "Veuillez vous connecter à votre compte";
+// }
 
 ?>
 
 
+<?php
+}else{
+    ?>
+    <!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../Controller/errors/erreur.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap" rel="stylesheet">
+<head>
+    <title>Erreur</title>
+</head>
+<body>
+<div class="fond">
+    <div class="round">
+        Erreur vous n'avez pas accès à cette page !</br>
+        Veuillez vous connecter</br>
+        <button ><a href="../Connexionuser/login1.php"  style="text-decoration:none">Se connecter</a></button>
+        </div>
+</div>
 
+
+<img src="../../../PNG/errorimage.png" alt="image d'erreur">
+
+</body>
+
+</html>
+<?php
+}
+?>

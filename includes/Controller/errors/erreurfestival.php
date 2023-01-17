@@ -9,7 +9,7 @@
 <body>
 <div class="fond">
     <div class="round">
-        Erreur cette page est reservée aux festivales !</br>
+        Erreur cette page est reservée aux festivals !</br>
         Veuillez retouner à la page d'accueil !</br>
         <button ><a href="./deconnexion.php"  style="text-decoration:none">Page accueil</a></button>
         </div>

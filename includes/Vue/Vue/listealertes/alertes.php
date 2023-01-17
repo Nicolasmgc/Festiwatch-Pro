@@ -1,5 +1,7 @@
 <?php
 session_start();
+
+if(isset($_SESSION['Fest_id'])){
 ?>
 
 <?php
@@ -94,9 +96,9 @@ session_start();
         </nav>
 
     <h1> Les alertes </h1>
-    <p> Vous êtes sur la page du festival "Les ardentes" </p>
+    <p> Vous êtes sur la page du festival <?php echo $_SESSION['Fest_nom']; ?> </p>
 <div class= page> <!-- C'est pour naviguer entre les pages de différents festivals -->
-    <a> Les Ardentes </a>
+
 </div>
 
 <table class="tableau-style">
@@ -120,17 +122,7 @@ session_start();
         global $row; 
         while($row = $stmt->fetch(PDO::FETCH_ASSOC)) : 
         ?>
-        <tr> 
-            <!--
-          <td class = 'id'><?php echo htmlspecialchars($row['alerte_id']); ?></td>
-          <td class = 'code'><?php echo htmlspecialchars($row['Montre_code']); ?></td>
-          <td class = 'zone'><?php echo htmlspecialchars($row['alerte_zone']); ?></td>
-          <td class = 'date'><?php echo htmlspecialchars($row['alerte_date']); ?></td>
-          <td class = 'horaire'><?php echo htmlspecialchars($row['alerte_horaire']); ?></td>
-          <td class = 'personnel'><?php echo htmlspecialchars($row['Personnel_nom']); ?></td>
-          <td class = 'statut'><?php echo htmlspecialchars($row['alerte_statut']); ?></td>
-          <td class = 'type'><?php echo htmlspecialchars($row['alerte_type']); ?></td>
-        -->
+        <tr>
           <td><?php echo htmlspecialchars($row['alerte_id']); ?></td>
           <td><?php echo htmlspecialchars($row['Montre_code']); ?></td>
           <td><?php echo htmlspecialchars($row['alerte_zone']); ?></td>
@@ -140,135 +132,39 @@ session_start();
           <td><?php echo htmlspecialchars($row['alerte_statut']); ?></td>
           <td><?php echo htmlspecialchars($row['alerte_type']); ?></td>
           <td>
-            <script>
-                async function modifyRecord(event) {
-                    event.preventDefault();
-
-                    const id = event.target.getAttribute('data-id');
-                    const response = await fetch(`/FestiWatch-pro/includes/Vue/Vue/listealertes/alertes.php`, {
-                        method: 'MODIFY'
-                    });
-
-                    console.log(id);
-
-                    if (response.ok) {
-                    console.log('Record deleted successfully');
-                    } else {
-                    console.error('Error deleting record');
-                    }
-                    setTimeout(() => location.reload(), 1000);
-                }
-
-                async function deleteRecord(event) {
-                    event.preventDefault();
-
-                    const id = event.target.getAttribute('data-id');
-                    const response = await fetch(`/FestiWatch-pro/includes/Vue/Vue/listealertes/alertes.php`, {
-                        method: 'DELETE'
-                    });
-                    
-                    console.log(id);
-
-                    if (response.ok) {
-                    console.log('Record deleted successfully');
-                    } else {
-                    console.error('Error deleting record');
-                    }
-                    setTimeout(() => location.reload(), 1000);
-                }
-            </script>
-            <form method="GET">
+            
+            <form method="POST">
                 <input type="number" name="alerteid" id="alerteid" placeholder="Enter the alert's id" required>
-                <input type="button" value="Modifier" onclick="modifyRecord(event)" data-id="<?php echo $row['alerte_id']?>" class="actionBtns" style="background-color: #55F">
-                <input type="button" value="Terminé" onclick="deleteRecord(event)" data-id="<?php echo $row['alerte_id']?>" class="actionBtns" style="background-color: #F58">
+                <input type="number" name="gestioid" id="gestioid" placeholder="Enter the personel's id">
+                <input type="submit" name="Modifier" value="Modifier" class="actionBtns" style="background-color: #55F">
+                <input type="submit" name="Terminer" value="Terminer" class="actionBtns" style="background-color: #F58">
             </form>
         </td>
         </tr>
         <?php 
         endwhile; 
         
-        if ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
-            $alerteid = intval($_GET['alerteid']);
+        if (isset($_POST['Terminer'])) {
+            $alerteid = intval($_POST['alerteid']);
+            echo 'TERMINATION OF ALERT WITH ID '. $alerteid;
             $stmt = $db->prepare("UPDATE alerte SET alerte_statut = 'Terminée' WHERE alerte_id = :id");
             $stmt->execute(['id' => $alerteid]);
         }
+
+        if(isset($_POST['Modifier'])){
+            $alerteid = intval($_POST['alerteid']);
+            $gestioid = intval($_POST['gestioid']);
+            echo 'MODIFICATION OF ALERT WITH ID '. $alerteid;
+            $stmt = $db->prepare("UPDATE alerte SET alerte_statut = 'Modifiée' WHERE alerte_id = :id");
+            $stmt->execute(['id' => $alerteid]);
+            $stmt2 = $db->prepare("UPDATE alerte SET Personnel_id = :gestioid; WHERE alerte_id = :id");
+            $stmt2->execute(['gestioid' => $gestioid, 'id' => $alerteid]);
+        }
+
         
         ?>
       </tbody>
 
-      <!--
-      <script>
-        xmlhttp=new XMLHttpRequest();
-        xmlhttp.open("POST","../../../Modele/listealerte/filtrealerte.php",true);
-        xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-        xmlhttp.send("fname=Henry&lname=Ford");
-
-        xmlhttp.onreadystatechange=function(){
-        if (xmlhttp.readyState==4 && xmlhttp.status==200){
-            var tab=JSON.parse(xmlhttp.responseText);
-            // console.log(tab[0][0])
-            for(r of tab){
-                console.log(r[1])
-                
-            document.getElementsByTagName('tbody')[0].innerHTML=r[0]
-            document.getElementsByTagName('tbody')[0].innerHTML=r[1]
-            document.getElementsByClassName('zone')[2].innerHTML=r[2]
-            document.getElementsByClassName('date')[3].innerHTML=r[3]
-            document.getElementsByClassName('horaire')[4].innerHTML=r[4]
-            document.getElementsByClassName('personnel')[5].innerHTML=r[5]
-            document.getElementsByClassName('statut')[6].innerHTML=r[6]
-            document.getElementsByClassName('type')[7].innerHTML=r[7]
-                
-            }
-    }
-}
-        </script>
-
-
-        
-
-        <!-- <tbody> 
-            <tr>
-                <td> 1 </td>
-                <td> 25 </td>
-                <td> zone B </td>
-                <td> 14-12-2022 </td>
-                <td> 20:09 </td>
-                <td> Henry Mont </td> 
-                <td> En attente </td>
-                <td> Malaise </td>
-            </tr>
-            <tr>
-                <td> 2 </td>
-                <td> 47 </td>
-                <td> zone A </td>
-                <td> 14-12-2022 </td>
-                <td> 20:45 </td>
-                <td> Thomas Auster </td> 
-                <td> En cours </td>
-                <td> Agression </td>
-            </tr>
-            <tr>
-                <td> 3 </td>
-                <td> 89 </td>
-                <td> zone C </td>
-                <td> 17-12-2022 </td>
-                <td> 18:49 </td>
-                <td> Justine Briant </td> 
-                <td> Terminé </td>
-                <td> Chute </td>
-            </tr>
-            <tr>
-                <td> 4 </td>
-                <td> 172 </td>
-                <td> zone B </td>
-                <td> 22-12-2022 </td>
-                <td> 14:49 </td>
-                <td> Arthur Lagrange </td> 
-                <td> Terminé </td>
-                <td> Bagarre </td>
-            </tr>
-        </tbody> -->
     </table>
 </br>
     <footer>
@@ -296,4 +192,36 @@ session_start();
     </body>
     
 
-    
+    <?php
+
+    }else{
+        ?>
+
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../Controller/errors/erreur.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap" rel="stylesheet">
+<head>
+    <title>Erreur</title>
+</head>
+<body>
+<div class="fond">
+    <div class="round">
+        Erreur cette page est reservée aux festivals !</br>
+        Veuillez retouner à la page d'accueil !</br>
+        <button ><a href=" ../Pagedaccueil/index.php"  style="text-decoration:none">Page d'accueil</a></button>
+        </div>
+</div>
+
+
+<img src="../../../PNG/errorimage.png" alt="image d'erreur">
+
+</body>
+
+</html>
+
+        <?php
+    }
+
+?>

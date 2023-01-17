@@ -32,6 +32,7 @@
                     $_SESSION['password'] = $result['password'];
                     $_SESSION['datedecreation'] = $result['datedecreation'];
                     $_SESSION['handicap'] = $result['handicap'];
+                    $_SESSION['role_id'] = $result['role_id'];
                     header("Location: ../../Vue/monprofiluser/monprofil.php?id=".$_SESSION['id']);
                     
                 }
