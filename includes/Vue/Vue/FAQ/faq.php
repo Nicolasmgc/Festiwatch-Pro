@@ -117,8 +117,8 @@
          
             <div class="foot">
             <div class="reseaux">
-            <a href="https://www.instagram.com/pro_detech"> <img src="../../../PNG/insta.png" alt="icone de insta" height="60" width="70"></a>
-            <img src="../../../PNG/youtube.png" alt="icone de insta" height="70" width="105">
+            <a href="https://www.instagram.com/pro_detech"> <img src="../../../PNG/insta.png" alt="icone de insta" height="70"></a>
+            <img src="../../../PNG/youtube.png" alt="icone de insta" height="72" width="105">
             <img src="../../../PNG/twitter.png" alt="icone de insta" height="75">
             </div>
             <div class="lien">
