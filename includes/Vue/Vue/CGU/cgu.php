@@ -3,6 +3,7 @@ session_start()
 ?>
 
 <!DOCTYPE HTML>
+<html lang="en-US">
 <head>
     <title>FestiWatch - CGU</title>
     <meta charset="utf-8">
@@ -63,6 +64,8 @@ session_start()
 
     <div class="FAQTitle"><h1>CGU</h1></div>
 
+    <div id="google_translate_element"></div>
+
     <div class="FAQCards">
         <div class="FAQCard">
             <div class="FAQQuestion"><div>Article 1 : Les mentions légales</div></div>
@@ -121,6 +124,20 @@ session_start()
             <a href="../FAQ/faq.php"> FAQ</a>
             <a href="../Connexionuser/login1.php">Connexion</a>
             </div> </div>
-             </footer>
+    </footer>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {pageLanguage: 'en'},
+                'google_translate_element'
+            );
+        }
+    </script>
+ 
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?
+    cb=googleTranslateElementInit">
+
+
 </body>
 
