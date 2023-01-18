@@ -1,20 +1,19 @@
-*{
+
+body{
     font-family: 'Montserrat', sans-serif;
+    background-image:url(../../../PNG/Solidays-2019-2.jpg);
+    background-position:40% 40%;
+    position:fixed;
+    left:30%;
+    top:35%;
+    font-size: 35px ;
+    color:black;
 }
 
 h1{
     position:fixed;
-    left:23%;
-    top:0%;
+    left:25%;
+    top:18%;
     font-size: 60px ;
-    background: linear-gradient(225deg,#f53b1e 0%,#911ef6 25%,#ee1616 100%);
-    background-clip: border-box;
-    -webkit-background-clip: text;
-     -webkit-text-fill-color: transparent;
-}
-
-body{
-    position:fixed;
-    left:35%;
-    top:20%;
+    color: black;
 }

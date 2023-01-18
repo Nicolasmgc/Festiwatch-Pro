@@ -43,7 +43,7 @@ session_start()
          </head>
 
 
-<body>
+<body> 
         <?php while($row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
         <tr> 
           <td><?php echo htmlspecialchars($row['reservation_id']); ?></td>
