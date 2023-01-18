@@ -17,3 +17,48 @@ h1{
     font-size: 60px ;
     color: black;
 }
+footer{
+    background-color:black ;
+    width: 100%;
+    display: flex;
+    padding: 20px auto;
+    position:fixed;
+    left:0%;
+    bottom: 0%;
+ }
+ 
+ .contact{
+     font-size:15px;
+     margin-left: 2%;
+     font-family: 'Montserrat', sans-serif;
+     flex-direction: column;
+     color: white;
+     margin-bottom: 2%;
+ }
+
+ .foot{
+     display: flex;
+     display: inline-block;
+     width: 50%;
+ }
+ .lien{
+     font-family: 'Montserrat', sans-serif;
+     color: aliceblue;   
+    margin-top: 4%;
+    text-align: center;
+ }
+ 
+ .reseaux a{
+     color: white;
+     padding: 5px;
+ }
+ .reseaux {
+    position: relative;
+    left:32%;
+
+}
+ .lien a{
+    color: white;
+    padding: 7px;
+    font-size: 20px;
+ }
