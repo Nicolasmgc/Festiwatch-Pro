@@ -8,7 +8,25 @@
         <title>Efrontech </title>
         <meta charset="utf-8">
         <link rel="icon" href="../../../PNG/Logo alternatif.png">
-        
+        <style>
+            .goog-te-banner-frame.skiptranslate, .goog-te-gadget-icon {
+                display: none !important;
+            }
+            body {
+                top: 0px !important;
+            }
+            .goog-tooltip {
+                display: none !important;
+            }
+            .goog-tooltip:hover {
+                display: none !important;
+            }
+            .goog-text-highlight {
+                background-color: transparent !important;
+                border: none !important;
+                box-shadow: none !important;
+            }
+        </style>
         <link rel="stylesheet" type="text/css" href="accueil2.css">
         
     </head>
@@ -103,26 +121,40 @@
         <div class="shadowdown"></div>
         <img class="image2" src="../../../PNG/hd-wallpaper-4768501_1920.jpg">
    
-    </body>
     <footer>
-           <div class="contact">
-           <br>
+        <div class="contact">
+            <br>
             Nous contacter <br>
             Mail :<br> prodetech@gmail.com <br>
             Numéro :<br> 068975412 <br>
             Adresse : <br>10 Rue de Vanves, 92130 Issy-les-Moulineaux
-            </div>
+        </div>
          
-            <div class="foot">
+        <div class="foot">
             <div class="reseaux">
-            <a href="https://www.instagram.com/pro_detech"> <img src="../../../PNG/insta.png" alt="icone de insta" height="70"></a>
-            <img src="../../../PNG/youtube.png" alt="icone de insta" height="70" padding-left="10">
-            <img src="../../../PNG/twitter.png" alt="icone de insta" height="75">
+                <a href="https://www.instagram.com/pro_detech"> <img src="../../../PNG/insta.png" alt="icone de insta" height="70"></a>
+                <img src="../../../PNG/youtube.png" alt="icone de insta" height="70" padding-left="10">
+                <img src="../../../PNG/twitter.png" alt="icone de insta" height="75">
             </div>
             <div class="lien">
-            <a href="../CGU/cgu.php">Conditions générales d'utilisation</a>
-            <a href="../FAQ/faq.php"> FAQ</a>
-            <a href="../Connexionuser/login1.php">Connexion</a>
-            </div> </div>
-             </footer>
+                <a href="../CGU/cgu.php">Conditions générales d'utilisation</a>
+                <a href="../FAQ/faq.php"> FAQ</a>
+                <a href="../Connexionuser/login1.php">Connexion</a>
+            </div> 
+            <div id="google_translate_element" style="position: absolute; right: 20px; bottom: 50px"></div>
+            <script type="text/javascript">
+                function googleTranslateElementInit() {
+                    new google.translate.TranslateElement(
+                        {pageLanguage: 'fr'},
+                        'google_translate_element'
+                    );
+                }
+            </script>
+        
+            <script type="text/javascript"
+                    src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+            </script>
+        </div>
+    </footer>
+    </body>
 </html>
