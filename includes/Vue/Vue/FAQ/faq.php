@@ -29,6 +29,11 @@
                         <li><a href="../monprofiluser/monprofil.php"> Voir mon profil </a></li>
                         <li><a href="#"> Liste des festivales </a></li>
                         <li><a href="../../../Controller/deconnexion.php"> Se déconnecter </a></li>
+                        <?php if($_SESSION['role_id'] == '2'){
+                        ?>
+                        
+                            <li><a href="#"> Pannel Admin </a></li>
+                            <?php } ?>
                         
                         </ul>
                                                
@@ -67,7 +72,7 @@
     <div class="FAQCards">
         <div class="FAQCard">
             <div class="FAQQuestion"><div>Comment je sais quel identifiant est associé à ma FestiWatch ?</div></div>
-            <div class="FAQAnswer"><div>L'identifiant sera déjà disponible sur la montre qui vous sera passée à votre entrée au festival.</div></div>
+            <div class="FAQAnswer"><div>L'identifiant sera déjà disponible sur la montre qui vous sera donnée à votre entrée au festival.</div></div>
         </div>
         <div class="FAQCard">
             <div class="FAQQuestion"><div>Comment puis-je alerter les secours en cas de malaise ?</div></div>

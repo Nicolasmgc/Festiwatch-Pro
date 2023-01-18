@@ -40,7 +40,8 @@
                 
                 
                 
-                <li class="deroulant"><?php if(isset($_SESSION['email'])){
+                <li class="deroulant">
+                    <?php if(isset($_SESSION['email'])){
                             ?>
                         
                       <a><?php echo $_SESSION['email'];?></a>
@@ -48,6 +49,11 @@
                         <li><a href="../monprofiluser/monprofil.php"> Voir mon profil </a></li>
                         <li><a href="#"> Liste des festivals </a></li>
                         <li><a href="../../../Controller/deconnexion.php"> Se déconnecter </a></li>
+                        <?php if($_SESSION['role_id'] == '2'){
+                        ?>
+                        
+                            <li><a href="#"> Pannel Admin </a></li>
+                            <?php } ?>
                         
                         </ul>
                                                
@@ -92,6 +98,7 @@
         <video src="../../../PNG/Concert - 1630.mp4" id="video" autoplay loop muted></video>
         
         <div class="shadowup"></div>
+        <img class="Montre" src="../../../PNG/Montre.png">
 
         <section>
             <div class="Bloc-description">
@@ -101,7 +108,7 @@
                     état physique.<br>
                 </p><br>
                 <p> 
-                    Véritable bijoux technologique, FestiWatch<br> vous fournira
+                    Véritable bijou technologique, FestiWatch<br> vous fournira
                     n'importe quelle information,<br> où vous le voulez et
                     quand vous le voulez.<br>
                 </p>
@@ -117,6 +124,26 @@
 
             </div>
         </section>
+        </div>
+            <div class="element">
+                <div class="nombre1">1</div>
+                <div class="infobulle">
+                    Capteur1
+                </div>
+            </div>
+            <div class="element2">
+                <div class="nombre2">2</div>
+                <div class="infobulle2">
+                    Capteur2
+                </div>
+            </div>
+            <div class="element3">
+                <div class="nombre3">3</div>
+                <div class="infobulle3">
+                    Capteur3
+                </div>
+            </div>
+        
        
         <div class="shadowdown"></div>
         <img class="image2" src="../../../PNG/hd-wallpaper-4768501_1920.jpg">

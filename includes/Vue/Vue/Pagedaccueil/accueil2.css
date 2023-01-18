@@ -295,11 +295,11 @@ button:hover {
 }
 
 .Bloc-description2 {
-    left:800px;
+    left:950px;
     position: absolute;
     z-index: 1;
     color: white;
-    top: 1000px;
+    top: 800px;
 }
 
 .button2 {
@@ -354,3 +354,173 @@ footer{
     color: white;
     padding: 7px;
  }
+ .Montre {
+    position: absolute;
+    top : 150%;
+    right: 40%;
+    height: auto;
+    width: 20%;
+
+}
+
+.element {
+    position : absolute;
+    color:rgb(255, 255, 255);
+    border-radius:5px;
+    padding:8px;
+    margin-top:10px;
+    z-index: 1;
+    top: 1100px;
+    left:52%;
+    width: 50px;
+}
+
+.infobulle {
+    transform : scale(0);
+    position: relative;
+    background-color:orange;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding:8px;
+    box-shadow: 1px 1px 0 0.5px rgba(0,0,0,0.3);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    transition: 1s;
+    width: 60px;
+    padding: 2px;
+    height: 50px;
+}
+
+.infobulle::before{
+    content:'';
+    position: relative;
+    border-bottom: 8px solid orange;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    margin-top:-16px;
+    margin-left:10px
+
+
+}
+
+.element:hover > .infobulle {
+    transform: scale(1);
+}
+
+.nombre1{
+    background-color: red;
+    width: 25px;
+    font-weight: 60px;
+    border-radius:5px;
+    padding-left: 5px;
+}
+
+.element2 {
+    position : relative;
+    color:rgb(255, 255, 255);
+    border-radius:5px;
+    padding:8px;
+    margin-top:10px;
+    z-index: 1;
+    top: 483px;
+    left:48%;
+    width: 25px;
+    
+}
+
+.infobulle2 {
+    transform : scale(0);
+    position: relative;
+    background-color:orange;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding:8px;
+    box-shadow: 1px 1px 0 0.5px rgba(0,0,0,0.3);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    transition: 1s;
+    width: 60px;
+    padding: 2px;
+    height: 50px;
+}
+
+.infobulle2::before{
+    content:'';
+    position: relative;
+    border-bottom: 8px solid orange;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    margin-top:-16px;
+    margin-left:10px
+
+
+}
+
+.element2:hover > .infobulle2 {
+    transform: scale(1);
+}
+
+.nombre2{
+    background-color: red;
+    width: 25px;
+    font-weight: 60px;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+
+.element3 {
+    position : absolute;
+    color:rgb(255, 255, 255);
+    border-radius:5px;
+    padding:8px;
+    margin-top:10px;
+    z-index: 1;
+    top: 1180px;
+    left:42%;
+    width: 25px;
+    
+}
+
+.infobulle3 {
+    transform : scale(0);
+    position: relative;
+    background-color:orange;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding:8px;
+    box-shadow: 1px 1px 0 0.5px rgba(0,0,0,0.3);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    transition: 1s;
+    width: 60px;
+    padding: 2px;
+    height: 50px;
+}
+
+.infobulle3::before{
+    content:'';
+    position: relative;
+    border-bottom: 8px solid orange;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    margin-top:-16px;
+    margin-left:10px
+
+
+}
+
+.element3:hover > .infobulle3 {
+    transform: scale(1);
+}
+
+.nombre3{
+    background-color: red;
+    width: 25px;
+    font-weight: 60px;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+
+.erros{
+    color:red;
+}
