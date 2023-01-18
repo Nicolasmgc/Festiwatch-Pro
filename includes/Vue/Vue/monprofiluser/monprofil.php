@@ -197,8 +197,8 @@ if(isset($_POST['formupdate3'])){
          
             <div class="foot">
             <div class="reseaux">
-            <a href="https://www.instagram.com/pro_detech"> <img src="../../../PNG/insta.png" alt="icone de insta"height="65"  ></a>
-            <img src="../../../PNG/youtube.png" alt="icone de insta" height="65" >
+            <a href="https://www.instagram.com/pro_detech"> <img src="../../../PNG/insta.png" alt="icone de insta" height="68"></a>
+            <img src="../../../PNG/youtube.png" alt="icone de insta" height="70" width="60">
             <img src="../../../PNG/twitter.png" alt="icone de insta" height="75">
             </div>
             <div class="lien">
