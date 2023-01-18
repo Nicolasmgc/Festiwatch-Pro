@@ -1,0 +1,36 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+h1{
+    position: fixed;
+    left:20%;
+    font-size: 50px;
+    background: linear-gradient(rgb(186, 4, 214), rgb(255, 83, 192), rgb(255, 0, 43));
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+form{
+    position: fixed;
+    left:40%;
+    top:23%;
+    font-size: 35px;
+}
+input[type=submit] {
+    position: fixed;
+    left:35%;
+    top:68%;
+    height: 8%;
+    width: 25%;
+    border: 5px solid black;
+    text-align: center;
+}
+input[type=texte] {
+    border: 5px solid black;
+    text-align: center;
+}
+img{
+    position: fixed;
+    left:20%;
+    top:10%;
+}
