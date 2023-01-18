@@ -19,15 +19,20 @@ form{
 input[type=submit] {
     position: fixed;
     left:35%;
-    top:68%;
-    height: 8%;
-    width: 25%;
+    top:70%;
+    height: 70px;
+    width: 400px;
     border: 5px solid black;
+    border-radius: 20px;
     text-align: center;
 }
 input[type=texte] {
     border: 5px solid black;
     text-align: center;
+    height: 60px;
+    width: 250px;
+    border: 5px solid black;
+    border-radius: 20px;
 }
 img{
     position: fixed;
