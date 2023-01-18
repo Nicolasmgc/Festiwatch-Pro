@@ -1,0 +1,15 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+    position:fixed;
+    left:32%;
+    top:0%;
+}
+
+body{
+    position:fixed;
+    left:35%;
+    top:20%;
+}

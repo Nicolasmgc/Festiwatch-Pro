@@ -33,15 +33,17 @@ session_start()
     $db = new PDO("mysql:host=" . $host . ";dbname=" . $dbname, $username, $password);
     ?>
 
-
-
 <!DOCTYPE html>
 <html>
-<h1>Historique de vos festivals</h1>
+
+<head>
+           <link rel="stylesheet" href="histouser.css">
+           <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap" rel="stylesheet">
+           <h1>Historique de vos festivals</h1>
+         </head>
 
 
-
-<tbody>
+<body>
         <?php while($row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
         <tr> 
           <td><?php echo htmlspecialchars($row['reservation_id']); ?></td>
@@ -50,6 +52,6 @@ session_start()
           <td><?php echo htmlspecialchars($row['Fest_datefin']); ?></td>
         </tr>
         <?php endwhile; ?>
-      </tbody>
+      </body>
 
 </html>
