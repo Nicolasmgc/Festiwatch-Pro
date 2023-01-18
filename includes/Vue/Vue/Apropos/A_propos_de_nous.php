@@ -67,7 +67,7 @@
         </nav>
              <div class="haut">
             <h2>Notre mission</h2><span class="vertical"></span>            
-            <br>Nous sommes une entreprise composée de sept jeunes ingénieurs, prêts á relever les défis de demain.
+            <br>Nous sommes une entreprise composée de sept jeunes ingénieurs, prêts à relever les défis de demain.
               Notre entreprise cherche à faciliter et à améliorer votre quotidien en vous informant sur la qualité de votre environnement,
                en l’occurrence un environnement festif. Afin de prévenir d’éventuels accidents  et de pouvoir profiter de votre événement en toute tranquillité, nous avons développé une montre connectée “FestiWatch”.
             </div>
@@ -125,13 +125,13 @@
        <div class="paragraphe">
        <p>FestiWatch vous permet de mesurer votre fréquence cardiaque, ainsi que votre température et l’intensité sonore
         autour de vous. Vos données de santé sont stockées et peuvent être consultées sur le site en temps réel, mais aussi 
-        après le festival. Nous considérons que votre santé et votre sécurité sont primordiales pour passer un bon moment entres amis. 
+        après le festival. Nous considérons que votre santé et votre sécurité sont primordiales pour passer un bon moment entre amis. 
         Ces données nous permettront de réagir rapidement en cas de problème. </p> 
         <p>La FestiWatch vous permet également de vous localiser et de localiser vos amis sur une carte, afin de vous retrouver
         facilement au courant de la soirée. Un bouton d’urgence a été ajouté aux montres pour vous permettre d’envoyer votre localisation, 
         afin qu’une équipe de sécurité vienne vous porter secours au plus vite si un problème survient. </p> 
         <p>Des capteurs vous permettent de mesurer la qualité de l’air autour de vous, si des données anormales sont récoltées,
-         une alerte nous sera envoyer,pour que votre expérience se passe au mieux.
+         une alerte nous sera envoyée,pour que votre expérience se passe au mieux.
         FestiWatch vous permet de vous localiser et de localiser vos amis sur une carte afin de vous retrouver plus facilement. </p> 
        </div>
        <footer>

@@ -90,7 +90,7 @@
                     état physique.<br>
                 </p><br>
                 <p> 
-                    Véritable bijoux technologique, FestiWatch<br> vous fournira
+                    Véritable bijou technologique, FestiWatch<br> vous fournira
                     n'importe quelle information,<br> où vous le voulez et
                     quand vous le voulez.<br>
                 </p>
