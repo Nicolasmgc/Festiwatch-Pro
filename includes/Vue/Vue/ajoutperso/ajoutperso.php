@@ -6,7 +6,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Ajout personnel pour votre festival</title>
+    <h1>Ajout personnel pour votre festival</h1>
 </head>
 <body>
 
