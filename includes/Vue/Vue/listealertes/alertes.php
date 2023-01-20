@@ -116,9 +116,16 @@ if(isset($_SESSION['Fest_id'])){
                 <th> Statut </th>
                 
                 <th> Type d'alerte</th>
-                <th> Action</th>
             </tr>
         </thead>
+
+            
+        <form method="POST">
+            <input type="number" name="alerteid" id="alerteid" placeholder="Enter the alert's id" required>
+            <input type="number" name="gestioid" id="gestioid" placeholder="Enter the personel's id">
+            <input type="submit" name="Modifier" value="Modifier" class="actionBtns" style="background-color: #55F">
+            <input type="submit" name="Terminer" value="Terminer" class="actionBtns" style="background-color: #F58">
+        </form>
 
         <tbody>
         <?php
@@ -137,14 +144,6 @@ if(isset($_SESSION['Fest_id'])){
           <td class = 'statut'><?php echo htmlspecialchars($row['alerte_statut']); ?></td>
           <td class = 'type'><?php echo htmlspecialchars($row['alerte_type']); ?></td>
         <tr>
-            
-            <form method="POST">
-                <input type="number" name="alerteid" id="alerteid" placeholder="Enter the alert's id" required>
-                <input type="number" name="gestioid" id="gestioid" placeholder="Enter the personel's id">
-                <input type="submit" name="Modifier" value="Modifier" class="actionBtns" style="background-color: #55F">
-                <input type="submit" name="Terminer" value="Terminer" class="actionBtns" style="background-color: #F58">
-                
-            </form>
         </td>
         </tr>
         <?php 
