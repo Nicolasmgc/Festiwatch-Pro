@@ -3,6 +3,7 @@
 
 ?>
 <!DOCTYPE HTML>
+<html>
 <head>
     <title>FestiWatch - FAQ</title>
     <meta charset="utf-8">
@@ -28,6 +29,11 @@
                         <li><a href="../monprofiluser/monprofil.php"> Voir mon profil </a></li>
                         <li><a href="#"> Liste des festivales </a></li>
                         <li><a href="../../../Controller/deconnexion.php"> Se déconnecter </a></li>
+                        <?php if($_SESSION['role_id'] == '2'){
+                        ?>
+                        
+                            <li><a href="#"> Pannel Admin </a></li>
+                            <?php } ?>
                         
                         </ul>
                                                
@@ -66,7 +72,7 @@
     <div class="FAQCards">
         <div class="FAQCard">
             <div class="FAQQuestion"><div>Comment je sais quel identifiant est associé à ma FestiWatch ?</div></div>
-            <div class="FAQAnswer"><div>L'identifiant sera déjà disponible sur la montre qui vous sera passée à votre entrée au festival.</div></div>
+            <div class="FAQAnswer"><div>L'identifiant sera déjà disponible sur la montre qui vous sera donnée à votre entrée au festival.</div></div>
         </div>
         <div class="FAQCard">
             <div class="FAQQuestion"><div>Comment puis-je alerter les secours en cas de malaise ?</div></div>
@@ -110,14 +116,23 @@
            <div class="contact">
            <br>
             Nous contacter <br>
-            Mail:<br> prodetec@gmail.com <br>
-            Numéro:<br> 068975412 <br>
-            Adresse: <br>10 Rue de Vanves, 92130 Issy-les-Moulineaux
+            Mail :<br> prodetech@gmail.com <br>
+            Numéro :<br> 068975412 <br>
+            Adresse :<br>10 Rue de Vanves, 92130 Issy-les-Moulineaux
             </div>
          
             <div class="foot">
+            <div class="reseaux">
+            <a href="https://www.instagram.com/pro_detech"> <img src="../../../PNG/insta.png" alt="icone de insta" height="70"></a>
+            <img src="../../../PNG/youtube.png" alt="icone de insta" height="72" width="105">
+            <img src="../../../PNG/twitter.png" alt="icone de insta" height="75">
+            </div>
             <div class="lien">
-            <a href="../CGU/cgu.php">Conditions général d'utilisation</a>
+            <a href="../CGU/cgu.php">Conditions générales d'utilisation</a>
+            <a href="../FAQ/faq.php"> FAQ</a>
             <a href="../Connexionuser/login1.php">Connexion</a>
             </div> </div>
+          
              </footer>
+
+</html>

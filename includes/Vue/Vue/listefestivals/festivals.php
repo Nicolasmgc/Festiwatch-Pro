@@ -50,6 +50,11 @@
                     <ul class="sous">
                         <li><a href="../monprofiluser/monprofil.php"> Voir mon profil </a></li>
                         <li><a href="../../../Controller/deconnexion.php"> Se déconnecter </a></li>
+                        <?php if($_SESSION['role_id'] == '2'){
+                        ?>
+                        
+                            <li><a href="#"> Pannel Admin </a></li>
+                            <?php } ?>
                         
                         </ul>
                                                
@@ -175,7 +180,7 @@ if(isset($resultf['Fest_nom']))
          
             <div class="foot">
             <div class="reseaux">
-            <a href="https://www.instagram.com/pro_detech"> <img src="../../../PNG/insta.png" alt="icone de insta" height="60"></a>
+            <a href="https://www.instagram.com/pro_detech"> <img src="../../../PNG/insta.png" alt="icone de insta" height="70"></a>
             <img src="../../../PNG/youtube.png" alt="icone de insta" height="70">
             <img src="../../../PNG/twitter.png" alt="icone de insta" height="75">
             </div>

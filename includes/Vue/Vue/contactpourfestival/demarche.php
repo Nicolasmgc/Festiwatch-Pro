@@ -99,6 +99,10 @@
             
 
             </p>
+
+<?php include '../../../Controller/database.php';
+global $db;
+?>
         <form class="enre" method="post">
             <h3>Formulaire</h3>
             <li><label class="la"> Nom </label>
@@ -111,9 +115,11 @@
             <input type="int" name="Cl_num" id="Cl_num" placeholder="Numéro de téléphone *" required></li>
             <li><label class="la"> Votre adresse </label>
             <input type="texte" name="Cl_adresse" id="Cl_adresse" placeholder="Votre adresse"></li>
-            <li><label class="la"> Remarques/Questions </label>
-            <textarea rows="10" cols="50"></textarea></li>
-            <li><input type="submit" name="formlogingestio" id="formlogingestio" value="Send"></li>            
+            <li><label class="la" name="la"> Remarques/Questions </label>
+            <input class="req" name="req" id="req" rows="10" cols="50"></textarea></li>
+            <li><input type="submit" name="formlogingestio" id="formlogingestio" value="Send"></li>     
+        </form>
+        <?php include '../../../Modele/signingestio/traitementdemarche.php'; ?>       
             
 
         </div>

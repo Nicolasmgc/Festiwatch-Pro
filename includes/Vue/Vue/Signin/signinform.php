@@ -55,7 +55,7 @@
             <input type="texte" name="nom" id="nom" placeholder="Votre Nom" required><br><br>
             <input type="texte" name="prenom" id="prenom" placeholder="Votre Prenom" required><br><br>
             <input type="email" name="semail" id="semail" placeholder="Votre Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required><br><br>
-            <input type="int" name="numtelephone" id="numtelephone" placeholder="Votre numéro de téléphone" pattern="[0-9]{10}" required><br><br>
+            <input type="int" name="numtelephone" id="numtelephone" placeholder="Votre numéro de téléphone"  required><br><br>
             <input type="texte" name="adresse" id="adresse" placeholder="Votre Adresse" required><br><br>
             <input type="texte" name="pays" id="pays" placeholder="Votre Pays" required><br><br>
             <input type="date" name="datedenaissance" id="datedenaissance" placeholder="Votre Date de Naissance" max="2006-12-31" min="1963-01-01" required><br><br>
@@ -68,7 +68,7 @@
                 <input type="radio" name="handicap" id="handicap" for="handicap" value=1 size="10"> Oui</input>
                 <input type="radio" name="handicap" id="handicap" for="handicap" value=0 checked> Non</input><br><br>
                     
-            <input type="submit" name="formsend" id="formsend" value="S'inscrire">
+            <input type="submit" name="formsend" id="formsend" value="S'inscrire" onclick="validate(); validerEmail();">
             <input type="reset" value="Effacer">
         </form>
     </div>

@@ -29,6 +29,11 @@ session_start()
                         <li><a href="../monprofiluser/monprofil.php"> Voir mon profil </a></li>
                         <li><a href="#"> Liste des festivales </a></li>
                         <li><a href="../../../Controller/deconnexion.php"> Se déconnecter </a></li>
+                        <?php if($_SESSION['role_id'] == '2'){
+                        ?>
+                        
+                            <li><a href="#"> Pannel Admin </a></li>
+                            <?php } ?>
                         
                         </ul>
                                                

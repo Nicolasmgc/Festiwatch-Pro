@@ -55,7 +55,7 @@ nav ul{
     bottom: 60px;
     background: transparent;
     margin-left: 60px;
-    margin-top: 0px;
+    margin-top: 70px;
     padding: 0px;
     width: 150px;
 }
@@ -147,9 +147,11 @@ body img {
 
 .container{
     position: relative;
+    top: 80px;
 }
 
 form {
+    width: 300px;
     margin-top: 10%;
     background : rgba(255,255,255,.3);
     padding: 0.80rem;
@@ -177,7 +179,6 @@ input {
     border: none;
     border-left: 1px solid rgba(255,255,255,.3);
     border-top: 1px solid rgba(255,255,255,.3);
-    width:200px;
     border-radius: 50px;
     backdrop-filter:blur(5px);
     -webkit-backdrop-filter: blur(5px);
@@ -232,10 +233,6 @@ img {
     position: absolute;
 
     
-}
-
-input #handicap {
-    width: 20px;
 }
 
 footer{
