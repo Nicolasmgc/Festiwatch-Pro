@@ -25,6 +25,7 @@
 
 .sidebarAlert {
     position: fixed;
+    border: 4px solid black;
     right: 0;
     width: 8%;
     height: 200px;
@@ -34,6 +35,24 @@
 }
 
 .sidebarAlert a {
+    margin: 0;
+    padding: 85px 5%;
+    font-size: 16px;
+    color: white;
+}
+
+.sidebarCreateGestio {
+    position: fixed;
+    border: 4px solid black;
+    left: 0;
+    width: 8%;
+    height: 200px;
+    top: 30%;
+    padding: 0;
+    background-color: blue;
+}
+
+.sidebarCreateGestio a {
     margin: 0;
     padding: 85px 5%;
     font-size: 16px;
