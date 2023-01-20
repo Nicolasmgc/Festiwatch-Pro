@@ -16,7 +16,7 @@ if(isset($_SESSION['role_id'])){
         <!DOCTYPE html>
         <html>
             <meta charset="utf-8">
-            <link rel="stylesheet" href="page_erreur.css">
+            <link rel="stylesheet" href="../../../Controller/errors/erreur.css">
             <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap" rel="stylesheet">
         <head>
             <title>Erreur</title>
@@ -31,7 +31,7 @@ if(isset($_SESSION['role_id'])){
         </div>
         
         
-        <img src="image.png" alt="image d'erreur">
+        <img src="../../../PNG/errorimage.png" alt="image d'erreur">
         
         </body>
         

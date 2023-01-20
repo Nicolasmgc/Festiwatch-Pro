@@ -87,6 +87,7 @@ session_start();
             <div id="mainContent">
                 <div id="searchBox">
                 <form method="POST">
+                <!-- <input id="searchBar"/> -->
                         <input type="int" name="searchbar" id="searchbar" placeholder="Recherchez le festival que vous souhaitez" required><br/>
                         <input type="submit" name="montrerecherche" id="montrerecherche" value="OK">
                                     <a href=""><img id="searchIcon" src="../../../PNG/searchIcon.png" alt="search"></a>
