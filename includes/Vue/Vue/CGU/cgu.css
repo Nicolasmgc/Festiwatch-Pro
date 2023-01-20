@@ -260,6 +260,11 @@ footer{
      color: white;
      padding: 5px;
  }
+ .reseaux {
+    position: relative;
+    left:32%;
+
+}
  .lien a{
     color: white;
     padding: 7px;

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : lun. 02 jan. 2023 à 11:32
+-- Généré le : mar. 17 jan. 2023 à 13:13
 -- Version du serveur : 5.7.36
 -- Version de PHP : 7.4.26
 
@@ -25,7 +25,6 @@ SET time_zone = "+00:00";
 
 --
 -- Structure de la table `alerte`
-
 --
 
 DROP TABLE IF EXISTS `alerte`;
@@ -50,9 +49,9 @@ CREATE TABLE IF NOT EXISTS `alerte` (
 --
 
 INSERT INTO `alerte` (`alerte_id`, `alerte_type`, `alerte_horaire`, `alerte_date`, `alerte_statut`, `alerte_zone`, `Montre_code`, `Personnel_id`, `Fest_id`) VALUES
-(2, 'malaise', '22:10:10', '2022-06-10', 'Termine', 'A', 1, 1, 15),
+(2, 'malaise', '22:10:10', '2022-06-10', 'ModifiÃ©e', 'A', 1, 2, 15),
 (3, 'alcool', '23:45:09', '2022-07-10', 'En cours', 'C', 2, 2, 1),
-(4, 'gaz', '00:45:09', '2022-08-10', 'En cours', 'B', 3, 3, 15);
+(4, 'gaz', '00:45:09', '2022-08-10', 'ModifiÃ©e', 'B', 3, 2, 15);
 
 -- --------------------------------------------------------
 
@@ -170,6 +169,31 @@ INSERT INTO `festival` (`Fest_id`, `Fest_nom`, `Fest_datedebut`, `Fest_datefin`,
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `festsign`
+--
+
+DROP TABLE IF EXISTS `festsign`;
+CREATE TABLE IF NOT EXISTS `festsign` (
+  `festsign_id` int(11) NOT NULL AUTO_INCREMENT,
+  `festsign_adresse` varchar(300) DEFAULT NULL,
+  `festsign_email` varchar(200) DEFAULT NULL,
+  `festsign_nom` varchar(100) DEFAULT NULL,
+  `festsign_prenom` varchar(100) DEFAULT NULL,
+  `festsign_numtel` int(10) DEFAULT NULL,
+  `festsign_remarque` varchar(1000) DEFAULT NULL,
+  PRIMARY KEY (`festsign_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `festsign`
+--
+
+INSERT INTO `festsign` (`festsign_id`, `festsign_adresse`, `festsign_email`, `festsign_nom`, `festsign_prenom`, `festsign_numtel`, `festsign_remarque`) VALUES
+(1, '63 Grande Rue', 'bab.maupas@gmail.com', 'Maupas', 'Bastien', 781898378, 'htgfd');
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `montre`
 --
 
@@ -203,17 +227,24 @@ CREATE TABLE IF NOT EXISTS `personnel` (
   `Personnel_fonction` varchar(40) DEFAULT NULL,
   `Personnel_nom` varchar(30) DEFAULT NULL,
   `Personnel_prenom` varchar(30) DEFAULT NULL,
-  PRIMARY KEY (`Personnel_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+  `Fest_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`Personnel_id`),
+  KEY `personnelfestid` (`Fest_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `personnel`
 --
 
-INSERT INTO `personnel` (`Personnel_id`, `Personnel_fonction`, `Personnel_nom`, `Personnel_prenom`) VALUES
-(1, 'Ambulancier', 'Merbouche', 'Nicolas'),
-(2, 'SAMU', 'Laperotine', 'Arno'),
-(3, 'SAMU', 'Messalti', 'Anaïs');
+INSERT INTO `personnel` (`Personnel_id`, `Personnel_fonction`, `Personnel_nom`, `Personnel_prenom`, `Fest_id`) VALUES
+(1, 'Ambulancier', 'Merbouche', 'Nicolas', NULL),
+(2, 'SAMU', 'Laperotine', 'Arno', NULL),
+(3, 'SAMU', 'Messalti', 'Anaïs', NULL),
+(4, 'Ambulancier', 'Laperotine', 'Arno', 15),
+(5, 'SAMU', 'El-Younsi', 'Ziad', 15),
+(6, 'Ambulancier', 'Laperotine', 'Ziad', 15),
+(7, 'lalalal', 'lalala', 'lalala', 15),
+(8, 'ooo', 'ooo', 'ooo', 15);
 
 -- --------------------------------------------------------
 
@@ -227,9 +258,19 @@ CREATE TABLE IF NOT EXISTS `reservation` (
   `id` int(11) DEFAULT NULL,
   `Fest_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`Reservation_id`),
-  KEY `id` (`id`),
-  KEY `Fest_id` (`Fest_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  KEY `Fest_id` (`Fest_id`),
+  KEY `on_delete_cascade_userid` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `reservation`
+--
+
+INSERT INTO `reservation` (`Reservation_id`, `id`, `Fest_id`) VALUES
+(1, 8, 15),
+(2, 10, 15),
+(5, 12, 15),
+(6, 13, 15);
 
 -- --------------------------------------------------------
 
@@ -278,23 +319,24 @@ CREATE TABLE IF NOT EXISTS `user` (
   UNIQUE KEY `email` (`email`),
   UNIQUE KEY `numtelephone` (`numtelephone`),
   KEY `FK_role_id` (`role_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `user`
 --
 
 INSERT INTO `user` (`id`, `nom`, `prenom`, `email`, `numtelephone`, `adresse`, `pays`, `datedenaissance`, `codepostal`, `ville`, `password`, `datedecreation`, `handicap`, `role_id`) VALUES
-(6, 'Maupas', 'Bastien', 'bastien.maupas@gmail.com', 123456789, '63 Grande Rue', 'France', '2022-12-23', 92380, 'Garches', '$2y$12$Qx3Xm0/tks9imQUNKnAE4OB9aRQiA.aVdOf357zSnwim/lT45yQZW', '2022-12-09 13:43:00', 0, NULL),
 (8, 'Maupas', 'Bastien', 'bastien.maupas25@gmail.com', 781898377, '63 Grande Rue', 'France', '2002-10-25', 92380, 'Garches', '$2y$12$bl4OspQ9eG.gFZM0vYHpJeckt/LpY5MVUP2BDbwJ.h.yeBmuF6vSG', '2022-12-11 21:17:27', 1, NULL),
 (10, 'Maupas', 'Bastien', 'bab.maupas@gmail.com', 535353535, 'Changement adresse', 'France', '2022-11-29', 92380, 'Changement Ville', '$2y$12$Nq4oO/reYDYPqRTw2/MPq.ID5YDRkk0JTN0V8Lj/I/eVuBlnEZbiy', '2022-12-13 14:46:52', 0, NULL),
-(11, 'Maupas', 'Bastien', 'bab.maupas@gmail.fr', 781898311, '63 Grande Rue', 'France', '2022-12-07', 92380, 'Garches', '$2y$12$SGbM.QaXCf8kotKAfghMFOmkgDJLM65V2iVPjsWKdEiMMvxEuIlVC', '2022-12-15 18:23:48', 0, NULL),
 (12, 'Maupas', 'Bastien', 'bab.as@gmail.com', 781898366, '63 Grande Rue', 'France', '2022-11-30', 92380, 'Garches', '$2y$12$6i/7wScTRDrVW0MPFP7ntu8RB/TCz3D9CmGX4MkZFhcBji39Uq22e', '2022-12-15 18:25:12', 0, NULL),
 (13, 'Maupas', 'Bastien', 'bab.ms@gmail.com', 781898333, '63 Grande Rue', 'France', '2022-12-08', 92380, 'Garches', '$2y$12$ZdNnPOOC3640BZTAAcGdQ.Uk5zTavnUPlSt3F3QVdy5FT4y3kPO8i', '2022-12-15 18:26:03', 0, NULL),
-(14, 'Maupas', 'Bastien', 'babs@gmail.com', 781898300, '63 Grande Rue', 'France', '2022-12-06', 92380, 'Garches', '$2y$12$jQroIvUWyoNF2tK3.HQnxuBDN1FxFLttOj1Lf9fSroDdyYqA8Mube', '2022-12-15 21:13:22', 0, NULL),
-(15, 'Maupas', 'Bastien', 'bab.pas@gmail.com', 781894444, '63 Grande Rue', 'France', '2022-11-29', 92380, 'Garches', '$2y$12$NsGIdjeP8LaxIuLn0Skz2.zDevdlrmBHlNE3aTOd5I7SK/UKAZO3u', '2022-12-16 00:13:43', 0, NULL),
 (16, 'Maupas', 'Bastien', 'bab.maas@gmail.com', 781893333, '63 Grande Rue', 'France', '2022-12-01', 92380, 'Garches', '$2y$12$idBgpqY92fgyEYqUHrXBou8uT7KdKv3WNwu.PkRMXDT1lBzNxkwW6', '2022-12-16 09:01:01', 0, NULL),
-(17, 'Maupas', 'Bastien', 'bab.maupppps@gmail.com', 733398378, '63 Grande Rue', 'France', '2022-11-30', 92380, 'Garches', '$2y$12$vOSlQb.l8XSn3bN7C23EOeXoui2g3FsJBizh5g6ol5ZW9XAifNanK', '2022-12-17 11:32:22', 0, NULL);
+(17, 'Maupas', 'Bastien', 'bab.maupppps@gmail.com', 733398378, '63 Grande Rue', 'France', '2022-11-30', 92380, 'Garches', '$2y$12$vOSlQb.l8XSn3bN7C23EOeXoui2g3FsJBizh5g6ol5ZW9XAifNanK', '2022-12-17 11:32:22', 0, NULL),
+(18, 'Maupas', 'Bastien', 'badfghjkl@gmail.com', 564783932, '63 Grande Rue', 'France', '2004-08-12', 92380, 'Garches', '$2y$12$xmsRTnZbzZZg3EEooufZfejRnyWO1DLZh943kGoXJr5aMc4JDEBje', '2023-01-06 08:23:37', 0, NULL),
+(19, 'Maupas', 'Bastien', 'baaaaaaaaaa.s@gmail.com', 984501526, '63 Grande Rue', 'France', '2004-12-01', 92380, 'Garches', '$2y$12$40Ir7GBGBYZ1RxC87I4Z2ub8Agr3gdqL2r7f3qEKxwedme14FxzhK', '2023-01-09 09:14:54', 0, 1),
+(20, 'Maupas', 'Bastien', 'sdfghbnj@gmail.com', 781898378, '63 Grande Rue', 'France', '2005-04-06', 92380, 'Garches', '$2y$12$AeeWImIZtD1j6jn.nM0nm.hrCJmFiHJ26eRrvzzA8ZaLVFE5YPF5q', '2023-01-13 15:42:55', 0, 1),
+(21, 'Maupas', 'Bastien', 'aaaaaaaaazert@gmail.com', 618273567, '63 Grande Rue', 'France', '1998-10-10', 92380, 'Garches', '$2y$12$VVp/0ecihxCjZKShSWTqMuhZaKzIJ.4sl/qThpDG5blUCBl7LB2Bu', '2023-01-13 15:44:58', 1, 1),
+(26, 'Admin', 'Admin', 'infinitemeasures@gmail.com', 954326272, '10 Rue de Vanves', 'France', '1999-10-10', 92130, 'Issy-Les-Moulineaux', '$2y$12$4zmzJD3.QhXl6pVvF/lQR.NmH68HVftuuWpHkV.0Qsy3wi585/wc2', '2023-01-13 18:09:08', 0, 2);
 
 -- --------------------------------------------------------
 
@@ -309,7 +351,7 @@ CREATE TABLE IF NOT EXISTS `userhistory` (
   `userhistory_datedecreation` timestamp NULL DEFAULT NULL,
   `userhistory_datedenaissance` date DEFAULT NULL,
   `userhistory_email` varchar(150) DEFAULT NULL,
-  `userhistory_handicap` tinyint(4) DEFAULT NULL,
+  `userhistory_handicap` tinyint(1) DEFAULT NULL,
   `userhistory_id` int(10) NOT NULL,
   `userhistory_nom` varchar(30) DEFAULT NULL,
   `userhistory_numtelephone` int(10) DEFAULT NULL,
@@ -320,6 +362,18 @@ CREATE TABLE IF NOT EXISTS `userhistory` (
   UNIQUE KEY `userhistory_email` (`userhistory_email`),
   UNIQUE KEY `userhistory_numtelephone` (`userhistory_numtelephone`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `userhistory`
+--
+
+INSERT INTO `userhistory` (`userhistory_adresse`, `userhistory_codepostal`, `userhistory_datedecreation`, `userhistory_datedenaissance`, `userhistory_email`, `userhistory_handicap`, `userhistory_id`, `userhistory_nom`, `userhistory_numtelephone`, `userhistory_pays`, `userhistory_prenom`, `userhistory_ville`) VALUES
+('63 Grande Rue', 92380, '2022-12-11 21:17:27', '2002-10-25', 'bastien.maupas25@gmail.com', 1, 8, 'Maupas', 781898377, 'France', 'Bastien', 'Garches'),
+('Changement adresse', 92380, '2022-12-13 14:46:52', '2022-11-29', 'bab.maupas@gmail.com', 0, 10, 'Maupas', 535353535, 'France', 'Bastien', 'Changement Ville'),
+('63 Grande Rue', 92380, '2022-12-15 18:25:12', '2022-11-30', 'bab.as@gmail.com', 0, 12, 'Maupas', 781898366, 'France', 'Bastien', 'Garches'),
+('63 Grande Rue', 92380, '2022-12-15 18:26:03', '2022-12-08', 'bab.ms@gmail.com', 0, 13, 'Maupas', 781898333, 'France', 'Bastien', 'Garches'),
+('63 Grande Rue', 92380, '2022-12-15 21:13:22', '2022-12-06', 'babs@gmail.com', 0, 14, 'Maupas', 781898300, 'France', 'Bastien', 'Garches'),
+('63 Grande Rue', 92380, '2022-12-16 00:13:43', '2022-11-29', 'bab.pas@gmail.com', 0, 15, 'Maupas', 781894444, 'France', 'Bastien', 'Garches');
 
 --
 -- Contraintes pour les tables déchargées
@@ -370,11 +424,18 @@ ALTER TABLE `montre`
   ADD CONSTRAINT `Fest_id1` FOREIGN KEY (`Fest_id`) REFERENCES `festival` (`Fest_id`);
 
 --
+-- Contraintes pour la table `personnel`
+--
+ALTER TABLE `personnel`
+  ADD CONSTRAINT `personnelfestid` FOREIGN KEY (`Fest_id`) REFERENCES `festival` (`Fest_id`);
+
+--
 -- Contraintes pour la table `reservation`
 --
 ALTER TABLE `reservation`
   ADD CONSTRAINT `Fest_id` FOREIGN KEY (`Fest_id`) REFERENCES `festival` (`Fest_id`),
-  ADD CONSTRAINT `id` FOREIGN KEY (`id`) REFERENCES `user` (`id`);
+  ADD CONSTRAINT `id` FOREIGN KEY (`id`) REFERENCES `user` (`id`),
+  ADD CONSTRAINT `on_delete_cascade_userid` FOREIGN KEY (`id`) REFERENCES `user` (`id`) ON DELETE CASCADE;
 
 --
 -- Contraintes pour la table `user`

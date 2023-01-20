@@ -118,14 +118,19 @@ session_start()
            <div class="contact">
            <br>
             Nous contacter <br>
-            Mail:<br> prodetec@gmail.com <br>
-            Numéro:<br> 068975412 <br>
-            Adresse: <br>10 Rue de Vanves, 92130 Issy-les-Moulineaux
+            Mail :<br> prodetech@gmail.com <br>
+            Numéro :<br> 068975412 <br>
+            Adresse :<br>10 Rue de Vanves, 92130 Issy-les-Moulineaux
             </div>
          
             <div class="foot">
+            <div class="reseaux">
+            <a href="https://www.instagram.com/pro_detech"> <img src="../../../PNG/insta.png" alt="icone de insta" height="60"></a>
+            <img src="../../../PNG/youtube.png" alt="icone de insta" height="70">
+            <img src="../../../PNG/twitter.png" alt="icone de insta" height="75">
+            </div>
             <div class="lien">
-            <a href="../CGU/cgu.php">Conditions général d'utilisation</a>
+            <a href="../CGU/cgu.php">Conditions générales d'utilisation</a>
             <a href="../FAQ/faq.php"> FAQ</a>
             <a href="../Connexionuser/login1.php">Connexion</a>
             </div> </div>

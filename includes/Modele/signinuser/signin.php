@@ -9,7 +9,7 @@
             if(!empty($password) && !empty($cpassword) && !empty($semail)&& !empty($nom) && !empty($prenom) && !empty($numtelephone) && !empty($adresse) && !empty($pays) && !empty($datedenaissance) && !empty($codepostal) && !empty($ville)){
 
                 if($password== $cpassword){
-                   
+
                     $options = [
                         'cost' => 12,
                     ];

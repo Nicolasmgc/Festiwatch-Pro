@@ -33,15 +33,17 @@ session_start()
     $db = new PDO("mysql:host=" . $host . ";dbname=" . $dbname, $username, $password);
     ?>
 
-
-
 <!DOCTYPE html>
 <html>
-<h1>Historique de vos festivals</h1>
+
+<head>
+           <link rel="stylesheet" href="histouser.css">
+           <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap" rel="stylesheet">
+           <h1>Historique de vos festivals</h1>
+         </head>
 
 
-
-<tbody>
+<body> 
         <?php while($row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
         <tr> 
           <td><?php echo htmlspecialchars($row['reservation_id']); ?></td>
@@ -50,6 +52,28 @@ session_start()
           <td><?php echo htmlspecialchars($row['Fest_datefin']); ?></td>
         </tr>
         <?php endwhile; ?>
-      </tbody>
+      </body>
+    </body>
+    <footer>
+           <div class="contact">
+           <br>
+            Nous contacter <br>
+            Mail :<br> prodetech@gmail.com <br>
+            Numéro :<br> 068975412 <br>
+            Adresse :<br>10 Rue de Vanves, 92130 Issy-les-Moulineaux
+            </div>
+         
+            <div class="foot">
+            <div class="reseaux">
+            <a href="https://www.instagram.com/pro_detech"> <img src="../../../PNG/insta.png" alt="icone de insta" height="60"></a>
+            <img src="../../../PNG/youtube.png" alt="icone de insta" height="70">
+            <img src="../../../PNG/twitter.png" alt="icone de insta" height="75">
+            </div>
+            <div class="lien">
+            <a href="../CGU/cgu.php">Conditions générales d'utilisation</a>
+            <a href="../FAQ/faq.php"> FAQ</a>
+            <a href="../Connexionuser/login1.php">Connexion</a>
+            </div> </div>
+             </footer>
 
 </html>

@@ -111,8 +111,12 @@ global $db;
 ?>
                     <h1>Bienvenue sur la page du festival <?php echo $_GET['Fest_nom']?></h1>
                     <div id="searchBox">
-                                    <input id="searchBar" placeholder="Recherchez un code de montre ici"/>
+                        <form method="POST">
+                        <input type="int" name="searchbar" id="searchbar" placeholder="Recherchez le festival que vous souhaitez" required><br/>
+                        <button><input type="submit" name="montrerecherche" id="montrerecherche" value="OK"></button>
                                     <a href=""><img id="searchIcon" src="../../../PNG/searchIcon.png" alt="search"></a>
+            </form>
+            <?php include '../../../Modele/recherchemontre/recherchemontre.php' ?>
                                 </div>
                     <div class="global">            
                         <img href="./Efrontech/Form user 2.html"  src="../../../PNG/les_ardentes_2022.jpg">
@@ -205,8 +209,12 @@ global $db;
     ?>
     <h1>Bienvenue sur la page du festival <?php echo $_GET['Fest_nom']?></h1>
     <div id="searchBox">
-                    <input id="searchBar" placeholder="Recherchez un code de montre ici"/>
-                    <a href=""><img id="searchIcon" src="../../../PNG/searchIcon.png" alt="search"></a>
+                        <form method="POST">
+                        <input type="int" name="searchbar" id="searchbar" placeholder="Recherchez le festival que vous souhaitez" required><br/>
+                        <button><input type="submit" name="montrerecherche" id="montrerecherche" value="OK"></button>
+                                    <a href=""><img id="searchIcon" src="../../../PNG/searchIcon.png" alt="search"></a>
+            </form>
+            <?php include '../../../Modele/recherchemontre/recherchemontre.php' ?>
                 </div>
     <div class="global">            
         <img href="./Efrontech/Form user 2.html"  src="../../../PNG/les_ardentes_2022.jpg">

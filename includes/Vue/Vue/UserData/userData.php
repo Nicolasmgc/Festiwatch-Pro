@@ -65,6 +65,10 @@ session_start();
         </nav>
 
 
+        <?php include '../../../Controller/database.php';
+        global $db;
+        ?>
+
         <div class="userDataTitle"><h1>Mes Données</h1></div>
 
         <div id="content">
@@ -82,7 +86,15 @@ session_start();
 
             <div id="mainContent">
                 <div id="searchBox">
-                    <input id="searchBar"/>
+                <form method="POST">
+                <!-- <input id="searchBar"/> -->
+                        <input type="int" name="searchbar" id="searchbar" placeholder="Recherchez le festival que vous souhaitez" required><br/>
+                        <input type="submit" name="montrerecherche" id="montrerecherche" value="OK">
+                                    <a href=""><img id="searchIcon" src="../../../PNG/searchIcon.png" alt="search"></a>
+            </form>
+
+            <?php include '../../../Modele/recherchemontre/recherchemontre.php' ?>
+
                     <a href=""><img id="searchIcon" src="../../../PNG/searchIcon.png" alt="search"></a>
                 </div>
                 <div id="dashboardBox">
@@ -91,12 +103,12 @@ session_start();
                         <div>
                             <label for="heartRate">Fréquence Cardiaque</label>
                             <meter id="heartRate" min=0 max=100 low="50" high="80" value=81 optimum="0"></meter>
-                            <div style="font-size: 32px; margin-bottom: 20px; margin-top: 40px; color: white">130 BPM</div>
+                            <div style="font-size: 32px; margin-bottom: 20px; margin-top: 40px; color: white"><?php echo $_GET['card_frequ']; ?> BPM</div>
                         </div>
                         <div>
                             <label for="soundIntensity">Amplitude Sonore</label>
                             <meter id="soundIntensity" min=0 max=100 low="50" high="80" value=51 optimum="0"></meter>
-                            <div style="font-size: 32px; margin-bottom: 20px; margin-top: 40px; color: white">80 dB</div>
+                            <div style="font-size: 32px; margin-bottom: 20px; margin-top: 40px; color: white"><?php echo $_GET['son_db']; ?> dB</div>
                         </div>
                     </div>
                     
@@ -104,12 +116,12 @@ session_start();
                         <div>
                             <label for="gazExposition">Gaz</label>
                             <meter id="gazExposition" min=0 max=100 low="33" high="66" value=20 optimum="0"></meter>
-                            <div style="font-size: 32px; margin-bottom: 20px; margin-top: 40px; color: white">20%</div>
+                            <div style="font-size: 32px; margin-bottom: 20px; margin-top: 40px; color: white"><?php echo $_GET['gaz_detec']; ?>%</div>
                         </div>   
                         <div>
                             <label for="alcoholConsumption">Consommation d'Alcool</label>
                             <meter id="alcoholConsumption" min=0 max=100 low="33" high="66" value=80 optimum="0"></meter>
-                            <div style="font-size: 32px; margin-bottom: 20px; margin-top: 40px; color: white">6 verres</div>
+                            <div style="font-size: 32px; margin-bottom: 20px; margin-top: 40px; color: white"><?php echo $_GET['compteur_alcool']; ?> verres</div>
                         </div> 
                     </div>
                 </div>

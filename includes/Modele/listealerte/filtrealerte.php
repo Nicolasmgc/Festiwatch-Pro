@@ -14,11 +14,12 @@ global $db;
     INNER JOIN montre ON alerte.Montre_code = montre.Montre_code)
     INNER JOIN festival ON alerte.Fest_id = festival.Fest_id)
     INNER JOIN personnel ON alerte.Personnel_id = personnel.Personnel_id)
-    WHERE alerte.Fest_id = :Fest_id AND alerte.alerte_statut = 'Termine'");
+    WHERE alerte.Fest_id = :Fest_id AND alerte.alerte_statut = 'Terminee'");
     $r->execute([
         'Fest_id' => $_SESSION[('Fest_id')]
         
     ]);
+
     while ($result = $r->fetch()) {
 
     $a[]= $result;
