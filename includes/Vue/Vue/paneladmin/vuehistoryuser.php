@@ -30,7 +30,13 @@
 if(isset($_SESSION['role_id'])){
     if($_SESSION['role_id'] == 2){
 ?>
-
+<!DOCTYPE html>
+        <html>
+            <meta charset="utf-8">
+            <link rel="stylesheet" href="vuehistoryuser.css">
+            <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap" rel="stylesheet">
+         <h1>Historique utilisateur</h1>
+            <body>
 <table class= "fond" style ="overflow-x:scroll; margin-top: 50px" >
 <thead>
         <tr>
@@ -51,6 +57,10 @@ if(isset($_SESSION['role_id'])){
       </thead>
 
 <tbody>
+
+</body>
+        
+        </html>
         <?php while($row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
         <tr> 
           <td><?php echo htmlspecialchars($row['userhistory_id']); ?></td>
