@@ -276,19 +276,17 @@ button:hover {
     position: absolute;
     height: 100px;
     width:100%;
-    background-image: linear-gradient(to top,rgb(0, 0, 0),rgba(0, 0, 0,
-    0));
-    top: 500px;
+    background-image: linear-gradient(to top,rgb(0, 0, 0),rgba(0, 0, 0, 0));
+    top: 75%;
 }
 
 .TOP3 {
     position: absolute;
     height: 100px;
     width:100%;
-    background-image: linear-gradient(to bottom,rgb(0, 0, 0),rgba(0, 0,
-    0, 0));
+    background-image: linear-gradient(to bottom,rgb(0, 0, 0),rgba(0, 0, 0, 0));
+    top: 85%;
 }
-
 .button1{
     top:-60px;
     left:-10px;
@@ -356,7 +354,7 @@ footer{
  }
  .Montre {
     position: absolute;
-    top : 150%;
+    top : 120%;
     right: 40%;
     height: auto;
     width: 20%;
@@ -370,7 +368,7 @@ footer{
     padding:8px;
     margin-top:10px;
     z-index: 1;
-    top: 1100px;
+    top: 145vh;
     left:52%;
     width: 50px;
 }
@@ -422,7 +420,7 @@ footer{
     padding:8px;
     margin-top:10px;
     z-index: 1;
-    top: 483px;
+    top: 63vh;
     left:48%;
     width: 25px;
     
@@ -475,7 +473,7 @@ footer{
     padding:8px;
     margin-top:10px;
     z-index: 1;
-    top: 1180px;
+    top: 170vh;
     left:42%;
     width: 25px;
     
