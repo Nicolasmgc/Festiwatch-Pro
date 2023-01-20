@@ -61,6 +61,7 @@
         </nav>
             <h1>Bienvenue sur votre profil gestionnaire</h1>
             <button class="sidebarAlert" type="button"><a href="../listealertes/alertes.php">ALERTES</a></button>
+            <button class="sidebarCreateGestio" type="button"><a href="../ajoutperso/ajoutperso.php">Ajouter <br/> du <br/> personnel</a></button>
             <div class="infocard">
             
                 <p>Votre adresse email personnelle : </p>

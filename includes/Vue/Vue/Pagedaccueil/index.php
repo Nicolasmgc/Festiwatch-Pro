@@ -8,6 +8,9 @@
         <title>Efrontech </title>
         <meta charset="utf-8">
         <link rel="icon" href="../../../PNG/Logo alternatif.png">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <style>
             .goog-te-banner-frame.skiptranslate, .goog-te-gadget-icon {
                 display: none !important;
@@ -28,6 +31,7 @@
             }
         </style>
         <link rel="stylesheet" type="text/css" href="accueil2.css">
+        
         
     </head>
     <body>
@@ -52,7 +56,7 @@
                         <?php if($_SESSION['role_id'] == '2'){
                         ?>
                         
-                            <li><a href="#"> Pannel Admin </a></li>
+                            <li><a href="../paneladmin/accueiladmin.php"> Pannel Admin </a></li>
                             <?php } ?>
                         
                         </ul>
@@ -87,7 +91,8 @@
             </ul>
         </nav>
 
-            <!--<div class="TOP2"></div>-->
+            <div class="TOP2"></div>
+            <div class="TOP3"></div>
 
         
         <button class="PoButton">

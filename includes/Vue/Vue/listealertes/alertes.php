@@ -99,7 +99,10 @@ if(isset($_SESSION['Fest_id'])){
     <p> Vous êtes sur la page du festival <?php echo $_SESSION['Fest_nom']; ?> </p>
 <div class= page> <!-- C'est pour naviguer entre les pages de différents festivals -->
 
+
 </div>
+
+<input onclick="onsenfout()" value="test" class="actionBtns" style="background-color: #F58"> <!-- Bouton pour trier à bien ranger -->
 
 <table class="tableau-style">
         <thead> 
@@ -113,9 +116,16 @@ if(isset($_SESSION['Fest_id'])){
                 <th> Statut </th>
                 
                 <th> Type d'alerte</th>
-                <th> Action</th>
             </tr>
         </thead>
+
+            
+        <form method="POST">
+            <input type="number" name="alerteid" id="alerteid" placeholder="Enter the alert's id" required>
+            <input type="number" name="gestioid" id="gestioid" placeholder="Enter the personel's id">
+            <input type="submit" name="Modifier" value="Modifier" class="actionBtns" style="background-color: #55F">
+            <input type="submit" name="Terminer" value="Terminer" class="actionBtns" style="background-color: #F58">
+        </form>
 
         <tbody>
         <?php
@@ -123,22 +133,17 @@ if(isset($_SESSION['Fest_id'])){
         while($row = $stmt->fetch(PDO::FETCH_ASSOC)) : 
         ?>
         <tr>
-          <td><?php echo htmlspecialchars($row['alerte_id']); ?></td>
-          <td><?php echo htmlspecialchars($row['Montre_code']); ?></td>
-          <td><?php echo htmlspecialchars($row['alerte_zone']); ?></td>
-          <td><?php echo htmlspecialchars($row['alerte_date']); ?></td>
-          <td><?php echo htmlspecialchars($row['alerte_horaire']); ?></td>
-          <td><?php echo htmlspecialchars($row['Personnel_nom']); ?></td>
-          <td><?php echo htmlspecialchars($row['alerte_statut']); ?></td>
-          <td><?php echo htmlspecialchars($row['alerte_type']); ?></td>
-          <td>
-            
-            <form method="POST">
-                <input type="number" name="alerteid" id="alerteid" placeholder="Enter the alert's id" required>
-                <input type="number" name="gestioid" id="gestioid" placeholder="Enter the personel's id">
-                <input type="submit" name="Modifier" value="Modifier" class="actionBtns" style="background-color: #55F">
-                <input type="submit" name="Terminer" value="Terminer" class="actionBtns" style="background-color: #F58">
-            </form>
+        <tr> 
+
+          <td class = 'id'><?php echo htmlspecialchars($row['alerte_id']); ?></td>
+          <td class = 'code'><?php echo htmlspecialchars($row['Montre_code']); ?></td>
+          <td class = 'zone'><?php echo htmlspecialchars($row['alerte_zone']); ?></td>
+          <td class = 'date'><?php echo htmlspecialchars($row['alerte_date']); ?></td>
+          <td class = 'horaire'><?php echo htmlspecialchars($row['alerte_horaire']); ?></td>
+          <td class = 'personnel'><?php echo htmlspecialchars($row['Personnel_nom']); ?></td>
+          <td class = 'statut'><?php echo htmlspecialchars($row['alerte_statut']); ?></td>
+          <td class = 'type'><?php echo htmlspecialchars($row['alerte_type']); ?></td>
+        <tr>
         </td>
         </tr>
         <?php 
@@ -147,7 +152,7 @@ if(isset($_SESSION['Fest_id'])){
         if (isset($_POST['Terminer'])) {
             $alerteid = intval($_POST['alerteid']);
             echo 'TERMINATION OF ALERT WITH ID '. $alerteid;
-            $stmt = $db->prepare("UPDATE alerte SET alerte_statut = 'Terminée' WHERE alerte_id = :id");
+            $stmt = $db->prepare("UPDATE alerte SET alerte_statut = 'Terminee' WHERE alerte_id = :id");
             $stmt->execute(['id' => $alerteid]);
         }
 
@@ -155,7 +160,7 @@ if(isset($_SESSION['Fest_id'])){
             $alerteid = intval($_POST['alerteid']);
             $gestioid = intval($_POST['gestioid']);
             echo 'MODIFICATION OF ALERT WITH ID '. $alerteid;
-            $stmt = $db->prepare("UPDATE alerte SET alerte_statut = 'Modifiée' WHERE alerte_id = :id");
+            $stmt = $db->prepare("UPDATE alerte SET alerte_statut = 'Modifiee' WHERE alerte_id = :id");
             $stmt->execute(['id' => $alerteid]);
             $stmt2 = $db->prepare("UPDATE alerte SET Personnel_id = :gestioid; WHERE alerte_id = :id");
             $stmt2->execute(['gestioid' => $gestioid, 'id' => $alerteid]);
@@ -187,10 +192,41 @@ if(isset($_SESSION['Fest_id'])){
             <a href="../FAQ/faq.php"> FAQ</a>
             <a href="../Connexionuser/login1.php">Connexion</a>
             <a href="../../../Modele/listealerte/filtrealerte.php">lalalala</a>
+            
             </div> </div>
              </footer>
     </body>
     
+
+    <script>
+        function onsenfout(){
+            xmlhttp=new XMLHttpRequest();
+            xmlhttp.open("POST","../../../Modele/listealerte/filtrealerte.php",true);
+            xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+            xmlhttp.send("fname=Henry&lname=Ford");
+            xmlhttp.onreadystatechange=function(){
+            if (xmlhttp.readyState==4 && xmlhttp.status==200){
+                var tab=JSON.parse(xmlhttp.responseText);
+                console.log(tab[0][0])
+                var i = 0
+                for(r of tab){
+                    console.log(i)
+
+                document.getElementsByClassName('id')[i].innerHTML=r[0]
+                document.getElementsByClassName('code')[i].innerHTML=r[1]
+                document.getElementsByClassName('zone')[i].innerHTML=r[2]
+                document.getElementsByClassName('date')[i].innerHTML=r[3]
+                document.getElementsByClassName('horaire')[i].innerHTML=r[4]
+                document.getElementsByClassName('personnel')[i].innerHTML=r[5]
+                document.getElementsByClassName('statut')[i].innerHTML=r[6]
+                document.getElementsByClassName('type')[i].innerHTML=r[7]
+                   i++ 
+                }
+            }
+         }
+        }
+        
+        </script>
 
     <?php
 
