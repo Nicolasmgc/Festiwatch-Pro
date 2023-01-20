@@ -4,7 +4,7 @@
 
 <?php
 if(isset($_SESSION['role_id'])){
-    if($_SESSION['role_id'] == 1){
+    if($_SESSION['role_id'] == 2){
 ?>
 
 <a href="gestionuser.php">Gérer les utilisateurs</a>
