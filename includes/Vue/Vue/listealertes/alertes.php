@@ -99,7 +99,10 @@ if(isset($_SESSION['Fest_id'])){
     <p> Vous êtes sur la page du festival <?php echo $_SESSION['Fest_nom']; ?> </p>
 <div class= page> <!-- C'est pour naviguer entre les pages de différents festivals -->
 
+
 </div>
+
+<input onclick="onsenfout()" value="test" class="actionBtns" style="background-color: #F58"> <!-- Bouton pour trier à bien ranger -->
 
 <table class="tableau-style">
         <thead> 
@@ -140,6 +143,7 @@ if(isset($_SESSION['Fest_id'])){
                 <input type="number" name="gestioid" id="gestioid" placeholder="Enter the personel's id">
                 <input type="submit" name="Modifier" value="Modifier" class="actionBtns" style="background-color: #55F">
                 <input type="submit" name="Terminer" value="Terminer" class="actionBtns" style="background-color: #F58">
+                
             </form>
         </td>
         </tr>
@@ -189,35 +193,40 @@ if(isset($_SESSION['Fest_id'])){
             <a href="../FAQ/faq.php"> FAQ</a>
             <a href="../Connexionuser/login1.php">Connexion</a>
             <a href="../../../Modele/listealerte/filtrealerte.php">lalalala</a>
+            
             </div> </div>
              </footer>
     </body>
     
 
     <script>
-        xmlhttp=new XMLHttpRequest();
-        xmlhttp.open("POST","../../../Modele/listealerte/filtrealerte.php",true);
-        xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-        xmlhttp.send("fname=Henry&lname=Ford");
-        xmlhttp.onreadystatechange=function(){
-        if (xmlhttp.readyState==4 && xmlhttp.status==200){
-            var tab=JSON.parse(xmlhttp.responseText);
-            console.log(tab[0][0])
-            for(r of tab){
-                console.log(r[1])
+        function onsenfout(){
+            xmlhttp=new XMLHttpRequest();
+            xmlhttp.open("POST","../../../Modele/listealerte/filtrealerte.php",true);
+            xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+            xmlhttp.send("fname=Henry&lname=Ford");
+            xmlhttp.onreadystatechange=function(){
+            if (xmlhttp.readyState==4 && xmlhttp.status==200){
+                var tab=JSON.parse(xmlhttp.responseText);
+                console.log(tab[0][0])
+                var i = 0
+                for(r of tab){
+                    console.log(i)
 
-            document.getElementsByTagName('tbody')[0].innerHTML=r[0]
-            document.getElementsByTagName('tbody')[1].innerHTML=r[1]
-            document.getElementsByClassName('zone')[2].innerHTML=r[2]
-            document.getElementsByClassName('date')[3].innerHTML=r[3]
-            document.getElementsByClassName('horaire')[4].innerHTML=r[4]
-            document.getElementsByClassName('personnel')[5].innerHTML=r[5]
-            document.getElementsByClassName('statut')[6].innerHTML=r[6]
-            document.getElementsByClassName('type')[7].innerHTML=r[7]
-                
+                document.getElementsByClassName('id')[i].innerHTML=r[0]
+                document.getElementsByClassName('code')[i].innerHTML=r[1]
+                document.getElementsByClassName('zone')[i].innerHTML=r[2]
+                document.getElementsByClassName('date')[i].innerHTML=r[3]
+                document.getElementsByClassName('horaire')[i].innerHTML=r[4]
+                document.getElementsByClassName('personnel')[i].innerHTML=r[5]
+                document.getElementsByClassName('statut')[i].innerHTML=r[6]
+                document.getElementsByClassName('type')[i].innerHTML=r[7]
+                   i++ 
+                }
             }
-    }
-}
+         }
+        }
+        
         </script>
 
     <?php
