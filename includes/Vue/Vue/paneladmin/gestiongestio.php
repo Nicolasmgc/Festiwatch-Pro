@@ -22,9 +22,14 @@
   }
 ?>
 
-<a href="variablehtml.php">Ajouter un festival</a>
-<a href="vuefestisign.php">Consulter les demandes</a>
+<link rel="stylesheet" typer="text/css" href="gestiongestio.css">
 
+<h1 style="margin: 50px; auto; padding: 0px; font-family: Elephant;">COMPTES FESTIVALS ENREGISTRÉS</h1>
+
+<div id="actionmenu">
+  <a href="variablehtml.php" class="action">Ajouter un festival</a>
+  <a href="vuefestisign.php" class="action">Consulter les demandes</a>
+</div>
 
 <?php include '../../../Controller/database.php';
     global $db;
@@ -35,6 +40,7 @@ if(isset($_SESSION['role_id'])){
     if($_SESSION['role_id'] == 2){
 ?>
 
+<div style="overflow-x: scroll;">
 <table class= "fond" style ="overflow-x:scroll; margin-top: 50px" >
 <thead>
         <tr>
@@ -76,7 +82,7 @@ if(isset($_SESSION['role_id'])){
         <?php endwhile; ?>
       </tbody>
         </table>
-
+</div>
         <?php
     }else{
 ?>
