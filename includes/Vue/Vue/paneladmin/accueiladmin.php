@@ -69,10 +69,31 @@ if(isset($_SESSION['role_id'])){
             </ul>
         </nav>
 
+        <div class="adminexpli">
+            <h1>Bienvenue dans votre panel Admin</h1>
+            <br><br>
+            <div class="expli">
+            <p>
+                Depuis cette page vous allez pouvoir naviguer parmis deux panels<br>
+                Le panel utilisateurs vous permet de consulter la liste des utilisateurs enregistrés et consulter leur données.<br>
+                Vous pouvez aussi supprimer les utilisateurs tout en conservant un historique.<br>
+                Le panel gestionnaires vous permet de consulter les demandes de gestionnaires et des créer des festivals.
+            </p>
+            </div>
+        </div>
+            
+
+                
 
 
-<a href="gestionuser.php">Gérer les utilisateurs</a>
-<a href="gestiongestio.php">Gérer les gestionnaires</a>
+<br>
+<br><br><br><br><br><br>
+<ul class="panel">
+    <li><a href="gestionuser.php">Gérer les utilisateurs</a></li>
+    <li><a href="gestiongestio.php">Gérer les gestionnaires</a></li>
+</ul>
+
+
 
 
 

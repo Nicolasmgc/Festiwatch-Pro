@@ -112,3 +112,22 @@ body{
     background: linear-gradient(225deg,#f53b1e 0%,#911ef6 25%,#ee1616
     100%);
 }
+
+.adminexpli{
+    margin-top: 10%;
+    text-align: center;
+}
+.panel li{
+    width: 10%;
+    text-align: center;
+    display: inline;
+    margin-left: 22%;
+    
+    border: solid 3px black;
+    padding: 2%;
+
+    border-radius: 20px;
+    background: linear-gradient(225deg,#f53b1e 0%,#911ef6 25%,#ee1616
+    100%);
+    
+}
