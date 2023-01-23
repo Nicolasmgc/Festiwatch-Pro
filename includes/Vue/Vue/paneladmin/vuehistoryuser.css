@@ -2,28 +2,31 @@
     font-family: 'Montserrat', sans-serif;
 }
 body{
-    background: linear-gradient(225deg,#e21717 0%,#eb8125 25%,#c80ba5 100%);
+    background-image:url(../../../PNG/fete.jpg);
 }
 table{
-    border-radius: 20%;
+    
     border-collapse: collapse;
     position: relative;
-    border-spacing : 17px;
     border: solid 5px black;
-    overflow-x:scroll
+    margin-bottom: 10%;
+    background: linear-gradient(225deg,#f53b1e 0%,#911ef6 25%,#ee1616 100%);
 }
 
-th, td{
+th{
     border: 5px solid black;
     padding: 11px;
-  }
-td { 
-    text-align: center;
 }
 
+td{
+    border: 5px solid black;
+    padding: 11px;
+    text-align: center;
+  }
 h1{
    text-align: center;
    font-size: 45px;
+   color: aliceblue;
 }
 
 ::-webkit-scrollbar {
