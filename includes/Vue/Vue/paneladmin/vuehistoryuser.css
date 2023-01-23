@@ -5,20 +5,48 @@ body{
     background: linear-gradient(225deg,#e21717 0%,#eb8125 25%,#c80ba5 100%);
 }
 table{
+    border-radius: 20%;
+    border-collapse: collapse;
     position: relative;
     border-spacing : 17px;
-    border : 1px solid black;
+    border: solid 5px black;
+    overflow-x:scroll
 }
-th{
-    border : 1px solid black;
-}
+
+th, td{
+    border: 5px solid black;
+    padding: 11px;
+  }
 td { 
-    padding: 7px;
     text-align: center;
-    border : 1px solid black;
 }
 
 h1{
    text-align: center;
    font-size: 45px;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    padding: 2px;
+}
+    
+/* Track */
+::-webkit-scrollbar-track {
+    background: #111;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(225deg,#f53b1e 0%,#911ef6 25%,#ee1616
+    100%);
+    box-shadow: 0 0 50px 10px rgba(255, 81, 0, 0.459);
+    border-radius: 10px;
+    width: 2px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(125deg,#f53b1e 0%,#911ef6 12%,#ee1616
+    50%);
 }
