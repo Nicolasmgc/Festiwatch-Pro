@@ -4,7 +4,7 @@
 }
 
 body {
-    background: linear-gradient(225deg,#f53b1e 0%,#911ef6 25%,#ee1616 100%);
+    background-image:url(../../../PNG/fete.jpg);
     text-align: center;
     overflow-x: hidden;
 }
@@ -67,4 +67,44 @@ td {
 ::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(125deg,#f53b1e 0%,#911ef6 12%,#ee1616
     50%);
+}
+
+footer{
+    background-color: #111;
+    position: absolute;
+    width: 100%;
+    margin-top: 50px;
+    margin-left: -9px;
+    display: flex;
+
+}
+.contact{
+    font-size:15px;
+    margin-left: 2%;
+    font-family: 'Montserrat', sans-serif;
+    flex-direction: column;
+    color: white;
+    margin-bottom: 2%;
+}
+.reseaux{
+    display:block;
+    margin-left:30%;
+    margin-top: 2%;
+    justify-content: space-between;
+}
+.foot{
+    display: flex;
+    display: inline-block;
+    width: 50%;
+}
+.lien{
+    font-family: 'Montserrat', sans-serif;
+    color: aliceblue;   
+   margin-top: 4%;
+   text-align: center;
+}
+
+a{
+    color: white;
+    padding: 5px;
 }
