@@ -173,21 +173,35 @@ if(isset($resultf['Fest_nom']))
            <div class="contact">
            <br>
             Nous contacter <br>
-            Mail:<br> prodetec@gmail.com <br>
-            Numéro:<br> 068975412 <br>
-            Adresse: <br>10 Rue de Vanves, 92130 Issy-les-Moulineaux
+            Mail :<br> prodetech@gmail.com <br>
+            Numéro :<br> 068975412 <br>
+            Adresse :<br>10 Rue de Vanves, 92130 Issy-les-Moulineaux
             </div>
          
             <div class="foot">
             <div class="reseaux">
-            <a href="https://www.instagram.com/pro_detech"> <img src="../../../PNG/insta.png" alt="icone de insta" height="70"></a>
-            <img src="../../../PNG/youtube.png" alt="icone de insta" height="70">
-            <img src="../../../PNG/twitter.png" alt="icone de insta" height="75">
+            <a href="https://www.instagram.com/pro_detech"> <img src="../../../PNG/insta.png" alt="icone de insta" class="insta"></a>
+            <img src="../../../PNG/youtube.png" alt="icone de insta" height="60">
+            <img src="../../../PNG/twitter.png" alt="icone de insta" height="65">
             </div>
             <div class="lien">
-            <a href="../CGU/cgu.php">Conditions général d'utilisation</a>
-            <a href="#">Connexion</a>
-            </div> </div>
+            <a href="../CGU/cgu.php">Conditions générales d'utilisation</a>
+            <a href="../FAQ/faq.php"> FAQ</a>
+            <a href="../Connexionuser/login1.php">Connexion</a>
+            </div>
+            <div id="google_translate_element" style="position: absolute; right: 20px; bottom: 50px; color: blue">GOOGLE TRANSLATE</div>
+            <script type="text/javascript">
+                function googleTranslateElementInit() {
+                    new google.translate.TranslateElement(
+                        {pageLanguage: 'fr', includedLanguages: 'en,fr,es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false},
+                        'google_translate_element'
+                    );
+                }
+            </script>
+        
+            <script type="text/javascript"
+                    src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+            </script> </div>
              </footer>
 </html>
 

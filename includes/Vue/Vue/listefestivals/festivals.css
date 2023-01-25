@@ -260,7 +260,7 @@ td,th {
 footer{
     background-color: #111;
     position: absolute;
-    width: 100%;
+    width: 101%;
     margin-left: -9px;
     display: flex;
 
@@ -268,12 +268,11 @@ footer{
 .contact{
     font-size:15px;
     margin-left: 2%;
-    font-family: 'Montserrat', sans-serif;
     flex-direction: column;
     color: white;
     margin-bottom: 2%;
+    font-family: 'Elephant';
 }
-
 .reseaux{
     display:block;
     margin-left:30%;
@@ -297,3 +296,7 @@ a{
     padding: 5px;
 }
 
+.insta{
+    height: 60px;
+    width: 60px;
+ }
