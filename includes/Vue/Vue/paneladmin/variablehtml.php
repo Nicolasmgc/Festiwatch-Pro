@@ -98,9 +98,8 @@ if(isset($_SESSION['role_id'])){
         
         
         <img src="../../../PNG/errorimage.png" alt="image d'erreur">
-        
+
         </body>
-        
         </html>
     <?php
     }
