@@ -237,35 +237,33 @@ global $db;
      <p><?php echo $_GET['Fest_programmation'] ?> </p>
     </div>
 </div>
-<footer class="foot_2">
-           <div class="contact_2">
-           <br>
-            Nous contacter <br>
-            Mail:<br> prodetec@gmail.com <br>
-            Numéro:<br> 068975412 <br>
-            Adresse: <br>10 Rue de Vanves, 92130 Issy-les-Moulineaux
-            </div>
-         
-        <div class="foot_2">
-            <div class="reseaux_2">
-                <a href="https://www.instagram.com/pro_detech"> <img src="../../../PNG/insta.png" alt="icone de insta"class="logo_foot2"></a>
-                <a href="https://www.instagram.com/pro_detech"> <img src="../../../PNG/twitter.png" alt="icone de insta" class="logo_foot2"></a>
-                <a href="https://www.instagram.com/pro_detech"> <img src="../../../PNG/youtube.png" alt="icone de insta" class="logo_foot_you"  ></a>
-            </div>
-            <div class="lien_2">
-                <a href="../CGU/cgu.php">Conditions général d'utilisation</a>
-                <a href="../FAQ/faq.php"> FAQ</a>
-                <a href="#">Connexion</a>
-            </div> 
-        </div>
-    </footer>
 
 <?php
 }
     ?>
 
-        
+    <footer class="foot_2">
+    <div class="contact_2">
+        <br>
+        Nous contacter <br>
+        Mail:<br> prodetec@gmail.com <br>
+        Numéro:<br> 068975412 <br>
+        Adresse: <br>10 Rue de Vanves, 92130 Issy-les-Moulineaux
+    </div>
+         
+    <div class="foot_2">
+        <div class="reseaux_2">
+            <a href="https://www.instagram.com/pro_detech"> <img src="../../../PNG/insta.png" alt="icone de insta"class="logo_foot2"></a>
+            <a href="https://www.instagram.com/pro_detech"> <img src="../../../PNG/twitter.png" alt="icone de insta" class="logo_foot2"></a>
+            <a href="https://www.instagram.com/pro_detech"> <img src="../../../PNG/youtube.png" alt="icone de insta" class="logo_foot_you"  ></a>
+        </div>
+        <div class="lien_2">
+            <a href="../CGU/cgu.php">Conditions général d'utilisation</a>
+            <a href="../FAQ/faq.php"> FAQ</a>
+            <a href="#">Connexion</a>
+        </div> 
+    </div>
+</footer>
     </body>
-
 </html>
 
