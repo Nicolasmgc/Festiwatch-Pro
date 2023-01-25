@@ -193,7 +193,7 @@ if(isset($_SESSION['Fest_id'])){
             <a href="../CGU/cgu.php">Conditions général d'utilisation</a>
             <a href="../FAQ/faq.php"> FAQ</a>
             <a href="../Connexionuser/login1.php">Connexion</a>
-            <a href="../../../Modele/listealerte/filtrealerte.php">lalalala</a>
+            <a href="../../../Modele/listealerte/filtrealerte.php">Alerte</a>
             
             </div> </div>
              </footer>

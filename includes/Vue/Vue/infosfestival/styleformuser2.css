@@ -10,12 +10,8 @@ img {
 
 body {
     overflow-x: hidden;
-}
-
-html{
     background: linear-gradient(225deg,#f99b0d 10%,#8425f8 30%,#452df8
     10%,rgb(227, 51, 243 ));
-    width: 100%;
 }
 
 ::-webkit-scrollbar {
@@ -386,7 +382,8 @@ footer{
  }
 .foot_2{
     position: absolute;
-    bottom: -100px;
+    bottom: -10px;
+    width: 50%;
 }
  .contact_2{
     font-size:15px;
