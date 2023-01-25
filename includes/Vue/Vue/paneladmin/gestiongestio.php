@@ -27,8 +27,9 @@
 <h1 style="margin: 50px; auto; padding: 0px; font-family: Elephant;">COMPTES FESTIVALS ENREGISTRÉS</h1>
 
 <div id="actionmenu">
-  <a href="variablehtml.php" class="action">Ajouter un festival</a>
-  <a href="vuefestisign.php" class="action">Consulter les demandes</a>
+  <a href="variablehtml.php" class="action">Ajouter</a>
+  <a href="accueiladmin.php" class="action">Menu</a>
+  <a href="vuefestisign.php" class="action">Demandes</a>
 </div>
 
 <?php include '../../../Controller/database.php';

@@ -35,9 +35,13 @@ if(isset($_SESSION['role_id'])){
             <meta charset="utf-8">
             <link rel="stylesheet" href="vuehistoryuser.css">
             <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap" rel="stylesheet">
-         <h1>Historique utilisateur</h1>
             <body>
 
+<h1>Historique utilisateur</h1>
+
+<div id="actionmenu">
+  <a href="accueiladmin.php" class="action">Menu</a>
+</div> 
 <div style="overflow-x: auto; margin: 40px">
 <table class= "fond" style ="overflow-x:scroll; margin-top: 50px" >
 <thead>
