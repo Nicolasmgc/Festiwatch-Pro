@@ -69,7 +69,7 @@ if(isset($_SESSION['role_id'])){
           <td><?php echo htmlspecialchars($row['datedenaissance']); ?></td>
           <td><?php echo htmlspecialchars($row['datedecreation']); ?></td>
           <td><?php echo htmlspecialchars($row['numtelephone']); ?></td>
-          <td><a href="../../../Modele/paneladmin/gestionuser/deleteuser.php?id=<?php echo $row['id'];?>&amp;nom=<?php echo $row['nom'];?>&amp;prenom=<?php echo $row['prenom'];?>&amp;email=<?php echo $row['email'];?>&amp;handicap=<?php echo $row['handicap'];?>&amp;pays=<?php echo $row['pays'];?>&amp;adresse=<?php echo $row['adresse'];?>&amp;ville=<?php echo $row['ville'];?>&amp;codepostal=<?php echo $row['codepostal'];?>&amp;datedenaissance=<?php echo $row['datedenaissance'];?>&amp;datedecreation=<?php echo $row['datedecreation'];?>&amp;numtelephone=<?php echo $row['numtelephone']?>">Supprimer cet utilisateur</a></td>
+          <td><a href="../../../Modele/paneladmin/gestionuser/deleteuser.php?id=<?php echo $row['id'];?>&amp;nom=<?php echo $row['nom'];?>&amp;prenom=<?php echo $row['prenom'];?>&amp;email=<?php echo $row['email'];?>&amp;handicap=<?php echo $row['handicap'];?>&amp;pays=<?php echo $row['pays'];?>&amp;adresse=<?php echo $row['adresse'];?>&amp;ville=<?php echo $row['ville'];?>&amp;codepostal=<?php echo $row['codepostal'];?>&amp;datedenaissance=<?php echo $row['datedenaissance'];?>&amp;datedecreation=<?php echo $row['datedecreation'];?>&amp;numtelephone=<?php echo $row['numtelephone']?>">Supprimer cet utilisateurs</a></td>
         </tr>
         <?php endwhile; ?>
       </tbody>
