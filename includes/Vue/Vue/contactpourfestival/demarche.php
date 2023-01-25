@@ -62,26 +62,6 @@
             </ul>
         </nav>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <div class = "deb">
         <h1> Comment intégrer votre festival dans notre site ? </h1>
         <br><br>
@@ -106,18 +86,18 @@ global $db;
         <form class="enre" method="post">
             <h3>Formulaire</h3>
             <li><label class="la"> Nom </label>
-            <input type="texte" name="Cl_nom" id="Cl_nom" placeholder="Votre nom *" required> </li>
+            <input type="text" name="Cl_nom" id="Cl_nom" placeholder="Votre nom *" required> </li>
             <li><label class="la"> Prénom </label>
-            <input type="texte" name="Cl_prenom" id="Cl_prenom" placeholder="Votre prénom *" required></li>
+            <input type="text" name="Cl_prenom" id="Cl_prenom" placeholder="Votre prénom *" required></li>
             <li><label class="la"> Email </label>
-            <input type="texte" name="Cl_email" id="Cl_email" placeholder="Votre email *" required></li>
+            <input type="text" name="Cl_email" id="Cl_email" placeholder="Votre email *" required></li>
             <li><label class="la"> Numéro de téléphone professionel </label>
             <input type="int" name="Cl_num" id="Cl_num" placeholder="Numéro de téléphone *" required></li>
             <li><label class="la"> Votre adresse </label>
-            <input type="texte" name="Cl_adresse" id="Cl_adresse" placeholder="Votre adresse"></li>
+            <input type="text" name="Cl_adresse" id="Cl_adresse" placeholder="Votre adresse"></li>
             <li><label class="la" name="la"> Remarques/Questions </label>
-            <input class="req" name="req" id="req" rows="10" cols="50"></textarea></li>
-            <li><input type="submit" name="formlogingestio" id="formlogingestio" value="Send"></li>     
+            <input class="req" name="req" id="req" rows="10" cols="50" placeholder="Type here..."></li>
+            <li style="margin-top: 50px;"><input type="submit" name="formlogingestio" id="formlogingestio" value="Send"></li>     
         </form>
         <?php include '../../../Modele/signingestio/traitementdemarche.php'; ?>       
             
@@ -125,16 +105,5 @@ global $db;
         </div>
 
     </div>
-
-
-
-
-
-
-
-
-
-
-
 
 </html>
