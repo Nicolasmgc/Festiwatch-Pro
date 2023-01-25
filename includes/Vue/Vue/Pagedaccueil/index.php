@@ -173,11 +173,11 @@
                 <a href="../FAQ/faq.php"> FAQ</a>
                 <a href="../Connexionuser/login1.php">Connexion</a>
             </div> 
-            <div id="google_translate_element" style="position: absolute; right: 20px; bottom: 50px"></div>
+            <div id="google_translate_element" style="position: absolute; right: 20px; bottom: 50px; color: blue">GOOGLE TRANSLATE</div>
             <script type="text/javascript">
                 function googleTranslateElementInit() {
                     new google.translate.TranslateElement(
-                        {pageLanguage: 'fr'},
+                        {pageLanguage: 'fr', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false},
                         'google_translate_element'
                     );
                 }

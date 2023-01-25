@@ -522,3 +522,7 @@ footer{
 .erros{
     color:red;
 }
+
+#google_translate_element{
+    color: #111;
+}
