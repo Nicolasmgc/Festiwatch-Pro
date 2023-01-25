@@ -19,7 +19,7 @@ global $db;
 if(isset($_SESSION['role_id'])){
     if($_SESSION['role_id'] == 2){
 ?>
-
+<div class="container">
     <form method="post">
         <input type="varchar" name="Fest_nom" id="Fest_nom" placeholder="Votre Nom" required><br/>
         <input type="date" name="Fest_datedebut" id="Fest_datedebut" placeholder="Début de votre festival" required><br/>
@@ -39,6 +39,7 @@ if(isset($_SESSION['role_id'])){
         
         <input type="submit" name="formsendgestio" id="formsendgestio" value="Ok">
     </form>
+</div>
 
     <?php include '../../../Modele/signingestio/signingestio.php'; ?>
 
@@ -102,3 +103,5 @@ if(isset($_SESSION['role_id'])){
     <?php
     }
     ?>
+
+    
