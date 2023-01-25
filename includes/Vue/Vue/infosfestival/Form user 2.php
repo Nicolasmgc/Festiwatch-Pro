@@ -90,6 +90,67 @@ session_start();
 global $db;
 ?>
 
+
+<?php 
+if(isset($_SESSION['Fest_id'])){
+    ?>
+    <h1>Bienvenue sur la page du festival <?php echo $_GET['Fest_nom']?></h1>
+    <div id="searchBox">
+                        <form method="POST" style="width: 100%">
+                            <div style="display: flex; flex-direction: row; justify-content: space-evenly">
+                                <input type="int" name="searchbar" id="searchbar" placeholder="Recherchez le festival que vous souhaitez" required><br/>
+                                <input type="submit" name="montrerecherche" id="montrerecherche" value="OK">
+                                <a href=""><img id="searchIcon" src="../../../PNG/searchIcon.png" alt="search"></a>
+                            </div>
+                        </form>
+            <?php include '../../../Modele/recherchemontre/recherchemontre.php' ?>
+                </div>
+    <div class="global">            
+        <img href="./Efrontech/Form user 2.html"  src="../../../PNG/les_ardentes_2022.jpg">
+        <div class="round"> 
+    <p>Date début : </p>
+     <p><?php echo $_GET['Fest_datedebut'] ?></p>
+     <p>Date de fin : </p>
+     <p> <?php echo $_GET['Fest_datefin'] ?></p>
+     <p>Lieu du festival :</p>
+    <p> <?php echo $_GET['Fest_adresse'] ?> - <?php echo $_GET['Fest_codepostal'] ?> - <?php echo $_GET['Fest_pays'] ?></p>
+     <p>Accès du festival </p> 
+    <p><?php echo $_GET['Fest_access']; ?> </p>
+    <p>Contacts en cas de problème :</p>
+    <p><?php echo $_GET['Fest_numtelephone'] ?> - <?php echo $_GET['Fest_email'] ?></p>
+    <p>Programmation : </p>
+     <p><?php echo $_GET['Fest_programmation'] ?> </p>
+    </div>
+</div>
+
+<footer class="foot_2">
+    <div class="contact_2">
+        <br>
+        Nous contacter <br>
+        Mail:<br> prodetec@gmail.com <br>
+        Numéro:<br> 068975412 <br>
+        Adresse: <br>10 Rue de Vanves, 92130 Issy-les-Moulineaux
+    </div>
+         
+    <div class="foot_2">
+        <div class="reseaux_2">
+            <a href="https://www.instagram.com/pro_detech"> <img src="../../../PNG/insta.png" alt="icone de insta"class="logo_foot2"></a>
+            <a href="https://www.instagram.com/pro_detech"> <img src="../../../PNG/twitter.png" alt="icone de insta" class="logo_foot2"></a>
+            <a href="https://www.instagram.com/pro_detech"> <img src="../../../PNG/youtube.png" alt="icone de insta" class="logo_foot_you"  ></a>
+        </div>
+        <div class="lien_2">
+            <a href="../CGU/cgu.php">Conditions général d'utilisation</a>
+            <a href="../FAQ/faq.php">FAQ</a>
+            <a href="#">Connexion</a>
+        </div> 
+    </div>
+</footer>
+                    
+    <?php
+}else{
+?>
+
+
     <?php
     
         $r4 = $db->prepare("SELECT * FROM reservation WHERE Fest_id = :Fest_id AND id = :id");
@@ -129,8 +190,8 @@ global $db;
                     'Reservation_id' => $lnumreserv
                 ]);
 ?>
-                    <h1>Bienvenue sur la page du festival <?php echo $_GET['Fest_nom']?></h1>
-                    <div id="searchBox">
+                   <h1>Bienvenue sur la page du festival <?php echo $_GET['Fest_nom']?></h1>
+    <div id="searchBox">
                         <form method="POST" style="width: 100%">
                             <div style="display: flex; flex-direction: row; justify-content: space-evenly">
                                 <input type="int" name="searchbar" id="searchbar" placeholder="Recherchez le festival que vous souhaitez" required><br/>
@@ -139,46 +200,49 @@ global $db;
                             </div>
                         </form>
             <?php include '../../../Modele/recherchemontre/recherchemontre.php' ?>
-                                </div>
-                    <div class="global">            
-                        <img href="./Efrontech/Form user 2.html"  src="../../../PNG/les_ardentes_2022.jpg">
-                        <div class="round"> 
-                        <p>Date début : </p>
-                     <p><?php echo $_GET['Fest_datedebut'] ?></p>
-                     <p>Date de fin : </p>
-                     <p> <?php echo $_GET['Fest_datefin'] ?></p>
-                     <p>Lieu du festival :</p>
-                     <p> <?php echo $_GET['Fest_adresse'] ?> - <?php echo $_GET['Fest_codepostal'] ?> - <?php echo $_GET['Fest_pays'] ?></p>
-                     <p>Accès du festival </p> 
-                     <p><?php echo $_GET['Fest_access']; ?> </p>
-                     <p>Contacts en cas de problème :</p>
-                     <p><?php echo $_GET['Fest_numtelephone'] ?> - <?php echo $_GET['Fest_email'] ?></p>
-                     <p>Programmation : </p>
-                     <p><?php echo $_GET['Fest_programmation'] ?> </p>
-                    </div>
                 </div>
-                <footer>
-           <div class="contact">
-           <br>
-            Nous contacter <br>
-            Mail:<br> prodetec@gmail.com <br>
-            Numéro:<br> 068975412 <br>
-            Adresse: <br>10 Rue de Vanves, 92130 Issy-les-Moulineaux
-            </div>
+    <div class="global">            
+        <img href="./Efrontech/Form user 2.html"  src="../../../PNG/les_ardentes_2022.jpg">
+        <div class="round"> 
+    <p>Date début : </p>
+     <p><?php echo $_GET['Fest_datedebut'] ?></p>
+     <p>Date de fin : </p>
+     <p> <?php echo $_GET['Fest_datefin'] ?></p>
+     <p>Lieu du festival :</p>
+    <p> <?php echo $_GET['Fest_adresse'] ?> - <?php echo $_GET['Fest_codepostal'] ?> - <?php echo $_GET['Fest_pays'] ?></p>
+     <p>Accès du festival </p> 
+    <p><?php echo $_GET['Fest_access']; ?> </p>
+    <p>Contacts en cas de problème :</p>
+    <p><?php echo $_GET['Fest_numtelephone'] ?> - <?php echo $_GET['Fest_email'] ?></p>
+    <p>Programmation : </p>
+     <p><?php echo $_GET['Fest_programmation'] ?> </p>
+    </div>
+</div>
+
+<footer class="foot_2">
+    <div class="contact_2">
+        <br>
+        Nous contacter <br>
+        Mail:<br> prodetec@gmail.com <br>
+        Numéro:<br> 068975412 <br>
+        Adresse: <br>10 Rue de Vanves, 92130 Issy-les-Moulineaux
+    </div>
          
-        <div class="foot">
-            <div class="reseaux">
-                <a href="https://www.instagram.com/pro_detech"> <img src="../../../PNG/insta.png" alt="icone de insta"class="logo_foot"></a>
-                <a href="https://www.instagram.com/pro_detech"> <img src="../../../PNG/twitter.png" alt="icone de insta" class="logo_foot"></a>
-                <a href="https://www.instagram.com/pro_detech"> <img src="../../../PNG/youtube.png" alt="icone de insta" class="logo_foot_you"  ></a>
-            </div>
-            <div class="lien">
-                <a href="../CGU/cgu.php">Conditions général d'utilisation</a>
-                <a href="../FAQ/faq.php"> FAQ</a>
-                <a href="#">Connexion</a>
-            </div> 
+    <div class="foot_2">
+        <div class="reseaux_2">
+            <a href="https://www.instagram.com/pro_detech"> <img src="../../../PNG/insta.png" alt="icone de insta"class="logo_foot2"></a>
+            <a href="https://www.instagram.com/pro_detech"> <img src="../../../PNG/twitter.png" alt="icone de insta" class="logo_foot2"></a>
+            <a href="https://www.instagram.com/pro_detech"> <img src="../../../PNG/youtube.png" alt="icone de insta" class="logo_foot_you"  ></a>
         </div>
-    </footer>
+        <div class="lien_2">
+            <a href="../CGU/cgu.php">Conditions général d'utilisation</a>
+            <a href="../FAQ/faq.php">FAQ</a>
+            <a href="#">Connexion</a>
+        </div> 
+    </div>
+</footer>
+    </body>
+</html>
 
 <?php
             }else{
@@ -283,6 +347,7 @@ global $db;
     </body>
 </html>
 <?php
+}
 }
     ?>
 
