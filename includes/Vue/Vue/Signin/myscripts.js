@@ -25,3 +25,4 @@ function validate() {
         alert("Mot de passe faible !");
 }
 
+    

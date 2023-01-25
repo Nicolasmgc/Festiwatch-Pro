@@ -7,7 +7,10 @@ body{
     left:30%;
     top:35%;
     font-size: 35px ;
-    color:black;
+    background: linear-gradient(rgb(186, 4, 214), rgb(255, 83, 192), rgb(255, 0, 43));
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent
 }
 
 h1{

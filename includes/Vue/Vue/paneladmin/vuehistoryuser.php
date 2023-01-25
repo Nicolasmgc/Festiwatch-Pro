@@ -30,7 +30,15 @@
 if(isset($_SESSION['role_id'])){
     if($_SESSION['role_id'] == 2){
 ?>
+<!DOCTYPE html>
+        <html>
+            <meta charset="utf-8">
+            <link rel="stylesheet" href="vuehistoryuser.css">
+            <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap" rel="stylesheet">
+         <h1>Historique utilisateur</h1>
+            <body>
 
+<div style="overflow-x: auto; margin: 40px">
 <table class= "fond" style ="overflow-x:scroll; margin-top: 50px" >
 <thead>
         <tr>
@@ -51,6 +59,10 @@ if(isset($_SESSION['role_id'])){
       </thead>
 
 <tbody>
+
+</body>
+        
+        </html>
         <?php while($row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
         <tr> 
           <td><?php echo htmlspecialchars($row['userhistory_id']); ?></td>
@@ -70,6 +82,28 @@ if(isset($_SESSION['role_id'])){
         <?php endwhile; ?>
       </tbody>
         </table>
+        </div>
+        <footer>
+           <div class="contact">
+           <br>
+            Nous contacter <br>
+            Mail :<br> prodetech@gmail.com <br>
+            Numéro :<br> 068975412 <br>
+            Adresse :<br>10 Rue de Vanves, 92130 Issy-les-Moulineaux
+            </div>
+         
+            <div class="foot">
+            <div class="reseaux">
+            <a href="https://www.instagram.com/pro_detech"> <img src="../../../PNG/insta.png" alt="icone de insta" height="60"></a>
+            <img src="../../../PNG/youtube.png" alt="icone de insta" height="70">
+            <img src="../../../PNG/twitter.png" alt="icone de insta" height="75">
+            </div>
+            <div class="lien">
+            <a href="../CGU/cgu.php">Conditions générales d'utilisation</a>
+            <a href="../FAQ/faq.php"> FAQ</a>
+            <a href="../Connexionuser/login1.php">Connexion</a>
+            </div> </div>
+             </footer>
 
         <?php
     }else{

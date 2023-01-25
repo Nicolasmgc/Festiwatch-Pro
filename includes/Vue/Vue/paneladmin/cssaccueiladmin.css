@@ -1,0 +1,133 @@
+*{
+    padding:0;
+    margin: 0;
+    font-family: 'Elephant';
+    text-decoration: none;
+    list-style:none;
+    color: white;
+}
+
+
+
+nav{
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 10px;
+    z-index: 1;
+
+}
+nav ul{
+    list-style-type: none;
+    
+}
+.logo{
+    background: transparent;
+    margin-left: 60px;
+    margin-top: 0px;
+    padding: 0px;
+    width: 150px;
+}
+
+nav ul li{
+    float:left;
+    width: 20%;
+    text-align: center;
+    position: relative;
+}
+
+nav ul::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+nav a{
+    display: block;
+    text-decoration: none;
+    margin: 10px 25px;
+    border: 0;
+    padding : 10px 20px;
+    background: transparent;
+    position: relative;
+    overflow: clip;
+    border-radius: 20px;
+    box-shadow: 0px -0px 0px 0px rgba(113, 34, 215, 0.5),0px 0px 0px 0px rgba(225, 51, 16, 0.5);
+    transition: all .2s;
+    
+}
+nav a::after{
+    content:"";
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(225deg,#f53b1e 0%,#911ef6 25%,#ee1616
+    100%);
+    position: absolute;
+    z-index :-1;
+    left: -20mm;
+    top: -15mm;
+    transition: all .5s;
+}
+nav a:hover{
+    color: orange;
+    border-bottom: 2px solid gold;
+    transform: translate(0, -2mm);
+    box-shadow: 10px -10px 25px 0 rgba(168, 107, 247, 0.25), -10px 10px
+    25px 0px rgba(255, 255, 255, 0.25);
+    background: linear-gradient(225deg,#f53b1e 0%,#911ef6 25%,#ee1616
+    100%);
+}
+a:hover::after{
+    transform:rotate(400deg);
+}
+.sous{
+    display: none;
+    
+    background: transparent;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav > ul li:hover .sous{
+    display: block;
+}
+
+.sous li{
+    float: none;
+    width: 100%;
+    text-align: left;
+}
+
+.sous a{ padding: 10px;
+    border-bottom: none;
+}
+
+.sous a:hover{
+    border-bottom: none;
+    background-color: blue;
+}
+
+body{
+    background: linear-gradient(225deg,#f53b1e 0%,#911ef6 25%,#ee1616
+    100%);
+}
+
+.adminexpli{
+    margin-top: 10%;
+    text-align: center;
+}
+.panel li{
+    width: 10%;
+    text-align: center;
+    display: inline;
+    margin-left: 22%;
+    
+    border: solid 3px black;
+    padding: 2%;
+
+    border-radius: 20px;
+    background: linear-gradient(225deg,#f53b1e 0%,#911ef6 25%,#ee1616
+    100%);
+    
+}

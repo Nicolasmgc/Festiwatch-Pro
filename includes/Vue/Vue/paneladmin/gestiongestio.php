@@ -22,9 +22,14 @@
   }
 ?>
 
-<a href="variablehtml.php">Ajouter un festival</a>
-<a href="vuefestisign.php">Consulter les demandes</a>
+<link rel="stylesheet" typer="text/css" href="gestiongestio.css">
 
+<h1 style="margin: 50px; auto; padding: 0px; font-family: Elephant;">COMPTES FESTIVALS ENREGISTRÉS</h1>
+
+<div id="actionmenu">
+  <a href="variablehtml.php" class="action">Ajouter un festival</a>
+  <a href="vuefestisign.php" class="action">Consulter les demandes</a>
+</div>
 
 <?php include '../../../Controller/database.php';
     global $db;
@@ -35,6 +40,7 @@ if(isset($_SESSION['role_id'])){
     if($_SESSION['role_id'] == 2){
 ?>
 
+<div style="overflow-x: scroll;">
 <table class= "fond" style ="overflow-x:scroll; margin-top: 50px" >
 <thead>
         <tr>
@@ -76,6 +82,28 @@ if(isset($_SESSION['role_id'])){
         <?php endwhile; ?>
       </tbody>
         </table>
+</div>
+        <footer>
+           <div class="contact">
+           <br>
+            Nous contacter <br>
+            Mail :<br> prodetech@gmail.com <br>
+            Numéro :<br> 068975412 <br>
+            Adresse :<br>10 Rue de Vanves, 92130 Issy-les-Moulineaux
+            </div>
+         
+            <div class="foot">
+            <div class="reseaux">
+            <a href="https://www.instagram.com/pro_detech"> <img src="../../../PNG/insta.png" alt="icone de insta" height="60"></a>
+            <img src="../../../PNG/youtube.png" alt="icone de insta" height="70">
+            <img src="../../../PNG/twitter.png" alt="icone de insta" height="75">
+            </div>
+            <div class="lien">
+            <a href="../CGU/cgu.php">Conditions générales d'utilisation</a>
+            <a href="../FAQ/faq.php"> FAQ</a>
+            <a href="../Connexionuser/login1.php">Connexion</a>
+            </div> </div>
+             </footer>
 
         <?php
     }else{

@@ -76,7 +76,6 @@ session_start();
                 <div id="mapBox">
                     <h1>MAP</h1>
                     <div id="map">
-                        <!--<img id="mapImage" src="templateMap.png" alt="Current Map unavailable">-->
                         <?php 
                             include "../UserData/MAP/map.html";
                         ?>
@@ -86,16 +85,13 @@ session_start();
 
             <div id="mainContent">
                 <div id="searchBox">
-                <form method="POST">
-                <!-- <input id="searchBar"/> -->
-                        <input type="int" name="searchbar" id="searchbar" placeholder="Recherchez le festival que vous souhaitez" required><br/>
-                        <input type="submit" name="montrerecherche" id="montrerecherche" value="OK">
-                                    <a href=""><img id="searchIcon" src="../../../PNG/searchIcon.png" alt="search"></a>
-            </form>
+                    <form method="POST" style="width: 100%; display: flex; flex-direction: row; justify-content: space-between">
+                        <input type="int" name="searchbar" class="searchBar" id="searchbar" placeholder="Recherchez le festival que vous souhaitez" required><br/>
+                        <input type="submit" name="montrerecherche" id="montrerecherche">
+                    </form>
 
-            <?php include '../../../Modele/recherchemontre/recherchemontre.php' ?>
+                    <?php include '../../../Modele/recherchemontre/recherchemontre.php' ?>
 
-                    <a href=""><img id="searchIcon" src="../../../PNG/searchIcon.png" alt="search"></a>
                 </div>
                 <div id="dashboardBox">
                     <h1>Dashboard</h1>
