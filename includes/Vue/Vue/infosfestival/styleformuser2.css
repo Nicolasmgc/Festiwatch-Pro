@@ -50,7 +50,7 @@ h1{
 }
 
 #searchBox {
-    width: 100%;
+    width: 98%;
     border-radius: 50px;
     background: linear-gradient(225deg,#e21717 0%,#eb8125 25%,#e022bd
     100%);
@@ -63,7 +63,14 @@ h1{
 
 }
 
-#searchBar {
+#searchbar::placeholder {
+    color: #fff;
+    opacity: 0.7;
+}
+  
+
+#searchbar {
+    display: inline-block;
     padding: 0px 10px;
     font-size: 20px;
     background: linear-gradient(225deg,#e21717 0%,#eb8125 25%,#e022bd
@@ -75,7 +82,16 @@ h1{
     width: 95%;
 }
 
+#montrerecherche {
+    margin: 2px 20px;
+    border-radius: 10px;
+    background-color: #452df8;
+    color: white;
+    width: 5%;
+}
+
 #searchIcon {
+    display: inline-block;
     position: inherit;
     margin: 5px;
     height: 30px;

@@ -111,11 +111,13 @@ global $db;
 ?>
                     <h1>Bienvenue sur la page du festival <?php echo $_GET['Fest_nom']?></h1>
                     <div id="searchBox">
-                        <form method="POST">
-                        <input type="int" name="searchbar" id="searchbar" placeholder="Recherchez le festival que vous souhaitez" required><br/>
-                        <button><input type="submit" name="montrerecherche" id="montrerecherche" value="OK"></button>
-                                    <a href=""><img id="searchIcon" src="../../../PNG/searchIcon.png" alt="search"></a>
-            </form>
+                        <form method="POST" style="width: 100%">
+                            <div style="display: flex; flex-direction: row; justify-content: space-evenly">
+                                <input type="int" name="searchbar" id="searchbar" placeholder="Recherchez le festival que vous souhaitez" required><br/>
+                                <input type="submit" name="montrerecherche" id="montrerecherche" value="OK">
+                                <a href=""><img id="searchIcon" src="../../../PNG/searchIcon.png" alt="search"></a>
+                            </div>
+                        </form>
             <?php include '../../../Modele/recherchemontre/recherchemontre.php' ?>
                                 </div>
                     <div class="global">            
@@ -209,11 +211,13 @@ global $db;
     ?>
     <h1>Bienvenue sur la page du festival <?php echo $_GET['Fest_nom']?></h1>
     <div id="searchBox">
-                        <form method="POST">
-                        <input type="int" name="searchbar" id="searchbar" placeholder="Recherchez le festival que vous souhaitez" required><br/>
-                        <button><input type="submit" name="montrerecherche" id="montrerecherche" value="OK"></button>
-                                    <a href=""><img id="searchIcon" src="../../../PNG/searchIcon.png" alt="search"></a>
-            </form>
+                        <form method="POST" style="width: 100%">
+                            <div style="display: flex; flex-direction: row; justify-content: space-evenly">
+                                <input type="int" name="searchbar" id="searchbar" placeholder="Recherchez le festival que vous souhaitez" required><br/>
+                                <input type="submit" name="montrerecherche" id="montrerecherche" value="OK">
+                                <a href=""><img id="searchIcon" src="../../../PNG/searchIcon.png" alt="search"></a>
+                            </div>
+                        </form>
             <?php include '../../../Modele/recherchemontre/recherchemontre.php' ?>
                 </div>
     <div class="global">            
