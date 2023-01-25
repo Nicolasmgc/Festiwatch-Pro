@@ -354,6 +354,12 @@ if(isset($_POST['formmodifemail'])){
     extract($_POST);
 
     if(!empty($modifemail)){
+        $z9 = $db->prepare("SELECT Fest_email FROM festival WHERE Fest_email = :Fest_email");
+        $z9 ->execute([
+            'Fest_email' => $modifemail
+        ]);
+        $result = $z9->rowCount();
+        if($result==0){
         $z = $db->prepare("UPDATE festival SET Fest_email = :Fest_email WHERE Fest_id = :Fest_id");
         $z ->execute([
             'Fest_email' => $modifemail,
@@ -361,7 +367,10 @@ if(isset($_POST['formmodifemail'])){
             'Fest_id' =>$_SESSION['Fest_id']
         ]);
         echo "Changement faits";
+    }else{
+        echo "Cet email existe déjà";
     }
+}
 }
 
 if(isset($_POST['formmodifadresse'])){
