@@ -177,7 +177,7 @@
             <script type="text/javascript">
                 function googleTranslateElementInit() {
                     new google.translate.TranslateElement(
-                        {pageLanguage: 'fr', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false},
+                        {pageLanguage: 'fr', includedLanguages: 'en,es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false},
                         'google_translate_element'
                     );
                 }
