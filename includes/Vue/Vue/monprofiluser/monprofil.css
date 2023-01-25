@@ -305,6 +305,7 @@ footer{
      font-family: 'Montserrat', sans-serif;
      color: aliceblue;   
     margin-top: 4%;
+    margin-right:12%;
     text-align: center;
  }
  
@@ -315,4 +316,8 @@ footer{
  .lien a{
     color: white;
     padding: 7px;
+ }
+ .insta{
+    height: 60px;
+    width: 60px;
  }

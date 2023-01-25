@@ -55,9 +55,6 @@ nav ul{
     width: 150px;
 }
     
-    
-
-
 
 nav ul li{
     float:left;
@@ -286,25 +283,32 @@ footer{
      display:block;
      margin-left:30%;
      margin-top: 2%;
-     justify-content: space-between;
+     justify-content: space-between ;
  }
  .foot{
      display: flex;
      display: inline-block;
      width: 50%;
  }
+
  .lien{
-     font-family: 'Montserrat', sans-serif;
-     color: aliceblue;   
-    margin-top: 4%;
-    text-align: center;
- }
- 
- .reseaux a{
-     color: white;
-     padding: 5px;
- }
- .lien a{
+    font-family: 'Montserrat', sans-serif;
+    color: aliceblue;   
+   margin-top: 4%;
+   margin-right:10%;
+   text-align: center;
+}
+
+.reseaux a{
     color: white;
-    padding: 7px;
+    padding: 5px;
+}
+.lien a{
+   color: white;
+   padding: 7px;
+   text-decoration: underline;
+}
+ .insta{
+    height: 60px;
+    width: 60px;
  }
