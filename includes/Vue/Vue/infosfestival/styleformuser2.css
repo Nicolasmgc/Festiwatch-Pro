@@ -12,6 +12,8 @@ body {
     overflow-x: hidden;
     background: linear-gradient(225deg,#f99b0d 10%,#8425f8 30%,#452df8
     10%,rgb(227, 51, 243 ));
+    background-size: 100% 400%;
+background-repeat: no-repeat;
 }
 
 ::-webkit-scrollbar {
@@ -290,10 +292,6 @@ footer{
      width: 300px;
      justify-content: space-between;
  }
- .reseaux img, .reseaux a {
-    width: 70%;
-    height: auto;
- }
 
  .foot{
      display: inline-block;
@@ -303,7 +301,7 @@ footer{
  .lien{
      font-family: 'Montserrat', sans-serif;
      color: aliceblue;   
-    margin-top: 4%;
+     margin-top: 6%;
     text-align: center;
     position: fixed;
     top: 85%;
@@ -400,7 +398,7 @@ footer{
 }
 .logo_foot2{
     height: 30%;
-    width:5%;
+    width:7%;
     padding:5%;
  }
 
