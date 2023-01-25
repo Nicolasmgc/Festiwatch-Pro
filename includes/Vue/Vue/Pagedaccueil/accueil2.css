@@ -266,7 +266,7 @@ button:hover {
 .image2 {
     position: absolute;
     left:0px;
-    height: auto;
+    height: 120%;
     width: 100%;
     top: 600px;
     z-index: -1;
@@ -316,7 +316,8 @@ footer{
     display: flex;
     width: 100%;
     position: absolute;
-    margin-top:50%
+    margin-top:50%;
+
  }
  
 .contact{
