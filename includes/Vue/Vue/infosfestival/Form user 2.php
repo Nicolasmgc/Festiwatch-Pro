@@ -238,11 +238,7 @@ global $db;
     </div>
 </div>
 
-<?php
-}
-    ?>
-
-    <footer class="foot_2">
+<footer class="foot_2">
     <div class="contact_2">
         <br>
         Nous contacter <br>
@@ -266,4 +262,9 @@ global $db;
 </footer>
     </body>
 </html>
+<?php
+}
+    ?>
+
+    
 
