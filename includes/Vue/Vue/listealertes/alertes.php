@@ -121,10 +121,12 @@ if(isset($_SESSION['Fest_id'])){
 
             
         <form method="POST">
-            <input type="number" name="alerteid" id="alerteid" placeholder="Enter the alert's id" required>
-            <input type="number" name="gestioid" id="gestioid" placeholder="Enter the personel's id">
-            <input type="submit" name="Modifier" value="Modifier" class="actionBtns" style="background-color: #55F">
-            <input type="submit" name="Terminer" value="Terminer" class="actionBtns" style="background-color: #F58">
+            <div style="width: 50%; margin: auto 100px auto 200px; display: inline-flex; justify-content: space-evenly;">
+                <input type="number" name="alerteid" id="alerteid" placeholder="Enter the alert's id" required>
+                <input type="number" name="gestioid" id="gestioid" placeholder="Enter the personel's id">
+                <input type="submit" name="Modifier" value="Modifier" class="actionBtns" style="background-color: #55F">
+                <input type="submit" name="Terminer" value="Terminer" class="actionBtns" style="background-color: #F58">
+            </div>
         </form>
 
         <tbody>

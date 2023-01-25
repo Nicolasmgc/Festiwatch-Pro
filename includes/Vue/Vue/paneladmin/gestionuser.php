@@ -38,6 +38,8 @@ if(isset($_SESSION['role_id'])){
             <h1>Gestion des utilisateur</h1>
             <body>
             <a href="vuehistoryuser.php" class="ref">Consulter l'historique des utilisateurs</a>
+
+<div style="overflow-x: scroll;">
 <table class= "fond" style ="overflow-x:scroll; margin-top: 50px" >
 <thead>
         <tr>
@@ -78,6 +80,7 @@ if(isset($_SESSION['role_id'])){
         <?php endwhile; ?>
       </tbody>
         </table>
+</div>
         <footer>
            <div class="contact">
            <br>

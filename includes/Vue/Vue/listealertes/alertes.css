@@ -8,7 +8,7 @@ body{
 }
 
 #alerteid, #gestioid {
-    display: block;
+    display: inline-block;
 }
 
 nav{
@@ -208,15 +208,5 @@ footer{
  }
 
 .actionBtns{
-    margin: 5px auto; border-radius: 5px; text-align: center; padding: 10px; height: 75%;
-    transition: 0.7s;
+    margin: 5px 20px; border-radius: 5px; text-align: center; padding: 10px; height: 75%;
 }
-
- .actionBtns:hover {
-    margin: 5px auto; 
-    border-radius: 5px; 
-    text-align: center; 
-    padding: 15px; 
-    height: 75%;
-    transition: 0.2s;
- }
