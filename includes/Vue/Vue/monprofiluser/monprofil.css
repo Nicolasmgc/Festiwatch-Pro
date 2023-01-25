@@ -27,25 +27,21 @@
     50%);
 }
 
-nav{
-    
-    
+nav{   
     position: relative;
-    
+    color: white;
     z-index: 1;
     display: inline-block;
 
 }
 nav ul{
     list-style-type: none;
-    
+    color: white;
 }
 .logo{
-    
     background: transparent;
     margin-left: 0px;
     margin-top: 0px;
-    
     width: 150px;
 }
 
@@ -54,12 +50,14 @@ nav ul li{
     width: 20%;
     text-align: center;
     position: relative;
+    color: white;
 }
 
 nav ul::after{
     content: "";
     display: table;
     clear: both;
+    color: white;
 }
 
 nav a{
@@ -74,8 +72,9 @@ nav a{
     border-radius: 20px;
     box-shadow: 0px -0px 0px 0px rgba(113, 34, 215, 0.5),0px 0px 0px 0px rgba(225, 51, 16, 0.5);
     transition: all .2s;
-    
+    color: white;
 }
+
 nav a::after{
     content:"";
     width: 400px;
@@ -87,6 +86,7 @@ nav a::after{
     left: -20mm;
     top: -15mm;
     transition: all .5s;
+    color: white;
 }
 nav a:hover{
     color: orange;
@@ -96,43 +96,51 @@ nav a:hover{
     25px 0px rgba(255, 255, 255, 0.25);
     background: linear-gradient(225deg,#f53b1e 0%,#911ef6 25%,#ee1616
     100%);
+    color: white;
 }
 a:hover::after{
     transform:rotate(400deg);
+    color: white;
 }
 .sous{
     display: none;
-    
     background: transparent;
     position: absolute;
     width: 100%;
     z-index: 1000;
+    color: white;
 }
 
 nav > ul li:hover .sous{
     display: block;
+    color: white;
 }
 
 .sous li{
     float: none;
     width: 100%;
     left: 0px;
+    color: white;
 }
 
 .sous a{ padding: 10px;
     border-bottom: none;
     right: 30px;
+    color: white;
 }
 
 .sous a:hover{
     border-bottom: none;
     background-color: blue;
+    color: white;
 }
+
 img {
     box-shadow: transparent;
     width: 80px;
-    position: static
+    position: static;
 }
+
 .round{
     border: 5px solid black;
     padding: 8%;
@@ -146,6 +154,7 @@ img {
     overflow: hidden;
     box-shadow: 0px 0px 0px 0px rgb(113 34 215 / 50%), 0px 0px 0px 0px rgb(225 51 16 / 50%);
     transition: all .2s;
+    color: white;
 }
 
 .round::after {
@@ -158,6 +167,7 @@ img {
     left: -20mm;
     top: -15mm;
     transition: all .5s;
+    color: white;
 }
 
 .round:hover::after{
@@ -232,7 +242,9 @@ body {
 body {
     color:black;
     background-color:white;
-    background-image:url(../../../PNG/image.jpg);
+    background-image:url(../../../PNG/hd-wallpaper-4768501_1920.jpg);
+    background-size: contain;
+    background-repeat: repeat-y;
     overflow-x: hidden;
     overflow-y: scroll;
     }
@@ -273,8 +285,14 @@ label{
 }
 
 .btn {
+    width: 90%;
+    margin: auto;
     margin-bottom: 20px;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
+
 footer{
     background-color:black ;
     width: 105%;

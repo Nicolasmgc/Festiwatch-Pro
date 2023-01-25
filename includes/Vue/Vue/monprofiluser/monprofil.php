@@ -184,6 +184,8 @@ if(isset($_POST['formupdate3'])){
     <button ><a href="../Pagedaccueil/index.php"  style="text-decoration:none">Page d'accueil</a></button>
 
     <button ><a href="../listefestivals/festivals.php"  style="text-decoration:none">Liste des festivals</a></button>
+
+    <button ><a href="../monprofiluser/vuehistoryfestival.php"  style="text-decoration:none">Historique des festivals</a></button>
 </div>
 </body>
 <footer>
