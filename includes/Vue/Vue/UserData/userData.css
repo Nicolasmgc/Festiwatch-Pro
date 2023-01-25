@@ -309,14 +309,14 @@ footer{
     background-color: #111;
     position: absolute;
     width: 100%;
-    margin-left: -9px;
+    top: 155%;
     display: flex;
 
 }
 .contact{
     font-size:15px;
     margin-left: 2%;
-    font-family: 'Montserrat', sans-serif;
+  font-family: 'elephant';
     flex-direction: column;
     color: white;
     margin-bottom: 2%;
@@ -324,8 +324,6 @@ footer{
 .reseaux{
     display:block;
     margin-left:30%;
-    margin-top: 2%;
-    justify-content: space-between;
 }
 .foot{
     display: flex;
@@ -335,12 +333,33 @@ footer{
 .lien{
     font-family: 'Montserrat', sans-serif;
     color: aliceblue;   
-   margin-top: 4%;
+   margin-top: 15%;
    text-align: center;
 }
 
 a{
     color: white;
     padding: 5px;
+}
+
+    /*justify-content: space-between;*/
+
+.insta{
+    height: 70px ;
+    width: 70px;
+    margin-left:1%;
+    margin-top: 7%;
+}
+.youtube{
+    height: 65px ;
+    width: 80px;
+    margin-left:7%;
+    margin-top: 7%;
+}
+.twit{
+    height: 80px ;
+    width: 80px;
+    margin-left:13%;
+    margin-top: 7%;
 }
 
