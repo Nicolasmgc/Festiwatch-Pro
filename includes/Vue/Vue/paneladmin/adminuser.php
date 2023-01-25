@@ -13,6 +13,26 @@
 
 
 
+<style>
+            .goog-te-banner-frame.skiptranslate, .goog-te-gadget-icon {
+                display: none !important;
+            }
+            body {
+                top: 0px !important;
+            }
+            .goog-tooltip {
+                display: none !important;
+            }
+            .goog-tooltip:hover {
+                display: none !important;
+            }
+            .goog-text-highlight {
+                background-color: transparent !important;
+                border: none !important;
+                box-shadow: none !important;
+            }
+        </style>
+
 <form method="post">
     <input type="number" name="rechercheuserid" id="rechercheuserid" placeholder="Chercher un utilisateur par id" required><br/>
     <button><input type="submit" name="formrechercheuserid" id="formrechercheuserid" value="Ok"></button>

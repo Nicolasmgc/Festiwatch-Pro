@@ -6,6 +6,26 @@
 <html>
 <meta charset="utf-8">
 <link rel="stylesheet" href="stylesignin.css">
+
+<style>
+    .goog-te-banner-frame.skiptranslate, .goog-te-gadget-icon {
+        display: none !important;
+    }
+    body {
+        top: 0px !important;
+    }
+    .goog-tooltip {
+        display: none !important;
+    }
+    .goog-tooltip:hover {
+        display: none !important;
+    }
+    .goog-text-highlight {
+        background-color: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+</style>
 <body>
 
 
