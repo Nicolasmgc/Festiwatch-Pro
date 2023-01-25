@@ -104,7 +104,7 @@ if(isset($_SESSION['role_id'])){
       </tbody>
         </table>
 </div>
-        <footer>
+<footer>
            <div class="contact">
            <br>
             Nous contacter <br>
@@ -125,7 +125,6 @@ if(isset($_SESSION['role_id'])){
             <a href="../Connexionuser/login1.php">Connexion</a>
             </div> </div>
              </footer>
-
         <?php
     }else{
 ?>
