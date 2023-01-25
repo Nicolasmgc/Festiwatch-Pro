@@ -130,7 +130,6 @@
             </div>
             <div class="lien">
             <a href="../CGU/cgu.php">Conditions générales d'utilisation</a>
-            <a href="../FAQ/faq.php"> FAQ</a>
             <a href="../Connexionuser/login1.php">Connexion</a>
             </div></div>
              </footer>
