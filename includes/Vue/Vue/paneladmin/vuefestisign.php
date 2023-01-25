@@ -35,6 +35,10 @@ if(isset($_SESSION['role_id'])){
 
 <h1 style="margin: 50px; auto; padding: 0px; font-family: Elephant;">FESTIVALS EN ATTENTE</h1>
 
+<div id="actionmenu">
+  <a href="accueiladmin.php" class="action">Menu</a>
+</div>
+
 <div style="overflow-x: auto; margin: 40px">
 <table class= "fond" style ="overflow-x:scroll; margin-top: 50px" >
 <thead>

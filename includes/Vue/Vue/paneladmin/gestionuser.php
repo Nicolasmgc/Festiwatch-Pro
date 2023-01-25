@@ -35,9 +35,15 @@ if(isset($_SESSION['role_id'])){
             <meta charset="utf-8">
             <link rel="stylesheet" href="gestionuser.css">
             <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap" rel="stylesheet">
-            <h1>Gestion des utilisateur</h1>
             <body>
-            <a href="vuehistoryuser.php" class="ref">Consulter l'historique des utilisateurs</a>
+
+<h1 style="margin: 50px; auto; padding: 0px; font-family: Elephant;">Gestion des utilisateur</h1>
+
+<div id="actionmenu">
+  <a href="variablehtml.php" class="action">Ajouter</a>
+  <a href="accueiladmin.php" class="action">Menu</a>
+  <a href="vuehistoryuser.php" class="action">Historique</a>
+</div>
 
 <div style="overflow-x: scroll;">
 <table class= "fond" style ="overflow-x:scroll; margin-top: 50px" >

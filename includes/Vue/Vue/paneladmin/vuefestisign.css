@@ -9,6 +9,19 @@ body {
     overflow-x: hidden;
 }
 
+
+#actionmenu {
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(225deg,#f53b1e 0%,#911ef6 25%,#ee1616 100%);
+    width: 50%;
+    margin: 60px auto 10px auto;
+    justify-content: space-evenly;
+    border-radius: 20px;
+    border: solid 2px black;
+    padding: 5px;
+}
+
 table {
     border-radius: 20px;
     margin: auto;
