@@ -329,3 +329,59 @@ select {
 .line7{
     display:flex;
 }
+footer{
+    background-color: #111;
+    position: absolute;
+    width: 100%;
+    top: 110%;
+    display: flex;
+
+}
+.contact{
+    font-size:15px;
+    margin-left: 2%;
+    font-family: 'Montserrat', sans-serif;
+    flex-direction: column;
+    color: white;
+    margin-bottom: 2%;
+}
+.reseaux{
+    display:block;
+    margin-left:30%;
+    margin-top: 2%;
+   
+}
+.foot{
+    display: flex;
+    display: inline-block;
+    width: 50%;
+}
+.lien{
+    font-family: 'Montserrat', sans-serif;
+    color: aliceblue;   
+   margin-top: 13%;
+   text-align: center;
+}
+
+a{
+    color: white;
+    padding: 5px;
+}
+
+    /*justify-content: space-between;*/
+
+.insta{
+    height: 70px ;
+    width: 70px;
+    margin-left:3%;
+}
+.youtube{
+    height: 65px ;
+    width: 80px;
+    margin-left:9%;
+}
+.twit{
+    height: 80px ;
+    width: 80px;
+    margin-left:15%;
+}

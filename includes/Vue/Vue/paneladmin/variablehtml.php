@@ -122,6 +122,27 @@ if(isset($_SESSION['role_id'])){
     <?php include '../../../Modele/signingestio/signingestio.php'; ?>
 
 </body>
+<footer>
+           <div class="contact">
+           <br>
+            Nous contacter <br>
+            Mail :<br> prodetech@gmail.com <br>
+            Numéro :<br> 068975412 <br>
+            Adresse :<br>10 Rue de Vanves, 92130 Issy-les-Moulineaux
+            </div>
+         
+            <div class="foot">
+            <div class="reseaux">
+            <a href="https://www.instagram.com/pro_detech"> <img src="../../../PNG/insta.png" alt="icone de insta" class="insta" ></a>
+            <img src="../../../PNG/youtube.png" alt="icone de insta" class="youtube" >
+            <img src="../../../PNG/twitter.png" alt="icone de insta" class="twit">
+            </div>
+            <div class="lien">
+            <a href="../CGU/cgu.php">Conditions générales d'utilisation</a>
+            <a href="../FAQ/faq.php"> FAQ</a>
+            <a href="../Connexionuser/login1.php">Connexion</a>
+            </div> </div>
+             </footer>
 </html>
 
 <?php
