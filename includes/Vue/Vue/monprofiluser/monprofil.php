@@ -151,7 +151,12 @@ if(isset($_POST['formupdate1'])){
 }
 if(isset($_POST['formupdate2'])){
     extract($_POST);
-
+    $z9 = $db->prepare("SELECT email FROM user WHERE email = :email");
+    $z9 ->execute([
+        'email' => $pemail
+    ]);
+    $result = $z9->rowCount();
+    if($result==0){
     if(!empty($pemail)){
         $z = $db->prepare("UPDATE user SET email = :email WHERE id = :id");
         $z ->execute([
@@ -161,10 +166,18 @@ if(isset($_POST['formupdate2'])){
         ]);
         echo "Changement faits";
     }
+}else{
+    echo "Cet email existe déjà";
+}
 }
 if(isset($_POST['formupdate3'])){
     extract($_POST);
-    
+    $z8 = $db->prepare("SELECT numtelephone FROM user WHERE numtelephone = :numtelephone");
+    $z8 ->execute([
+        'numtelephone' => $pnumtelephone
+    ]);
+    $result2 = $z8->rowCount();
+    if($result==0){
         if(!empty($pnumtelephone)){
         $z = $db->prepare("UPDATE user SET numtelephone = :numtelephone WHERE id = :id");
         $z ->execute([
@@ -174,7 +187,10 @@ if(isset($_POST['formupdate3'])){
         ]);
         echo "Changement faits";
     }
-  }   ?>
+  }else{
+    echo "Ce numéro de téléphone existe déjà";
+  }
+   }   ?>
 <br/><br/><br/>
 <div class="btn">
     <button ><a href="../../../Controller/deconnexion.php"  style="text-decoration:none">Déconnexion</a></button>
