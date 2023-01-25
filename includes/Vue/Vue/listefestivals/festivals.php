@@ -180,7 +180,8 @@ if(isset($resultf['Fest_nom']))
          
             <div class="foot">
             <div class="reseaux">
-            <a href="https://www.instagram.com/pro_detech"> <img src="../../../PNG/insta.png" alt="icone de insta" class="insta"></a>
+            <a href="https://www.instagram.com/pro_detech"> 
+              <img src="../../../PNG/insta.png" alt="icone de insta" class="insta"></a>
             <img src="../../../PNG/youtube.png" alt="icone de insta" height="60">
             <img src="../../../PNG/twitter.png" alt="icone de insta" height="65">
             </div>

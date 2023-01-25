@@ -55,9 +55,6 @@ nav ul{
     width: 150px;
 }
     
-    
-
-
 
 nav ul li{
     float:left;
@@ -307,4 +304,8 @@ footer{
  .lien a{
     color: white;
     padding: 7px;
+ }
+ .insta{
+    height: 60px;
+    width: 60px;
  }
