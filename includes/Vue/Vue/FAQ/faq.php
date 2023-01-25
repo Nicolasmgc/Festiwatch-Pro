@@ -9,6 +9,25 @@
     <meta charset="utf-8">
     <link rel="icon" href="../../../PNG/icon.jpeg">
     
+    <style>
+            .goog-te-banner-frame.skiptranslate, .goog-te-gadget-icon {
+                display: none !important;
+            }
+            body {
+                top: 0px !important;
+            }
+            .goog-tooltip {
+                display: none !important;
+            }
+            .goog-tooltip:hover {
+                display: none !important;
+            }
+            .goog-text-highlight {
+                background-color: transparent !important;
+                border: none !important;
+                box-shadow: none !important;
+            }
+        </style>
     <link rel="stylesheet" type="text/css" href="faq2.css">
 </head>
 <body>

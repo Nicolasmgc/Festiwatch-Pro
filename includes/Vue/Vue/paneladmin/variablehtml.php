@@ -6,6 +6,26 @@
 <html>
 <meta charset="utf-8">
 <link rel="stylesheet" href="stylesignin.css">
+
+<style>
+    .goog-te-banner-frame.skiptranslate, .goog-te-gadget-icon {
+        display: none !important;
+    }
+    body {
+        top: 0px !important;
+    }
+    .goog-tooltip {
+        display: none !important;
+    }
+    .goog-tooltip:hover {
+        display: none !important;
+    }
+    .goog-text-highlight {
+        background-color: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+</style>
 <body>
 
 
@@ -15,6 +35,62 @@
 <?php include '../../../Controller/database.php';
 global $db;
 ?>
+
+<nav>
+    <ul>
+        <div style="right: 0px; width: 100%">
+        <li style="left: -150px"><img src="../../../PNG/Logo alternatif.png" class="logo"></li> 
+        <li style="margin-left: 250px"><a href="../Pagedaccueil/index.php" > Accueil </a></li>
+        <li><a href="../FAQ/faq.php"> FAQ </a></li>
+        <li><a href="../Apropos/A_propos_de_nous.php"> A propos de nous </a></li>
+        </div>
+        
+        
+        <li class="deroulant"><?php if(isset($_SESSION['email'])){
+                    ?>
+                
+                <a><?php echo $_SESSION['email'];?></a>
+            <ul class="sous">
+                <li><a href="../monprofiluser/monprofil.php"> Voir mon profil </a></li>
+                <li><a href="#"> Liste des festivales </a></li>
+                <li><a href="../../../Controller/deconnexion.php"> Se déconnecter </a></li>
+                <?php if($_SESSION['role_id'] == '2'){
+                ?>
+                
+                    <li><a href="#"> Pannel Admin </a></li>
+                    <?php } ?>
+                
+                </ul>
+                                        
+                <?php
+        }
+                elseif(isset($_SESSION['Fest_id'])){
+                    ?>
+
+
+                <a><?php echo $_SESSION['Fest_nom'];?></a>
+                <ul class="sous">
+                    <li><a href="../mesinfosgestio/mesinfos.php"> Voir mes infos </a></li> <?php // Truc très ghetto ça marche moyennement ce href faire gaffe pendant la démo ?>
+                    <li><a href="../../../Controller/deconnexion.php"> Se déconnecter </a></li>
+                </ul>  
+
+
+                    <?php
+                }
+                else{ ?>
+                <li><a href="../Connexionuser/login1.php">Se connecter </a></li>
+                
+                <?php } ?>
+            
+            
+            
+        </li>
+        
+        
+        
+        
+    </ul>
+</nav>
 
 <?php
 if(isset($_SESSION['role_id'])){

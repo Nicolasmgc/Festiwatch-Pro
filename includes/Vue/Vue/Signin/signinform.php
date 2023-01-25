@@ -64,7 +64,7 @@
             <input type="password" name="password" id="password" placeholder="Votre Mot de passe" required><br><br>
             <input type="password" name="cpassword" id="cpassword" placeholder="Confirmez votre mot de passe" required><br><br>
             
-            <label>Handicap :</label>
+            <label>Êtes-vous à mobilité réduite ?</label></br>
                 <input type="radio" name="handicap" id="handicap" for="handicap" value=1 size="10"> Oui</input>
                 <input type="radio" name="handicap" id="handicap" for="handicap" value=0 checked> Non</input><br><br>
                     

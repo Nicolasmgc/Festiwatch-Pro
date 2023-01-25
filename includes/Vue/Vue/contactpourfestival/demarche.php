@@ -10,6 +10,25 @@
 <head>
     <title>Démarche pour un nouveau festival</title>
 
+    <style>
+            .goog-te-banner-frame.skiptranslate, .goog-te-gadget-icon {
+                display: none !important;
+            }
+            body {
+                top: 0px !important;
+            }
+            .goog-tooltip {
+                display: none !important;
+            }
+            .goog-tooltip:hover {
+                display: none !important;
+            }
+            .goog-text-highlight {
+                background-color: transparent !important;
+                border: none !important;
+                box-shadow: none !important;
+            }
+        </style>
 </head>
 <body>
 <nav>

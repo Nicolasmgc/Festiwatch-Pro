@@ -24,6 +24,26 @@
 
 <link rel="stylesheet" typer="text/css" href="gestiongestio.css">
 
+
+<style>
+            .goog-te-banner-frame.skiptranslate, .goog-te-gadget-icon {
+                display: none !important;
+            }
+            body {
+                top: 0px !important;
+            }
+            .goog-tooltip {
+                display: none !important;
+            }
+            .goog-tooltip:hover {
+                display: none !important;
+            }
+            .goog-text-highlight {
+                background-color: transparent !important;
+                border: none !important;
+                box-shadow: none !important;
+            }
+        </style>
 <h1 style="margin: 50px; auto; padding: 0px; font-family: Elephant;">COMPTES FESTIVALS ENREGISTRÉS</h1>
 
 <div id="actionmenu">

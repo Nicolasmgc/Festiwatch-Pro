@@ -11,6 +11,26 @@ if(isset($_SESSION['role_id'])){
     <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="cssaccueiladmin.css">
+
+    <style>
+        .goog-te-banner-frame.skiptranslate, .goog-te-gadget-icon {
+            display: none !important;
+        }
+        body {
+            top: 0px !important;
+        }
+        .goog-tooltip {
+            display: none !important;
+        }
+        .goog-tooltip:hover {
+            display: none !important;
+        }
+        .goog-text-highlight {
+            background-color: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+    </style>    
     </head>
 <body>
 <nav>
