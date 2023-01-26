@@ -10,7 +10,7 @@ body{
     background: linear-gradient(rgb(186, 4, 214), rgb(255, 83, 192), rgb(255, 0, 43));
     background-clip: border-box;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent
+    -webkit-text-fill-color: transparent;
 }
 
 h1{
