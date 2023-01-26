@@ -45,8 +45,8 @@
                                 'role_id' => 1
                                 
                             ]);
-                        echo "Le compte a été créé";
-                        // header location à mettre ici ?
+                        $succes = "Le compte a été créé";
+                        header("Location: ../../Vue/Signin/signinform.php?succes=".$succes);
 
                         }else {
                             echo "Ce numéro de téléphone est déjà utilisé";

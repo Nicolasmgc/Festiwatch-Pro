@@ -49,7 +49,7 @@ if(isset($_SESSION['role_id'])){
                       <a><?php echo $_SESSION['email'];?></a>
                     <ul class="sous">
                         <li><a href="../monprofiluser/monprofil.php"> Voir mon profil </a></li>
-                        <li><a href="#"> Liste des festivals </a></li>
+                        <li><a href="../listefestivals/festivals.php"> Liste des festivals </a></li>
                         <li><a href="../../../Controller/deconnexion.php"> Se déconnecter </a></li>
                         <?php if($_SESSION['role_id'] == '2'){
                         ?>

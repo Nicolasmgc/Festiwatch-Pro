@@ -52,6 +52,11 @@
     <div class="container">
         <form method="post" id="formdiv" style="margin: 50px auto;">
             <p>Sign in</p>
+            <?php
+        if(isset($_GET['succes'])){
+            echo $_GET['succes'];
+        }
+        ?></br>
             <input type="texte" name="nom" id="nom" placeholder="Votre Nom" required><br><br>
             <input type="texte" name="prenom" id="prenom" placeholder="Votre Prenom" required><br><br>
             <input type="email" name="semail" id="semail" paceholder="Votre Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required><br><br>

@@ -19,7 +19,7 @@
             );
             $resultf = $c1->rowCount();
             if($resultf == 0){
-                $q1 = $db->prepare("INSERT INTO festival(Fest_nom, Fest_email, Fest_numtelephone, Fest_datedebut,Fest_datefin,Fest_prix,Fest_programmation,Fest_adresse,Fest_codepostal,Fest_pays,Fest_access,Fest_lien,Fest_password) VALUES(:Fest_nom, :Fest_email, :Fest_numtelephone, :Fest_datedebut,:Fest_datefin,:Fest_prix,:Fest_programmation,:Fest_adresse,:Fest_codepostal,:Fest_pays,:Fest_access,:Fest_lien,:Fest_password)");
+                $q1 = $db->prepare("INSERT INTO festival(Fest_nom, Fest_email, Fest_numtelephone, Fest_datedebut,Fest_datefin,Fest_prix,Fest_programmation,Fest_adresse,Fest_codepostal,Fest_pays,Fest_access,Fest_lien,Fest_password,Fest_acceshandicap) VALUES(:Fest_nom, :Fest_email, :Fest_numtelephone, :Fest_datedebut,:Fest_datefin,:Fest_prix,:Fest_programmation,:Fest_adresse,:Fest_codepostal,:Fest_pays,:Fest_access,:Fest_lien,:Fest_password,:Fest_handicap)");
                 $q1->execute([
                     'Fest_nom' => $Fest_nom,
                     'Fest_email' => $Fest_email,
@@ -33,10 +33,13 @@
                     'Fest_pays' => $Fest_pays,
                     'Fest_access' => $Fest_access,
                     'Fest_lien' => $Fest_lien,
-                    'Fest_password' => $hashpassf
+                    'Fest_password' => $hashpassf,
+                    'Fest_handicap' => $Fest_handicap
 
                 ]);
-                echo "Le festival a été créé";
+                $succes = "Le festival a été créé";
+                header("Location: ../../Vue/paneladmin/variablehtml.php?succes=".$succes);
+                // echo "Le festival a été créé";
             }else{
                 echo"Ce nom est déjà utilisé";
             }
