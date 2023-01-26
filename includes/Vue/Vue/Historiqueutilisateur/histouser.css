@@ -2,11 +2,11 @@
 body{
     font-family: 'Montserrat', sans-serif;
    background-image:url(../../../PNG/Solidays-2019-2.jpg);
-    background-position:40% 40%;
-    position:fixed;
-    left:30%;
-    top:35%;
-    font-size: 35px ;
+    background-position:40% 50%;
+    margin-top: 18%;
+    margin-left: 30%;
+    font-size: 30px;
+
 }
 
 h1{
@@ -16,6 +16,7 @@ h1{
     font-size: 60px ;
     color: black;
 }
+
 footer{
     background-color:black ;
     width: 100%;
