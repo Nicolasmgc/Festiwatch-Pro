@@ -296,7 +296,6 @@ if(isset($_SESSION['Fest_id'])){
                             <div style="display: flex; flex-direction: row; justify-content: space-evenly">
                                 <input type="int" name="searchbar" id="searchbar" placeholder="Recherchez le festival que vous souhaitez" required><br/>
                                 <input type="submit" name="montrerecherche" id="montrerecherche" value="OK">
-                                <a href=""><img id="searchIcon" src="../../../PNG/searchIcon.png" alt="search"></a>
                             </div>
                         </form>
             <?php include '../../../Modele/recherchemontre/recherchemontre.php' ?>
