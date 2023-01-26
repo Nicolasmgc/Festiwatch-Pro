@@ -79,7 +79,7 @@
     formulaire.addEventListener("submit", function(event) {
         event.preventDefault();
         if (formulaire.checkValidity()) {
-        msg.innerHTML = "Compte créé";
+        msg.innerHTML = "Personnel ajouté";
         }
     }); 
 </script>
