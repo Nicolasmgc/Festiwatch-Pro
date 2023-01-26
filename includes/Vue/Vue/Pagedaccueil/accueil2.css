@@ -386,18 +386,20 @@ footer{
     border-right: 10px solid transparent;
     transition: 1s;
     width: 60px;
-    padding: 2px;
+    
+    padding-left:0px;
+        
     height: 50px;
 }
 
 .infobulle::before{
-    content:'';
+    
     position: relative;
     border-bottom: 8px solid orange;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    margin-top:-16px;
-    margin-left:10px
+    padding-left: 30px;
+    
 
 
 }
@@ -439,18 +441,20 @@ footer{
     border-right: 10px solid transparent;
     transition: 1s;
     width: 60px;
-    padding: 2px;
+    
+    padding-left:0px;
+        
     height: 50px;
 }
 
 .infobulle2::before{
-    content:'';
+
     position: relative;
     border-bottom: 8px solid orange;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    margin-top:-16px;
-    margin-left:10px
+    padding-left: 30px;
+    
 
 
 }
@@ -492,19 +496,19 @@ footer{
     border-right: 10px solid transparent;
     transition: 1s;
     width: 60px;
-    padding: 2px;
+    
+    padding-left:0px;
+        
     height: 50px;
 }
 
 .infobulle3::before{
-    content:'';
+    
     position: relative;
     border-bottom: 8px solid orange;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    margin-top:-16px;
-    margin-left:10px
-
+    
 
 }
 

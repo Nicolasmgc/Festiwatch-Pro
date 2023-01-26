@@ -123,9 +123,9 @@
         <secion>
             <div class="Bloc-description2">
                 <button class="button2"><h1>Une nouvelle manière de s'amuser</h1></button><br>
-                <p> En plus de vous transmettre des informations<br> en continuité, FestiWatch permet
+                <p> En plus de vous transmettre des informations<br> en continu, FestiWatch permet
                     de vous avertir <br>en cas de danger potentiel afin que vous <br>et vos amis puissiez
-                profiter de chaque instants <br>en toute sureté. </p>
+                profiter de chaque instant <br>en toute sûreté. </p>
 
             </div>
         </section>
