@@ -37,7 +37,9 @@
                     'Fest_handicap' => $Fest_handicap
 
                 ]);
-                echo "Le festival a été créé";
+                $succes = "Le festival a été créé";
+                header("Location: ../../Vue/paneladmin/variablehtml.php?succes=".$succes);
+                // echo "Le festival a été créé";
             }else{
                 echo"Ce nom est déjà utilisé";
             }

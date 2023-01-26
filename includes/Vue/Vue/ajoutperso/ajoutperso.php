@@ -38,6 +38,11 @@
 
     <div id="maindiv">
         <form method="post" id="formdiv">
+        <?php
+        if(isset($_GET['succes'])){
+            echo $_GET['succes'];
+        }
+        ?>
             <input type="texte" name="Personnel_nom" id="Personnel_nom" placeholder="Nom du personnel" required ><br><br>
             <input type="texte" name="Personnel_prenom" id="Personnel_prenom" placeholder="Prenom du personnel" required><br><br>
             <input type="texte" name="Personnel_fonction" id="Personnel_fonction" placeholder="Fonction du personnel" required><br><br>
@@ -76,7 +81,7 @@
     ?>
     <?php include '../../../Modele/ajoutpersonnel/ajoutpersonnel.php'; ?>
 
-<script>
+<!-- <script>
     var formulaire = document.getElementById("formdiv");
     var msg = document.getElementById("msg");
 
@@ -86,7 +91,7 @@
         msg.innerHTML = "Personnel ajouté";
         }
     }); 
-</script>
+</script> -->
 
 <?php
 }else{

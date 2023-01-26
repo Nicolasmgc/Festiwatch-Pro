@@ -122,8 +122,8 @@ if(isset($_SESSION['Fest_id'])){
             
         <form method="POST">
             <div style="width: 50%; margin: auto 100px auto 200px; display: inline-flex; justify-content: space-evenly;">
-                <input type="number" name="alerteid" id="alerteid" placeholder="Enter the alert's id" required>
-                <input type="number" name="gestioid" id="gestioid" placeholder="Enter the personel's id">
+                <input type="number" name="alerteid" id="alerteid" placeholder="Entrer l'id de l'alerte" required>
+                <input type="number" name="gestioid" id="gestioid" placeholder="Entrer l'id du personnel">
                 <input type="submit" name="Modifier" value="Modifier" class="actionBtns" style="background-color: #55F">
                 <input type="submit" name="Terminer" value="Terminer" class="actionBtns" style="background-color: #F58">
             </div>
@@ -193,7 +193,7 @@ if(isset($_SESSION['Fest_id'])){
             <a href="../CGU/cgu.php">Conditions général d'utilisation</a>
             <a href="../FAQ/faq.php"> FAQ</a>
             <a href="../Connexionuser/login1.php">Connexion</a>
-            <a href="../../../Modele/listealerte/filtrealerte.php">lalalala</a>
+            <!-- <a href="../../../Modele/listealerte/filtrealerte.php">lalalala</a> -->
             
             </div> </div>
              </footer>

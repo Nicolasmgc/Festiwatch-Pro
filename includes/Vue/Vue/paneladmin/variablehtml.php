@@ -54,6 +54,11 @@ if(isset($_SESSION['role_id'])){
 <div class="container">
     <form method="post" id="formdiv" style="margin: 30px auto 50px auto;">
         <p>Sign in</p>
+        <?php
+        if(isset($_GET['succes'])){
+            echo $_GET['succes'];
+        }
+        ?>
         <div class="line1"><input type="varchar" name="Fest_nom" id="Fest_nom" placeholder="Votre Nom" required><br/><br>
             <input type="date" name="Fest_datedebut" id="Fest_datedebut" placeholder="Début de votre festival" required><br/><br></div><br>
         <div class="line2"><input type="date" name="Fest_datefin" id="Fest_datefin" placeholder="Fin de votre festival" required><br/><br>
@@ -75,7 +80,8 @@ if(isset($_SESSION['role_id'])){
     </div>
 
         
-        <input type="submit" name="formsendgestio" id="formsendgestio" value="Ok">
+        <input type="submit" name="formsendgestio" id="formsendgestio" value="Ajouter le festival">
+
         <div id="msg" style="font-size: 16px; color: #730800; width: 50%; margin: 10px auto"></div>
     </form>
 </div>

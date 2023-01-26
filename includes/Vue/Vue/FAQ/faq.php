@@ -112,17 +112,17 @@
 
     <div class="FAQTitle"><h1>FAQ</h1></div>
 
-        <div class="FAQCards">
-        <?php while($row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
+        <!-- <div class="FAQCards">
+        <?php // while($row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
         <div class="FAQCard">
-        <div class="FAQQuestion"><div><?php echo htmlspecialchars($row['faq_question']); ?></div></div>
-            <div class="FAQAnswer"><div><?php echo htmlspecialchars($row['faq_reponse']); ?></div></div>
+        <div class="FAQQuestion"><div><?php // echo htmlspecialchars($row['faq_question']); ?></div></div>
+            <div class="FAQAnswer"><div><?php // echo htmlspecialchars($row['faq_reponse']); ?></div></div>
           </div>
-          <?php endwhile; ?>
-    </div>
+          <?php // endwhile; ?>
+    </div> -->
 
 
-    <!-- <div class="FAQCards">
+    <div class="FAQCards">
         <div class="FAQCard">
             <div class="FAQQuestion"><div>Comment je sais quel identifiant est associé à ma FestiWatch ?</div></div>
             <div class="FAQAnswer"><div>L'identifiant sera déjà disponible sur la montre qui vous sera donnée à votre entrée au festival.</div></div>
@@ -163,7 +163,7 @@
             <div class="FAQQuestion"><div>Les ondes qui permettent aux FestiWatches d'envoyer nos données au site sont-elles dangereuses ?</div></div>
             <div class="FAQAnswer"><div>Ne vous inquiétez pas, les ondes ne sont pas plus nocives que celles émises par votre téléphone puisqu'elles émettent des ondes Bluetooth.</div></div>
         </div>
-    </div> -->
+    </div>
 </body>
 <footer>
            <div class="contact">
