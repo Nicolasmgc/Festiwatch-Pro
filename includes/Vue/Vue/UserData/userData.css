@@ -299,6 +299,10 @@ label {
     font-weight: 900;
 }
 
+#heartRate, #soundIntensity, #gazExposition, #alcoholConsumption {
+    margin: 40px auto;
+}
+
 #upperIndicators {
     margin-left: 0px;
     margin-right: 40%;
@@ -315,11 +319,12 @@ meter {
     width: 80px;
     color: white;
 }
+
 footer{
     background-color: #111;
     position: absolute;
     width: 100%;
-    top: 155%;
+    top: 165%;
     display: flex;
 
 }

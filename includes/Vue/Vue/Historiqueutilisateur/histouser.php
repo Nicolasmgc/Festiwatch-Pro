@@ -65,7 +65,7 @@ session_start()
 
 
 <body> 
-<button class="button" ><a href="../Pagedaccueil/monprofil.php"> Mon profil</a></button>
+<button class="button" ><a href="../monprofiluser/monprofil.php"> Mon profil</a></button>
         <?php while($row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
         <tr class="test"> 
           <td><?php echo htmlspecialchars($row['reservation_id']); ?></td>
