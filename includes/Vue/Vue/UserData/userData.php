@@ -97,12 +97,12 @@ session_start();
                     <h1>Dashboard</h1>
                     <div id="upperIndicators">
                         <div>
-                            <label for="heartRate">Fréquence Cardiaque</label>
+                            <label for="heartRate" style="font-size: 28px">Fréquence Cardiaque</label>
                             <meter id="heartRate" min=0 max=100 low="50" high="80" value=81 optimum="0"></meter>
                             <div style="font-size: 32px; margin-bottom: 20px; margin-top: 40px; color: white"><?php echo $_GET['card_frequ']; ?> BPM</div>
                         </div>
                         <div>
-                            <label for="soundIntensity">Amplitude Sonore</label>
+                            <label for="soundIntensity" style="font-size: 28px">Amplitude Sonore</label>
                             <meter id="soundIntensity" min=0 max=100 low="50" high="80" value=51 optimum="0"></meter>
                             <div style="font-size: 32px; margin-bottom: 20px; margin-top: 40px; color: white"><?php echo $_GET['son_db']; ?> dB</div>
                         </div>
@@ -110,12 +110,12 @@ session_start();
                     
                     <div id="lowerIndicators">
                         <div>
-                            <label for="gazExposition">Gaz</label>
+                            <label for="gazExposition" style="font-size: 28px">Gaz</label>
                             <meter id="gazExposition" min=0 max=100 low="33" high="66" value=20 optimum="0"></meter>
                             <div style="font-size: 32px; margin-bottom: 20px; margin-top: 40px; color: white"><?php echo $_GET['gaz_detec']; ?>%</div>
                         </div>   
                         <div>
-                            <label for="alcoholConsumption">Consommation d'Alcool</label>
+                            <label for="alcoholConsumption" style="font-size: 28px">Consommation d'Alcool</label>
                             <meter id="alcoholConsumption" min=0 max=100 low="33" high="66" value=80 optimum="0"></meter>
                             <div style="font-size: 32px; margin-bottom: 20px; margin-top: 40px; color: white"><?php echo $_GET['compteur_alcool']; ?> verres</div>
                         </div> 
