@@ -33,6 +33,7 @@ session_start()
     $db = new PDO("mysql:host=" . $host . ";dbname=" . $dbname, $username, $password);
     ?>
 
+
 <!DOCTYPE html>
 <html>
 <h1>Historique de vos festivals</h1>
@@ -64,6 +65,7 @@ session_start()
 
 
 <body> 
+<button class="button" ><a href="../Pagedaccueil/monprofil.php"> Mon profil</a></button>
         <?php while($row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
         <tr class="test"> 
           <td><?php echo htmlspecialchars($row['reservation_id']); ?></td>

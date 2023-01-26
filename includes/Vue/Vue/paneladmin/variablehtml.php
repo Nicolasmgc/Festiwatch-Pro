@@ -2,6 +2,11 @@
 
 ?>
 
+<?php
+if(isset($_SESSION['role_id'])){
+    if($_SESSION['role_id'] == 2){
+?>
+
 <!DOCTYPE html>
 <html>
 <meta charset="utf-8">
@@ -49,6 +54,11 @@ if(isset($_SESSION['role_id'])){
 <div class="container">
     <form method="post" id="formdiv" style="margin: 30px auto 50px auto;">
         <p>Sign in</p>
+        <?php
+        if(isset($_GET['succes'])){
+            echo $_GET['succes'];
+        }
+        ?>
         <div class="line1"><input type="varchar" name="Fest_nom" id="Fest_nom" placeholder="Votre Nom" required><br/><br>
             <input type="date" name="Fest_datedebut" id="Fest_datedebut" placeholder="Début de votre festival" required><br/><br></div><br>
         <div class="line2"><input type="date" name="Fest_datefin" id="Fest_datefin" placeholder="Fin de votre festival" required><br/><br>
@@ -63,9 +73,15 @@ if(isset($_SESSION['role_id'])){
             <input type="int" name="Fest_numtelephone" id="Fest_numtelephone" placeholder="Numéro de téléphone du festival" required><br/><br></div><br>
         <div class="line7"><input type="password" name="fest_password" id="fest_password" placeholder="Votre mot de passe" required><br/><br>
             <input type="password" name="fest_passwordc" id="fest_passwordc" placeholder="Vérifiez votre mdp" required><br/><br></div><br>
+            <label>Festival compatible aux personnes </br> à mobilité réduite ?</label></br>
+        <div class="line8">
+                <input type="radio" name="Fest_handicap" id="Fest_handicap" for="handicap" value=1 size="1"> Oui</input>
+                <input type="radio" name="Fest_handicap" id="Fest_handicap" for="handicap" value=0 checked> Non</input><br><br>
+    </div>
 
         
-        <input type="submit" name="formsendgestio" id="formsendgestio" value="Ok">
+        <input type="submit" name="formsendgestio" id="formsendgestio" value="Ajouter le festival">
+
         <div id="msg" style="font-size: 16px; color: #730800; width: 50%; margin: 10px auto"></div>
     </form>
 </div>
@@ -153,7 +169,7 @@ if(isset($_SESSION['role_id'])){
     }
     ?>
 
-<script>
+<!-- <script>
 var formulaire = document.getElementById("formdiv");
 var msg = document.getElementById("msg");
 
@@ -163,4 +179,34 @@ formulaire.addEventListener("submit", function(event) {
       msg.innerHTML = "Compte créé";
     }
 }); 
-</script>
+</script> -->
+
+<?php
+    }}else{
+    ?>
+            <!DOCTYPE html>
+        <html>
+            <meta charset="utf-8">
+            <link rel="stylesheet" href="../../../Controller/errors/erreur.css">
+            <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap" rel="stylesheet">
+        <head>
+            <title>Erreur</title>
+        </head>
+        <body>
+        <div class="fond">
+            <div class="round">
+                Erreur vous n'êtes pas administrateur !</br>
+                Veuillez retouner à la page d'accueil !</br>
+                <button ><a href="./deconnexion.php"  style="text-decoration:none">Page accueil</a></button>
+                </div>
+        </div>
+        
+        
+        <img src="../../../PNG/errorimage.png" alt="image d'erreur">
+        
+        </body>
+        
+        </html>
+    <?php
+    }
+    ?>

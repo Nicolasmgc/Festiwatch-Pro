@@ -2,7 +2,7 @@
 body{
     font-family: 'Montserrat', sans-serif;
    background-image:url(../../../PNG/Solidays-2019-2.jpg);
-    background-position:40% 50%;
+    background-position:40% 70%;
     margin-top: 18%;
     margin-left: 30%;
     font-size: 30px;
@@ -61,4 +61,22 @@ footer{
     color: white;
     padding: 7px;
     font-size: 20px;
+ }
+ .button{
+    
+    position:fixed;
+    left: 5%;
+    top:5%;
+    border: 0;
+    line-height: 2.5;
+    padding: 0 30px;
+    text-align: center;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 10px;
+    border: solid 5px black;
+ }
+ .button a{
+    color: black;
+    text-decoration: none;
  }

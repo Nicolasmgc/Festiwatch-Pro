@@ -50,10 +50,14 @@ session_start();
                         
                       <a><?php echo $_SESSION['email'];?></a>
                     <ul class="sous">
-                        <li><a href="../monprofiluser/monprofil.php"> Voir mon profil </a></li>
-                        <li><a href="#"> Liste des festivales </a></li>
+                    <li><a href="../monprofiluser/monprofil.php"> Voir mon profil </a></li>
+                        <li><a href="../listefestivals/festivals.php"> Liste des festivals </a></li>
                         <li><a href="../../../Controller/deconnexion.php"> Se déconnecter </a></li>
+                        <?php if($_SESSION['role_id'] == '2'){
+                        ?>
                         
+                            <li><a href="../paneladmin/accueiladmin.php"> Panel Admin </a></li>
+                            <?php } ?>
                         </ul>
                                                
                         <?php
@@ -98,7 +102,7 @@ if(isset($_SESSION['Fest_id'])){
     <div id="searchBox">
                         <form method="POST" style="width: 100%">
                             <div style="height: 50px; display: flex; flex-direction: row; justify-content: space-evenly">
-                                <input type="int" name="searchbar" id="searchbar" placeholder="Recherchez le festival que vous souhaitez" required><br/>
+                                <input type="int" name="searchbar" id="searchbar" placeholder="Recherchez le code de la montre que vous souhaitez" required><br/>
                                 <input type="submit" name="montrerecherche" id="montrerecherche">
                             </div>
                         </form>
@@ -193,7 +197,7 @@ if(isset($_SESSION['Fest_id'])){
     <div id="searchBox">
                         <form method="POST" style="width: 100%">
                             <div style="height: 50px; display: flex; flex-direction: row; justify-content: space-evenly">
-                                <input type="int" name="searchbar" id="searchbar" placeholder="Recherchez le festival que vous souhaitez" required><br/>
+                                <input type="int" name="searchbar" id="searchbar" placeholder="Recherchez le code de la montre que vous souhaitez" required><br/>
                                 <input type="submit" name="montrerecherche" id="montrerecherche">
                             </div>
                         </form>
@@ -294,7 +298,7 @@ if(isset($_SESSION['Fest_id'])){
     <div id="searchBox">
                         <form method="POST" style="width: 100%">
                             <div style="display: flex; flex-direction: row; justify-content: space-evenly">
-                                <input type="int" name="searchbar" id="searchbar" placeholder="Recherchez le festival que vous souhaitez" required><br/>
+                                <input type="int" name="searchbar" id="searchbar" placeholder="Recherchez le code de la montre que vous souhaitez" required><br/>
                                 <input type="submit" name="montrerecherche" id="montrerecherche" value="OK">
                             </div>
                         </form>

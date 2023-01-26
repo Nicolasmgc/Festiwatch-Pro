@@ -68,12 +68,13 @@
                         
                       <a><?php echo $_SESSION['email'];?></a>
                     <ul class="sous">
-                        <li><a href="../monprofiluser/monprofil.php"> Voir mon profil </a></li>
+                    <li><a href="../monprofiluser/monprofil.php"> Voir mon profil </a></li>
+
                         <li><a href="../../../Controller/deconnexion.php"> Se déconnecter </a></li>
                         <?php if($_SESSION['role_id'] == '2'){
                         ?>
                         
-                            <li><a href="#"> Pannel Admin </a></li>
+                            <li><a href="../paneladmin/accueiladmin.php"> Panel Admin </a></li>
                             <?php } ?>
                         
                         </ul>
@@ -159,7 +160,11 @@
           <td><?php echo htmlspecialchars($row['Fest_lien']); ?></td>
           <td><?php echo htmlspecialchars($row['Fest_numtelephone']); ?></td>
           <td><?php echo htmlspecialchars($row['Fest_email']); ?></td>
-          <td><?php echo htmlspecialchars($row['Fest_acceshandicap']); ?></td>
+          <td><?php if($row['Fest_acceshandicap']==0){
+            echo "Non";
+          }else{
+            echo "Oui";
+          }; ?></td>
         </tr>
         <?php endwhile; ?>
       </tbody>

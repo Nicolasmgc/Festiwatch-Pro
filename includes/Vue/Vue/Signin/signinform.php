@@ -52,12 +52,18 @@
     <div class="container">
         <form method="post" id="formdiv" style="margin: 50px auto;">
             <p>Sign in</p>
+            <?php
+        if(isset($_GET['succes'])){
+            echo $_GET['succes'];
+        }
+        ?></br>
             <input type="texte" name="nom" id="nom" placeholder="Votre Nom" required><br><br>
             <input type="texte" name="prenom" id="prenom" placeholder="Votre Prenom" required><br><br>
-            <input type="email" name="semail" id="semail" paceholder="Votre Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required><br><br>
+            <input type="email" name="semail" id="semail" paceholder="Votre Adresse mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required><br><br>
             <input type="int" name="numtelephone" id="numtelephone" placeholder="Votre numéro de téléphone"  required><br><br>
             <input type="texte" name="adresse" id="adresse" placeholder="Votre Adresse" required><br><br>
             <input type="texte" name="pays" id="pays" placeholder="Votre Pays" required><br><br>
+            <label>Votre date de naissance</label>
             <input type="date" name="datedenaissance" id="datedenaissance" placeholder="Votre Date de Naissance" max="2006-12-31" min="1963-01-01" required><br><br>
             <input type="int" name="codepostal" id="codepostal" placeholder="Votre Code Postal" required><br><br>
             <input type="texte" name="ville" id="ville" placeholder="Votre Ville" required><br><br>
