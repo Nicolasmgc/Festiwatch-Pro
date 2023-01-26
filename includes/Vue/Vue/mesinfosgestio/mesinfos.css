@@ -352,3 +352,8 @@ footer{
     color: white;
     padding: 7px;
  }
+
+
+ input::-webkit-input-placeholder {
+    color: white;
+ }
