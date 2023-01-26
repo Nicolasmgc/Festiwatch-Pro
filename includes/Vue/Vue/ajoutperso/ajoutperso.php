@@ -35,14 +35,14 @@
     </style>
 </head>
 <body>
-
-    <div id="maindiv">
-        <form method="post" id="formdiv">
-        <?php
+<h2>        <?php
         if(isset($_GET['succes'])){
             echo $_GET['succes'];
         }
-        ?>
+        ?> </h2>
+    <div id="maindiv">
+        <form method="post" id="formdiv">
+
             <input type="texte" name="Personnel_nom" id="Personnel_nom" placeholder="Nom du personnel" required ><br><br>
             <input type="texte" name="Personnel_prenom" id="Personnel_prenom" placeholder="Prenom du personnel" required><br><br>
             <input type="texte" name="Personnel_fonction" id="Personnel_fonction" placeholder="Fonction du personnel" required><br><br>
