@@ -208,5 +208,5 @@ footer{
  }
 
 .actionBtns{
-    margin: 5px 20px; border-radius: 5px; text-align: center; padding: 10px; height: 75%;
+    margin: 5px 20px 5px 50px; border-radius: 5px; text-align: center; padding: 10px 50px; height: 75%;
 }

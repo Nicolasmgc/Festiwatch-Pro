@@ -122,7 +122,7 @@ if(isset($_SESSION['Fest_id'])){
 
 </div>
 
-<input onclick="onsenfout()" value="test" class="actionBtns" style="background-color: #F58"> <!-- Bouton pour trier à bien ranger -->
+<button onclick="onsenfout()" class="actionBtns" style="background-color: #F58">Test</button> <!-- Bouton pour trier à bien ranger -->
 
 <table class="tableau-style">
         <thead> 
