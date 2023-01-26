@@ -36,7 +36,7 @@
 global $db;
 ?>
 
-<h1 style="margin: 50px auto 150px auto; padding: 0px; font-family: Elephant; display: block">Gestion des utilisateurs</h1>
+<h1 style="margin: 50px auto 150px auto; padding: 0px; font-family: Elephant; display: block">Gestion des gestionnaires</h1>
 
 <div id="actionmenu">
   <a href="accueiladmin.php" class="action">Menu</a>
