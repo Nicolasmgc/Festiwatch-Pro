@@ -231,6 +231,11 @@ nav .logo{
     margin: 5px;
 }
 
+#searchbar::placeholder {
+    color:#fff;
+    opacity: 0.4;
+}
+
 #searchIcon {
     position: inherit;
     margin: 5px;
@@ -269,7 +274,8 @@ nav .logo{
 }
 
 #upperIndicators, #lowerIndicators {
-    margin: auto 20%;
+    width: 80%;
+    margin: auto 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -280,6 +286,10 @@ nav .logo{
     flex-direction: column;
     align-items: center;
     margin-top: 10px;
+}
+
+#upperIndicators * {
+    margin: auto 5px;
 }
 
 label {
