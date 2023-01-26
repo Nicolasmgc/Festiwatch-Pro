@@ -94,10 +94,10 @@ if(isset($_SESSION['role_id'])){
             <br><br>
             <div class="expli">
             <p>
-                Depuis cette page vous allez pouvoir naviguer parmis deux panels<br>
-                Le panel utilisateurs vous permet de consulter la liste des utilisateurs enregistrés et consulter leur données.<br>
-                Vous pouvez aussi supprimer les utilisateurs tout en conservant un historique.<br>
-                Le panel gestionnaires vous permet de consulter les demandes de gestionnaires et des créer des festivals.
+                Depuis cette page vous allez pouvoir naviguer parmis deux panels.<br>
+                Le panel utilisateur vous permet de consulter la liste des utilisateurs enregistrés et consulter leurs données personnelles.<br>
+                Vous pouvez aussi supprimer les utilisateurs tout en conservant leur historique.<br>
+                Le panel gestionnaire vous permet de consulter les demandes des gestionnaires et de créer des festivals.
             </p>
             </div>
         </div>

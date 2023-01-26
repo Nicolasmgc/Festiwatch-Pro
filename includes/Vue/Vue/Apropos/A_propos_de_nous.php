@@ -143,8 +143,8 @@
        <img img src="../../../PNG/party2.png" alt="icone de fete"  height="325"class="image1" /><br>
        </div>
        <div class="paragraphe">
-       <p>FestiWatch vous permet de mesurer votre fréquence cardiaque, ainsi que votre température et l’intensité sonore
-        autour de vous. Vos données de santé sont stockées et peuvent être consultées sur le site en temps réel, mais aussi 
+       <p>FestiWatch vous permet de mesurer votre fréquence cardiaque, ainsi que l’intensité sonore et le gaz présent autour de vous. 
+        Vos données de santé sont stockées et peuvent être consultées sur le site en temps réel, mais aussi 
         après le festival. Nous considérons que votre santé et votre sécurité sont primordiales pour passer un bon moment entre amis. 
         Ces données nous permettront de réagir rapidement en cas de problème. </p> 
         <p>La FestiWatch vous permet également de vous localiser et de localiser vos amis sur une carte, afin de vous retrouver

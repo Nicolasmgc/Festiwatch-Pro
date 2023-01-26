@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mar. 17 jan. 2023 à 13:13
+-- Généré le : mer. 25 jan. 2023 à 23:46
 -- Version du serveur : 5.7.36
 -- Version de PHP : 7.4.26
 
@@ -42,16 +42,19 @@ CREATE TABLE IF NOT EXISTS `alerte` (
   KEY `montre_code6` (`Montre_code`),
   KEY `Personnel_id` (`Personnel_id`),
   KEY `FK_Fest_id` (`Fest_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `alerte`
 --
 
 INSERT INTO `alerte` (`alerte_id`, `alerte_type`, `alerte_horaire`, `alerte_date`, `alerte_statut`, `alerte_zone`, `Montre_code`, `Personnel_id`, `Fest_id`) VALUES
-(2, 'malaise', '22:10:10', '2022-06-10', 'ModifiÃ©e', 'A', 1, 2, 15),
-(3, 'alcool', '23:45:09', '2022-07-10', 'En cours', 'C', 2, 2, 1),
-(4, 'gaz', '00:45:09', '2022-08-10', 'ModifiÃ©e', 'B', 3, 2, 15);
+(2, 'malaise', '22:10:10', '2022-06-10', 'Terminee', 'A', 1, 3, 15),
+(3, 'alcool', '23:45:09', '2022-07-10', 'En cours', 'C', 2, 3, 1),
+(4, 'gaz', '00:45:09', '2022-08-10', 'Terminee', 'B', 3, 3, 15),
+(7, 'Cardiaque', '19:56:25', '2022-11-10', 'Terminee', 'D', 2, 6, 15),
+(8, 'Cardiaque', '19:56:25', '2022-11-10', 'Terminee', 'D', 2, 6, 15),
+(9, 'Cardiaque', '19:56:25', '2022-11-10', 'En cours', 'D', 2, 6, 15);
 
 -- --------------------------------------------------------
 
@@ -66,7 +69,15 @@ CREATE TABLE IF NOT EXISTS `capteurcardiaque` (
   `Montre_code` int(11) DEFAULT NULL,
   PRIMARY KEY (`card_id`),
   KEY `montre_code5` (`Montre_code`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `capteurcardiaque`
+--
+
+INSERT INTO `capteurcardiaque` (`card_id`, `card_frequ`, `Montre_code`) VALUES
+(1, 130, 1),
+(2, 1, 3);
 
 -- --------------------------------------------------------
 
@@ -81,7 +92,15 @@ CREATE TABLE IF NOT EXISTS `capteurgaz` (
   `Montre_code` int(11) DEFAULT NULL,
   PRIMARY KEY (`gaz_id`),
   KEY `montre_code4` (`Montre_code`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `capteurgaz`
+--
+
+INSERT INTO `capteurgaz` (`gaz_id`, `gaz_detec`, `Montre_code`) VALUES
+(1, 20, 1),
+(2, 1, 3);
 
 -- --------------------------------------------------------
 
@@ -96,22 +115,15 @@ CREATE TABLE IF NOT EXISTS `capteursonore` (
   `Montre_code` int(11) DEFAULT NULL,
   PRIMARY KEY (`son_id`),
   KEY `montre_code3` (`Montre_code`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
--- Structure de la table `capteurtemperature`
+-- Déchargement des données de la table `capteursonore`
 --
 
-DROP TABLE IF EXISTS `capteurtemperature`;
-CREATE TABLE IF NOT EXISTS `capteurtemperature` (
-  `temp_id` int(11) NOT NULL AUTO_INCREMENT,
-  `temp_degre` float DEFAULT NULL,
-  `Montre_code` int(11) DEFAULT NULL,
-  PRIMARY KEY (`temp_id`),
-  KEY `montre_code2` (`Montre_code`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+INSERT INTO `capteursonore` (`son_id`, `son_db`, `Montre_code`) VALUES
+(1, 100, 1),
+(2, 1, 3);
 
 -- --------------------------------------------------------
 
@@ -126,7 +138,15 @@ CREATE TABLE IF NOT EXISTS `compteur` (
   `Montre_code` int(11) DEFAULT NULL,
   PRIMARY KEY (`compteur_id`),
   KEY `montre_code1` (`Montre_code`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `compteur`
+--
+
+INSERT INTO `compteur` (`compteur_id`, `compteur_alcool`, `Montre_code`) VALUES
+(1, 3, 1),
+(2, 1, 3);
 
 -- --------------------------------------------------------
 
@@ -150,21 +170,21 @@ CREATE TABLE IF NOT EXISTS `festival` (
   `Fest_password` varchar(250) NOT NULL,
   `Fest_email` varchar(150) DEFAULT NULL,
   `Fest_numtelephone` int(10) DEFAULT NULL,
+  `Fest_acceshandicap` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`Fest_id`),
   UNIQUE KEY `Fest_nom` (`Fest_nom`),
   UNIQUE KEY `Fest_email` (`Fest_email`),
   UNIQUE KEY `Fest_numtelephone` (`Fest_numtelephone`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `festival`
 --
 
-INSERT INTO `festival` (`Fest_id`, `Fest_nom`, `Fest_datedebut`, `Fest_datefin`, `Fest_prix`, `Fest_programmation`, `Fest_adresse`, `Fest_codepostal`, `Fest_pays`, `Fest_access`, `Fest_lien`, `Fest_password`, `Fest_email`, `Fest_numtelephone`) VALUES
-(1, 'Solidays', '2023-06-10', '2023-06-13', 50, 'Gazo, Niska, ...', 'Hippodrome de Longchamp', 92290, 'France', 'Voiture, TRAM ...', 'www.solidays.fr', 'aaa', NULL, NULL),
-(2, 'Rock en seine', '2023-08-05', '2023-08-07', 30, 'Programmation 2', 'Parc de Saint-cloud', 92120, 'France', 'accès 2', 'www.rockenseine.fr', 'aaa', NULL, NULL),
-(15, 'Les Ardentes', '2023-06-14', '2023-06-16', 30, 'Programmation Les Ardentes', 'Adresse Les Ardentes', 91170, 'Belgique', 'Parking utilisateurs; bus', 'www.lesardentes.com', '$2y$12$0dOjNr.wclqnqkwdG1xAauUVtMrUDrCBueYaVE5CSSpwFdHBDBkTa', 'lesardentes@gmail.com', 946322742),
-(16, 'dfghujgcvhjk', '2022-11-29', '2022-12-01', 30, 'allalalalalal', '63 Grande Rue', 92380, 'France', 'auhjihk', 'www.teyeyeyey/com', '$2y$12$epcQ0y6iT3TVm9E5WZZyyuFd412cKUc2mmoVD1P2fKvaAM0EtAGly', 'fghghj.ghjk@gmail.com', 781895678);
+INSERT INTO `festival` (`Fest_id`, `Fest_nom`, `Fest_datedebut`, `Fest_datefin`, `Fest_prix`, `Fest_programmation`, `Fest_adresse`, `Fest_codepostal`, `Fest_pays`, `Fest_access`, `Fest_lien`, `Fest_password`, `Fest_email`, `Fest_numtelephone`, `Fest_acceshandicap`) VALUES
+(1, 'Solidays', '2023-06-10', '2023-06-13', 50, 'Gazo, Niska, ...', 'Hippodrome de Longchamp', 92290, 'France', 'Voiture, TRAM ...', 'www.solidays.fr', 'aaa', NULL, NULL, NULL),
+(15, 'Les Ardentes', '2023-06-14', '2023-06-16', 30, 'Programmation Les Ardentes', 'Adresse Les Ardentes', 91170, 'Belgique', 'Parking utilisateurs; bus', 'www.lesardentes.com', '$2y$12$0dOjNr.wclqnqkwdG1xAauUVtMrUDrCBueYaVE5CSSpwFdHBDBkTa', 'lesardentes@gmail.com', 946322742, NULL),
+(17, 'Festmodif', '2023-01-12', '2023-01-27', 80, 'Programmationtesttest', 'adressetesttesttest', 87162, 'Testtesttest', 'lesardentes@gmail.com', 'lientesttesttest.com', '$2y$12$tDLAZJJRmLbIlkCYH.uGfuwqm2Du/tZyKr2IAStzmMf0wTdFaBUwG', 'lalalalala@gmail.com', 875372826, NULL);
 
 -- --------------------------------------------------------
 
@@ -182,14 +202,16 @@ CREATE TABLE IF NOT EXISTS `festsign` (
   `festsign_numtel` int(10) DEFAULT NULL,
   `festsign_remarque` varchar(1000) DEFAULT NULL,
   PRIMARY KEY (`festsign_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `festsign`
 --
 
 INSERT INTO `festsign` (`festsign_id`, `festsign_adresse`, `festsign_email`, `festsign_nom`, `festsign_prenom`, `festsign_numtel`, `festsign_remarque`) VALUES
-(1, '63 Grande Rue', 'bab.maupas@gmail.com', 'Maupas', 'Bastien', 781898378, 'htgfd');
+(1, '63 Grande Rue', 'bab.maupas@gmail.com', 'Maupas', 'Bastien', 781898378, 'htgfd'),
+(2, 'Test', 'Test@gmail.com', 'Test', 'Test', 926527262, 'Test'),
+(3, '63 Grande Rue', 'dfghjkrftgyhjk', 'Maupas', 'Bastien', 781898378, 'question');
 
 -- --------------------------------------------------------
 
@@ -230,7 +252,7 @@ CREATE TABLE IF NOT EXISTS `personnel` (
   `Fest_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`Personnel_id`),
   KEY `personnelfestid` (`Fest_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `personnel`
@@ -244,7 +266,10 @@ INSERT INTO `personnel` (`Personnel_id`, `Personnel_fonction`, `Personnel_nom`, 
 (5, 'SAMU', 'El-Younsi', 'Ziad', 15),
 (6, 'Ambulancier', 'Laperotine', 'Ziad', 15),
 (7, 'lalalal', 'lalala', 'lalala', 15),
-(8, 'ooo', 'ooo', 'ooo', 15);
+(8, 'ooo', 'ooo', 'ooo', 15),
+(9, 'Lalalalala', 'Persad', 'Constance', 15),
+(10, 'fvcdxs', 'ooo', 'gtrfds', 15),
+(11, 'SAMU', 'Laperotine', 'Ziad', 15);
 
 -- --------------------------------------------------------
 
@@ -260,7 +285,7 @@ CREATE TABLE IF NOT EXISTS `reservation` (
   PRIMARY KEY (`Reservation_id`),
   KEY `Fest_id` (`Fest_id`),
   KEY `on_delete_cascade_userid` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `reservation`
@@ -270,7 +295,8 @@ INSERT INTO `reservation` (`Reservation_id`, `id`, `Fest_id`) VALUES
 (1, 8, 15),
 (2, 10, 15),
 (5, 12, 15),
-(6, 13, 15);
+(6, 13, 15),
+(10, NULL, 15);
 
 -- --------------------------------------------------------
 
@@ -319,7 +345,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   UNIQUE KEY `email` (`email`),
   UNIQUE KEY `numtelephone` (`numtelephone`),
   KEY `FK_role_id` (`role_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `user`
@@ -327,15 +353,10 @@ CREATE TABLE IF NOT EXISTS `user` (
 
 INSERT INTO `user` (`id`, `nom`, `prenom`, `email`, `numtelephone`, `adresse`, `pays`, `datedenaissance`, `codepostal`, `ville`, `password`, `datedecreation`, `handicap`, `role_id`) VALUES
 (8, 'Maupas', 'Bastien', 'bastien.maupas25@gmail.com', 781898377, '63 Grande Rue', 'France', '2002-10-25', 92380, 'Garches', '$2y$12$bl4OspQ9eG.gFZM0vYHpJeckt/LpY5MVUP2BDbwJ.h.yeBmuF6vSG', '2022-12-11 21:17:27', 1, NULL),
-(10, 'Maupas', 'Bastien', 'bab.maupas@gmail.com', 535353535, 'Changement adresse', 'France', '2022-11-29', 92380, 'Changement Ville', '$2y$12$Nq4oO/reYDYPqRTw2/MPq.ID5YDRkk0JTN0V8Lj/I/eVuBlnEZbiy', '2022-12-13 14:46:52', 0, NULL),
+(10, 'Maupas', 'Bastien', 'sdxcfvgbhnjhgfdxcgvhbnj,k', 781898378, 'Adresse test', 'France', '2022-11-29', 92380, 'Ville test', '$2y$12$Nq4oO/reYDYPqRTw2/MPq.ID5YDRkk0JTN0V8Lj/I/eVuBlnEZbiy', '2022-12-13 14:46:52', 0, NULL),
 (12, 'Maupas', 'Bastien', 'bab.as@gmail.com', 781898366, '63 Grande Rue', 'France', '2022-11-30', 92380, 'Garches', '$2y$12$6i/7wScTRDrVW0MPFP7ntu8RB/TCz3D9CmGX4MkZFhcBji39Uq22e', '2022-12-15 18:25:12', 0, NULL),
 (13, 'Maupas', 'Bastien', 'bab.ms@gmail.com', 781898333, '63 Grande Rue', 'France', '2022-12-08', 92380, 'Garches', '$2y$12$ZdNnPOOC3640BZTAAcGdQ.Uk5zTavnUPlSt3F3QVdy5FT4y3kPO8i', '2022-12-15 18:26:03', 0, NULL),
 (16, 'Maupas', 'Bastien', 'bab.maas@gmail.com', 781893333, '63 Grande Rue', 'France', '2022-12-01', 92380, 'Garches', '$2y$12$idBgpqY92fgyEYqUHrXBou8uT7KdKv3WNwu.PkRMXDT1lBzNxkwW6', '2022-12-16 09:01:01', 0, NULL),
-(17, 'Maupas', 'Bastien', 'bab.maupppps@gmail.com', 733398378, '63 Grande Rue', 'France', '2022-11-30', 92380, 'Garches', '$2y$12$vOSlQb.l8XSn3bN7C23EOeXoui2g3FsJBizh5g6ol5ZW9XAifNanK', '2022-12-17 11:32:22', 0, NULL),
-(18, 'Maupas', 'Bastien', 'badfghjkl@gmail.com', 564783932, '63 Grande Rue', 'France', '2004-08-12', 92380, 'Garches', '$2y$12$xmsRTnZbzZZg3EEooufZfejRnyWO1DLZh943kGoXJr5aMc4JDEBje', '2023-01-06 08:23:37', 0, NULL),
-(19, 'Maupas', 'Bastien', 'baaaaaaaaaa.s@gmail.com', 984501526, '63 Grande Rue', 'France', '2004-12-01', 92380, 'Garches', '$2y$12$40Ir7GBGBYZ1RxC87I4Z2ub8Agr3gdqL2r7f3qEKxwedme14FxzhK', '2023-01-09 09:14:54', 0, 1),
-(20, 'Maupas', 'Bastien', 'sdfghbnj@gmail.com', 781898378, '63 Grande Rue', 'France', '2005-04-06', 92380, 'Garches', '$2y$12$AeeWImIZtD1j6jn.nM0nm.hrCJmFiHJ26eRrvzzA8ZaLVFE5YPF5q', '2023-01-13 15:42:55', 0, 1),
-(21, 'Maupas', 'Bastien', 'aaaaaaaaazert@gmail.com', 618273567, '63 Grande Rue', 'France', '1998-10-10', 92380, 'Garches', '$2y$12$VVp/0ecihxCjZKShSWTqMuhZaKzIJ.4sl/qThpDG5blUCBl7LB2Bu', '2023-01-13 15:44:58', 1, 1),
 (26, 'Admin', 'Admin', 'infinitemeasures@gmail.com', 954326272, '10 Rue de Vanves', 'France', '1999-10-10', 92130, 'Issy-Les-Moulineaux', '$2y$12$4zmzJD3.QhXl6pVvF/lQR.NmH68HVftuuWpHkV.0Qsy3wi585/wc2', '2023-01-13 18:09:08', 0, 2);
 
 -- --------------------------------------------------------
@@ -373,7 +394,12 @@ INSERT INTO `userhistory` (`userhistory_adresse`, `userhistory_codepostal`, `use
 ('63 Grande Rue', 92380, '2022-12-15 18:25:12', '2022-11-30', 'bab.as@gmail.com', 0, 12, 'Maupas', 781898366, 'France', 'Bastien', 'Garches'),
 ('63 Grande Rue', 92380, '2022-12-15 18:26:03', '2022-12-08', 'bab.ms@gmail.com', 0, 13, 'Maupas', 781898333, 'France', 'Bastien', 'Garches'),
 ('63 Grande Rue', 92380, '2022-12-15 21:13:22', '2022-12-06', 'babs@gmail.com', 0, 14, 'Maupas', 781898300, 'France', 'Bastien', 'Garches'),
-('63 Grande Rue', 92380, '2022-12-16 00:13:43', '2022-11-29', 'bab.pas@gmail.com', 0, 15, 'Maupas', 781894444, 'France', 'Bastien', 'Garches');
+('63 Grande Rue', 92380, '2022-12-16 00:13:43', '2022-11-29', 'bab.pas@gmail.com', 0, 15, 'Maupas', 781894444, 'France', 'Bastien', 'Garches'),
+('63 Grande Rue', 92380, '2022-12-17 11:32:22', '2022-11-30', 'bab.maupppps@gmail.com', 0, 17, 'Maupas', 733398378, 'France', 'Bastien', 'Garches'),
+('63 Grande Rue', 92380, '2023-01-06 08:23:37', '2004-08-12', 'badfghjkl@gmail.com', 0, 18, 'Maupas', 564783932, 'France', 'Bastien', 'Garches'),
+('63 Grande Rue', 92380, '2023-01-13 15:42:55', '2005-04-06', 'sdfghbnj@gmail.com', 0, 20, 'Maupas', 781898378, 'France', 'Bastien', 'Garches'),
+('63 Grande Rue', 92380, '2023-01-13 15:44:58', '1998-10-10', 'aaaaaaaaazert@gmail.com', 1, 21, 'Maupas', 618273567, 'France', 'Bastien', 'Garches'),
+('63 Grande Rue', 92380, '2023-01-25 20:45:08', '2006-12-13', 'testtest@gmail.com', 1, 27, 'Maupas', 917263827, 'France', 'Bastien', 'Garches');
 
 --
 -- Contraintes pour les tables déchargées
@@ -404,12 +430,6 @@ ALTER TABLE `capteurgaz`
 --
 ALTER TABLE `capteursonore`
   ADD CONSTRAINT `montre_code3` FOREIGN KEY (`Montre_code`) REFERENCES `montre` (`Montre_code`);
-
---
--- Contraintes pour la table `capteurtemperature`
---
-ALTER TABLE `capteurtemperature`
-  ADD CONSTRAINT `montre_code2` FOREIGN KEY (`Montre_code`) REFERENCES `montre` (`Montre_code`);
 
 --
 -- Contraintes pour la table `compteur`
