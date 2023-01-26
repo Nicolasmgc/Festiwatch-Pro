@@ -47,7 +47,7 @@ if(isset($_SESSION['role_id'])){
     if($_SESSION['role_id'] == 2){
 ?>
 <div class="container">
-    <form method="post" id="formdiv" style="margin: 50px auto;">
+    <form method="post" id="formdiv" style="margin: 30px auto 50px auto;">
         <p>Sign in</p>
         <div class="line1"><input type="varchar" name="Fest_nom" id="Fest_nom" placeholder="Votre Nom" required><br/><br>
             <input type="date" name="Fest_datedebut" id="Fest_datedebut" placeholder="Début de votre festival" required><br/><br></div><br>
