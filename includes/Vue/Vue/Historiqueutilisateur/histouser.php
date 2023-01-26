@@ -35,11 +35,11 @@ session_start()
 
 <!DOCTYPE html>
 <html>
-
+<h1>Historique de vos festivals</h1>
 <head>
             <link rel="stylesheet" href="histouser.css">
             <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap" rel="stylesheet">
-            <h1>Historique de vos festivals</h1>
+            
 
             <style>
                 .goog-te-banner-frame.skiptranslate, .goog-te-gadget-icon {
@@ -65,7 +65,7 @@ session_start()
 
 <body> 
         <?php while($row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
-        <tr> 
+        <tr class="test"> 
           <td><?php echo htmlspecialchars($row['reservation_id']); ?></td>
           <td><?php echo htmlspecialchars($row['Fest_nom']); ?></td>
           <td><?php echo htmlspecialchars($row['Fest_datedebut']); ?></td>
