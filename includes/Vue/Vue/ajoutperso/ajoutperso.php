@@ -32,20 +32,16 @@
 </head>
 <body>
 
-    <div>
-        <form method ="post">
+    <div id="maindiv">
+        <form method="post" id="formdiv">
             <input type="texte" name="Personnel_nom" id="Personnel_nom" placeholder="Nom du personnel" required ><br><br>
             <input type="texte" name="Personnel_prenom" id="Personnel_prenom" placeholder="Prenom du personnel" required><br><br>
             <input type="texte" name="Personnel_fonction" id="Personnel_fonction" placeholder="Fonction du personnel" required><br><br>
             <input type="submit" name="sendperso" id="sendperso" value="Ajouter un membre du personnel">
-
-
-    </form>
-
-
-
-
+            <div id="msg" style="position: absolute; font-size: 16px; color: #730800; width: 50%; margin: 50px auto"></div>
+        </form>
     </div>
+
 </body>
 <footer>
 <div class="contact">
@@ -75,3 +71,15 @@
     global $db;
     ?>
     <?php include '../../../Modele/ajoutpersonnel/ajoutpersonnel.php'; ?>
+
+<script>
+    var formulaire = document.getElementById("formdiv");
+    var msg = document.getElementById("msg");
+
+    formulaire.addEventListener("submit", function(event) {
+        event.preventDefault();
+        if (formulaire.checkValidity()) {
+        msg.innerHTML = "Compte créé";
+        }
+    }); 
+</script>
