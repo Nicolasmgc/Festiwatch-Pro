@@ -39,9 +39,7 @@ global $db;
 <h1 style="margin: 50px auto 150px auto; padding: 0px; font-family: Elephant; display: block">Gestion des utilisateurs</h1>
 
 <div id="actionmenu">
-  <a href="variablehtml.php" class="action">Ajouter</a>
   <a href="accueiladmin.php" class="action">Menu</a>
-  <a href="vuehistoryuser.php" class="action">Historique</a>
 </div>
 
 <?php
