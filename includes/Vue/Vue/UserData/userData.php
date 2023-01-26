@@ -86,7 +86,7 @@ session_start();
             <div id="mainContent">
                 <div id="searchBox">
                     <form method="POST" style="width: 100%; display: flex; flex-direction: row; justify-content: space-between">
-                        <input type="int" name="searchbar" class="searchBar" id="searchbar" placeholder="Recherchez le festival que vous souhaitez" required><br/>
+                        <input type="int" name="searchbar" class="searchBar" id="searchbar" placeholder="Recherchez le numéro de montre que vous souhaitez" required><br/>
                         <input type="submit" name="montrerecherche" id="montrerecherche">
                     </form>
 

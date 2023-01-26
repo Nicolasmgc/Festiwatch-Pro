@@ -302,7 +302,7 @@ input[type='submit'] {
 input[type='text'], input[type='date'], input[type='email'], input[type='tel'], input[type='number'], input[type='int'] {
     border-radius: 5px;
     background-color: #80a;
-    color: #000;
+    color: white;
     border-width: 2px;
     padding: 10px;
     margin: 5% 0%;

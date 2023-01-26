@@ -160,7 +160,11 @@
           <td><?php echo htmlspecialchars($row['Fest_lien']); ?></td>
           <td><?php echo htmlspecialchars($row['Fest_numtelephone']); ?></td>
           <td><?php echo htmlspecialchars($row['Fest_email']); ?></td>
-          <td><?php echo htmlspecialchars($row['Fest_acceshandicap']); ?></td>
+          <td><?php if($row['Fest_acceshandicap']==0){
+            echo "Non";
+          }else{
+            echo "Oui";
+          }; ?></td>
         </tr>
         <?php endwhile; ?>
       </tbody>

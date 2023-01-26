@@ -102,7 +102,7 @@ if(isset($_SESSION['Fest_id'])){
     <div id="searchBox">
                         <form method="POST" style="width: 100%">
                             <div style="height: 50px; display: flex; flex-direction: row; justify-content: space-evenly">
-                                <input type="int" name="searchbar" id="searchbar" placeholder="Recherchez le festival que vous souhaitez" required><br/>
+                                <input type="int" name="searchbar" id="searchbar" placeholder="Recherchez le code de la montre que vous souhaitez" required><br/>
                                 <input type="submit" name="montrerecherche" id="montrerecherche">
                             </div>
                         </form>
@@ -197,7 +197,7 @@ if(isset($_SESSION['Fest_id'])){
     <div id="searchBox">
                         <form method="POST" style="width: 100%">
                             <div style="height: 50px; display: flex; flex-direction: row; justify-content: space-evenly">
-                                <input type="int" name="searchbar" id="searchbar" placeholder="Recherchez le festival que vous souhaitez" required><br/>
+                                <input type="int" name="searchbar" id="searchbar" placeholder="Recherchez le code de la montre que vous souhaitez" required><br/>
                                 <input type="submit" name="montrerecherche" id="montrerecherche">
                             </div>
                         </form>
@@ -298,7 +298,7 @@ if(isset($_SESSION['Fest_id'])){
     <div id="searchBox">
                         <form method="POST" style="width: 100%">
                             <div style="display: flex; flex-direction: row; justify-content: space-evenly">
-                                <input type="int" name="searchbar" id="searchbar" placeholder="Recherchez le festival que vous souhaitez" required><br/>
+                                <input type="int" name="searchbar" id="searchbar" placeholder="Recherchez le code de la montre que vous souhaitez" required><br/>
                                 <input type="submit" name="montrerecherche" id="montrerecherche" value="OK">
                             </div>
                         </form>

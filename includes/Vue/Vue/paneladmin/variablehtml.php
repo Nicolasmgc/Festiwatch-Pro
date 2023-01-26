@@ -163,7 +163,7 @@ if(isset($_SESSION['role_id'])){
     }
     ?>
 
-<script>
+<!-- <script>
 var formulaire = document.getElementById("formdiv");
 var msg = document.getElementById("msg");
 
@@ -173,7 +173,7 @@ formulaire.addEventListener("submit", function(event) {
       msg.innerHTML = "Compte créé";
     }
 }); 
-</script>
+</script> -->
 
 <?php
     }}else{
