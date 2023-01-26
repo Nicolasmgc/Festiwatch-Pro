@@ -97,10 +97,9 @@ if(isset($_SESSION['Fest_id'])){
     <h1>Bienvenue sur la page du festival <?php echo $_GET['Fest_nom']?></h1>
     <div id="searchBox">
                         <form method="POST" style="width: 100%">
-                            <div style="display: flex; flex-direction: row; justify-content: space-evenly">
+                            <div style="height: 50px; display: flex; flex-direction: row; justify-content: space-evenly">
                                 <input type="int" name="searchbar" id="searchbar" placeholder="Recherchez le festival que vous souhaitez" required><br/>
-                                <input type="submit" name="montrerecherche" id="montrerecherche" value="OK">
-                                <a href=""><img id="searchIcon" src="../../../PNG/searchIcon.png" alt="search"></a>
+                                <input type="submit" name="montrerecherche" id="montrerecherche">
                             </div>
                         </form>
             <?php include '../../../Modele/recherchemontre/recherchemontre.php' ?>
@@ -193,10 +192,9 @@ if(isset($_SESSION['Fest_id'])){
                    <h1>Bienvenue sur la page du festival <?php echo $_GET['Fest_nom']?></h1>
     <div id="searchBox">
                         <form method="POST" style="width: 100%">
-                            <div style="display: flex; flex-direction: row; justify-content: space-evenly">
+                            <div style="height: 50px; display: flex; flex-direction: row; justify-content: space-evenly">
                                 <input type="int" name="searchbar" id="searchbar" placeholder="Recherchez le festival que vous souhaitez" required><br/>
-                                <input type="submit" name="montrerecherche" id="montrerecherche" value="OK">
-                                <a href=""><img id="searchIcon" src="../../../PNG/searchIcon.png" alt="search"></a>
+                                <input type="submit" name="montrerecherche" id="montrerecherche">
                             </div>
                         </form>
             <?php include '../../../Modele/recherchemontre/recherchemontre.php' ?>

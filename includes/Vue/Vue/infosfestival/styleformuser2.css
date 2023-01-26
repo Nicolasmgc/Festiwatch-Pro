@@ -82,8 +82,11 @@ h1{
 #montrerecherche {
     margin: 2px 20px;
     border-radius: 10px;
-    background-color: #452df8;
-    color: white;
+    background: url("../../../PNG/searchIcon.png");
+    background-size: 40px;
+    background-position: 10px 0px;
+    background-repeat: no-repeat;
+    font-size: 0;
     width: 5%;
 }
 
