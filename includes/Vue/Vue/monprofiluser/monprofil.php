@@ -221,7 +221,7 @@ if(isset($_POST['formupdate3'])){
 
     <button ><a href="../listefestivals/festivals.php"  style="text-decoration:none">Liste des festivals</a></button>
 
-    <button ><a href="../monprofiluser/vuehistoryfestival.php"  style="text-decoration:none">Historique des festivals</a></button>
+    <button ><a href="../Historiqueutilisateur/histouser.php"  style="text-decoration:none">Historique des festivals</a></button>
 </div>
 </body>
 <footer>
