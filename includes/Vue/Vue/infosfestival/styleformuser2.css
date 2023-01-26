@@ -279,15 +279,6 @@ footer{
     bottom:0px;
     left:0px;
  }
- 
- .contact{
-     font-size:15px;
-     margin-left: 2%;
-     font-family: 'Elephant';
-     flex-direction: column;
-     color: white;
-     margin-bottom: 2%;
- }
  .reseaux{
      display:flex;
      flex-direction: row;
@@ -302,22 +293,20 @@ footer{
      justify-content: space-between;
      width: 50%;
  }
- .lien{
-     font-family: 'Montserrat', sans-serif;
-     color: aliceblue;   
-     margin-top: 6%;
-    text-align: center;
-    position: fixed;
-    top: 85%;
-    left:35%;
- }
- 
- .reseaux a{
-     color: white;
-     padding: 5px;
- }
 
-
+ .insta{
+    height: 70px;
+    margin-left: 12%;
+ }
+ .youtube{
+    height: 50%;
+    width: 40%;
+    margin-left: 12%;
+ }
+ .twitter{
+    height: 40%;
+    width: 20%;
+ }
  .lien a{
     color: white;
     padding: 7px;
@@ -336,18 +325,6 @@ footer{
      color: white;
      margin-bottom: 2%;
  }
- .reseaux{
-     display:flex;
-     flex-direction: row;
-     margin-left:30%;
-     margin-top: 2%;
-     width: 300px;
-     justify-content: space-between;
- }
- .reseaux img, .reseaux a {
-    width: 70%;
-    height: auto;
- }
 
  .foot{
      display: inline-block;
@@ -357,15 +334,14 @@ footer{
  .lien{
      font-family: 'Montserrat', sans-serif;
      color: aliceblue;   
-    margin-top: 4%;
     text-align: center;
+        margin-top: 4%;
+       text-align: center;
+       position: fixed;
+       top: 85%;
+       left:35%;
+    
  }
- 
- .reseaux a{
-     color: white;
-     padding: 5px;
- }
-
 
  .lien a{
     color: white;
@@ -447,17 +423,7 @@ footer{
    color: white;
    padding: 7px;
 }
-/*
-.logo_foot{
-   height: 30%;
-   width:5%;
-   padding:5%;
-}
-.logo_foot_you{
-   height: 35%;
-   width:5%;
-   padding:5%;
-}*/
+
 .foot_2{
     width: 100%;
     position: relative;

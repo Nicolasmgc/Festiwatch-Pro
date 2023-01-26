@@ -277,9 +277,9 @@ if(isset($_SESSION['Fest_id'])){
          
             <div class="foot">
             <div class="reseaux">
-            <a href="https://www.instagram.com/pro_detech"> <img src="../../../PNG/insta.png" alt="icone de insta" height="60"></a>
-            <img src="../../../PNG/youtube.png" alt="icone de insta" height="70">
-            <img src="../../../PNG/twitter.png" alt="icone de insta" height="75">
+            <a href="https://www.instagram.com/pro_detech"> <img src="../../../PNG/insta.png" alt="icone de insta"  class="insta"></a>
+            <img src="../../../PNG/youtube.png" alt="icone de insta" class="youtube">
+            <img src="../../../PNG/twitter.png" alt="icone de insta" class="twitter">
             </div>
             <div class="lien">
                 <a href="../CGU/cgu.php">Conditions général d'utilisation</a>
