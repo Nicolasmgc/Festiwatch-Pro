@@ -50,11 +50,11 @@
         </nav>
 
     <div class="container">
-        <form method="post">
+        <form method="post" id="formdiv" style="margin: 50px auto;">
             <p>Sign in</p>
             <input type="texte" name="nom" id="nom" placeholder="Votre Nom" required><br><br>
             <input type="texte" name="prenom" id="prenom" placeholder="Votre Prenom" required><br><br>
-            <input type="email" name="semail" id="semail" placeholder="Votre Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required><br><br>
+            <input type="email" name="semail" id="semail" paceholder="Votre Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required><br><br>
             <input type="int" name="numtelephone" id="numtelephone" placeholder="Votre numéro de téléphone"  required><br><br>
             <input type="texte" name="adresse" id="adresse" placeholder="Votre Adresse" required><br><br>
             <input type="texte" name="pays" id="pays" placeholder="Votre Pays" required><br><br>
@@ -70,6 +70,7 @@
                     
             <input type="submit" name="formsend" id="formsend" value="S'inscrire" onclick="validate(); validerEmail();">
             <input type="reset" value="Effacer">
+            <div id="msg" style="font-size: 16px; color: #730800; width: 50%; margin: 10px auto"></div>
         </form>
     </div>
     <script src="myscripts.js"></script>

@@ -1,16 +1,12 @@
 
 body{
     font-family: 'Montserrat', sans-serif;
-    background-image:url(../../../PNG/Solidays-2019-2.jpg);
+   background-image:url(../../../PNG/Solidays-2019-2.jpg);
     background-position:40% 40%;
     position:fixed;
     left:30%;
     top:35%;
     font-size: 35px ;
-    background: linear-gradient(rgb(186, 4, 214), rgb(255, 83, 192), rgb(255, 0, 43));
-    background-clip: border-box;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent
 }
 
 h1{

@@ -47,7 +47,7 @@ if(isset($_SESSION['role_id'])){
     if($_SESSION['role_id'] == 2){
 ?>
 <div class="container">
-    <form method="post">
+    <form method="post" id="formdiv" style="margin: 30px auto 50px auto;">
         <p>Sign in</p>
         <div class="line1"><input type="varchar" name="Fest_nom" id="Fest_nom" placeholder="Votre Nom" required><br/><br>
             <input type="date" name="Fest_datedebut" id="Fest_datedebut" placeholder="Début de votre festival" required><br/><br></div><br>
@@ -66,6 +66,7 @@ if(isset($_SESSION['role_id'])){
 
         
         <input type="submit" name="formsendgestio" id="formsendgestio" value="Ok">
+        <div id="msg" style="font-size: 16px; color: #730800; width: 50%; margin: 10px auto"></div>
     </form>
 </div>
 
@@ -152,4 +153,14 @@ if(isset($_SESSION['role_id'])){
     }
     ?>
 
-    
+<script>
+var formulaire = document.getElementById("formdiv");
+var msg = document.getElementById("msg");
+
+formulaire.addEventListener("submit", function(event) {
+    event.preventDefault();
+    if (formulaire.checkValidity()) {
+      msg.innerHTML = "Compte créé";
+    }
+}); 
+</script>

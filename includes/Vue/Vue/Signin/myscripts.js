@@ -25,4 +25,12 @@ function validate() {
         alert("Mot de passe faible !");
 }
 
-    
+var formulaire = document.getElementById("formdiv");
+ var msg = document.getElementById("msg");
+
+formulaire.addEventListener("submit", function(event) {
+    event.preventDefault();
+    if (formulaire.checkValidity()) {
+      msg.innerHTML = "Compte créé";
+    }
+}); 
