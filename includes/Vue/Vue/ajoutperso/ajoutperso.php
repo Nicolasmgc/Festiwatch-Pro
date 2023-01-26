@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="ajoutperso.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap" rel="stylesheet">
     <h1>Ajout de personnel pour votre festival</h1>
-
+    <button class="button" ><a href="../mesinfosgestio/mesinfos.php"> Mes informations</a></button>
     <style>
         .goog-te-banner-frame.skiptranslate, .goog-te-gadget-icon {
             display: none !important;
