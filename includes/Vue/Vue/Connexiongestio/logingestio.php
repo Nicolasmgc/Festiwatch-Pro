@@ -45,7 +45,7 @@ global $db;
 <form class="login-form" method="post">
     <input type="texte" name="lfest_nom" id="lfest_nom" placeholder="Le nom de votre festival" required><br/>
     <input type="password" name="fpassword" id="fpassword" placeholder="Votre Mot de passe" required><br/>
-    <input type="submit" name="formlogingestio" id="formlogingestio" value="Ok"><br/>
+    <input type="submit" name="formlogingestio" id="formlogingestio" value="Se connecter"><br/>
 </form>
 
     <?php include '../../../Modele/logingestio/backlogingestio.php'; ?>

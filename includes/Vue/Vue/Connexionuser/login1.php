@@ -49,7 +49,7 @@ global $db;
 <form class="login-form" method="post">
     <input type="email" name="lemail" id="lemail" placeholder="Votre Email" required><br/>
     <input type="password" name="lpassword" id="lpassword" placeholder="Votre Mot de passe" required><br/>
-    <button><input class="butt" type="submit" name="formlogin" id="formlogin" value="Ok"></button><br/>
+    <button><input class="butt" type="submit" name="formlogin" id="formlogin" value="Se connecter"></button><br/>
 </form>
 
     <?php include '../../../Modele/loginuser/login.php'; ?>
