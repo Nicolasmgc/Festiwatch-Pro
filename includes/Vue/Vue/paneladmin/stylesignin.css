@@ -14,6 +14,7 @@ body {
     justify-content: center;
     align-items: center;
     font-family: arial,sans-serif;
+    height: 100%;
 }
 
 ::-webkit-scrollbar {
@@ -41,171 +42,23 @@ body {
     50%);
 }
 
-nav{
-    width: 100%;
-    margin: 0 auto;
-    
-    position:absolute;
-    top: 10px;
-    z-index: 1;
-
-}
-
-nav ul{
-    list-style-type: none;
-    
-}
-
-.logo{
-    background: transparent;
-    
-    margin-left: 60px;
-    margin-top: 0px;
-    padding: 0px;
-    
-    width: 150px;
-}
-
-nav ul li{
-    float:left;
-    width: 20%;
-    text-align: center;
-    position: relative;
-}
-
-nav ul::after{
-
-    content: "";
-    display: table;
-    clear: both;
-}
-
-nav a{
-    display: block;
-    text-decoration: none;
-    color: black;
-    margin: 10px 25px;
-    border: 0;
-    padding : 10px 20px;
-    background: transparent;
-    position: relative;
-    overflow: clip;
+#actionmenu {
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    background: linear-gradient(225deg,#f53b1e 0%,#911ef6 25%,#ee1616 100%);
+    width: 50%;
+    margin: 60px auto 10px auto;
+    justify-content: space-evenly;
     border-radius: 20px;
-    box-shadow: 0px -0px 0px 0px rgba(113, 34, 215, 0.5),0px 0px 0px 0px rgba(225, 51, 16, 0.5);
-    transition: all .2s;
-    
-}
-
-nav a::after{
-    content:"";
-    width: 400px;
-    height: 400px;
-    background: linear-gradient(225deg,#f53b1e 0%,#911ef6 25%,#ee1616
-    100%);
-    position: absolute;
-    z-index :-1;
-    left: -20mm;
-    top: -15mm;
-    transition: all .5s;
-}
-
-nav a:hover{
-    color: orange;
-    border-bottom: 2px solid gold;
-    transform: translate(0, -2mm);
-    box-shadow: 10px -10px 25px 0 rgba(168, 107, 247, 0.25), -10px 10px
-    25px 0px rgba(255, 255, 255, 0.25);
-    background: linear-gradient(225deg,#f53b1e 0%,#911ef6 25%,#ee1616
-    100%);
-}
-
-a:hover::after{
-    transform:rotate(400deg);
-    
-    
-}
-
-.sous{
-    display: none;
-    
-    background: transparent;
-    position: absolute;
-    width: 100%;
-    z-index: 1000;
-}
-
-nav > ul li:hover .sous{
-    display: block;
-}
-
-.sous li{
-    float: none;
-    width: 100%;
-    text-align: left;
-}
-
-.sous a{ padding: 10px;
-    border-bottom: none;
-}
-
-.sous a:hover{
-    border-bottom: none;
-    background-color: blue;
-}
-
-img {
-    box-shadow: transparent;
-    width: 80px;
-    position: static
-    
-}
-
-button {
-    background: transparent;
-    color: white;
-    position: absolute;
-    top :300px;
-    left: 450px;
-    font-weight: 600;
-    z-index:1;
-    overflow: clip;
-    border-radius: 20px;
-    padding: 10px 20px;
-    cursor: pointer;
-    box-shadow: 0px -0px 0px 0px rgba(143, 64, 248, .5),0px 0px 0px 0px
-    rgba(39,200, 255, .5);
-    
-    transition: all .5s;
-    
-}
-
-button::after {
-    content:"";
-    width: 700px;
-    height: 700px;
-    font-weight: 500px;
-    background: linear-gradient(225deg,#e21717 0%,#eb8125 25%,#e022bd
-    100%);
-    position: absolute;
-    top:-500px;
-    left:-150px;
-    z-index:-1;
-    transition: all.3s;
-}
-
-button:hover::after {
-    transform: rotate(150deg);
-}
-
-button:hover {
-    transform: translate(0,-6px);
-    box-shadow: 10px -10px 25px 0 rgba(168, 107, 247, 0.25), -10px 10px
-    25px 0px rgba(255, 255, 255, 0.25);
+    border: solid 2px black;
+    padding: 5px;
 }
 
 .container{
-    position: relative;
-    margin: 200px auto 200px auto;
+    position: absolute;
+    top: 20px;
+    margin: 200px auto 50px auto;
 }
 
 form {
@@ -281,7 +134,6 @@ button {
     font-size: 20px;
     margin:10px;
     cursor: pointer;
-
 }
 
 img {
@@ -333,10 +185,10 @@ footer{
     background-color: #111;
     position: absolute;
     width: 100%;
-    top: 110%;
+    top: 130%;
     display: flex;
-
 }
+
 .contact{
     font-size:15px;
     margin-left: 2%;

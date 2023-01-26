@@ -57,7 +57,7 @@ if(isset($_SESSION['role_id'])){
             <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap" rel="stylesheet">
             <body>
 
-<h1 style="margin: 50px; auto; padding: 0px; font-family: Elephant;">Gestion des utilisateur</h1>
+<h1 style="margin: 50px; auto; padding: 0px; font-family: Elephant;">Gestion des utilisateurs</h1>
 
 <div id="actionmenu">
   <a href="variablehtml.php" class="action">Ajouter</a>
