@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mer. 25 jan. 2023 à 23:46
+-- Généré le : jeu. 26 jan. 2023 à 01:08
 -- Version du serveur : 5.7.36
 -- Version de PHP : 7.4.26
 
@@ -151,6 +151,37 @@ INSERT INTO `compteur` (`compteur_id`, `compteur_alcool`, `Montre_code`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `faq`
+--
+
+DROP TABLE IF EXISTS `faq`;
+CREATE TABLE IF NOT EXISTS `faq` (
+  `faq_id` int(11) NOT NULL AUTO_INCREMENT,
+  `faq_question` text,
+  `faq_reponse` varchar(8000) DEFAULT NULL,
+  PRIMARY KEY (`faq_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `faq`
+--
+
+INSERT INTO `faq` (`faq_id`, `faq_question`, `faq_reponse`) VALUES
+(1, 'Comment je sais quel identifiant est associé à ma FestiWatch ?', 'L/identifiant sera déjà disponible sur la montre qui vous sera donnée à votre entrée au festival.'),
+(2, 'Comment puis-je alerter les secours en cas de malaise ?', 'Il vous suffit d\appuyer sur les boutons sur les côtés de la montre pendant plus de 5 secondes.'),
+(3, 'Et pour alerter les secours si un ami fait un malaise ?', 'Vous pouvez les appeler depuis votre montre à condition de rester avec la personne, ou bien le faire depuis la montre de la personne en détresse.'),
+(4, 'Où dois-je aller si ma montre n\a plus de batterie ?', 'Vous pouvez la donner à un responsable à l\accueil du festival, le responsable se chargera de vous en donner une nouvelle.'),
+(5, 'Pourrai-je toujours accéder à mes données récoltées après le festival ?', 'Bien sûr, vos données seront actives pendant encore 6 mois après la fin du festival, sauf si vous souhaitez les supprimer avant.'),
+(6, 'Si nos données vitales sont surveillées pour notre sécurité, puis-je retirer ma FestiWatch durant le festival ?', 'Il n\est pas particulièrement recommandé aux festivaliers de retirer la FestiWatch durant un événement agité, mais si vous préférez la retirer, il est préférable de l\éteindre pour éviter toute confusion.'),
+(7, 'Puis-je sortir du festival avec ma montre ?', 'Si votre festival est en possession des FestiWatches, cela dépendra de ses organisateurs. Sinon, vous devrez remettre votre FestiWatch à un(e) responsable en sortant des lieux.'),
+(8, 'Que se passe-t-il si j\abime ou casse ma FestiWatch ?', 'Chez PRODETECH, on vous aviserait plutôt de faire attention à la FestiWatch qui vous a été attribuée. Cependant, aucune charge supplémentaire ne vous sera demandée si elle n\est pas possession du festival.'),
+(9, 'Comment puis-je associer ma montre à la FestiWatch de mes amis ?', 'En vous rendant sur le site internet de la FestiWatch, vous pouvez envoyer des invitations de connexions à d\autres festivaliers en entrant leur identifiant FestiWatch.'),
+(10, 'Les ondes qui permettent aux FestiWatches d\envoyer nos données au site sont-elles dangereuses ?', 'Ne vous inquiétez pas, les ondes ne sont pas plus nocives que celles émises par votre téléphone puisqu\elles émettent des ondes Bluetooth.'),
+(11, 'test ?', 'test.');
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `festival`
 --
 
@@ -175,7 +206,7 @@ CREATE TABLE IF NOT EXISTS `festival` (
   UNIQUE KEY `Fest_nom` (`Fest_nom`),
   UNIQUE KEY `Fest_email` (`Fest_email`),
   UNIQUE KEY `Fest_numtelephone` (`Fest_numtelephone`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `festival`
@@ -345,7 +376,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   UNIQUE KEY `email` (`email`),
   UNIQUE KEY `numtelephone` (`numtelephone`),
   KEY `FK_role_id` (`role_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `user`

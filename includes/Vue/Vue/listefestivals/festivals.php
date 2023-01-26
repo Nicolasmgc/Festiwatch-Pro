@@ -134,6 +134,7 @@
           <th>Lien</th>
           <th>Numéro de téléphone</th>
           <th>Adresse mail</th>
+          <th>Accès handicapé</th>
         </tr>
       </thead>
 
@@ -158,6 +159,7 @@
           <td><?php echo htmlspecialchars($row['Fest_lien']); ?></td>
           <td><?php echo htmlspecialchars($row['Fest_numtelephone']); ?></td>
           <td><?php echo htmlspecialchars($row['Fest_email']); ?></td>
+          <td><?php echo htmlspecialchars($row['Fest_acceshandicap']); ?></td>
         </tr>
         <?php endwhile; ?>
       </tbody>
