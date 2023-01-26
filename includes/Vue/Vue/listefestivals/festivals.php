@@ -68,12 +68,13 @@
                         
                       <a><?php echo $_SESSION['email'];?></a>
                     <ul class="sous">
-                        <li><a href="../monprofiluser/monprofil.php"> Voir mon profil </a></li>
+                    <li><a href="../monprofiluser/monprofil.php"> Voir mon profil </a></li>
+
                         <li><a href="../../../Controller/deconnexion.php"> Se déconnecter </a></li>
                         <?php if($_SESSION['role_id'] == '2'){
                         ?>
                         
-                            <li><a href="#"> Pannel Admin </a></li>
+                            <li><a href="../paneladmin/accueiladmin.php"> Panel Admin </a></li>
                             <?php } ?>
                         
                         </ul>

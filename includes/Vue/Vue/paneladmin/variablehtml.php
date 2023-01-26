@@ -63,6 +63,11 @@ if(isset($_SESSION['role_id'])){
             <input type="int" name="Fest_numtelephone" id="Fest_numtelephone" placeholder="Numéro de téléphone du festival" required><br/><br></div><br>
         <div class="line7"><input type="password" name="fest_password" id="fest_password" placeholder="Votre mot de passe" required><br/><br>
             <input type="password" name="fest_passwordc" id="fest_passwordc" placeholder="Vérifiez votre mdp" required><br/><br></div><br>
+            <label>Festival compatible aux personnes </br> à mobilité réduite ?</label></br>
+        <div class="line8">
+                <input type="radio" name="Fest_handicap" id="Fest_handicap" for="handicap" value=1 size="1"> Oui</input>
+                <input type="radio" name="Fest_handicap" id="Fest_handicap" for="handicap" value=0 checked> Non</input><br><br>
+    </div>
 
         
         <input type="submit" name="formsendgestio" id="formsendgestio" value="Ok">

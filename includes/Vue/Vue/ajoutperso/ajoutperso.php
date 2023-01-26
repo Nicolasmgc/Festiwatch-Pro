@@ -4,6 +4,10 @@
 <!DOCTYPE html>
 <html>
 
+<?php if(isset($_SESSION['Fest_id'])){
+   ?> 
+
+
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="ajoutperso.css">
@@ -83,3 +87,35 @@
         }
     }); 
 </script>
+
+<?php
+}else{
+?>
+
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../Controller/errors/erreur.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap" rel="stylesheet">
+<head>
+    <title>Erreur</title>
+</head>
+<body>
+<div class="fond">
+    <div class="round">
+        Erreur cette page est reservée aux festivals !</br>
+        Veuillez retouner à la page d'accueil !</br>
+        <button ><a href=" ../Pagedaccueil/index.php"  style="text-decoration:none">Page d'accueil</a></button>
+        </div>
+</div>
+
+
+<img src="../../../PNG/errorimage.png" alt="image d'erreur">
+
+</body>
+
+</html>
+
+<?php
+}
+?>

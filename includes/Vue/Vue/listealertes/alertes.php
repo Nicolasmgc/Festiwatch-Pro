@@ -43,26 +43,6 @@ if(isset($_SESSION['Fest_id'])){
     <title> Alertes </title>
     <link rel="stylesheet" href="alertes.css">
 
-
-    <style>
-            .goog-te-banner-frame.skiptranslate, .goog-te-gadget-icon {
-                display: none !important;
-            }
-            body {
-                top: 0px !important;
-            }
-            .goog-tooltip {
-                display: none !important;
-            }
-            .goog-tooltip:hover {
-                display: none !important;
-            }
-            .goog-text-highlight {
-                background-color: transparent !important;
-                border: none !important;
-                box-shadow: none !important;
-            }
-        </style>
 </head>
 
 <body>
@@ -122,7 +102,7 @@ if(isset($_SESSION['Fest_id'])){
 
 </div>
 
-<input onclick="onsenfout()" value="test" class="actionBtns" style="background-color: #F58"> <!-- Bouton pour trier à bien ranger -->
+<input onclick="onsenfout()" value="Trier par statut" class="actionBtns" style="background-color: #F58"> <!-- Bouton pour trier à bien ranger -->
 
 <table class="tableau-style">
         <thead> 
@@ -213,7 +193,7 @@ if(isset($_SESSION['Fest_id'])){
             <a href="../CGU/cgu.php">Conditions général d'utilisation</a>
             <a href="../FAQ/faq.php"> FAQ</a>
             <a href="../Connexionuser/login1.php">Connexion</a>
-            <a href="../../../Modele/listealerte/filtrealerte.php">Alerte</a>
+            <a href="../../../Modele/listealerte/filtrealerte.php">lalalala</a>
             
             </div> </div>
              </footer>
