@@ -31,8 +31,8 @@ for($i=0, $size=count($data_tab); $i<$size; $i++){
 echo "Trame $i: $data_tab[$i]<br />";
 }
 
-
-$trame = $data_tab[0];
+for ($i = 0; $i < 14; $i++){
+$trame = $data_tab[$i];
 // décodage avec des substring
 $t = substr($trame,0,1);
 $o = substr($trame,1,4);
@@ -42,12 +42,24 @@ list($t, $o, $r, $c, $n, $v, $a, $x, $year, $month, $day, $hour, $min, $sec) =
 sscanf($trame,"%1s%4s%1s%1s%2s%4s%4s%2s%4s%2s%2s%2s%2s%2s");
 echo("<br />$t,$o,$r,$c,$n,$v,$a,$x,$year,$month,$day,$hour,$min,$sec<br />");
 
-$add = $db->prepare("INSERT INTO capteurgaz(gaz_detec, Montre_code) VALUES(:gaz_detec, :Montre_code)");
+$date = $year ."-" .$month ."-" .$day ." / " .$hour .":" .$min;
+
+$time = $hour .":" .$min;
+
+$add = $db->prepare("INSERT INTO capteurgaz(gaz_detec, month, Montre_code, year, day, hour, minute, date, time) VALUES(:gaz_detec, :month, :Montre_code, :year, :day, :hour, :minute, :date, :time)");
 $add->execute([
     'gaz_detec' => $v,
-    'Montre_code' => 3
+    'Montre_code' => 3,
+    'month' => $month,
+    'year' => $year,
+    'day' => $day,
+    'hour' => $hour,
+    'minute' => $min,
+    'date' => $date,
+    'time' => $time
+
 ]);
 
-
+}
 
 ?>

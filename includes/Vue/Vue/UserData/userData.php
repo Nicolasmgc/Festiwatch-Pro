@@ -10,8 +10,10 @@ session_start();
         <link rel="stylesheet" type="text/css" href="../../../general.css">
         <link rel="stylesheet" type="text/css" href="navStyle.css">
         <link rel="stylesheet" type="text/css" href="../UserData/userData.css">
+        
     </head>
     <body>
+        
     <nav>
             <ul>
                <li><img src="../../../PNG/Logo alternatif2.png" class="logo" >  </a></li>   
@@ -64,10 +66,11 @@ session_start();
             </ul>
         </nav>
 
-
         <?php include '../../../Controller/database.php';
         global $db;
         ?>
+
+
 
         <div class="userDataTitle"><h1>Mes Données</h1></div>
 
@@ -98,8 +101,82 @@ session_start();
                     <div id="upperIndicators">
                         <div>
                             <label for="heartRate" style="font-size: 28px">Fréquence Cardiaque</label>
-                            <meter id="heartRate" min=0 max=100 low="50" high="80" value=81 optimum="0"></meter>
-                            <div style="font-size: 32px; margin-bottom: 20px; margin-top: 40px; color: white"><?php echo $_GET['card_frequ']; ?> BPM</div>
+                                                        
+                            <?php 
+                            $con2 = new mysqli('localhost','root','','siteweb');
+                            $query2 = $con2->query("
+                            SELECT 
+                            time as time,
+                            card_frequ as amount
+                            FROM capteurcardiaque
+                            WHERE Montre_code = 3
+                            GROUP BY time
+                            ");
+
+                            foreach($query2 as $data2)
+                            {
+                            $time2[] = $data2['time'];
+                            $amount2[] = $data2['amount'];
+                            }
+
+                            ?>
+
+                            <!DOCTYPE html>
+                            <html>
+                            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                            <div class="canva2">
+                                <canvas id="myChart2"></canvas>
+                            </div>
+
+                            <script>
+                            // === include 'setup' then 'config' above ===
+                            const labels2 = <?php echo json_encode($time2) ?>;
+                            const data2 = {
+                                labels: labels2,
+                                datasets: [{
+                                label: 'Fréquence cardiaque',
+                                data: <?php echo json_encode($amount2) ?>,
+                                backgroundColor: [
+                                    'rgba(255, 99, 132, 0.2)',
+                                    'rgba(255, 159, 64, 0.2)',
+                                    'rgba(255, 205, 86, 0.2)',
+                                    'rgba(75, 192, 192, 0.2)',
+                                    'rgba(54, 162, 235, 0.2)',
+                                    'rgba(153, 102, 255, 0.2)',
+                                    'rgba(201, 203, 207, 0.2)'
+                                ],
+                                borderColor: [
+                                    'rgb(255, 99, 132)',
+                                    'rgb(255, 159, 64)',
+                                    'rgb(255, 205, 86)',
+                                    'rgb(75, 192, 192)',
+                                    'rgb(54, 162, 235)',
+                                    'rgb(153, 102, 255)',
+                                    'rgb(201, 203, 207)'
+                                ],
+                                borderWidth: 1
+                                }]
+                            };
+
+                            const config2 = {
+                                type: 'line',
+                                data: data2,
+                                
+                                options: {
+                                scales: {
+                                    y: {
+                                    beginAtZero: true
+                                    }
+                                }
+
+                                },
+                            };
+
+                            var myChart2 = new Chart(
+                                document.getElementById('myChart2'),
+                                config2
+                            );
+                            </script>
                         </div>
                         <div>
                             <label for="soundIntensity" style="font-size: 28px">Amplitude Sonore</label>
@@ -110,12 +187,84 @@ session_start();
                     
                     <div id="lowerIndicators">
                         <div>
-                            <label for="gazExposition" style="font-size: 28px">Gaz</label>
-                            <meter id="gazExposition" min=0 max=100 low="33" high="66" value=20 optimum="0"></meter>
-                            <div style="font-size: 32px; margin-bottom: 20px; margin-top: 40px; color: white"><?php echo $_GET['gaz_detec']; ?>%</div>
+                            <label for="gazExposition" style="font-size: 28px" class="titreGaz" >Gaz</label>
+                            <?php 
+                            $con = new mysqli('localhost','root','','siteweb');
+                            $query = $con->query("
+                            SELECT 
+                            time as time,
+                            gaz_detec as amount
+                            FROM capteurgaz
+                            GROUP BY time
+                            ");
+
+                            foreach($query as $data)
+                            {
+                            $time[] = $data['time'];
+                            $amount[] = $data['amount'];
+                            }
+
+                            ?>
+
+                            <!DOCTYPE html>
+                            <html>
+                            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                            <div class="canva">
+                                <canvas id="myChart"></canvas>
+                            </div>
+
+                            <script>
+                            // === include 'setup' then 'config' above ===
+                            const labels = <?php echo json_encode($time) ?>;
+                            const data = {
+                                labels: labels,
+                                datasets: [{
+                                label: 'Mesure gaz',
+                                data: <?php echo json_encode($amount) ?>,
+                                backgroundColor: [
+                                    'rgba(255, 99, 132, 0.2)',
+                                    'rgba(255, 159, 64, 0.2)',
+                                    'rgba(255, 205, 86, 0.2)',
+                                    'rgba(75, 192, 192, 0.2)',
+                                    'rgba(54, 162, 235, 0.2)',
+                                    'rgba(153, 102, 255, 0.2)',
+                                    'rgba(201, 203, 207, 0.2)'
+                                ],
+                                borderColor: [
+                                    'rgb(255, 99, 132)',
+                                    'rgb(255, 159, 64)',
+                                    'rgb(255, 205, 86)',
+                                    'rgb(75, 192, 192)',
+                                    'rgb(54, 162, 235)',
+                                    'rgb(153, 102, 255)',
+                                    'rgb(201, 203, 207)'
+                                ],
+                                borderWidth: 1
+                                }]
+                            };
+
+                            const config = {
+                                type: 'line',
+                                data: data,
+                                
+                                options: {
+                                scales: {
+                                    y: {
+                                    beginAtZero: true
+                                    }
+                                }
+
+                                },
+                            };
+
+                            var myChart = new Chart(
+                                document.getElementById('myChart'),
+                                config
+                            );
+                            </script>
                         </div>   
                         <div>
-                            <label for="alcoholConsumption" style="font-size: 28px">Consommation d'Alcool</label>
+                            <label for="alcoholConsumption" style="font-size: 28px">Température</label>
                             <meter id="alcoholConsumption" min=0 max=100 low="33" high="66" value=80 optimum="0"></meter>
                             <div style="font-size: 32px; margin-bottom: 20px; margin-top: 40px; color: white"><?php echo $_GET['compteur_alcool']; ?> verres</div>
                         </div> 
