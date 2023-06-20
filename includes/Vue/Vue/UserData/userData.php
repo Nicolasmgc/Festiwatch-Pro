@@ -271,13 +271,17 @@ session_start();
                                 config
                             );
                             </script>
-                        </div>   
+                        </div> 
                         <div>
                             <label for="alcoholConsumption" style="font-size: 28px">Température</label>
                             <meter id="alcoholConsumption" min=0 max=100 low="33" high="66" value=80 optimum="0"></meter>
                             <div style="font-size: 32px; margin-bottom: 20px; margin-top: 40px; color: white"><?php echo $_GET['mesure_temp']; ?> °C</div>
                         </div> 
                     </div>
+                    <div class = "Lower lower indicator">  <label for="HumidityPercentage" style="font-size: 28px">Humidité</label>
+                    <meter id="HumidityPercentage" min=0 max=100 low="33" high="66" value=20 optimum="0"></meter> 
+                    </div>
+                   
                 </div>
             </div>
         </div>
