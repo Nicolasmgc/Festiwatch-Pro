@@ -13,7 +13,11 @@ session_start();
         
     </head>
     <body>
-        
+
+    <?php include '../../../Controller/database.php';
+    global $db; ?>
+    
+
     <nav>
             <ul>
                <li><img src="../../../PNG/Logo alternatif2.png" class="logo" >  </a></li>   
@@ -66,9 +70,6 @@ session_start();
             </ul>
         </nav>
 
-        <?php include '../../../Controller/database.php';
-        global $db;
-        ?>
 
 
 
@@ -195,6 +196,7 @@ session_start();
                             time as time,
                             gaz_detec as amount
                             FROM capteurgaz
+                            WHERE Montre_code=3
                             GROUP BY time
                             ");
 
@@ -266,7 +268,7 @@ session_start();
                         <div>
                             <label for="alcoholConsumption" style="font-size: 28px">Température</label>
                             <meter id="alcoholConsumption" min=0 max=100 low="33" high="66" value=80 optimum="0"></meter>
-                            <div style="font-size: 32px; margin-bottom: 20px; margin-top: 40px; color: white"><?php echo $_GET['compteur_alcool']; ?> verres</div>
+                            <div style="font-size: 32px; margin-bottom: 20px; margin-top: 40px; color: white"><?php echo $_GET['mesure_temp']; ?> °C</div>
                         </div> 
                     </div>
                 </div>
