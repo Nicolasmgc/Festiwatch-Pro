@@ -278,7 +278,7 @@ session_start();
                             <div style="font-size: 32px; margin-bottom: 20px; margin-top: 40px; color: white"><?php echo $_GET['mesure_temp']; ?> °C</div>
                         </div> 
                     </div>
-                    <div class = "Lower lower indicator">  <label for="HumidityPercentage" style="font-size: 28px">Humidité</label>
+                    <div class = "Lowerlowerindicator">  <label for="HumidityPercentage" style="font-size: 28px">Humidité</label>
                     <meter id="HumidityPercentage" min=0 max=100 low="33" high="66" value=20 optimum="0"></meter> 
                     </div>
                    

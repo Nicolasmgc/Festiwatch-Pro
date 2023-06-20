@@ -403,4 +403,6 @@ a{
     border-radius: 30px;
 }
 
-
+.Lowerlowerindicator {
+    position: absolute;
+}
