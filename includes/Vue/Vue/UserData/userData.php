@@ -104,15 +104,19 @@ session_start();
                             <label for="heartRate" style="font-size: 28px">Fréquence Cardiaque</label>
                                                         
                             <?php 
-                            $con2 = new mysqli('localhost','root','','siteweb');
-                            $query2 = $con2->query("
-                            SELECT 
+
+
+                            $query2 = $db->prepare("SELECT 
                             time as time,
                             card_frequ as amount
                             FROM capteurcardiaque
-                            WHERE Montre_code = 3
+                            WHERE Montre_code = :Montre_code
                             GROUP BY time
                             ");
+
+                            $query2->execute([
+                                'Montre_code' => $_GET['Montre_code']
+                            ]);
 
                             foreach($query2 as $data2)
                             {
@@ -190,15 +194,18 @@ session_start();
                         <div>
                             <label for="gazExposition" style="font-size: 28px" class="titreGaz" >Gaz</label>
                             <?php 
-                            $con = new mysqli('localhost','root','','siteweb');
-                            $query = $con->query("
-                            SELECT 
+
+                            $query = $db->prepare("SELECT 
                             time as time,
                             gaz_detec as amount
                             FROM capteurgaz
-                            WHERE Montre_code=3
+                            WHERE Montre_code = :Montre_code
                             GROUP BY time
                             ");
+                            
+                            $query->execute([
+                                'Montre_code' => $_GET['Montre_code']
+                            ]);
 
                             foreach($query as $data)
                             {

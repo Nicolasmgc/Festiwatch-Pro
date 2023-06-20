@@ -29,7 +29,7 @@
                 $_SESSION['Montre_code'] = $result['Montre_code'];
                 $Fest_id = $result['Fest_id'];
 
-                header("Location: ../../Vue/UserData/userData.php?son_db=".$son_db."&gaz_detec=".$gaz_detect."&card_frequ=".$card_frequ."&mesure_temp=".$mesure_temp."&mesure_hum".$mesure_hum."&Fest_id=".$Fest_id);
+                header("Location: ../../Vue/UserData/userData.php?son_db=".$son_db."&gaz_detec=".$gaz_detect."&card_frequ=".$card_frequ."&mesure_temp=".$mesure_temp."&mesure_hum=".$mesure_hum."&Fest_id=".$Fest_id."&Montre_code=".$Montre_code);
 
             }
         }
