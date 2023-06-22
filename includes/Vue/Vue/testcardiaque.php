@@ -1,7 +1,5 @@
 <?php
 
-
-
 include '../../Controller/database.php';
 global $db;
 
