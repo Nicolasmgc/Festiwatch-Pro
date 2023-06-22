@@ -35,7 +35,8 @@
     </style>
 </head>
 <body>
-<h2>        <?php
+<h2>  
+          <?php
         if(isset($_GET['succes'])){
             echo $_GET['succes'];
         }

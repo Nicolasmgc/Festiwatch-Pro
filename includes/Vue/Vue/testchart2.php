@@ -1,8 +1,10 @@
-<?php 
 
+<?php
 include '../../Controller/database.php';
 global $db;
+?>
 
+<?php
 
 $query3 = $db->prepare("SELECT 
 time as time,

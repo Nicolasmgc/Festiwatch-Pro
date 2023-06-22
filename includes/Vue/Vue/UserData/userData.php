@@ -185,6 +185,7 @@ session_start();
                         </div>
                         <div>
                             <label for="soundIntensity" style="font-size: 28px">Amplitude Sonore</label>
+                                                        
                             <meter id="soundIntensity" min=0 max=100 low="50" high="80" value=51 optimum="0"></meter>
                             <div style="font-size: 32px; margin-bottom: 20px; margin-top: 40px; color: white"><?php echo $_GET['son_db']; ?> dB</div>
                         </div>
@@ -277,9 +278,6 @@ session_start();
                             <meter id="alcoholConsumption" min=0 max=100 low="33" high="66" value=80 optimum="0"></meter>
                             <div style="font-size: 32px; margin-bottom: 20px; margin-top: 40px; color: white"><?php echo $_GET['mesure_temp']; ?> °C</div>
                         </div> 
-                    </div>
-                    <div class = "Lower lower indicator">  <label for="HumidityPercentage" style="font-size: 28px">Humidité</label>
-                    <meter id="HumidityPercentage" min=0 max=100 low="33" high="66" value=20 optimum="0"></meter> 
                     </div>
                    
                 </div>

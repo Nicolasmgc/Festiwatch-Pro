@@ -403,4 +403,12 @@ a{
     border-radius: 30px;
 }
 
+#myChart3 {
+    position: flex;
+    height: 150%;
+    width: 150%;
+    background-color: rgb(244, 239, 239);
+    border-radius: 30px;
+    left: 50px
+}
 
